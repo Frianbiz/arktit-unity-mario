@@ -6808,6 +6808,64 @@ extern "C"  void IndexedSet_1_set_Item_m3923255859_gshared (IndexedSet_1_t549597
 		return;
 	}
 }
+// System.Void UnityEngine.UI.Collections.IndexedSet`1<System.Object>::RemoveAll(System.Predicate`1<T>)
+extern "C"  void IndexedSet_1_RemoveAll_m2736534958_gshared (IndexedSet_1_t549597370 * __this, Predicate_1_t1132419410 * ___match0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	Il2CppObject * V_1 = NULL;
+	{
+		V_0 = (int32_t)0;
+		goto IL_0034;
+	}
+
+IL_0008:
+	{
+		List_1_t2058570427 * L_0 = (List_1_t2058570427 *)__this->get_m_List_0();
+		int32_t L_1 = V_0;
+		NullCheck((List_1_t2058570427 *)L_0);
+		Il2CppObject * L_2 = ((  Il2CppObject * (*) (List_1_t2058570427 *, int32_t, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 14)->methodPointer)((List_1_t2058570427 *)L_0, (int32_t)L_1, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 14));
+		V_1 = (Il2CppObject *)L_2;
+		Predicate_1_t1132419410 * L_3 = ___match0;
+		Il2CppObject * L_4 = V_1;
+		NullCheck((Predicate_1_t1132419410 *)L_3);
+		bool L_5 = ((  bool (*) (Predicate_1_t1132419410 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 19)->methodPointer)((Predicate_1_t1132419410 *)L_3, (Il2CppObject *)L_4, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 19));
+		if (!L_5)
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		Il2CppObject * L_6 = V_1;
+		NullCheck((IndexedSet_1_t549597370 *)__this);
+		((  bool (*) (IndexedSet_1_t549597370 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 20)->methodPointer)((IndexedSet_1_t549597370 *)__this, (Il2CppObject *)L_6, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 20));
+		goto IL_0033;
+	}
+
+IL_002f:
+	{
+		int32_t L_7 = V_0;
+		V_0 = (int32_t)((int32_t)((int32_t)L_7+(int32_t)1));
+	}
+
+IL_0033:
+	{
+	}
+
+IL_0034:
+	{
+		int32_t L_8 = V_0;
+		List_1_t2058570427 * L_9 = (List_1_t2058570427 *)__this->get_m_List_0();
+		NullCheck((List_1_t2058570427 *)L_9);
+		int32_t L_10 = ((  int32_t (*) (List_1_t2058570427 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 5)->methodPointer)((List_1_t2058570427 *)L_9, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 5));
+		if ((((int32_t)L_8) < ((int32_t)L_10)))
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		return;
+	}
+}
 // System.Void UnityEngine.UI.Collections.IndexedSet`1<System.Object>::Sort(System.Comparison`1<T>)
 extern "C"  void IndexedSet_1_Sort_m2938181397_gshared (IndexedSet_1_t549597370 * __this, Comparison_1_t3951188146 * ___sortLayoutFunction0, const MethodInfo* method)
 {
@@ -6817,7 +6875,7 @@ extern "C"  void IndexedSet_1_Sort_m2938181397_gshared (IndexedSet_1_t549597370 
 		List_1_t2058570427 * L_0 = (List_1_t2058570427 *)__this->get_m_List_0();
 		Comparison_1_t3951188146 * L_1 = ___sortLayoutFunction0;
 		NullCheck((List_1_t2058570427 *)L_0);
-		((  void (*) (List_1_t2058570427 *, Comparison_1_t3951188146 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 19)->methodPointer)((List_1_t2058570427 *)L_0, (Comparison_1_t3951188146 *)L_1, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 19));
+		((  void (*) (List_1_t2058570427 *, Comparison_1_t3951188146 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 21)->methodPointer)((List_1_t2058570427 *)L_0, (Comparison_1_t3951188146 *)L_1, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 21));
 		V_0 = (int32_t)0;
 		goto IL_0034;
 	}
@@ -7949,6 +8007,43 @@ extern "C"  void ObjectPool_1_set_countAll_m1742773675_gshared (ObjectPool_1_t12
 		return;
 	}
 }
+// System.Int32 UnityEngine.UI.ObjectPool`1<System.Object>::get_countActive()
+extern "C"  int32_t ObjectPool_1_get_countActive_m2655657865_gshared (ObjectPool_1_t1235855446 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		NullCheck((ObjectPool_1_t1235855446 *)__this);
+		int32_t L_0 = ((  int32_t (*) (ObjectPool_1_t1235855446 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2)->methodPointer)((ObjectPool_1_t1235855446 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2));
+		NullCheck((ObjectPool_1_t1235855446 *)__this);
+		int32_t L_1 = ((  int32_t (*) (ObjectPool_1_t1235855446 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 3)->methodPointer)((ObjectPool_1_t1235855446 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 3));
+		V_0 = (int32_t)((int32_t)((int32_t)L_0-(int32_t)L_1));
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 UnityEngine.UI.ObjectPool`1<System.Object>::get_countInactive()
+extern "C"  int32_t ObjectPool_1_get_countInactive_m763736764_gshared (ObjectPool_1_t1235855446 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		Stack_1_t3777177449 * L_0 = (Stack_1_t3777177449 *)__this->get_m_Stack_0();
+		NullCheck((Stack_1_t3777177449 *)L_0);
+		int32_t L_1 = ((  int32_t (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4)->methodPointer)((Stack_1_t3777177449 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4));
+		V_0 = (int32_t)L_1;
+		goto IL_0012;
+	}
+
+IL_0012:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
 // T UnityEngine.UI.ObjectPool`1<System.Object>::Get()
 extern "C"  Il2CppObject * ObjectPool_1_Get_m3724675538_gshared (ObjectPool_1_t1235855446 * __this, const MethodInfo* method)
 {
@@ -7957,19 +8052,19 @@ extern "C"  Il2CppObject * ObjectPool_1_Get_m3724675538_gshared (ObjectPool_1_t1
 	{
 		Stack_1_t3777177449 * L_0 = (Stack_1_t3777177449 *)__this->get_m_Stack_0();
 		NullCheck((Stack_1_t3777177449 *)L_0);
-		int32_t L_1 = ((  int32_t (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2)->methodPointer)((Stack_1_t3777177449 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2));
+		int32_t L_1 = ((  int32_t (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4)->methodPointer)((Stack_1_t3777177449 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4));
 		if (L_1)
 		{
 			goto IL_002c;
 		}
 	}
 	{
-		Il2CppObject * L_2 = ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 3)->methodPointer)(NULL /*static, unused*/, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 3));
+		Il2CppObject * L_2 = ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 5)->methodPointer)(NULL /*static, unused*/, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 5));
 		V_0 = (Il2CppObject *)L_2;
 		NullCheck((ObjectPool_1_t1235855446 *)__this);
-		int32_t L_3 = ((  int32_t (*) (ObjectPool_1_t1235855446 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4)->methodPointer)((ObjectPool_1_t1235855446 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4));
+		int32_t L_3 = ((  int32_t (*) (ObjectPool_1_t1235855446 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2)->methodPointer)((ObjectPool_1_t1235855446 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2));
 		NullCheck((ObjectPool_1_t1235855446 *)__this);
-		((  void (*) (ObjectPool_1_t1235855446 *, int32_t, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 5)->methodPointer)((ObjectPool_1_t1235855446 *)__this, (int32_t)((int32_t)((int32_t)L_3+(int32_t)1)), /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 5));
+		((  void (*) (ObjectPool_1_t1235855446 *, int32_t, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 6)->methodPointer)((ObjectPool_1_t1235855446 *)__this, (int32_t)((int32_t)((int32_t)L_3+(int32_t)1)), /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 6));
 		goto IL_003a;
 	}
 
@@ -7977,7 +8072,7 @@ IL_002c:
 	{
 		Stack_1_t3777177449 * L_4 = (Stack_1_t3777177449 *)__this->get_m_Stack_0();
 		NullCheck((Stack_1_t3777177449 *)L_4);
-		Il2CppObject * L_5 = ((  Il2CppObject * (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 6)->methodPointer)((Stack_1_t3777177449 *)L_4, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 6));
+		Il2CppObject * L_5 = ((  Il2CppObject * (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 7)->methodPointer)((Stack_1_t3777177449 *)L_4, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 7));
 		V_0 = (Il2CppObject *)L_5;
 	}
 
@@ -7993,7 +8088,7 @@ IL_003a:
 		UnityAction_1_t4056035046 * L_7 = (UnityAction_1_t4056035046 *)__this->get_m_ActionOnGet_1();
 		Il2CppObject * L_8 = V_0;
 		NullCheck((UnityAction_1_t4056035046 *)L_7);
-		((  void (*) (UnityAction_1_t4056035046 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 7)->methodPointer)((UnityAction_1_t4056035046 *)L_7, (Il2CppObject *)L_8, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 7));
+		((  void (*) (UnityAction_1_t4056035046 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 8)->methodPointer)((UnityAction_1_t4056035046 *)L_7, (Il2CppObject *)L_8, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 8));
 	}
 
 IL_0051:
@@ -8021,7 +8116,7 @@ extern "C"  void ObjectPool_1_Release_m1615270002_gshared (ObjectPool_1_t1235855
 	{
 		Stack_1_t3777177449 * L_0 = (Stack_1_t3777177449 *)__this->get_m_Stack_0();
 		NullCheck((Stack_1_t3777177449 *)L_0);
-		int32_t L_1 = ((  int32_t (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2)->methodPointer)((Stack_1_t3777177449 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 2));
+		int32_t L_1 = ((  int32_t (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4)->methodPointer)((Stack_1_t3777177449 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 4));
 		if ((((int32_t)L_1) <= ((int32_t)0)))
 		{
 			goto IL_003c;
@@ -8030,7 +8125,7 @@ extern "C"  void ObjectPool_1_Release_m1615270002_gshared (ObjectPool_1_t1235855
 	{
 		Stack_1_t3777177449 * L_2 = (Stack_1_t3777177449 *)__this->get_m_Stack_0();
 		NullCheck((Stack_1_t3777177449 *)L_2);
-		Il2CppObject * L_3 = ((  Il2CppObject * (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 8)->methodPointer)((Stack_1_t3777177449 *)L_2, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 8));
+		Il2CppObject * L_3 = ((  Il2CppObject * (*) (Stack_1_t3777177449 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 9)->methodPointer)((Stack_1_t3777177449 *)L_2, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 9));
 		Il2CppObject * L_4 = ___element0;
 		bool L_5 = Object_ReferenceEquals_m3900584722(NULL /*static, unused*/, (Il2CppObject *)L_3, (Il2CppObject *)L_4, /*hidden argument*/NULL);
 		if (!L_5)
@@ -8055,7 +8150,7 @@ IL_003c:
 		UnityAction_1_t4056035046 * L_7 = (UnityAction_1_t4056035046 *)__this->get_m_ActionOnRelease_2();
 		Il2CppObject * L_8 = ___element0;
 		NullCheck((UnityAction_1_t4056035046 *)L_7);
-		((  void (*) (UnityAction_1_t4056035046 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 7)->methodPointer)((UnityAction_1_t4056035046 *)L_7, (Il2CppObject *)L_8, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 7));
+		((  void (*) (UnityAction_1_t4056035046 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 8)->methodPointer)((UnityAction_1_t4056035046 *)L_7, (Il2CppObject *)L_8, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 8));
 	}
 
 IL_0053:
@@ -8063,7 +8158,7 @@ IL_0053:
 		Stack_1_t3777177449 * L_9 = (Stack_1_t3777177449 *)__this->get_m_Stack_0();
 		Il2CppObject * L_10 = ___element0;
 		NullCheck((Stack_1_t3777177449 *)L_9);
-		((  void (*) (Stack_1_t3777177449 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 10)->methodPointer)((Stack_1_t3777177449 *)L_9, (Il2CppObject *)L_10, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 10));
+		((  void (*) (Stack_1_t3777177449 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 11)->methodPointer)((Stack_1_t3777177449 *)L_9, (Il2CppObject *)L_10, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 11));
 		return;
 	}
 }

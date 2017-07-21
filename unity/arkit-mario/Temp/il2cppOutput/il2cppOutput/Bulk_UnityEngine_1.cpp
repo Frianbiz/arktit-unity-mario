@@ -16,15 +16,30 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Scri4067966717.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Anim4078305555.h"
 #include "mscorlib_System_Void1841601450.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Anim1693994278.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Play1502856514.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Play3667545548.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Fram1120735295.h"
-#include "mscorlib_System_Object2689449295.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Play3250302433.h"
-#include "UnityEngine_UnityEngine_Experimental_Rendering_Rend984453155.h"
-#include "mscorlib_System_IntPtr2504060609.h"
+#include "UnityEngine_UnityEngine_RuntimeAnimatorController670468573.h"
+#include "mscorlib_System_String2029220233.h"
+#include "mscorlib_System_Single2076509932.h"
+#include "mscorlib_System_Int322071877448.h"
 #include "mscorlib_System_Boolean3825574718.h"
+#include "UnityEngine_UnityEngine_AnimatorStateInfo2577870592.h"
+#include "UnityEngine_UnityEngine_AnimatorTransitionInfo2410896200.h"
+#include "UnityEngine_UnityEngine_AnimatorClipInfo3905751349.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen3274872481.h"
+#include "mscorlib_System_Object2689449295.h"
+#include "mscorlib_System_ArgumentNullException628810857.h"
+#include "UnityEngine_UnityEngine_AnimatorControllerParamete1381019216.h"
+#include "mscorlib_System_IndexOutOfRangeException3527622107.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Fram1120735295.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Frame658788566.h"
+#include "mscorlib_System_IntPtr2504060609.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Play3250302433.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Scri4067966717.h"
+#include "UnityEngine_UnityEngine_Experimental_Rendering_Rend984453155.h"
 #include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "UnityEngine_UnityEngine_Experimental_Rendering_Script4271526.h"
 #include "UnityEngine_UnityEngine_FilterMode10814199.h"
@@ -34,20 +49,21 @@
 #include "mscorlib_System_Action_1_gen4041298073.h"
 #include "mscorlib_System_Delegate3022476291.h"
 #include "UnityEngine_UnityEngine_Font_FontTextureRebuildCal1272078033.h"
-#include "mscorlib_System_Int322071877448.h"
 #include "mscorlib_System_AsyncCallback163412349.h"
 #include "UnityEngine_UnityEngine_FontStyle2764949590.h"
+#include "UnityEngine_UnityEngine_ForceMode1856518252.h"
 #include "UnityEngine_UnityEngine_GameObject1756533147.h"
-#include "mscorlib_System_String2029220233.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
 #include "mscorlib_System_Type1303803226.h"
 #include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "UnityEngine_UnityEngine_Transform3275118058.h"
 #include "UnityEngine_UnityEngine_SendMessageOptions1414041951.h"
+#include "UnityEngine_UnityEngine_Gizmos2256232573.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
+#include "UnityEngine_UnityEngine_Color2020392075.h"
 #include "UnityEngine_UnityEngine_Gradient3600583008.h"
 #include "UnityEngine_UnityEngine_GUI4082743951.h"
 #include "mscorlib_System_DateTime693205669.h"
-#include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UnityEngineInternal_GenericStack3718539591.h"
 #include "UnityEngine_UnityEngine_GUISkin1436893342.h"
 #include "UnityEngine_UnityEngine_Rect3681755626.h"
@@ -61,7 +77,6 @@
 #include "UnityEngine_UnityEngine_Texture2243626319.h"
 #include "UnityEngine_UnityEngine_GUIElement3381083099.h"
 #include "UnityEngine_UnityEngine_GUILayer3254902478.h"
-#include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "UnityEngine_UnityEngine_GUILayout2579273657.h"
 #include "UnityEngine_UnityEngine_GUILayoutOption_Type4024155706.h"
 #include "UnityEngine_UnityEngine_GUILayoutEntry3828586629.h"
@@ -75,7 +90,6 @@
 #include "mscorlib_System_Collections_Stack1043988394.h"
 #include "UnityEngine_UnityEngine_GUIScrollGroup755788567.h"
 #include "UnityEngine_UnityEngine_GUISettings622856320.h"
-#include "UnityEngine_UnityEngine_Color2020392075.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g3714688016.h"
 #include "UnityEngine_UnityEngine_ScriptableObject1975622470.h"
 #include "mscorlib_System_StringComparer1574862926.h"
@@ -96,6 +110,8 @@
 #include "mscorlib_System_RuntimeTypeHandle2330101084.h"
 #include "mscorlib_System_Reflection_MethodInfo3330546337.h"
 #include "mscorlib_System_Reflection_MemberInfo4043097260.h"
+#include "UnityEngine_UnityEngine_GUIText2411476300.h"
+#include "UnityEngine_UnityEngine_GUITexture1909122990.h"
 #include "UnityEngine_UnityEngine_GUIUtility3275770671.h"
 #include "mscorlib_System_Exception1927440687.h"
 #include "mscorlib_System_Reflection_TargetInvocationExcepti4098620458.h"
@@ -103,13 +119,15 @@
 #include "mscorlib_System_ArgumentException3259014390.h"
 #include "UnityEngine_UnityEngine_Gyroscope1705362817.h"
 #include "UnityEngine_UnityEngine_HideFlags1434274199.h"
+#include "UnityEngine_UnityEngine_HideInInspector2503583610.h"
+#include "mscorlib_System_Attribute542643598.h"
 #include "UnityEngine_UnityEngine_HorizontalWrapMode2027154177.h"
 #include "UnityEngine_UnityEngine_HumanBone1529896151.h"
 #include "UnityEngine_UnityEngine_HumanLimit250797648.h"
 #include "UnityEngine_UnityEngine_IL2CPPStructAlignmentAttrib130316838.h"
-#include "mscorlib_System_Attribute542643598.h"
 #include "UnityEngine_UnityEngine_IMECompositionMode1898275508.h"
 #include "UnityEngine_UnityEngine_Input1785128008.h"
+#include "UnityEngine_UnityEngine_KeyCode2283395152.h"
 #include "UnityEngine_UnityEngine_Touch407273883.h"
 #include "UnityEngine_UnityEngine_Internal_DefaultValueAttri1027170048.h"
 #include "UnityEngine_UnityEngine_Internal_ExcludeFromDocsAtt665825653.h"
@@ -120,18 +138,19 @@
 #include "mscorlib_System_Int64909078037.h"
 #include "mscorlib_System_DateTimeKind2186819611.h"
 #include "UnityEngine_UnityEngine_iOS_RemoteNotification2254252895.h"
-#include "UnityEngine_UnityEngine_KeyCode2283395152.h"
+#include "UnityEngine_UnityEngine_Joint454317436.h"
+#include "UnityEngine_UnityEngine_Rigidbody4233889191.h"
 #include "UnityEngine_UnityEngine_Keyframe1449471340.h"
 #include "UnityEngine_UnityEngine_LayerMask3188175821.h"
 #include "UnityEngine_UnityEngine_Light494725636.h"
 #include "UnityEngine_UnityEngine_Logger3328995178.h"
 #include "UnityEngine_UnityEngine_LogType1559732862.h"
+#include "UnityEngine_UnityEngine_Shader2430389951.h"
 #include "UnityEngine_UnityEngine_Matrix4x42933234003.h"
 #include "UnityEngine_UnityEngine_MaterialPropertyBlock3303648957.h"
 #include "UnityEngine_UnityEngine_Mathf2336485820.h"
 #include "UnityEngine_UnityEngineInternal_MathfInternal715669973.h"
 #include "UnityEngine_UnityEngine_Quaternion4030073918.h"
-#include "mscorlib_System_IndexOutOfRangeException3527622107.h"
 #include "UnityEngine_UnityEngine_Vector42243707581.h"
 #include "UnityEngine_UnityEngine_Mesh1356156583.h"
 #include "UnityEngine_UnityEngine_Mesh_InternalShaderChannel3331827198.h"
@@ -166,8 +185,13 @@
 #include "UnityEngine_UnityEngine_Events_UnityEvent_1_gen339633637.h"
 #include "UnityEngine_UnityEngine_OperatingSystemFamily1896948788.h"
 #include "UnityEngine_UnityEngine_ParticleSystem3394631041.h"
+#include "UnityEngine_UnityEngine_ParticleSystem_MainModule6751348.h"
+#include "UnityEngine_UnityEngine_ParticleSystem_EmissionMod2748003162.h"
 #include "UnityEngine_UnityEngine_ParticleSystem_Particle250075699.h"
 #include "UnityEngine_UnityEngine_ParticleSystem_IteratorDel2419492168.h"
+#include "UnityEngine_UnityEngine_ParticleSystem_MinMaxCurve122563058.h"
+#include "UnityEngine_UnityEngine_ParticleSystemCurveMode1659312557.h"
+#include "UnityEngine_UnityEngine_AnimationCurve3306541151.h"
 #include "UnityEngine_UnityEngine_Physics634932869.h"
 #include "UnityEngine_UnityEngine_QueryTriggerInteraction478029726.h"
 #include "UnityEngine_UnityEngine_RaycastHit87180320.h"
@@ -175,30 +199,37 @@
 #include "UnityEngine_UnityEngine_Physics2D2540166467.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen4166282325.h"
 #include "UnityEngine_UnityEngine_Plane3727654732.h"
+#include "UnityEngine_UnityEngine_PlayMode1184682879.h"
 #include "UnityEngine_UnityEngine_PreferBinarySerialization2472773525.h"
 #include "UnityEngine_UnityEngine_PropertyAttribute2606999759.h"
-#include "UnityEngine_UnityEngine_Random1170710517.h"
-#include "UnityEngine_UnityEngine_RangeAttribute3336560921.h"
-#include "UnityEngine_UnityEngine_RangeInt2323401134.h"
-#include "UnityEngine_UnityEngine_Collider3497673348.h"
-#include "UnityEngine_UnityEngine_RaycastHit2D4063908774.h"
-#include "UnityEngine_UnityEngine_Collider2D646061738.h"
-#include "UnityEngine_UnityEngine_RectTransform3349966182.h"
-#include "UnityEngine_UnityEngine_RectTransform_ReapplyDrive2020713228.h"
-#include "UnityEngine_UnityEngine_RectTransform_Edge3306019089.h"
-#include "UnityEngine_UnityEngine_RectTransform_Axis3420330537.h"
-#include "UnityEngine_UnityEngine_RectTransformUtility2941082270.h"
-#include "UnityEngine_UnityEngine_Canvas209405766.h"
-#include "UnityEngine_UnityEngine_RemoteSettings392466225.h"
-#include "UnityEngine_UnityEngine_RemoteSettings_UpdatedEven3033456180.h"
-#include "UnityEngine_UnityEngine_Renderer257310565.h"
+#include "UnityEngine_UnityEngine_QualitySettings3238033062.h"
 
-// UnityEngine.Experimental.Director.ScriptPlayable
-struct ScriptPlayable_t4067966717;
-// UnityEngine.Experimental.Director.Playable
-struct Playable_t3667545548;
+// UnityEngine.Experimental.Director.AnimatorControllerPlayable
+struct AnimatorControllerPlayable_t4078305555;
+// UnityEngine.Experimental.Director.AnimationPlayable
+struct AnimationPlayable_t1693994278;
+// UnityEngine.RuntimeAnimatorController
+struct RuntimeAnimatorController_t670468573;
+// System.String
+struct String_t;
+// UnityEngine.AnimatorClipInfo[]
+struct AnimatorClipInfoU5BU5D_t2969332312;
+// System.Collections.Generic.List`1<UnityEngine.AnimatorClipInfo>
+struct List_1_t3274872481;
+// System.ArgumentNullException
+struct ArgumentNullException_t628810857;
 // System.Object
 struct Il2CppObject;
+// UnityEngine.AnimatorControllerParameter[]
+struct AnimatorControllerParameterU5BU5D_t1936965233;
+// UnityEngine.AnimatorControllerParameter
+struct AnimatorControllerParameter_t1381019216;
+// System.IndexOutOfRangeException
+struct IndexOutOfRangeException_t3527622107;
+// UnityEngine.Experimental.Director.Playable
+struct Playable_t3667545548;
+// UnityEngine.Experimental.Director.ScriptPlayable
+struct ScriptPlayable_t4067966717;
 // UnityEngine.Experimental.Rendering.IRenderPipeline
 struct IRenderPipeline_t2611978095;
 // UnityEngine.Experimental.Rendering.IRenderPipelineAsset
@@ -225,8 +256,6 @@ struct IAsyncResult_t1999651008;
 struct AsyncCallback_t163412349;
 // UnityEngine.GameObject
 struct GameObject_t1756533147;
-// System.String
-struct String_t;
 // UnityEngine.Object
 struct Object_t1021602117;
 // System.Type[]
@@ -315,14 +344,20 @@ struct ValueCollection_t984569266;
 struct Texture2D_t3542995729;
 // System.Reflection.MethodInfo
 struct MethodInfo_t;
+// UnityEngine.GUIText
+struct GUIText_t2411476300;
 // System.Exception
 struct Exception_t1927440687;
 // System.ArgumentException
 struct ArgumentException_t3259014390;
-// UnityEngine.IL2CPPStructAlignmentAttribute
-struct IL2CPPStructAlignmentAttribute_t130316838;
+// UnityEngine.HideInInspector
+struct HideInInspector_t2503583610;
 // System.Attribute
 struct Attribute_t542643598;
+// UnityEngine.IL2CPPStructAlignmentAttribute
+struct IL2CPPStructAlignmentAttribute_t130316838;
+// UnityEngine.Touch[]
+struct TouchU5BU5D_t3887265178;
 // UnityEngine.Internal.DefaultValueAttribute
 struct DefaultValueAttribute_t1027170048;
 // UnityEngine.Internal.ExcludeFromDocsAttribute
@@ -333,16 +368,20 @@ struct LocalNotification_t317971878;
 struct IDictionary_t596158605;
 // UnityEngine.iOS.RemoteNotification
 struct RemoteNotification_t2254252895;
+// UnityEngine.Joint
+struct Joint_t454317436;
+// UnityEngine.Rigidbody
+struct Rigidbody_t4233889191;
 // UnityEngine.Light
 struct Light_t494725636;
 // UnityEngine.Logger
 struct Logger_t3328995178;
 // UnityEngine.ILogHandler
 struct ILogHandler_t264057413;
+// UnityEngine.Shader
+struct Shader_t2430389951;
 // UnityEngine.MaterialPropertyBlock
 struct MaterialPropertyBlock_t3303648957;
-// System.IndexOutOfRangeException
-struct IndexOutOfRangeException_t3527622107;
 // UnityEngine.Mesh
 struct Mesh_t1356156583;
 // System.Int32[]
@@ -413,6 +452,8 @@ struct ParticleSystem_t3394631041;
 struct ParticleU5BU5D_t574222242;
 // UnityEngine.ParticleSystem/IteratorDelegate
 struct IteratorDelegate_t2419492168;
+// UnityEngine.AnimationCurve
+struct AnimationCurve_t3306541151;
 // UnityEngine.RaycastHit[]
 struct RaycastHitU5BU5D_t1214023521;
 // System.Collections.Generic.List`1<UnityEngine.Rigidbody2D>
@@ -421,22 +462,15 @@ struct List_1_t4166282325;
 struct PreferBinarySerialization_t2472773525;
 // UnityEngine.PropertyAttribute
 struct PropertyAttribute_t2606999759;
-// UnityEngine.RangeAttribute
-struct RangeAttribute_t3336560921;
-// UnityEngine.Collider
-struct Collider_t3497673348;
-// UnityEngine.Collider2D
-struct Collider2D_t646061738;
-// UnityEngine.RectTransform
-struct RectTransform_t3349966182;
-// UnityEngine.RectTransform/ReapplyDrivenProperties
-struct ReapplyDrivenProperties_t2020713228;
-// UnityEngine.Canvas
-struct Canvas_t209405766;
-// UnityEngine.RemoteSettings/UpdatedEventHandler
-struct UpdatedEventHandler_t3033456180;
-// UnityEngine.Renderer
-struct Renderer_t257310565;
+extern Il2CppClass* ArgumentNullException_t628810857_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1467286041;
+extern const uint32_t AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m3523103275_MetadataUsageId;
+extern const uint32_t AnimatorControllerPlayable_GetNextAnimatorClipInfo_m2439552509_MetadataUsageId;
+extern Il2CppClass* IndexOutOfRangeException_t3527622107_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1460639766;
+extern const uint32_t AnimatorControllerPlayable_GetParameter_m1109094904_MetadataUsageId;
+extern Il2CppClass* PlayableHandle_t1502856514_il2cpp_TypeInfo_var;
+extern const uint32_t PlayableHandle_Equals_m1435096530_MetadataUsageId;
 extern Il2CppClass* RenderPipelineManager_t984453155_il2cpp_TypeInfo_var;
 extern const uint32_t RenderPipelineManager_get_currentPipeline_m679160301_MetadataUsageId;
 extern const uint32_t RenderPipelineManager_set_currentPipeline_m3825706412_MetadataUsageId;
@@ -678,8 +712,12 @@ extern Il2CppCodeGenString* _stringLiteral4248023613;
 extern const uint32_t GUIUtility_CheckOnGUI_m4284398968_MetadataUsageId;
 extern const uint32_t GUIUtility__cctor_m46116445_MetadataUsageId;
 extern Il2CppClass* Input_t1785128008_il2cpp_TypeInfo_var;
+extern const uint32_t Input_GetKey_m3849524999_MetadataUsageId;
 extern const uint32_t Input_get_mousePosition_m146923508_MetadataUsageId;
 extern const uint32_t Input_get_mouseScrollDelta_m3430638853_MetadataUsageId;
+extern const uint32_t Input_get_acceleration_m2886343410_MetadataUsageId;
+extern Il2CppClass* TouchU5BU5D_t3887265178_il2cpp_TypeInfo_var;
+extern const uint32_t Input_get_touches_m388011594_MetadataUsageId;
 extern const uint32_t Input_GetTouch_m1463942798_MetadataUsageId;
 extern const uint32_t Input_get_compositionCursorPos_m1262302043_MetadataUsageId;
 extern const uint32_t Input_set_compositionCursorPos_m1615567306_MetadataUsageId;
@@ -704,13 +742,15 @@ extern const uint32_t Material_set_color_m577844242_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral4026354833;
 extern const uint32_t Material_get_mainTexture_m432794412_MetadataUsageId;
 extern const uint32_t Mathf_Lerp_m1686556575_MetadataUsageId;
+extern const uint32_t Mathf_LerpAngle_m3501252860_MetadataUsageId;
+extern const uint32_t Mathf_MoveTowards_m1130995897_MetadataUsageId;
 extern const uint32_t Mathf_Approximately_m1064446634_MetadataUsageId;
+extern const uint32_t Mathf_SmoothDamp_m1166236953_MetadataUsageId;
 extern const uint32_t Mathf_SmoothDamp_m1604773625_MetadataUsageId;
 extern const uint32_t Mathf_Repeat_m943844734_MetadataUsageId;
 extern const uint32_t Mathf_InverseLerp_m55890283_MetadataUsageId;
 extern Il2CppClass* MathfInternal_t715669973_il2cpp_TypeInfo_var;
 extern const uint32_t Mathf__cctor_m326403828_MetadataUsageId;
-extern Il2CppClass* IndexOutOfRangeException_t3527622107_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1338169977;
 extern const uint32_t Matrix4x4_get_Item_m3317262185_MetadataUsageId;
 extern const uint32_t Matrix4x4_set_Item_m870949794_MetadataUsageId;
@@ -817,51 +857,93 @@ extern const uint32_t Object_FindObjectOfType_m2330404063_MetadataUsageId;
 extern const uint32_t Object_op_Equality_m3764089466_MetadataUsageId;
 extern const uint32_t Object_op_Inequality_m2402264703_MetadataUsageId;
 extern const uint32_t Object__cctor_m2991092887_MetadataUsageId;
+extern Il2CppClass* MinMaxCurve_t122563058_il2cpp_TypeInfo_var;
+extern const uint32_t MainModule_get_startLifetime_m3865400535_MetadataUsageId;
+struct AnimationCurve_t3306541151_marshaled_pinvoke;
+struct AnimationCurve_t3306541151;;
+struct AnimationCurve_t3306541151_marshaled_pinvoke;;
+extern Il2CppClass* AnimationCurve_t3306541151_il2cpp_TypeInfo_var;
+extern const uint32_t MinMaxCurve_t122563058_pinvoke_FromNativeMethodDefinition_MetadataUsageId;
+struct AnimationCurve_t3306541151_marshaled_com;
+struct AnimationCurve_t3306541151_marshaled_com;;
 extern Il2CppClass* List_1_t4166282325_il2cpp_TypeInfo_var;
 extern Il2CppClass* Physics2D_t2540166467_il2cpp_TypeInfo_var;
 extern const MethodInfo* List_1__ctor_m2338710192_MethodInfo_var;
 extern const uint32_t Physics2D__cctor_m3532647019_MetadataUsageId;
 extern const uint32_t Plane_Raycast_m2870142810_MetadataUsageId;
-extern Il2CppClass* Quaternion_t4030073918_il2cpp_TypeInfo_var;
-extern const uint32_t Quaternion_Equals_m3730391696_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral3587482509;
-extern const uint32_t Quaternion_ToString_m2638853272_MetadataUsageId;
-extern Il2CppClass* Vector3_t2243707580_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral1807026812;
-extern const uint32_t Ray_ToString_m2019179238_MetadataUsageId;
-extern Il2CppClass* Rect_t3681755626_il2cpp_TypeInfo_var;
-extern const uint32_t Rect_Equals_m3806390726_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral1853817013;
-extern const uint32_t Rect_ToString_m2728794442_MetadataUsageId;
-extern Il2CppClass* Il2CppComObject_il2cpp_TypeInfo_var;
-extern const uint32_t RectOffset_t3387826427_pinvoke_FromNativeMethodDefinition_MetadataUsageId;
-extern const uint32_t RectOffset_t3387826427_com_FromNativeMethodDefinition_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral3899275604;
-extern const uint32_t RectOffset_ToString_m1281517011_MetadataUsageId;
-extern Il2CppClass* RectTransform_t3349966182_il2cpp_TypeInfo_var;
-extern Il2CppClass* ReapplyDrivenProperties_t2020713228_il2cpp_TypeInfo_var;
-extern const uint32_t RectTransform_add_reapplyDrivenProperties_m1603911943_MetadataUsageId;
-extern const uint32_t RectTransform_remove_reapplyDrivenProperties_m4209881182_MetadataUsageId;
-extern const uint32_t RectTransform_SendReapplyDrivenProperties_m90487700_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral895140023;
-extern const uint32_t RectTransform_GetLocalCorners_m1836626405_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral3518247078;
-extern const uint32_t RectTransform_GetWorldCorners_m3873546362_MetadataUsageId;
-extern const uint32_t RectTransform_GetParentSize_m1571597933_MetadataUsageId;
-extern Il2CppClass* RectTransformUtility_t2941082270_il2cpp_TypeInfo_var;
-extern const uint32_t RectTransformUtility_ScreenPointToWorldPointInRectangle_m2304638810_MetadataUsageId;
-extern const uint32_t RectTransformUtility_ScreenPointToLocalPointInRectangle_m2398565080_MetadataUsageId;
-extern const uint32_t RectTransformUtility_ScreenPointToRay_m1842507230_MetadataUsageId;
-extern const uint32_t RectTransformUtility_FlipLayoutOnAxis_m3920364518_MetadataUsageId;
-extern const uint32_t RectTransformUtility_FlipLayoutAxes_m532748168_MetadataUsageId;
-extern const uint32_t RectTransformUtility_RectangleContainsScreenPoint_m1244853728_MetadataUsageId;
-extern const uint32_t RectTransformUtility_PixelAdjustPoint_m560908615_MetadataUsageId;
-extern const uint32_t RectTransformUtility_PixelAdjustRect_m93024038_MetadataUsageId;
-extern Il2CppClass* Vector3U5BU5D_t1172311765_il2cpp_TypeInfo_var;
-extern const uint32_t RectTransformUtility__cctor_m1866023382_MetadataUsageId;
-extern Il2CppClass* RemoteSettings_t392466225_il2cpp_TypeInfo_var;
-extern const uint32_t RemoteSettings_CallOnUpdate_m1624968574_MetadataUsageId;
 
+// UnityEngine.AnimatorClipInfo[]
+struct AnimatorClipInfoU5BU5D_t2969332312  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) AnimatorClipInfo_t3905751349  m_Items[1];
+
+public:
+	inline AnimatorClipInfo_t3905751349  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AnimatorClipInfo_t3905751349 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AnimatorClipInfo_t3905751349  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline AnimatorClipInfo_t3905751349  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AnimatorClipInfo_t3905751349 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AnimatorClipInfo_t3905751349  value)
+	{
+		m_Items[index] = value;
+	}
+};
+// UnityEngine.AnimatorControllerParameter[]
+struct AnimatorControllerParameterU5BU5D_t1936965233  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) AnimatorControllerParameter_t1381019216 * m_Items[1];
+
+public:
+	inline AnimatorControllerParameter_t1381019216 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AnimatorControllerParameter_t1381019216 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AnimatorControllerParameter_t1381019216 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline AnimatorControllerParameter_t1381019216 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AnimatorControllerParameter_t1381019216 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AnimatorControllerParameter_t1381019216 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
 // UnityEngine.Camera[]
 struct CameraU5BU5D_t3079764780  : public Il2CppArray
 {
@@ -1082,6 +1164,41 @@ public:
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// UnityEngine.Touch[]
+struct TouchU5BU5D_t3887265178  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) Touch_t407273883  m_Items[1];
+
+public:
+	inline Touch_t407273883  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Touch_t407273883 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Touch_t407273883  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Touch_t407273883  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Touch_t407273883 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Touch_t407273883  value)
+	{
+		m_Items[index] = value;
 	}
 };
 // System.Int32[]
@@ -1420,6 +1537,12 @@ extern "C" void GUIStyle_t1799908754_marshal_pinvoke_cleanup(GUIStyle_t179990875
 extern "C" void GUIStyle_t1799908754_marshal_com(const GUIStyle_t1799908754& unmarshaled, GUIStyle_t1799908754_marshaled_com& marshaled);
 extern "C" void GUIStyle_t1799908754_marshal_com_back(const GUIStyle_t1799908754_marshaled_com& marshaled, GUIStyle_t1799908754& unmarshaled);
 extern "C" void GUIStyle_t1799908754_marshal_com_cleanup(GUIStyle_t1799908754_marshaled_com& marshaled);
+extern "C" void AnimationCurve_t3306541151_marshal_pinvoke(const AnimationCurve_t3306541151& unmarshaled, AnimationCurve_t3306541151_marshaled_pinvoke& marshaled);
+extern "C" void AnimationCurve_t3306541151_marshal_pinvoke_back(const AnimationCurve_t3306541151_marshaled_pinvoke& marshaled, AnimationCurve_t3306541151& unmarshaled);
+extern "C" void AnimationCurve_t3306541151_marshal_pinvoke_cleanup(AnimationCurve_t3306541151_marshaled_pinvoke& marshaled);
+extern "C" void AnimationCurve_t3306541151_marshal_com(const AnimationCurve_t3306541151& unmarshaled, AnimationCurve_t3306541151_marshaled_com& marshaled);
+extern "C" void AnimationCurve_t3306541151_marshal_com_back(const AnimationCurve_t3306541151_marshaled_com& marshaled, AnimationCurve_t3306541151& unmarshaled);
+extern "C" void AnimationCurve_t3306541151_marshal_com_cleanup(AnimationCurve_t3306541151_marshaled_com& marshaled);
 
 // System.Void System.Action`1<System.Object>::Invoke(!0)
 extern "C"  void Action_1_Invoke_m4180501989_gshared (Action_1_t2491248677 * __this, Il2CppObject * p0, const MethodInfo* method);
@@ -1492,6 +1615,208 @@ extern "C"  void UnityEvent_1__ctor_m2948712401_gshared (UnityEvent_1_t211022746
 // System.Void UnityEngine.Events.UnityEvent`1<System.Object>::.ctor()
 extern "C"  void UnityEvent_1__ctor_m2073978020_gshared (UnityEvent_1_t2727799310 * __this, const MethodInfo* method);
 
+// System.Void UnityEngine.Experimental.Director.AnimationPlayable::.ctor()
+extern "C"  void AnimationPlayable__ctor_m1288299781 (AnimationPlayable_t1693994278 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.RuntimeAnimatorController UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  RuntimeAnimatorController_t670468573 * AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  float AnimatorControllerPlayable_GetFloatString_m2999633302 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_GetFloatID_m3274868729 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetFloatString_m3937146789 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetFloatID_m2632606700 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_GetBoolString_m2552769404 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_GetBoolID_m2566184981 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_SetBoolString_m1314460333 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_SetBoolID_m1141253014 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_GetIntegerString_m3063601436 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_GetIntegerID_m756947419 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetIntegerString_m1750228335 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetIntegerID_m1774408598 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_SetTriggerString_m2313149510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetTriggerID_m290818743 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_ResetTriggerString_m1669955779 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_ResetTriggerID_m326518904 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveString_m4036987523 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveID_m4183631446 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_GetLayerCountInternal_m467020652 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_GetLayerNameInternal_m3717310182 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_GetLayerIndexInternal_m696260605 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_GetLayerWeightInternal_m2558846198 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetLayerWeightInternal_m1987718751 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetCurrentAnimatorStateInfoInternal_m1841547606 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetNextAnimatorStateInfoInternal_m928343784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_GetAnimatorTransitionInfoInternal_m2884059009 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetCurrentAnimatorClipInfoInternal_m2037167218 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.ArgumentNullException::.ctor(System.String)
+extern "C"  void ArgumentNullException__ctor_m3380712306 (ArgumentNullException_t628810857 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
+extern "C"  void AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131 (AnimatorControllerPlayable_t4078305555 * __this, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___isCurrent2, Il2CppObject * ___clips3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.AnimatorControllerPlayable,UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212 (Il2CppObject * __this /* static, unused */, AnimatorControllerPlayable_t4078305555 * ___self0, PlayableHandle_t1502856514 * ___handle1, int32_t ___layerIndex2, bool ___isCurrent3, Il2CppObject * ___clips4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  int32_t AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetNextAnimatorClipInfoInternal_m2063705906 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_ResolveHashInternal_m4066573656 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_IsInTransitionInternal_m3004933857 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_GetParameterCountInternal_m3993919750 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_GetParametersArrayInternal_m851504719 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IndexOutOfRangeException::.ctor(System.String)
+extern "C"  void IndexOutOfRangeException__ctor_m1847153122 (IndexOutOfRangeException_t3527622107 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::StringToHash(System.String)
+extern "C"  int32_t AnimatorControllerPlayable_StringToHash_m223263502 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m2119841183 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m220517942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m3146661810 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2562520484 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2629510873 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_Play_m1100499576 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInternal_m3385259863 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_Play_m2286317581 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_HasStateInternal_m1905524675 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Object::.ctor()
+extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValid()
+extern "C"  bool PlayableHandle_IsValid_m40842953 (PlayableHandle_t1502856514 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  bool PlayableHandle_IsValidInternal_m1910030079 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  bool PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::CompareVersion(UnityEngine.Experimental.Director.PlayableHandle,UnityEngine.Experimental.Director.PlayableHandle)
+extern "C"  bool PlayableHandle_CompareVersion_m2333515486 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514  ___lhs0, PlayableHandle_t1502856514  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::Equals(System.Object)
+extern "C"  bool PlayableHandle_Equals_m1435096530 (PlayableHandle_t1502856514 * __this, Il2CppObject * ___p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 System.IntPtr::GetHashCode()
+extern "C"  int32_t IntPtr_GetHashCode_m1174575389 (IntPtr_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 System.Int32::GetHashCode()
+extern "C"  int32_t Int32_GetHashCode_m1381647448 (int32_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Experimental.Director.PlayableHandle::GetHashCode()
+extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282 (PlayableHandle_t1502856514 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
+extern "C"  bool IntPtr_op_Equality_m1573482188 (Il2CppObject * __this /* static, unused */, IntPtr_t p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Experimental.Director.Playable::.ctor()
 extern "C"  void Playable__ctor_m334077411 (Playable_t3667545548 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Experimental.Rendering.RenderPipelineManager::set_currentPipeline(UnityEngine.Experimental.Rendering.IRenderPipeline)
@@ -1520,10 +1845,16 @@ extern "C"  void GameObject_Internal_CreateGameObject_m3428198595 (Il2CppObject 
 extern "C"  Component_t3819376471 * GameObject_AddComponent_m3757565614 (GameObject_t1756533147 * __this, Type_t * ___componentType0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Array UnityEngine.GameObject::GetComponentsInternal(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Object)
 extern "C"  Il2CppArray * GameObject_GetComponentsInternal_m3486524399 (GameObject_t1756533147 * __this, Type_t * ___type0, bool ___useSearchTypeAsArrayReturnType1, bool ___recursive2, bool ___includeInactive3, bool ___reverse4, Il2CppObject * ___resultList5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+extern "C"  void GameObject_BroadcastMessage_m3472370570 (GameObject_t1756533147 * __this, String_t* ___methodName0, Il2CppObject * ___parameter1, int32_t ___options2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 extern "C"  Component_t3819376471 * GameObject_Internal_AddComponentWithType_m214735204 (GameObject_t1756533147 * __this, Type_t * ___componentType0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Object::.ctor()
-extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Gizmos::INTERNAL_CALL_DrawLine(UnityEngine.Vector3&,UnityEngine.Vector3&)
+extern "C"  void Gizmos_INTERNAL_CALL_DrawLine_m1667943171 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___from0, Vector3_t2243707580 * ___to1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Gizmos::INTERNAL_CALL_DrawWireSphere(UnityEngine.Vector3&,System.Single)
+extern "C"  void Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___center0, float ___radius1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Gizmos::INTERNAL_set_color(UnityEngine.Color&)
+extern "C"  void Gizmos_INTERNAL_set_color_m3356916140 (Il2CppObject * __this /* static, unused */, Color_t2020392075 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Gradient::Init()
 extern "C"  void Gradient_Init_m4156899649 (Gradient_t3600583008 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Gradient::Cleanup()
@@ -1968,6 +2299,8 @@ extern "C"  int32_t GUIUtility_Internal_GetGUIDepth_m1699616910 (Il2CppObject * 
 extern "C"  void ArgumentException__ctor_m3739475201 (ArgumentException_t3259014390 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2 UnityEngine.Vector2::get_zero()
 extern "C"  Vector2_t2243707579  Vector2_get_zero_m3966848876 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Attribute::.ctor()
+extern "C"  void Attribute__ctor_m1730479323 (Attribute_t542643598 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.HumanBone::get_boneName()
 extern "C"  String_t* HumanBone_get_boneName_m1281040133 (HumanBone_t1529896151 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.HumanBone::set_boneName(System.String)
@@ -1976,12 +2309,18 @@ extern "C"  void HumanBone_set_boneName_m2410239828 (HumanBone_t1529896151 * __t
 extern "C"  String_t* HumanBone_get_humanName_m2091758568 (HumanBone_t1529896151 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.HumanBone::set_humanName(System.String)
 extern "C"  void HumanBone_set_humanName_m1385708911 (HumanBone_t1529896151 * __this, String_t* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Attribute::.ctor()
-extern "C"  void Attribute__ctor_m1730479323 (Attribute_t542643598 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Input::GetKeyInt(System.Int32)
+extern "C"  bool Input_GetKeyInt_m4143570188 (Il2CppObject * __this /* static, unused */, int32_t ___key0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Input::INTERNAL_get_mousePosition(UnityEngine.Vector3&)
 extern "C"  void Input_INTERNAL_get_mousePosition_m2302165941 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Input::INTERNAL_get_mouseScrollDelta(UnityEngine.Vector2&)
 extern "C"  void Input_INTERNAL_get_mouseScrollDelta_m1140491498 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Input::INTERNAL_get_acceleration(UnityEngine.Vector3&)
+extern "C"  void Input_INTERNAL_get_acceleration_m292520951 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Input::get_touchCount()
+extern "C"  int32_t Input_get_touchCount_m2050827666 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Touch UnityEngine.Input::GetTouch(System.Int32)
+extern "C"  Touch_t407273883  Input_GetTouch_m1463942798 (Il2CppObject * __this /* static, unused */, int32_t ___index0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Input::INTERNAL_CALL_GetTouch(System.Int32,UnityEngine.Touch&)
 extern "C"  void Input_INTERNAL_CALL_GetTouch_m1737132542 (Il2CppObject * __this /* static, unused */, int32_t ___index0, Touch_t407273883 * ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Input::INTERNAL_get_compositionCursorPos(UnityEngine.Vector2&)
@@ -2010,6 +2349,8 @@ extern "C"  void LocalNotification_Destroy_m215220946 (LocalNotification_t317971
 extern "C"  void DateTime__ctor_m3270618252 (DateTime_t693205669 * __this, int32_t p0, int32_t p1, int32_t p2, int32_t p3, int32_t p4, int32_t p5, int32_t p6, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.iOS.RemoteNotification::Destroy()
 extern "C"  void RemoteNotification_Destroy_m1272240769 (RemoteNotification_t2254252895 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Joint::INTERNAL_set_anchor(UnityEngine.Vector3&)
+extern "C"  void Joint_INTERNAL_set_anchor_m3684652072 (Joint_t454317436 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Keyframe::.ctor(System.Single,System.Single)
 extern "C"  void Keyframe__ctor_m2042404667 (Keyframe_t1449471340 * __this, float ___time0, float ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Keyframe::.ctor(System.Single,System.Single,System.Single,System.Single)
@@ -2102,6 +2443,14 @@ extern "C"  void MaterialPropertyBlock_SetColorImpl_m2316982234 (MaterialPropert
 extern "C"  double Math_Log_m3325929366 (Il2CppObject * __this /* static, unused */, double p0, double p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp01(System.Single)
 extern "C"  float Mathf_Clamp01_m3888954684 (Il2CppObject * __this /* static, unused */, float ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Mathf::Repeat(System.Single,System.Single)
+extern "C"  float Mathf_Repeat_m943844734 (Il2CppObject * __this /* static, unused */, float ___t0, float ___length1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Mathf::Sign(System.Single)
+extern "C"  float Mathf_Sign_m2039143327 (Il2CppObject * __this /* static, unused */, float ___f0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Time::get_deltaTime()
+extern "C"  float Time_get_deltaTime_m2233168104 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Mathf::SmoothDamp(System.Single,System.Single,System.Single&,System.Single,System.Single,System.Single)
+extern "C"  float Mathf_SmoothDamp_m1604773625 (Il2CppObject * __this /* static, unused */, float ___current0, float ___target1, float* ___currentVelocity2, float ___smoothTime3, float ___maxSpeed4, float ___deltaTime5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Matrix4x4::INTERNAL_CALL_TRS(UnityEngine.Vector3&,UnityEngine.Quaternion&,UnityEngine.Vector3&,UnityEngine.Matrix4x4&)
 extern "C"  void Matrix4x4_INTERNAL_CALL_TRS_m2077933669 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___pos0, Quaternion_t4030073918 * ___q1, Vector3_t2243707580 * ___s2, Matrix4x4_t2933234003 * ___value3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Matrix4x4::get_Item(System.Int32)
@@ -2112,8 +2461,6 @@ extern "C"  float Matrix4x4_get_Item_m312280350 (Matrix4x4_t2933234003 * __this,
 extern "C"  void Matrix4x4_set_Item_m870949794 (Matrix4x4_t2933234003 * __this, int32_t ___index0, float ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Matrix4x4::set_Item(System.Int32,System.Int32,System.Single)
 extern "C"  void Matrix4x4_set_Item_m1035113911 (Matrix4x4_t2933234003 * __this, int32_t ___row0, int32_t ___column1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.IndexOutOfRangeException::.ctor(System.String)
-extern "C"  void IndexOutOfRangeException__ctor_m1847153122 (IndexOutOfRangeException_t3527622107 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector4 UnityEngine.Matrix4x4::GetColumn(System.Int32)
 extern "C"  Vector4_t2243707581  Matrix4x4_GetColumn_m1367096730 (Matrix4x4_t2933234003 * __this, int32_t ___i0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Vector4::GetHashCode()
@@ -2262,8 +2609,6 @@ extern "C"  void Object_Destroy_m4279412553 (Il2CppObject * __this /* static, un
 extern "C"  void Object_DestroyImmediate_m3563317232 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * ___obj0, bool ___allowDestroyingAssets1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::DestroyObject(UnityEngine.Object,System.Single)
 extern "C"  void Object_DestroyObject_m282495858 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * ___obj0, float ___t1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
-extern "C"  bool IntPtr_op_Equality_m1573482188 (Il2CppObject * __this /* static, unused */, IntPtr_t p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Object::GetOffsetOfInstanceIDInCPlusPlusObject()
 extern "C"  int32_t Object_GetOffsetOfInstanceIDInCPlusPlusObject_m1587840561 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int64 System.IntPtr::ToInt64()
@@ -2298,8 +2643,24 @@ extern "C"  Object_t1021602117 * Object_Instantiate_m2489341053 (Il2CppObject * 
 extern "C"  Object_t1021602117 * Object_Internal_CloneSingleWithParent_m665572246 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * ___data0, Transform_t3275118058 * ___parent1, bool ___worldPositionStays2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
 extern "C"  ObjectU5BU5D_t4217747464* Object_FindObjectsOfType_m2121813744 (Il2CppObject * __this /* static, unused */, Type_t * ___type0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/MainModule::.ctor(UnityEngine.ParticleSystem)
+extern "C"  void MainModule__ctor_m4099059742 (MainModule_t6751348 * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/EmissionModule::.ctor(UnityEngine.ParticleSystem)
+extern "C"  void EmissionModule__ctor_m1076689768 (EmissionModule_t2748003162 * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)
+extern "C"  void EmissionModule_SetEnabled_m1102718738 (Il2CppObject * __this /* static, unused */, ParticleSystem_t3394631041 * ___system0, bool ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/EmissionModule::set_enabled(System.Boolean)
+extern "C"  void EmissionModule_set_enabled_m4266189783 (EmissionModule_t2748003162 * __this, bool ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.ParticleSystem/IteratorDelegate::Invoke(UnityEngine.ParticleSystem)
 extern "C"  bool IteratorDelegate_Invoke_m3389138368 (IteratorDelegate_t2419492168 * __this, ParticleSystem_t3394631041 * ___ps0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/MainModule::GetStartLifetime(UnityEngine.ParticleSystem,UnityEngine.ParticleSystem/MinMaxCurve&)
+extern "C"  void MainModule_GetStartLifetime_m3062333575 (Il2CppObject * __this /* static, unused */, ParticleSystem_t3394631041 * ___system0, MinMaxCurve_t122563058 * ___curve1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.ParticleSystem/MinMaxCurve UnityEngine.ParticleSystem/MainModule::get_startLifetime()
+extern "C"  MinMaxCurve_t122563058  MainModule_get_startLifetime_m3865400535 (MainModule_t6751348 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AnimationCurve::.ctor()
+extern "C"  void AnimationCurve__ctor_m3707994114 (AnimationCurve_t3306541151 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.ParticleSystem/MinMaxCurve::get_constant()
+extern "C"  float MinMaxCurve_get_constant_m3247355635 (MinMaxCurve_t122563058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.ParticleSystem/Particle::set_position(UnityEngine.Vector3)
 extern "C"  void Particle_set_position_m3680513126 (Particle_t250075699 * __this, Vector3_t2243707580  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
@@ -2308,6 +2669,8 @@ extern "C"  void Vector3__ctor_m2638739322 (Vector3_t2243707580 * __this, float 
 extern "C"  void Particle_set_startSize_m2457836830 (Particle_t250075699 * __this, float ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.ParticleSystem/Particle::set_startColor(UnityEngine.Color32)
 extern "C"  void Particle_set_startColor_m3936512348 (Particle_t250075699 * __this, Color32_t874517518  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Physics::INTERNAL_get_gravity(UnityEngine.Vector3&)
+extern "C"  void Physics_INTERNAL_get_gravity_m3802008392 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C"  bool Physics_Raycast_m3475924638 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, float ___maxDistance2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Physics::Internal_RaycastTest(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
@@ -2330,8 +2693,12 @@ extern "C"  RaycastHitU5BU5D_t1214023521* Physics_RaycastAll_m410413656 (Il2CppO
 extern "C"  RaycastHitU5BU5D_t1214023521* Physics_RaycastAll_m3908263591 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, float ___maxDistance2, int32_t ___layermask3, int32_t ___queryTriggerInteraction4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.RaycastHit[] UnityEngine.Physics::INTERNAL_CALL_RaycastAll(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C"  RaycastHitU5BU5D_t1214023521* Physics_INTERNAL_CALL_RaycastAll_m2126789092 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___origin0, Vector3_t2243707580 * ___direction1, float ___maxDistance2, int32_t ___layermask3, int32_t ___queryTriggerInteraction4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Physics::Internal_CapsuleCast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C"  bool Physics_Internal_CapsuleCast_m1833501922 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___point10, Vector3_t2243707580  ___point21, float ___radius2, Vector3_t2243707580  ___direction3, RaycastHit_t87180320 * ___hitInfo4, float ___maxDistance5, int32_t ___layermask6, int32_t ___queryTriggerInteraction7, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C"  bool Physics_INTERNAL_CALL_Internal_Raycast_m93849932 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___origin0, Vector3_t2243707580 * ___direction1, RaycastHit_t87180320 * ___hitInfo2, float ___maxDistance3, int32_t ___layermask4, int32_t ___queryTriggerInteraction5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_CapsuleCast(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C"  bool Physics_INTERNAL_CALL_Internal_CapsuleCast_m4097719249 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___point10, Vector3_t2243707580 * ___point21, float ___radius2, Vector3_t2243707580 * ___direction3, RaycastHit_t87180320 * ___hitInfo4, float ___maxDistance5, int32_t ___layermask6, int32_t ___queryTriggerInteraction7, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_RaycastTest(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C"  bool Physics_INTERNAL_CALL_Internal_RaycastTest_m3440840981 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___origin0, Vector3_t2243707580 * ___direction1, float ___maxDistance2, int32_t ___layermask3, int32_t ___queryTriggerInteraction4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Collections.Generic.List`1<UnityEngine.Rigidbody2D>::.ctor()
@@ -2350,209 +2717,2321 @@ extern "C"  float Plane_get_distance_m1834776091 (Plane_t3727654732 * __this, co
 extern "C"  bool Mathf_Approximately_m1064446634 (Il2CppObject * __this /* static, unused */, float ___a0, float ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Plane::Raycast(UnityEngine.Ray,System.Single&)
 extern "C"  bool Plane_Raycast_m2870142810 (Plane_t3727654732 * __this, Ray_t2469606224  ___ray0, float* ___enter1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)
-extern "C"  void Quaternion__ctor_m3196903881 (Quaternion_t4030073918 * __this, float ___x0, float ___y1, float ___z2, float ___w3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Quaternion::INTERNAL_CALL_Inverse(UnityEngine.Quaternion&,UnityEngine.Quaternion&)
-extern "C"  void Quaternion_INTERNAL_CALL_Inverse_m1043108654 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918 * ___rotation0, Quaternion_t4030073918 * ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
-extern "C"  Vector3_t2243707580  Vector3_op_Multiply_m1351554733 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___a0, float ___d1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Quaternion UnityEngine.Quaternion::Internal_FromEulerRad(UnityEngine.Vector3)
-extern "C"  Quaternion_t4030073918  Quaternion_Internal_FromEulerRad_m1121344272 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___euler0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Quaternion::INTERNAL_CALL_Internal_FromEulerRad(UnityEngine.Vector3&,UnityEngine.Quaternion&)
-extern "C"  void Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___euler0, Quaternion_t4030073918 * ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Quaternion::Dot(UnityEngine.Quaternion,UnityEngine.Quaternion)
-extern "C"  float Quaternion_Dot_m952616600 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___a0, Quaternion_t4030073918  ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Quaternion::op_Equality(UnityEngine.Quaternion,UnityEngine.Quaternion)
-extern "C"  bool Quaternion_op_Equality_m2308156925 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___lhs0, Quaternion_t4030073918  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 System.Single::GetHashCode()
-extern "C"  int32_t Single_GetHashCode_m3102305584 (float* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Quaternion::GetHashCode()
-extern "C"  int32_t Quaternion_GetHashCode_m2270520528 (Quaternion_t4030073918 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.Single::Equals(System.Single)
-extern "C"  bool Single_Equals_m3359827399 (float* __this, float p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Quaternion::Equals(System.Object)
-extern "C"  bool Quaternion_Equals_m3730391696 (Quaternion_t4030073918 * __this, Il2CppObject * ___other0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Quaternion::ToString()
-extern "C"  String_t* Quaternion_ToString_m2638853272 (Quaternion_t4030073918 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.PropertyAttribute::.ctor()
-extern "C"  void PropertyAttribute__ctor_m3663555848 (PropertyAttribute_t2606999759 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.RangeInt::get_end()
-extern "C"  int32_t RangeInt_get_end_m913869897 (RangeInt_t2323401134 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_normalized()
-extern "C"  Vector3_t2243707580  Vector3_get_normalized_m936072361 (Vector3_t2243707580 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Ray::.ctor(UnityEngine.Vector3,UnityEngine.Vector3)
-extern "C"  void Ray__ctor_m3379034047 (Ray_t2469606224 * __this, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
-extern "C"  Vector3_t2243707580  Vector3_op_Addition_m3146764857 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___a0, Vector3_t2243707580  ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Ray::GetPoint(System.Single)
-extern "C"  Vector3_t2243707580  Ray_GetPoint_m1353702366 (Ray_t2469606224 * __this, float ___distance0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Ray::ToString()
-extern "C"  String_t* Ray_ToString_m2019179238 (Ray_t2469606224 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.RaycastHit::get_point()
-extern "C"  Vector3_t2243707580  RaycastHit_get_point_m326143462 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.RaycastHit::get_normal()
-extern "C"  Vector3_t2243707580  RaycastHit_get_normal_m817665579 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.RaycastHit::get_distance()
-extern "C"  float RaycastHit_get_distance_m1178709367 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Collider UnityEngine.RaycastHit::get_collider()
-extern "C"  Collider_t3497673348 * RaycastHit_get_collider_m301198172 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_point()
-extern "C"  Vector2_t2243707579  RaycastHit2D_get_point_m442317739 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_normal()
-extern "C"  Vector2_t2243707579  RaycastHit2D_get_normal_m3768105386 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.RaycastHit2D::get_fraction()
-extern "C"  float RaycastHit2D_get_fraction_m1296150410 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Collider2D UnityEngine.RaycastHit2D::get_collider()
-extern "C"  Collider2D_t646061738 * RaycastHit2D_get_collider_m2568504212 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Rect::get_position()
-extern "C"  Vector2_t2243707579  Rect_get_position_m24550734 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Rect::get_center()
-extern "C"  Vector2_t2243707579  Rect_get_center_m3049923624 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Rect::get_xMin()
-extern "C"  float Rect_get_xMin_m1161102488 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Rect::get_yMin()
-extern "C"  float Rect_get_yMin_m1161103577 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Rect::get_min()
-extern "C"  Vector2_t2243707579  Rect_get_min_m2549872833 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Rect::get_max()
-extern "C"  Vector2_t2243707579  Rect_get_max_m96665935 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Rect::get_size()
-extern "C"  Vector2_t2243707579  Rect_get_size_m3833121112 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rect::set_xMin(System.Single)
-extern "C"  void Rect_set_xMin_m4214255623 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rect::set_yMin(System.Single)
-extern "C"  void Rect_set_yMin_m734445288 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rect::set_xMax(System.Single)
-extern "C"  void Rect_set_xMax_m3501625033 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rect::set_yMax(System.Single)
-extern "C"  void Rect_set_yMax_m21814698 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Rect::Contains(UnityEngine.Vector3)
-extern "C"  bool Rect_Contains_m1334685291 (Rect_t3681755626 * __this, Vector3_t2243707580  ___point0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Rect::Overlaps(UnityEngine.Rect)
-extern "C"  bool Rect_Overlaps_m210444568 (Rect_t3681755626 * __this, Rect_t3681755626  ___other0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Rect UnityEngine.Rect::OrderMinMax(UnityEngine.Rect)
-extern "C"  Rect_t3681755626  Rect_OrderMinMax_m1783437776 (Il2CppObject * __this /* static, unused */, Rect_t3681755626  ___rect0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Rect::Overlaps(UnityEngine.Rect,System.Boolean)
-extern "C"  bool Rect_Overlaps_m4145874649 (Rect_t3681755626 * __this, Rect_t3681755626  ___other0, bool ___allowInverse1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Rect::op_Equality(UnityEngine.Rect,UnityEngine.Rect)
-extern "C"  bool Rect_op_Equality_m2793663577 (Il2CppObject * __this /* static, unused */, Rect_t3681755626  ___lhs0, Rect_t3681755626  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Rect::GetHashCode()
-extern "C"  int32_t Rect_GetHashCode_m559954498 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Rect::Equals(System.Object)
-extern "C"  bool Rect_Equals_m3806390726 (Rect_t3681755626 * __this, Il2CppObject * ___other0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Rect::ToString()
-extern "C"  String_t* Rect_ToString_m2728794442 (Rect_t3681755626 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectOffset::Init()
-extern "C"  void RectOffset_Init_m4361650 (RectOffset_t3387826427 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectOffset::Cleanup()
-extern "C"  void RectOffset_Cleanup_m3198970074 (RectOffset_t3387826427 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_get_rect(UnityEngine.Rect&)
-extern "C"  void RectTransform_INTERNAL_get_rect_m1177342209 (RectTransform_t3349966182 * __this, Rect_t3681755626 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_get_anchorMin(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_anchorMin_m3180545469 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_set_anchorMin(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_anchorMin_m885423409 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_get_anchorMax(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_anchorMax_m834202955 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_set_anchorMax(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_anchorMax_m1551648727 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_get_anchoredPosition(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_anchoredPosition_m3564306187 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_set_anchoredPosition(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_anchoredPosition_m693024247 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_get_sizeDelta(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_sizeDelta_m3975625099 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_set_sizeDelta(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_sizeDelta_m1402803191 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_get_pivot(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_pivot_m3003734630 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::INTERNAL_set_pivot(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_pivot_m2764958706 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform/ReapplyDrivenProperties::Invoke(UnityEngine.RectTransform)
-extern "C"  void ReapplyDrivenProperties_Invoke_m1090213637 (ReapplyDrivenProperties_t2020713228 * __this, RectTransform_t3349966182 * ___driven0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Rect UnityEngine.RectTransform::get_rect()
-extern "C"  Rect_t3681755626  RectTransform_get_rect_m73954734 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::GetLocalCorners(UnityEngine.Vector3[])
-extern "C"  void RectTransform_GetLocalCorners_m1836626405 (RectTransform_t3349966182 * __this, Vector3U5BU5D_t1172311765* ___fourCornersArray0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Transform UnityEngine.Component::get_transform()
-extern "C"  Transform_t3275118058 * Component_get_transform_m2697483695 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Transform::TransformPoint(UnityEngine.Vector3)
-extern "C"  Vector3_t2243707580  Transform_TransformPoint_m3272254198 (Transform_t3275118058 * __this, Vector3_t2243707580  ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMin()
-extern "C"  Vector2_t2243707579  RectTransform_get_anchorMin_m1497323108 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Vector2::set_Item(System.Int32,System.Single)
-extern "C"  void Vector2_set_Item_m3881967114 (Vector2_t2243707579 * __this, int32_t ___index0, float ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::set_anchorMin(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_anchorMin_m4247668187 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMax()
-extern "C"  Vector2_t2243707579  RectTransform_get_anchorMax_m3816015142 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::set_anchorMax(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_anchorMax_m2955899993 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_sizeDelta()
-extern "C"  Vector2_t2243707579  RectTransform_get_sizeDelta_m2157326342 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::set_sizeDelta(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_sizeDelta_m2319668137 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchoredPosition()
-extern "C"  Vector2_t2243707579  RectTransform_get_anchoredPosition_m3570822376 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_pivot()
-extern "C"  Vector2_t2243707579  RectTransform_get_pivot_m759087479 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Vector2::get_Item(System.Int32)
-extern "C"  float Vector2_get_Item_m2792130561 (Vector2_t2243707579 * __this, int32_t ___index0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::set_anchoredPosition(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_anchoredPosition_m2077229449 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransform::GetParentSize()
-extern "C"  Vector2_t2243707579  RectTransform_GetParentSize_m1571597933 (RectTransform_t3349966182 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Transform UnityEngine.Transform::get_parent()
-extern "C"  Transform_t3275118058 * Transform_get_parent_m147407266 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector2::op_Implicit(UnityEngine.Vector2)
-extern "C"  Vector3_t2243707580  Vector2_op_Implicit_m176791411 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579  ___v0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Ray UnityEngine.RectTransformUtility::ScreenPointToRay(UnityEngine.Camera,UnityEngine.Vector2)
-extern "C"  Ray_t2469606224  RectTransformUtility_ScreenPointToRay_m1842507230 (Il2CppObject * __this /* static, unused */, Camera_t189460977 * ___cam0, Vector2_t2243707579  ___screenPos1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
-extern "C"  Quaternion_t4030073918  Transform_get_rotation_m1033555130 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_back()
-extern "C"  Vector3_t2243707580  Vector3_get_back_m4246539215 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)
-extern "C"  Vector3_t2243707580  Quaternion_op_Multiply_m1483423721 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___rotation0, Vector3_t2243707580  ___point1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Transform::get_position()
-extern "C"  Vector3_t2243707580  Transform_get_position_m1104419803 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.RectTransformUtility::ScreenPointToWorldPointInRectangle(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Camera,UnityEngine.Vector3&)
-extern "C"  bool RectTransformUtility_ScreenPointToWorldPointInRectangle_m2304638810 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, Vector2_t2243707579  ___screenPoint1, Camera_t189460977 * ___cam2, Vector3_t2243707580 * ___worldPoint3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Transform::InverseTransformPoint(UnityEngine.Vector3)
-extern "C"  Vector3_t2243707580  Transform_InverseTransformPoint_m2648491174 (Transform_t3275118058 * __this, Vector3_t2243707580  ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Vector2::op_Implicit(UnityEngine.Vector3)
-extern "C"  Vector2_t2243707579  Vector2_op_Implicit_m1064335535 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___v0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
-extern "C"  bool Object_op_Inequality_m2402264703 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * ___x0, Object_t1021602117 * ___y1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Ray UnityEngine.Camera::ScreenPointToRay(UnityEngine.Vector3)
-extern "C"  Ray_t2469606224  Camera_ScreenPointToRay_m614889538 (Camera_t189460977 * __this, Vector3_t2243707580  ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
-extern "C"  Vector3_t2243707580  Vector3_get_forward_m1201659139 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
-extern "C"  Transform_t3275118058 * Transform_GetChild_m3838588184 (Transform_t3275118058 * __this, int32_t ___index0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransformUtility::FlipLayoutOnAxis(UnityEngine.RectTransform,System.Int32,System.Boolean,System.Boolean)
-extern "C"  void RectTransformUtility_FlipLayoutOnAxis_m3920364518 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, int32_t ___axis1, bool ___keepPositioning2, bool ___recursive3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Transform::get_childCount()
-extern "C"  int32_t Transform_get_childCount_m881385315 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransform::set_pivot(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_pivot_m1360548980 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransformUtility::FlipLayoutAxes(UnityEngine.RectTransform,System.Boolean,System.Boolean)
-extern "C"  void RectTransformUtility_FlipLayoutAxes_m532748168 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, bool ___keepPositioning1, bool ___recursive2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.RectTransformUtility::GetTransposed(UnityEngine.Vector2)
-extern "C"  Vector2_t2243707579  RectTransformUtility_GetTransposed_m1770338235 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579  ___input0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.RectTransformUtility::INTERNAL_CALL_RectangleContainsScreenPoint(UnityEngine.RectTransform,UnityEngine.Vector2&,UnityEngine.Camera)
-extern "C"  bool RectTransformUtility_INTERNAL_CALL_RectangleContainsScreenPoint_m3362263993 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, Vector2_t2243707579 * ___screenPoint1, Camera_t189460977 * ___cam2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustPoint(UnityEngine.Vector2&,UnityEngine.Transform,UnityEngine.Canvas,UnityEngine.Vector2&)
-extern "C"  void RectTransformUtility_INTERNAL_CALL_PixelAdjustPoint_m2153046669 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579 * ___point0, Transform_t3275118058 * ___elementTransform1, Canvas_t209405766 * ___canvas2, Vector2_t2243707579 * ___value3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustRect(UnityEngine.RectTransform,UnityEngine.Canvas,UnityEngine.Rect&)
-extern "C"  void RectTransformUtility_INTERNAL_CALL_PixelAdjustRect_m1237215542 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rectTransform0, Canvas_t209405766 * ___canvas1, Rect_t3681755626 * ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.RemoteSettings/UpdatedEventHandler::Invoke()
-extern "C"  void UpdatedEventHandler_Invoke_m159598802 (UpdatedEventHandler_t3033456180 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::.ctor()
+extern "C"  void AnimatorControllerPlayable__ctor_m98486062 (AnimatorControllerPlayable_t4078305555 * __this, const MethodInfo* method)
+{
+	{
+		AnimationPlayable__ctor_m1288299781(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.Experimental.Director.PlayableHandle UnityEngine.Experimental.Director.AnimatorControllerPlayable::op_Implicit(UnityEngine.Experimental.Director.AnimatorControllerPlayable)
+extern "C"  PlayableHandle_t1502856514  AnimatorControllerPlayable_op_Implicit_m2653766077 (Il2CppObject * __this /* static, unused */, AnimatorControllerPlayable_t4078305555 * ___b0, const MethodInfo* method)
+{
+	PlayableHandle_t1502856514  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		AnimatorControllerPlayable_t4078305555 * L_0 = ___b0;
+		NullCheck(L_0);
+		PlayableHandle_t1502856514  L_1 = ((Playable_t3667545548 *)L_0)->get_handle_0();
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		PlayableHandle_t1502856514  L_2 = V_0;
+		return L_2;
+	}
+}
+// UnityEngine.RuntimeAnimatorController UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  RuntimeAnimatorController_t670468573 * AnimatorControllerPlayable_GetAnimatorControllerInternal_m3295942522 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	RuntimeAnimatorController_t670468573 * V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		RuntimeAnimatorController_t670468573 * L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		RuntimeAnimatorController_t670468573 * L_2 = V_0;
+		return L_2;
+	}
+}
+// UnityEngine.RuntimeAnimatorController UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  RuntimeAnimatorController_t670468573 * AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	typedef RuntimeAnimatorController_t670468573 * (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681_ftn) (PlayableHandle_t1502856514 *);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
+	return _il2cpp_icall_func(___handle0);
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloat(System.String)
+extern "C"  float AnimatorControllerPlayable_GetFloat_m3973018798 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		float L_2 = AnimatorControllerPlayable_GetFloatString_m2999633302(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		float L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloat(System.Int32)
+extern "C"  float AnimatorControllerPlayable_GetFloat_m1390479365 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		float L_2 = AnimatorControllerPlayable_GetFloatID_m3274868729(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		float L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloat(System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetFloat_m1976526821 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, float ___value1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		float L_2 = ___value1;
+		AnimatorControllerPlayable_SetFloatString_m3937146789(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloat(System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetFloat_m3591286820 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, float ___value1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		float L_2 = ___value1;
+		AnimatorControllerPlayable_SetFloatID_m2632606700(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBool(System.String)
+extern "C"  bool AnimatorControllerPlayable_GetBool_m3591753284 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		bool L_2 = AnimatorControllerPlayable_GetBoolString_m2552769404(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBool(System.Int32)
+extern "C"  bool AnimatorControllerPlayable_GetBool_m1148461985 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		bool L_2 = AnimatorControllerPlayable_GetBoolID_m2566184981(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBool(System.String,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_SetBool_m557806493 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		bool L_2 = ___value1;
+		AnimatorControllerPlayable_SetBoolString_m1314460333(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBool(System.Int32,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_SetBool_m1779744142 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, bool ___value1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		bool L_2 = ___value1;
+		AnimatorControllerPlayable_SetBoolID_m1141253014(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetInteger(System.String)
+extern "C"  int32_t AnimatorControllerPlayable_GetInteger_m4173276460 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		int32_t L_2 = AnimatorControllerPlayable_GetIntegerString_m3063601436(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetInteger(System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_GetInteger_m3742708739 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		int32_t L_2 = AnimatorControllerPlayable_GetIntegerID_m756947419(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetInteger(System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetInteger_m1311149575 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, int32_t ___value1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		int32_t L_2 = ___value1;
+		AnimatorControllerPlayable_SetIntegerString_m1750228335(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetInteger(System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetInteger_m1170756226 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, int32_t ___value1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		int32_t L_2 = ___value1;
+		AnimatorControllerPlayable_SetIntegerID_m1774408598(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTrigger(System.String)
+extern "C"  void AnimatorControllerPlayable_SetTrigger_m3144166126 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		AnimatorControllerPlayable_SetTriggerString_m2313149510(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTrigger(System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetTrigger_m4082809679 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		AnimatorControllerPlayable_SetTriggerID_m290818743(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTrigger(System.String)
+extern "C"  void AnimatorControllerPlayable_ResetTrigger_m1410782179 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		AnimatorControllerPlayable_ResetTriggerString_m1669955779(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTrigger(System.Int32)
+extern "C"  void AnimatorControllerPlayable_ResetTrigger_m2216540396 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		AnimatorControllerPlayable_ResetTriggerID_m326518904(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurve(System.String)
+extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurve_m1187113395 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___name0;
+		bool L_2 = AnimatorControllerPlayable_IsParameterControlledByCurveString_m4036987523(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurve(System.Int32)
+extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurve_m3222505226 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___id0;
+		bool L_2 = AnimatorControllerPlayable_IsParameterControlledByCurveID_m4183631446(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::get_layerCount()
+extern "C"  int32_t AnimatorControllerPlayable_get_layerCount_m3541790599 (AnimatorControllerPlayable_t4078305555 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = AnimatorControllerPlayable_GetLayerCountInternal_m467020652(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_0012;
+	}
+
+IL_0012:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_GetLayerCountInternal_m467020652 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255_ftn) (PlayableHandle_t1502856514 *);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
+	return _il2cpp_icall_func(___handle0);
+}
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_GetLayerNameInternal_m3717310182 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	String_t* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		String_t* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		String_t* L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef String_t* (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerName(System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_GetLayerName_m2571001466 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	String_t* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		String_t* L_2 = AnimatorControllerPlayable_GetLayerNameInternal_m3717310182(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		String_t* L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_GetLayerIndexInternal_m696260605 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___layerName1;
+		int32_t L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	return _il2cpp_icall_func(___handle0, ___layerName1);
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerIndex(System.String)
+extern "C"  int32_t AnimatorControllerPlayable_GetLayerIndex_m3450603267 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___layerName0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___layerName0;
+		int32_t L_2 = AnimatorControllerPlayable_GetLayerIndexInternal_m696260605(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_GetLayerWeightInternal_m2558846198 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		float L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		float L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef float (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerWeight(System.Int32)
+extern "C"  float AnimatorControllerPlayable_GetLayerWeight_m839112938 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		float L_2 = AnimatorControllerPlayable_GetLayerWeightInternal_m2558846198(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		float L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetLayerWeightInternal_m1987718751 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		float L_2 = ___weight2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944_ftn) (PlayableHandle_t1502856514 *, int32_t, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)");
+	_il2cpp_icall_func(___handle0, ___layerIndex1, ___weight2);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetLayerWeight(System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetLayerWeight_m795493633 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, float ___weight1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		float L_2 = ___weight1;
+		AnimatorControllerPlayable_SetLayerWeightInternal_m1987718751(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetCurrentAnimatorStateInfoInternal_m1841547606 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	AnimatorStateInfo_t2577870592  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		AnimatorStateInfo_t2577870592  L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef AnimatorStateInfo_t2577870592  (*AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorStateInfo(System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetCurrentAnimatorStateInfo_m689786022 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	AnimatorStateInfo_t2577870592  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_GetCurrentAnimatorStateInfoInternal_m1841547606(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		AnimatorStateInfo_t2577870592  L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetNextAnimatorStateInfoInternal_m928343784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	AnimatorStateInfo_t2577870592  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		AnimatorStateInfo_t2577870592  L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef AnimatorStateInfo_t2577870592  (*AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorStateInfo(System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetNextAnimatorStateInfo_m1349013420 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	AnimatorStateInfo_t2577870592  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_GetNextAnimatorStateInfoInternal_m928343784(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		AnimatorStateInfo_t2577870592  L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_GetAnimatorTransitionInfoInternal_m2884059009 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	AnimatorTransitionInfo_t2410896200  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		AnimatorTransitionInfo_t2410896200  L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		AnimatorTransitionInfo_t2410896200  L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef AnimatorTransitionInfo_t2410896200  (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorTransitionInfo(System.Int32)
+extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_GetAnimatorTransitionInfo_m1294266687 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	AnimatorTransitionInfo_t2410896200  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		AnimatorTransitionInfo_t2410896200  L_2 = AnimatorControllerPlayable_GetAnimatorTransitionInfoInternal_m2884059009(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		AnimatorTransitionInfo_t2410896200  L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetCurrentAnimatorClipInfoInternal_m2037167218 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef AnimatorClipInfoU5BU5D_t2969332312* (*AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfo(System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m663340294 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_GetCurrentAnimatorClipInfoInternal_m2037167218(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1<UnityEngine.AnimatorClipInfo>)
+extern "C"  void AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m3523103275 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, List_1_t3274872481 * ___clips1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m3523103275_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_t3274872481 * L_0 = ___clips1;
+		if (L_0)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		ArgumentNullException_t628810857 * L_1 = (ArgumentNullException_t628810857 *)il2cpp_codegen_object_new(ArgumentNullException_t628810857_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m3380712306(L_1, _stringLiteral1467286041, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0012:
+	{
+		PlayableHandle_t1502856514 * L_2 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_3 = ___layerIndex0;
+		List_1_t3274872481 * L_4 = ___clips1;
+		AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131(__this, L_2, L_3, (bool)1, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1<UnityEngine.AnimatorClipInfo>)
+extern "C"  void AnimatorControllerPlayable_GetNextAnimatorClipInfo_m2439552509 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, List_1_t3274872481 * ___clips1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AnimatorControllerPlayable_GetNextAnimatorClipInfo_m2439552509_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_t3274872481 * L_0 = ___clips1;
+		if (L_0)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		ArgumentNullException_t628810857 * L_1 = (ArgumentNullException_t628810857 *)il2cpp_codegen_object_new(ArgumentNullException_t628810857_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m3380712306(L_1, _stringLiteral1467286041, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0012:
+	{
+		PlayableHandle_t1502856514 * L_2 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_3 = ___layerIndex0;
+		List_1_t3274872481 * L_4 = ___clips1;
+		AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131(__this, L_2, L_3, (bool)0, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
+extern "C"  void AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131 (AnimatorControllerPlayable_t4078305555 * __this, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___isCurrent2, Il2CppObject * ___clips3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		bool L_2 = ___isCurrent2;
+		Il2CppObject * L_3 = ___clips3;
+		AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212(NULL /*static, unused*/, __this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.AnimatorControllerPlayable,UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212 (Il2CppObject * __this /* static, unused */, AnimatorControllerPlayable_t4078305555 * ___self0, PlayableHandle_t1502856514 * ___handle1, int32_t ___layerIndex2, bool ___isCurrent3, Il2CppObject * ___clips4, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212_ftn) (AnimatorControllerPlayable_t4078305555 *, PlayableHandle_t1502856514 *, int32_t, bool, Il2CppObject *);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.AnimatorControllerPlayable,UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)");
+	_il2cpp_icall_func(___self0, ___handle1, ___layerIndex2, ___isCurrent3, ___clips4);
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  int32_t AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		bool L_2 = ___current2;
+		int32_t L_3 = AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		int32_t L_4 = V_0;
+		return L_4;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097_ftn) (PlayableHandle_t1502856514 *, int32_t, bool);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1, ___current2);
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfoCount(System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_GetCurrentAnimatorClipInfoCount_m335090574 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		int32_t L_2 = AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390(NULL /*static, unused*/, L_0, L_1, (bool)1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfoCount(System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_GetNextAnimatorClipInfoCount_m2044259572 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		int32_t L_2 = AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390(NULL /*static, unused*/, L_0, L_1, (bool)0, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetNextAnimatorClipInfoInternal_m2063705906 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef AnimatorClipInfoU5BU5D_t2969332312* (*AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfo(System.Int32)
+extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetNextAnimatorClipInfo_m962214430 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_GetNextAnimatorClipInfoInternal_m2063705906(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResolveHash(System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_ResolveHash_m2472572196 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___hash0, const MethodInfo* method)
+{
+	String_t* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___hash0;
+		String_t* L_2 = AnimatorControllerPlayable_ResolveHashInternal_m4066573656(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		String_t* L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_ResolveHashInternal_m4066573656 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method)
+{
+	String_t* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___hash1;
+		String_t* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		String_t* L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method)
+{
+	typedef String_t* (*AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___hash1);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_IsInTransitionInternal_m3004933857 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
+{
+	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsInTransition(System.Int32)
+extern "C"  bool AnimatorControllerPlayable_IsInTransition_m4064534331 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		bool L_2 = AnimatorControllerPlayable_IsInTransitionInternal_m3004933857(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0013;
+	}
+
+IL_0013:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_GetParameterCountInternal_m3993919750 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209_ftn) (PlayableHandle_t1502856514 *);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
+	return _il2cpp_icall_func(___handle0);
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::get_parameterCount()
+extern "C"  int32_t AnimatorControllerPlayable_get_parameterCount_m993805465 (AnimatorControllerPlayable_t4078305555 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = AnimatorControllerPlayable_GetParameterCountInternal_m3993919750(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_0012;
+	}
+
+IL_0012:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_GetParametersArrayInternal_m851504719 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	AnimatorControllerParameterU5BU5D_t1936965233* V_0 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		AnimatorControllerParameterU5BU5D_t1936965233* L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		AnimatorControllerParameterU5BU5D_t1936965233* L_2 = V_0;
+		return L_2;
+	}
+}
+// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
+{
+	typedef AnimatorControllerParameterU5BU5D_t1936965233* (*AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534_ftn) (PlayableHandle_t1502856514 *);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
+	return _il2cpp_icall_func(___handle0);
+}
+// UnityEngine.AnimatorControllerParameter UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParameter(System.Int32)
+extern "C"  AnimatorControllerParameter_t1381019216 * AnimatorControllerPlayable_GetParameter_m1109094904 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___index0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AnimatorControllerPlayable_GetParameter_m1109094904_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	AnimatorControllerParameterU5BU5D_t1936965233* V_0 = NULL;
+	AnimatorControllerParameter_t1381019216 * V_1 = NULL;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		AnimatorControllerParameterU5BU5D_t1936965233* L_1 = AnimatorControllerPlayable_GetParametersArrayInternal_m851504719(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		int32_t L_2 = ___index0;
+		if ((((int32_t)L_2) >= ((int32_t)0)))
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		int32_t L_3 = ___index0;
+		AnimatorControllerParameterU5BU5D_t1936965233* L_4 = V_0;
+		NullCheck(L_4);
+		if ((((int32_t)L_3) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_4)->max_length)))))))
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		IndexOutOfRangeException_t3527622107 * L_5 = (IndexOutOfRangeException_t3527622107 *)il2cpp_codegen_object_new(IndexOutOfRangeException_t3527622107_il2cpp_TypeInfo_var);
+		IndexOutOfRangeException__ctor_m1847153122(L_5, _stringLiteral1460639766, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_0028:
+	{
+		AnimatorControllerParameterU5BU5D_t1936965233* L_6 = V_0;
+		int32_t L_7 = ___index0;
+		NullCheck(L_6);
+		int32_t L_8 = L_7;
+		AnimatorControllerParameter_t1381019216 * L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
+		V_1 = L_9;
+		goto IL_0031;
+	}
+
+IL_0031:
+	{
+		AnimatorControllerParameter_t1381019216 * L_10 = V_1;
+		return L_10;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::StringToHash(System.String)
+extern "C"  int32_t AnimatorControllerPlayable_StringToHash_m223263502 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_StringToHash_m223263502_ftn) (String_t*);
+	static AnimatorControllerPlayable_StringToHash_m223263502_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_StringToHash_m223263502_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::StringToHash(System.String)");
+	return _il2cpp_icall_func(___name0);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single,System.Int32)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m2203048040 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (0.0f);
+		String_t* L_0 = ___stateName0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = ___layer2;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m3978247231 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (0.0f);
+		V_1 = (-1);
+		String_t* L_0 = ___stateName0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = V_1;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___stateName0;
+		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		float L_3 = ___transitionDuration1;
+		int32_t L_4 = ___layer2;
+		float L_5 = ___fixedTime3;
+		AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818(NULL /*static, unused*/, L_0, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single,System.Int32)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m246216837 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (0.0f);
+		int32_t L_0 = ___stateNameHash0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = ___layer2;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m2153894334 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (0.0f);
+		V_1 = (-1);
+		int32_t L_0 = ___stateNameHash0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = V_1;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___stateNameHash0;
+		float L_2 = ___transitionDuration1;
+		int32_t L_3 = ___layer2;
+		float L_4 = ___fixedTime3;
+		AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		float L_2 = ___transitionDuration2;
+		int32_t L_3 = ___layer3;
+		float L_4 = ___fixedTime4;
+		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m3955067023 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (0.0f);
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		float L_2 = ___transitionDuration2;
+		int32_t L_3 = ___layer3;
+		float L_4 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m3729673154 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (0.0f);
+		V_1 = (-1);
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		float L_2 = ___transitionDuration2;
+		int32_t L_3 = V_1;
+		float L_4 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771_ftn) (PlayableHandle_t1502856514 *, int32_t, float, int32_t, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)");
+	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___transitionDuration2, ___layer3, ___fixedTime4);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single,System.Int32)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m2332797404 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		String_t* L_0 = ___stateName0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = ___layer2;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFade_m2119841183(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m437921439 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		String_t* L_0 = ___stateName0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = V_1;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFade_m2119841183(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m2119841183 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___stateName0;
+		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		float L_3 = ___transitionDuration1;
+		int32_t L_4 = ___layer2;
+		float L_5 = ___normalizedTime3;
+		AnimatorControllerPlayable_CrossFadeInternal_m220517942(NULL /*static, unused*/, L_0, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single,System.Int32)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m1243737073 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		int32_t L_0 = ___stateNameHash0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = ___layer2;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFade_m3146661810(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m949607638 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		int32_t L_0 = ___stateNameHash0;
+		float L_1 = ___transitionDuration1;
+		int32_t L_2 = V_1;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_CrossFade_m3146661810(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFade_m3146661810 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___stateNameHash0;
+		float L_2 = ___transitionDuration1;
+		int32_t L_3 = ___layer2;
+		float L_4 = ___normalizedTime3;
+		AnimatorControllerPlayable_CrossFadeInternal_m220517942(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m220517942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		float L_2 = ___transitionDuration2;
+		int32_t L_3 = ___layer3;
+		float L_4 = ___normalizedTime4;
+		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m622348039 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		float L_2 = ___transitionDuration2;
+		int32_t L_3 = ___layer3;
+		float L_4 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m3412201542 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		float L_2 = ___transitionDuration2;
+		int32_t L_3 = V_1;
+		float L_4 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831_ftn) (PlayableHandle_t1502856514 *, int32_t, float, int32_t, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)");
+	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___transitionDuration2, ___layer3, ___normalizedTime4);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m172593751 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		String_t* L_0 = ___stateName0;
+		int32_t L_1 = ___layer1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_PlayInFixedTime_m2562520484(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m3734997604 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		String_t* L_0 = ___stateName0;
+		int32_t L_1 = V_1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_PlayInFixedTime_m2562520484(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2562520484 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___stateName0;
+		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		int32_t L_3 = ___layer1;
+		float L_4 = ___fixedTime2;
+		AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167(NULL /*static, unused*/, L_0, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2966168794 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		int32_t L_0 = ___stateNameHash0;
+		int32_t L_1 = ___layer1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_PlayInFixedTime_m2629510873(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2493327565 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		int32_t L_0 = ___stateNameHash0;
+		int32_t L_1 = V_1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_PlayInFixedTime_m2629510873(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2629510873 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___stateNameHash0;
+		int32_t L_2 = ___layer1;
+		float L_3 = ___fixedTime2;
+		AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		int32_t L_2 = ___layer2;
+		float L_3 = ___fixedTime3;
+		AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m2047085454 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		int32_t L_2 = ___layer2;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m623452639 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		int32_t L_2 = V_1;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)");
+	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___layer2, ___fixedTime3);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_Play_m3114724599 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		String_t* L_0 = ___stateName0;
+		int32_t L_1 = ___layer1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_Play_m1100499576(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String)
+extern "C"  void AnimatorControllerPlayable_Play_m1337154648 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		String_t* L_0 = ___stateName0;
+		int32_t L_1 = V_1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_Play_m1100499576(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_Play_m1100499576 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		String_t* L_1 = ___stateName0;
+		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		int32_t L_3 = ___layer1;
+		float L_4 = ___normalizedTime2;
+		AnimatorControllerPlayable_PlayInternal_m3385259863(NULL /*static, unused*/, L_0, L_2, L_3, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_Play_m1350238866 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		int32_t L_0 = ___stateNameHash0;
+		int32_t L_1 = ___layer1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_Play_m2286317581(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32)
+extern "C"  void AnimatorControllerPlayable_Play_m4092315465 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		int32_t L_0 = ___stateNameHash0;
+		int32_t L_1 = V_1;
+		float L_2 = V_0;
+		AnimatorControllerPlayable_Play_m2286317581(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_Play_m2286317581 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___stateNameHash0;
+		int32_t L_2 = ___layer1;
+		float L_3 = ___normalizedTime2;
+		AnimatorControllerPlayable_PlayInternal_m3385259863(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_PlayInternal_m3385259863 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		int32_t L_2 = ___layer2;
+		float L_3 = ___normalizedTime3;
+		AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInternal_m2770955394 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		int32_t L_2 = ___layer2;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_PlayInternal_m4018423479 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		V_0 = (-std::numeric_limits<float>::infinity());
+		V_1 = (-1);
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___stateNameHash1;
+		int32_t L_2 = V_1;
+		float L_3 = V_0;
+		AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)");
+	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___layer2, ___normalizedTime3);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::HasState(System.Int32,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_HasState_m4036688937 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, int32_t ___stateID1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
+		int32_t L_1 = ___layerIndex0;
+		int32_t L_2 = ___stateID1;
+		bool L_3 = AnimatorControllerPlayable_HasStateInternal_m1905524675(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		bool L_4 = V_0;
+		return L_4;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_HasStateInternal_m1905524675 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___layerIndex1;
+		int32_t L_2 = ___stateID2;
+		bool L_3 = AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		bool L_4 = V_0;
+		return L_4;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method)
+{
+	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___layerIndex1, ___stateID2);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetFloatString_m3937146789 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		float L_2 = ___value2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790_ftn) (PlayableHandle_t1502856514 *, String_t*, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)");
+	_il2cpp_icall_func(___handle0, ___name1, ___value2);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_SetFloatID_m2632606700 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		float L_2 = ___value2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187_ftn) (PlayableHandle_t1502856514 *, int32_t, float);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)");
+	_il2cpp_icall_func(___handle0, ___id1, ___value2);
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  float AnimatorControllerPlayable_GetFloatString_m2999633302 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		float L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		float L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	typedef float (*AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	return _il2cpp_icall_func(___handle0, ___name1);
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_GetFloatID_m3274868729 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		float L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		float L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	typedef float (*AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___id1);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_SetBoolString_m1314460333 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		bool L_2 = ___value2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510_ftn) (PlayableHandle_t1502856514 *, String_t*, bool);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)");
+	_il2cpp_icall_func(___handle0, ___name1, ___value2);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_SetBoolID_m1141253014 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		bool L_2 = ___value2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503_ftn) (PlayableHandle_t1502856514 *, int32_t, bool);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)");
+	_il2cpp_icall_func(___handle0, ___id1, ___value2);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_GetBoolString_m2552769404 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	return _il2cpp_icall_func(___handle0, ___name1);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_GetBoolID_m2566184981 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___id1);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetIntegerString_m1750228335 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		int32_t L_2 = ___value2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784_ftn) (PlayableHandle_t1502856514 *, String_t*, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)");
+	_il2cpp_icall_func(___handle0, ___name1, ___value2);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetIntegerID_m1774408598 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		int32_t L_2 = ___value2;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)");
+	_il2cpp_icall_func(___handle0, ___id1, ___value2);
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_GetIntegerString_m3063601436 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		int32_t L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	return _il2cpp_icall_func(___handle0, ___name1);
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_GetIntegerID_m756947419 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		int32_t L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___id1);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_SetTriggerString_m2313149510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	_il2cpp_icall_func(___handle0, ___name1);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_SetTriggerID_m290818743 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	_il2cpp_icall_func(___handle0, ___id1);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_ResetTriggerString_m1669955779 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	_il2cpp_icall_func(___handle0, ___name1);
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_ResetTriggerID_m326518904 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	_il2cpp_icall_func(___handle0, ___id1);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveString_m4036987523 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		String_t* L_1 = ___name1;
+		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
+{
+	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406_ftn) (PlayableHandle_t1502856514 *, String_t*);
+	static AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
+	return _il2cpp_icall_func(___handle0, ___name1);
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveID_m4183631446 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___handle0;
+		int32_t L_1 = ___id1;
+		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
+extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
+{
+	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn) (PlayableHandle_t1502856514 *, int32_t);
+	static AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
+	return _il2cpp_icall_func(___handle0, ___id1);
+}
+// System.Void UnityEngine.Experimental.Director.Playable::.ctor()
+extern "C"  void Playable__ctor_m334077411 (Playable_t3667545548 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.Experimental.Director.PlayableHandle UnityEngine.Experimental.Director.Playable::op_Implicit(UnityEngine.Experimental.Director.Playable)
+extern "C"  PlayableHandle_t1502856514  Playable_op_Implicit_m1650048605 (Il2CppObject * __this /* static, unused */, Playable_t3667545548 * ___b0, const MethodInfo* method)
+{
+	PlayableHandle_t1502856514  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Playable_t3667545548 * L_0 = ___b0;
+		NullCheck(L_0);
+		PlayableHandle_t1502856514  L_1 = L_0->get_handle_0();
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		PlayableHandle_t1502856514  L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.Playable::IsValid()
+extern "C"  bool Playable_IsValid_m2102916683 (Playable_t3667545548 * __this, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = __this->get_address_of_handle_0();
+		bool L_1 = PlayableHandle_IsValid_m40842953(L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_0012;
+	}
+
+IL_0012:
+	{
+		bool L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValid()
+extern "C"  bool PlayableHandle_IsValid_m40842953 (PlayableHandle_t1502856514 * __this, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		bool L_0 = PlayableHandle_IsValidInternal_m1910030079(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		bool L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  bool PlayableHandle_IsValid_m40842953_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
+	return PlayableHandle_IsValid_m40842953(_thisAdjusted, method);
+}
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  bool PlayableHandle_IsValidInternal_m1910030079 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		PlayableHandle_t1502856514 * L_0 = ___playable0;
+		bool L_1 = PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		bool L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
+extern "C"  bool PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method)
+{
+	typedef bool (*PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn) (PlayableHandle_t1502856514 *);
+	static PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
+	return _il2cpp_icall_func(___playable0);
+}
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::Equals(System.Object)
+extern "C"  bool PlayableHandle_Equals_m1435096530 (PlayableHandle_t1502856514 * __this, Il2CppObject * ___p0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (PlayableHandle_Equals_m1435096530_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		Il2CppObject * L_0 = ___p0;
+		if (((Il2CppObject *)IsInstSealed(L_0, PlayableHandle_t1502856514_il2cpp_TypeInfo_var)))
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		V_0 = (bool)0;
+		goto IL_002a;
+	}
+
+IL_0013:
+	{
+		Il2CppObject * L_1 = ___p0;
+		bool L_2 = PlayableHandle_CompareVersion_m2333515486(NULL /*static, unused*/, (*(PlayableHandle_t1502856514 *)__this), ((*(PlayableHandle_t1502856514 *)((PlayableHandle_t1502856514 *)UnBox(L_1, PlayableHandle_t1502856514_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_002a;
+	}
+
+IL_002a:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+extern "C"  bool PlayableHandle_Equals_m1435096530_AdjustorThunk (Il2CppObject * __this, Il2CppObject * ___p0, const MethodInfo* method)
+{
+	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
+	return PlayableHandle_Equals_m1435096530(_thisAdjusted, ___p0, method);
+}
+// System.Int32 UnityEngine.Experimental.Director.PlayableHandle::GetHashCode()
+extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282 (PlayableHandle_t1502856514 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		IntPtr_t* L_0 = __this->get_address_of_m_Handle_0();
+		int32_t L_1 = IntPtr_GetHashCode_m1174575389(L_0, /*hidden argument*/NULL);
+		int32_t* L_2 = __this->get_address_of_m_Version_1();
+		int32_t L_3 = Int32_GetHashCode_m1381647448(L_2, /*hidden argument*/NULL);
+		V_0 = ((int32_t)((int32_t)L_1^(int32_t)L_3));
+		goto IL_002a;
+	}
+
+IL_002a:
+	{
+		int32_t L_4 = V_0;
+		return L_4;
+	}
+}
+extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
+	return PlayableHandle_GetHashCode_m1257452282(_thisAdjusted, method);
+}
+// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::CompareVersion(UnityEngine.Experimental.Director.PlayableHandle,UnityEngine.Experimental.Director.PlayableHandle)
+extern "C"  bool PlayableHandle_CompareVersion_m2333515486 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514  ___lhs0, PlayableHandle_t1502856514  ___rhs1, const MethodInfo* method)
+{
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
+	{
+		IntPtr_t L_0 = (&___lhs0)->get_m_Handle_0();
+		IntPtr_t L_1 = (&___rhs1)->get_m_Handle_0();
+		bool L_2 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		int32_t L_3 = (&___lhs0)->get_m_Version_1();
+		int32_t L_4 = (&___rhs1)->get_m_Version_1();
+		G_B3_0 = ((((int32_t)L_3) == ((int32_t)L_4))? 1 : 0);
+		goto IL_002c;
+	}
+
+IL_002b:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_002c:
+	{
+		V_0 = (bool)G_B3_0;
+		goto IL_0032;
+	}
+
+IL_0032:
+	{
+		bool L_5 = V_0;
+		return L_5;
+	}
+}
 // System.Void UnityEngine.Experimental.Director.ScriptPlayable::.ctor()
 extern "C"  void ScriptPlayable__ctor_m1712674040 (ScriptPlayable_t4067966717 * __this, const MethodInfo* method)
 {
@@ -3296,6 +5775,30 @@ extern "C"  void GameObject_SendMessage_m71956653 (GameObject_t1756533147 * __th
 	_il2cpp_icall_func = (GameObject_SendMessage_m71956653_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)");
 	_il2cpp_icall_func(__this, ___methodName0, ___value1, ___options2);
 }
+// System.Void UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+extern "C"  void GameObject_BroadcastMessage_m3472370570 (GameObject_t1756533147 * __this, String_t* ___methodName0, Il2CppObject * ___parameter1, int32_t ___options2, const MethodInfo* method)
+{
+	typedef void (*GameObject_BroadcastMessage_m3472370570_ftn) (GameObject_t1756533147 *, String_t*, Il2CppObject *, int32_t);
+	static GameObject_BroadcastMessage_m3472370570_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_BroadcastMessage_m3472370570_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)");
+	_il2cpp_icall_func(__this, ___methodName0, ___parameter1, ___options2);
+}
+// System.Void UnityEngine.GameObject::BroadcastMessage(System.String)
+extern "C"  void GameObject_BroadcastMessage_m3362833428 (GameObject_t1756533147 * __this, String_t* ___methodName0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	Il2CppObject * V_1 = NULL;
+	{
+		V_0 = 0;
+		V_1 = NULL;
+		String_t* L_0 = ___methodName0;
+		Il2CppObject * L_1 = V_1;
+		int32_t L_2 = V_0;
+		GameObject_BroadcastMessage_m3472370570(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
 // UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 extern "C"  Component_t3819376471 * GameObject_Internal_AddComponentWithType_m214735204 (GameObject_t1756533147 * __this, Type_t * ___componentType0, const MethodInfo* method)
 {
@@ -3330,6 +5833,58 @@ extern "C"  void GameObject_Internal_CreateGameObject_m3428198595 (Il2CppObject 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GameObject_Internal_CreateGameObject_m3428198595_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::Internal_CreateGameObject(UnityEngine.GameObject,System.String)");
 	_il2cpp_icall_func(___mono0, ___name1);
+}
+// System.Void UnityEngine.Gizmos::DrawLine(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C"  void Gizmos_DrawLine_m1315654064 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___from0, Vector3_t2243707580  ___to1, const MethodInfo* method)
+{
+	{
+		Gizmos_INTERNAL_CALL_DrawLine_m1667943171(NULL /*static, unused*/, (&___from0), (&___to1), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Gizmos::INTERNAL_CALL_DrawLine(UnityEngine.Vector3&,UnityEngine.Vector3&)
+extern "C"  void Gizmos_INTERNAL_CALL_DrawLine_m1667943171 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___from0, Vector3_t2243707580 * ___to1, const MethodInfo* method)
+{
+	typedef void (*Gizmos_INTERNAL_CALL_DrawLine_m1667943171_ftn) (Vector3_t2243707580 *, Vector3_t2243707580 *);
+	static Gizmos_INTERNAL_CALL_DrawLine_m1667943171_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Gizmos_INTERNAL_CALL_DrawLine_m1667943171_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Gizmos::INTERNAL_CALL_DrawLine(UnityEngine.Vector3&,UnityEngine.Vector3&)");
+	_il2cpp_icall_func(___from0, ___to1);
+}
+// System.Void UnityEngine.Gizmos::DrawWireSphere(UnityEngine.Vector3,System.Single)
+extern "C"  void Gizmos_DrawWireSphere_m3395547818 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___center0, float ___radius1, const MethodInfo* method)
+{
+	{
+		float L_0 = ___radius1;
+		Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875(NULL /*static, unused*/, (&___center0), L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Gizmos::INTERNAL_CALL_DrawWireSphere(UnityEngine.Vector3&,System.Single)
+extern "C"  void Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___center0, float ___radius1, const MethodInfo* method)
+{
+	typedef void (*Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875_ftn) (Vector3_t2243707580 *, float);
+	static Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Gizmos::INTERNAL_CALL_DrawWireSphere(UnityEngine.Vector3&,System.Single)");
+	_il2cpp_icall_func(___center0, ___radius1);
+}
+// System.Void UnityEngine.Gizmos::set_color(UnityEngine.Color)
+extern "C"  void Gizmos_set_color_m494992840 (Il2CppObject * __this /* static, unused */, Color_t2020392075  ___value0, const MethodInfo* method)
+{
+	{
+		Gizmos_INTERNAL_set_color_m3356916140(NULL /*static, unused*/, (&___value0), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Gizmos::INTERNAL_set_color(UnityEngine.Color&)
+extern "C"  void Gizmos_INTERNAL_set_color_m3356916140 (Il2CppObject * __this /* static, unused */, Color_t2020392075 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Gizmos_INTERNAL_set_color_m3356916140_ftn) (Color_t2020392075 *);
+	static Gizmos_INTERNAL_set_color_m3356916140_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Gizmos_INTERNAL_set_color_m3356916140_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Gizmos::INTERNAL_set_color(UnityEngine.Color&)");
+	_il2cpp_icall_func(___value0);
 }
 // Conversion methods for marshalling of: UnityEngine.Gradient
 extern "C" void Gradient_t3600583008_marshal_pinvoke(const Gradient_t3600583008& unmarshaled, Gradient_t3600583008_marshaled_pinvoke& marshaled)
@@ -13525,6 +16080,15 @@ IL_0072:
 		return L_22;
 	}
 }
+// System.Void UnityEngine.GUIText::set_text(System.String)
+extern "C"  void GUIText_set_text_m3758377277 (GUIText_t2411476300 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	typedef void (*GUIText_set_text_m3758377277_ftn) (GUIText_t2411476300 *, String_t*);
+	static GUIText_set_text_m3758377277_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUIText_set_text_m3758377277_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIText::set_text(System.String)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Single UnityEngine.GUIUtility::get_pixelsPerPoint()
 extern "C"  float GUIUtility_get_pixelsPerPoint_m2667928361 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
@@ -14023,6 +16587,14 @@ extern "C"  void GUIUtility__cctor_m46116445 (Il2CppObject * __this /* static, u
 		return;
 	}
 }
+// System.Void UnityEngine.HideInInspector::.ctor()
+extern "C"  void HideInInspector__ctor_m2243513849 (HideInInspector_t2503583610 * __this, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m1730479323(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
 // Conversion methods for marshalling of: UnityEngine.HumanBone
 extern "C" void HumanBone_t1529896151_marshal_pinvoke(const HumanBone_t1529896151& unmarshaled, HumanBone_t1529896151_marshaled_pinvoke& marshaled)
 {
@@ -14150,6 +16722,24 @@ extern "C"  void IL2CPPStructAlignmentAttribute__ctor_m2555798229 (IL2CPPStructA
 		return;
 	}
 }
+// System.Boolean UnityEngine.Input::GetKeyInt(System.Int32)
+extern "C"  bool Input_GetKeyInt_m4143570188 (Il2CppObject * __this /* static, unused */, int32_t ___key0, const MethodInfo* method)
+{
+	typedef bool (*Input_GetKeyInt_m4143570188_ftn) (int32_t);
+	static Input_GetKeyInt_m4143570188_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Input_GetKeyInt_m4143570188_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetKeyInt(System.Int32)");
+	return _il2cpp_icall_func(___key0);
+}
+// System.Single UnityEngine.Input::GetAxis(System.String)
+extern "C"  float Input_GetAxis_m2098048324 (Il2CppObject * __this /* static, unused */, String_t* ___axisName0, const MethodInfo* method)
+{
+	typedef float (*Input_GetAxis_m2098048324_ftn) (String_t*);
+	static Input_GetAxis_m2098048324_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Input_GetAxis_m2098048324_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetAxis(System.String)");
+	return _il2cpp_icall_func(___axisName0);
+}
 // System.Single UnityEngine.Input::GetAxisRaw(System.String)
 extern "C"  float Input_GetAxisRaw_m4133353720 (Il2CppObject * __this /* static, unused */, String_t* ___axisName0, const MethodInfo* method)
 {
@@ -14159,6 +16749,15 @@ extern "C"  float Input_GetAxisRaw_m4133353720 (Il2CppObject * __this /* static,
 	_il2cpp_icall_func = (Input_GetAxisRaw_m4133353720_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetAxisRaw(System.String)");
 	return _il2cpp_icall_func(___axisName0);
 }
+// System.Boolean UnityEngine.Input::GetButton(System.String)
+extern "C"  bool Input_GetButton_m38251721 (Il2CppObject * __this /* static, unused */, String_t* ___buttonName0, const MethodInfo* method)
+{
+	typedef bool (*Input_GetButton_m38251721_ftn) (String_t*);
+	static Input_GetButton_m38251721_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Input_GetButton_m38251721_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetButton(System.String)");
+	return _il2cpp_icall_func(___buttonName0);
+}
 // System.Boolean UnityEngine.Input::GetButtonDown(System.String)
 extern "C"  bool Input_GetButtonDown_m2792523731 (Il2CppObject * __this /* static, unused */, String_t* ___buttonName0, const MethodInfo* method)
 {
@@ -14167,6 +16766,39 @@ extern "C"  bool Input_GetButtonDown_m2792523731 (Il2CppObject * __this /* stati
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Input_GetButtonDown_m2792523731_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetButtonDown(System.String)");
 	return _il2cpp_icall_func(___buttonName0);
+}
+// System.Boolean UnityEngine.Input::GetButtonUp(System.String)
+extern "C"  bool Input_GetButtonUp_m1680009186 (Il2CppObject * __this /* static, unused */, String_t* ___buttonName0, const MethodInfo* method)
+{
+	typedef bool (*Input_GetButtonUp_m1680009186_ftn) (String_t*);
+	static Input_GetButtonUp_m1680009186_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Input_GetButtonUp_m1680009186_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetButtonUp(System.String)");
+	return _il2cpp_icall_func(___buttonName0);
+}
+// System.Boolean UnityEngine.Input::GetKey(UnityEngine.KeyCode)
+extern "C"  bool Input_GetKey_m3849524999 (Il2CppObject * __this /* static, unused */, int32_t ___key0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Input_GetKey_m3849524999_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		int32_t L_0 = ___key0;
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		bool L_1 = Input_GetKeyInt_m4143570188(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		bool L_2 = V_0;
+		return L_2;
+	}
 }
 // System.Boolean UnityEngine.Input::GetMouseButton(System.Int32)
 extern "C"  bool Input_GetMouseButton_m464100923 (Il2CppObject * __this /* static, unused */, int32_t ___button0, const MethodInfo* method)
@@ -14275,6 +16907,99 @@ extern "C"  bool Input_get_mousePresent_m1434891730 (Il2CppObject * __this /* st
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Input_get_mousePresent_m1434891730_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::get_mousePresent()");
 	return _il2cpp_icall_func();
+}
+// UnityEngine.Vector3 UnityEngine.Input::get_acceleration()
+extern "C"  Vector3_t2243707580  Input_get_acceleration_m2886343410 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Input_get_acceleration_m2886343410_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector3_t2243707580  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Input_INTERNAL_get_acceleration_m292520951(NULL /*static, unused*/, (&V_0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_0 = V_0;
+		V_1 = L_0;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		Vector3_t2243707580  L_1 = V_1;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Input::INTERNAL_get_acceleration(UnityEngine.Vector3&)
+extern "C"  void Input_INTERNAL_get_acceleration_m292520951 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Input_INTERNAL_get_acceleration_m292520951_ftn) (Vector3_t2243707580 *);
+	static Input_INTERNAL_get_acceleration_m292520951_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Input_INTERNAL_get_acceleration_m292520951_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::INTERNAL_get_acceleration(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(___value0);
+}
+// UnityEngine.Touch[] UnityEngine.Input::get_touches()
+extern "C"  TouchU5BU5D_t3887265178* Input_get_touches_m388011594 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Input_get_touches_m388011594_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	TouchU5BU5D_t3887265178* V_1 = NULL;
+	int32_t V_2 = 0;
+	TouchU5BU5D_t3887265178* V_3 = NULL;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		int32_t L_0 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		V_1 = ((TouchU5BU5D_t3887265178*)SZArrayNew(TouchU5BU5D_t3887265178_il2cpp_TypeInfo_var, (uint32_t)L_1));
+		V_2 = 0;
+		goto IL_002b;
+	}
+
+IL_0015:
+	{
+		TouchU5BU5D_t3887265178* L_2 = V_1;
+		int32_t L_3 = V_2;
+		NullCheck(L_2);
+		int32_t L_4 = V_2;
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Touch_t407273883  L_5 = Input_GetTouch_m1463942798(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+		(*(Touch_t407273883 *)((L_2)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_3)))) = L_5;
+		int32_t L_6 = V_2;
+		V_2 = ((int32_t)((int32_t)L_6+(int32_t)1));
+	}
+
+IL_002b:
+	{
+		int32_t L_7 = V_2;
+		int32_t L_8 = V_0;
+		if ((((int32_t)L_7) < ((int32_t)L_8)))
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		TouchU5BU5D_t3887265178* L_9 = V_1;
+		V_3 = L_9;
+		goto IL_0039;
+	}
+
+IL_0039:
+	{
+		TouchU5BU5D_t3887265178* L_10 = V_3;
+		return L_10;
+	}
 }
 // UnityEngine.Touch UnityEngine.Input::GetTouch(System.Int32)
 extern "C"  Touch_t407273883  Input_GetTouch_m1463942798 (Il2CppObject * __this /* static, unused */, int32_t ___index0, const MethodInfo* method)
@@ -15000,6 +17725,41 @@ IL_0013:
 		return;
 	}
 }
+// UnityEngine.Rigidbody UnityEngine.Joint::get_connectedBody()
+extern "C"  Rigidbody_t4233889191 * Joint_get_connectedBody_m102918198 (Joint_t454317436 * __this, const MethodInfo* method)
+{
+	typedef Rigidbody_t4233889191 * (*Joint_get_connectedBody_m102918198_ftn) (Joint_t454317436 *);
+	static Joint_get_connectedBody_m102918198_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Joint_get_connectedBody_m102918198_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Joint::get_connectedBody()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Joint::set_connectedBody(UnityEngine.Rigidbody)
+extern "C"  void Joint_set_connectedBody_m2242534827 (Joint_t454317436 * __this, Rigidbody_t4233889191 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Joint_set_connectedBody_m2242534827_ftn) (Joint_t454317436 *, Rigidbody_t4233889191 *);
+	static Joint_set_connectedBody_m2242534827_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Joint_set_connectedBody_m2242534827_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Joint::set_connectedBody(UnityEngine.Rigidbody)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.Joint::set_anchor(UnityEngine.Vector3)
+extern "C"  void Joint_set_anchor_m4209051050 (Joint_t454317436 * __this, Vector3_t2243707580  ___value0, const MethodInfo* method)
+{
+	{
+		Joint_INTERNAL_set_anchor_m3684652072(__this, (&___value0), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Joint::INTERNAL_set_anchor(UnityEngine.Vector3&)
+extern "C"  void Joint_INTERNAL_set_anchor_m3684652072 (Joint_t454317436 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Joint_INTERNAL_set_anchor_m3684652072_ftn) (Joint_t454317436 *, Vector3_t2243707580 *);
+	static Joint_INTERNAL_set_anchor_m3684652072_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Joint_INTERNAL_set_anchor_m3684652072_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Joint::INTERNAL_set_anchor(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Void UnityEngine.Keyframe::.ctor(System.Single,System.Single)
 extern "C"  void Keyframe__ctor_m2042404667 (Keyframe_t1449471340 * __this, float ___time0, float ___value1, const MethodInfo* method)
 {
@@ -15254,6 +18014,33 @@ extern "C"  void Light_set_intensity_m1790590300 (Light_t494725636 * __this, flo
 	static Light_set_intensity_m1790590300_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Light_set_intensity_m1790590300_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Light::set_intensity(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Single UnityEngine.Light::get_shadowStrength()
+extern "C"  float Light_get_shadowStrength_m1628863523 (Light_t494725636 * __this, const MethodInfo* method)
+{
+	typedef float (*Light_get_shadowStrength_m1628863523_ftn) (Light_t494725636 *);
+	static Light_get_shadowStrength_m1628863523_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Light_get_shadowStrength_m1628863523_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Light::get_shadowStrength()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Light::set_shadowStrength(System.Single)
+extern "C"  void Light_set_shadowStrength_m677056102 (Light_t494725636 * __this, float ___value0, const MethodInfo* method)
+{
+	typedef void (*Light_set_shadowStrength_m677056102_ftn) (Light_t494725636 *, float);
+	static Light_set_shadowStrength_m677056102_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Light_set_shadowStrength_m677056102_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Light::set_shadowStrength(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.Light::set_shadowBias(System.Single)
+extern "C"  void Light_set_shadowBias_m2553631738 (Light_t494725636 * __this, float ___value0, const MethodInfo* method)
+{
+	typedef void (*Light_set_shadowBias_m2553631738_ftn) (Light_t494725636 *, float);
+	static Light_set_shadowBias_m2553631738_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Light_set_shadowBias_m2553631738_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Light::set_shadowBias(System.Single)");
 	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Void UnityEngine.Logger::.ctor(UnityEngine.ILogHandler)
@@ -15583,6 +18370,24 @@ extern "C"  void Material__ctor_m1440882780 (Material_t193706927 * __this, Mater
 		Material_Internal_CreateWithMaterial_m2907597451(NULL /*static, unused*/, __this, L_0, /*hidden argument*/NULL);
 		return;
 	}
+}
+// UnityEngine.Shader UnityEngine.Material::get_shader()
+extern "C"  Shader_t2430389951 * Material_get_shader_m2320486867 (Material_t193706927 * __this, const MethodInfo* method)
+{
+	typedef Shader_t2430389951 * (*Material_get_shader_m2320486867_ftn) (Material_t193706927 *);
+	static Material_get_shader_m2320486867_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Material_get_shader_m2320486867_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Material::get_shader()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Material::set_shader(UnityEngine.Shader)
+extern "C"  void Material_set_shader_m743681806 (Material_t193706927 * __this, Shader_t2430389951 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Material_set_shader_m743681806_ftn) (Material_t193706927 *, Shader_t2430389951 *);
+	static Material_set_shader_m743681806_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Material_set_shader_m743681806_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Material::set_shader(UnityEngine.Shader)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Void UnityEngine.Material::set_color(UnityEngine.Color)
 extern "C"  void Material_set_color_m577844242 (Material_t193706927 * __this, Color_t2020392075  ___value0, const MethodInfo* method)
@@ -16025,6 +18830,24 @@ IL_000f:
 	{
 		float L_2 = V_0;
 		return L_2;
+	}
+}
+// System.Single UnityEngine.Mathf::Atan2(System.Single,System.Single)
+extern "C"  float Mathf_Atan2_m496071197 (Il2CppObject * __this /* static, unused */, float ___y0, float ___x1, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___y0;
+		float L_1 = ___x1;
+		double L_2 = atan2((((double)((double)L_0))), (((double)((double)L_1))));
+		V_0 = (((float)((float)L_2)));
+		goto IL_0011;
+	}
+
+IL_0011:
+	{
+		float L_3 = V_0;
+		return L_3;
 	}
 }
 // System.Single UnityEngine.Mathf::Sqrt(System.Single)
@@ -16540,6 +19363,96 @@ IL_0013:
 		return L_5;
 	}
 }
+// System.Single UnityEngine.Mathf::LerpAngle(System.Single,System.Single,System.Single)
+extern "C"  float Mathf_LerpAngle_m3501252860 (Il2CppObject * __this /* static, unused */, float ___a0, float ___b1, float ___t2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Mathf_LerpAngle_m3501252860_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	{
+		float L_0 = ___b1;
+		float L_1 = ___a0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
+		float L_2 = Mathf_Repeat_m943844734(NULL /*static, unused*/, ((float)((float)L_0-(float)L_1)), (360.0f), /*hidden argument*/NULL);
+		V_0 = L_2;
+		float L_3 = V_0;
+		if ((!(((float)L_3) > ((float)(180.0f)))))
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		float L_4 = V_0;
+		V_0 = ((float)((float)L_4-(float)(360.0f)));
+	}
+
+IL_0022:
+	{
+		float L_5 = ___a0;
+		float L_6 = V_0;
+		float L_7 = ___t2;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
+		float L_8 = Mathf_Clamp01_m3888954684(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
+		V_1 = ((float)((float)L_5+(float)((float)((float)L_6*(float)L_8))));
+		goto IL_0032;
+	}
+
+IL_0032:
+	{
+		float L_9 = V_1;
+		return L_9;
+	}
+}
+// System.Single UnityEngine.Mathf::MoveTowards(System.Single,System.Single,System.Single)
+extern "C"  float Mathf_MoveTowards_m1130995897 (Il2CppObject * __this /* static, unused */, float ___current0, float ___target1, float ___maxDelta2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Mathf_MoveTowards_m1130995897_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___target1;
+		float L_1 = ___current0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
+		float L_2 = fabsf(((float)((float)L_0-(float)L_1)));
+		float L_3 = ___maxDelta2;
+		if ((!(((float)L_2) <= ((float)L_3))))
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		float L_4 = ___target1;
+		V_0 = L_4;
+		goto IL_0028;
+	}
+
+IL_0016:
+	{
+		float L_5 = ___current0;
+		float L_6 = ___target1;
+		float L_7 = ___current0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
+		float L_8 = Mathf_Sign_m2039143327(NULL /*static, unused*/, ((float)((float)L_6-(float)L_7)), /*hidden argument*/NULL);
+		float L_9 = ___maxDelta2;
+		V_0 = ((float)((float)L_5+(float)((float)((float)L_8*(float)L_9))));
+		goto IL_0028;
+	}
+
+IL_0028:
+	{
+		float L_10 = V_0;
+		return L_10;
+	}
+}
 // System.Boolean UnityEngine.Mathf::Approximately(System.Single,System.Single)
 extern "C"  bool Mathf_Approximately_m1064446634 (Il2CppObject * __this /* static, unused */, float ___a0, float ___b1, const MethodInfo* method)
 {
@@ -16570,6 +19483,40 @@ IL_0038:
 	{
 		bool L_10 = V_0;
 		return L_10;
+	}
+}
+// System.Single UnityEngine.Mathf::SmoothDamp(System.Single,System.Single,System.Single&,System.Single)
+extern "C"  float Mathf_SmoothDamp_m1166236953 (Il2CppObject * __this /* static, unused */, float ___current0, float ___target1, float* ___currentVelocity2, float ___smoothTime3, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Mathf_SmoothDamp_m1166236953_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	{
+		float L_0 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_0;
+		V_1 = (std::numeric_limits<float>::infinity());
+		float L_1 = ___current0;
+		float L_2 = ___target1;
+		float* L_3 = ___currentVelocity2;
+		float L_4 = ___smoothTime3;
+		float L_5 = V_1;
+		float L_6 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
+		float L_7 = Mathf_SmoothDamp_m1604773625(NULL /*static, unused*/, L_1, L_2, L_3, L_4, L_5, L_6, /*hidden argument*/NULL);
+		V_2 = L_7;
+		goto IL_001e;
+	}
+
+IL_001e:
+	{
+		float L_8 = V_2;
+		return L_8;
 	}
 }
 // System.Single UnityEngine.Mathf::SmoothDamp(System.Single,System.Single,System.Single&,System.Single,System.Single,System.Single)
@@ -20085,6 +23032,44 @@ extern "C"  void Object__cctor_m2991092887 (Il2CppObject * __this /* static, unu
 		return;
 	}
 }
+// UnityEngine.ParticleSystem/MainModule UnityEngine.ParticleSystem::get_main()
+extern "C"  MainModule_t6751348  ParticleSystem_get_main_m1338387869 (ParticleSystem_t3394631041 * __this, const MethodInfo* method)
+{
+	MainModule_t6751348  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		MainModule_t6751348  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		MainModule__ctor_m4099059742(&L_0, __this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		MainModule_t6751348  L_1 = V_0;
+		return L_1;
+	}
+}
+// UnityEngine.ParticleSystem/EmissionModule UnityEngine.ParticleSystem::get_emission()
+extern "C"  EmissionModule_t2748003162  ParticleSystem_get_emission_m3968992617 (ParticleSystem_t3394631041 * __this, const MethodInfo* method)
+{
+	EmissionModule_t2748003162  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		EmissionModule_t2748003162  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		EmissionModule__ctor_m1076689768(&L_0, __this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		EmissionModule_t2748003162  L_1 = V_0;
+		return L_1;
+	}
+}
 // System.Void UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32)
 extern "C"  void ParticleSystem_SetParticles_m3035584975 (ParticleSystem_t3394631041 * __this, ParticleU5BU5D_t574222242* ___particles0, int32_t ___size1, const MethodInfo* method)
 {
@@ -20093,6 +23078,74 @@ extern "C"  void ParticleSystem_SetParticles_m3035584975 (ParticleSystem_t339463
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (ParticleSystem_SetParticles_m3035584975_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32)");
 	_il2cpp_icall_func(__this, ___particles0, ___size1);
+}
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke(const EmissionModule_t2748003162& unmarshaled, EmissionModule_t2748003162_marshaled_pinvoke& marshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke_back(const EmissionModule_t2748003162_marshaled_pinvoke& marshaled, EmissionModule_t2748003162& unmarshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke_cleanup(EmissionModule_t2748003162_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_com(const EmissionModule_t2748003162& unmarshaled, EmissionModule_t2748003162_marshaled_com& marshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+extern "C" void EmissionModule_t2748003162_marshal_com_back(const EmissionModule_t2748003162_marshaled_com& marshaled, EmissionModule_t2748003162& unmarshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_com_cleanup(EmissionModule_t2748003162_marshaled_com& marshaled)
+{
+}
+// System.Void UnityEngine.ParticleSystem/EmissionModule::.ctor(UnityEngine.ParticleSystem)
+extern "C"  void EmissionModule__ctor_m1076689768 (EmissionModule_t2748003162 * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method)
+{
+	{
+		ParticleSystem_t3394631041 * L_0 = ___particleSystem0;
+		__this->set_m_ParticleSystem_0(L_0);
+		return;
+	}
+}
+extern "C"  void EmissionModule__ctor_m1076689768_AdjustorThunk (Il2CppObject * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method)
+{
+	EmissionModule_t2748003162 * _thisAdjusted = reinterpret_cast<EmissionModule_t2748003162 *>(__this + 1);
+	EmissionModule__ctor_m1076689768(_thisAdjusted, ___particleSystem0, method);
+}
+// System.Void UnityEngine.ParticleSystem/EmissionModule::set_enabled(System.Boolean)
+extern "C"  void EmissionModule_set_enabled_m4266189783 (EmissionModule_t2748003162 * __this, bool ___value0, const MethodInfo* method)
+{
+	{
+		ParticleSystem_t3394631041 * L_0 = __this->get_m_ParticleSystem_0();
+		bool L_1 = ___value0;
+		EmissionModule_SetEnabled_m1102718738(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+extern "C"  void EmissionModule_set_enabled_m4266189783_AdjustorThunk (Il2CppObject * __this, bool ___value0, const MethodInfo* method)
+{
+	EmissionModule_t2748003162 * _thisAdjusted = reinterpret_cast<EmissionModule_t2748003162 *>(__this + 1);
+	EmissionModule_set_enabled_m4266189783(_thisAdjusted, ___value0, method);
+}
+// System.Void UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)
+extern "C"  void EmissionModule_SetEnabled_m1102718738 (Il2CppObject * __this /* static, unused */, ParticleSystem_t3394631041 * ___system0, bool ___value1, const MethodInfo* method)
+{
+	typedef void (*EmissionModule_SetEnabled_m1102718738_ftn) (ParticleSystem_t3394631041 *, bool);
+	static EmissionModule_SetEnabled_m1102718738_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (EmissionModule_SetEnabled_m1102718738_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)");
+	_il2cpp_icall_func(___system0, ___value1);
 }
 // System.Void UnityEngine.ParticleSystem/IteratorDelegate::.ctor(System.Object,System.IntPtr)
 extern "C"  void IteratorDelegate__ctor_m3692393942 (IteratorDelegate_t2419492168 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
@@ -20138,6 +23191,205 @@ extern "C"  bool IteratorDelegate_EndInvoke_m121475984 (IteratorDelegate_t241949
 {
 	Il2CppObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
 	return *(bool*)UnBox ((Il2CppCodeGenObject*)__result);
+}
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/MainModule
+extern "C" void MainModule_t6751348_marshal_pinvoke(const MainModule_t6751348& unmarshaled, MainModule_t6751348_marshaled_pinvoke& marshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'MainModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+extern "C" void MainModule_t6751348_marshal_pinvoke_back(const MainModule_t6751348_marshaled_pinvoke& marshaled, MainModule_t6751348& unmarshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'MainModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/MainModule
+extern "C" void MainModule_t6751348_marshal_pinvoke_cleanup(MainModule_t6751348_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/MainModule
+extern "C" void MainModule_t6751348_marshal_com(const MainModule_t6751348& unmarshaled, MainModule_t6751348_marshaled_com& marshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'MainModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+extern "C" void MainModule_t6751348_marshal_com_back(const MainModule_t6751348_marshaled_com& marshaled, MainModule_t6751348& unmarshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'MainModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/MainModule
+extern "C" void MainModule_t6751348_marshal_com_cleanup(MainModule_t6751348_marshaled_com& marshaled)
+{
+}
+// System.Void UnityEngine.ParticleSystem/MainModule::.ctor(UnityEngine.ParticleSystem)
+extern "C"  void MainModule__ctor_m4099059742 (MainModule_t6751348 * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method)
+{
+	{
+		ParticleSystem_t3394631041 * L_0 = ___particleSystem0;
+		__this->set_m_ParticleSystem_0(L_0);
+		return;
+	}
+}
+extern "C"  void MainModule__ctor_m4099059742_AdjustorThunk (Il2CppObject * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method)
+{
+	MainModule_t6751348 * _thisAdjusted = reinterpret_cast<MainModule_t6751348 *>(__this + 1);
+	MainModule__ctor_m4099059742(_thisAdjusted, ___particleSystem0, method);
+}
+// UnityEngine.ParticleSystem/MinMaxCurve UnityEngine.ParticleSystem/MainModule::get_startLifetime()
+extern "C"  MinMaxCurve_t122563058  MainModule_get_startLifetime_m3865400535 (MainModule_t6751348 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MainModule_get_startLifetime_m3865400535_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	MinMaxCurve_t122563058  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	MinMaxCurve_t122563058  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		Initobj (MinMaxCurve_t122563058_il2cpp_TypeInfo_var, (&V_0));
+		ParticleSystem_t3394631041 * L_0 = __this->get_m_ParticleSystem_0();
+		MainModule_GetStartLifetime_m3062333575(NULL /*static, unused*/, L_0, (&V_0), /*hidden argument*/NULL);
+		MinMaxCurve_t122563058  L_1 = V_0;
+		V_1 = L_1;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		MinMaxCurve_t122563058  L_2 = V_1;
+		return L_2;
+	}
+}
+extern "C"  MinMaxCurve_t122563058  MainModule_get_startLifetime_m3865400535_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	MainModule_t6751348 * _thisAdjusted = reinterpret_cast<MainModule_t6751348 *>(__this + 1);
+	return MainModule_get_startLifetime_m3865400535(_thisAdjusted, method);
+}
+// System.Void UnityEngine.ParticleSystem/MainModule::GetStartLifetime(UnityEngine.ParticleSystem,UnityEngine.ParticleSystem/MinMaxCurve&)
+extern "C"  void MainModule_GetStartLifetime_m3062333575 (Il2CppObject * __this /* static, unused */, ParticleSystem_t3394631041 * ___system0, MinMaxCurve_t122563058 * ___curve1, const MethodInfo* method)
+{
+	typedef void (*MainModule_GetStartLifetime_m3062333575_ftn) (ParticleSystem_t3394631041 *, MinMaxCurve_t122563058 *);
+	static MainModule_GetStartLifetime_m3062333575_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MainModule_GetStartLifetime_m3062333575_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem/MainModule::GetStartLifetime(UnityEngine.ParticleSystem,UnityEngine.ParticleSystem/MinMaxCurve&)");
+	_il2cpp_icall_func(___system0, ___curve1);
+}
+
+
+
+
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/MinMaxCurve
+extern "C" void MinMaxCurve_t122563058_marshal_pinvoke(const MinMaxCurve_t122563058& unmarshaled, MinMaxCurve_t122563058_marshaled_pinvoke& marshaled)
+{
+	marshaled.___m_Mode_0 = unmarshaled.get_m_Mode_0();
+	marshaled.___m_CurveMultiplier_1 = unmarshaled.get_m_CurveMultiplier_1();
+	if (unmarshaled.get_m_CurveMin_2() != NULL) AnimationCurve_t3306541151_marshal_pinvoke(*unmarshaled.get_m_CurveMin_2(), marshaled.___m_CurveMin_2);
+	if (unmarshaled.get_m_CurveMax_3() != NULL) AnimationCurve_t3306541151_marshal_pinvoke(*unmarshaled.get_m_CurveMax_3(), marshaled.___m_CurveMax_3);
+	marshaled.___m_ConstantMin_4 = unmarshaled.get_m_ConstantMin_4();
+	marshaled.___m_ConstantMax_5 = unmarshaled.get_m_ConstantMax_5();
+}
+extern "C" void MinMaxCurve_t122563058_marshal_pinvoke_back(const MinMaxCurve_t122563058_marshaled_pinvoke& marshaled, MinMaxCurve_t122563058& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MinMaxCurve_t122563058_pinvoke_FromNativeMethodDefinition_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t unmarshaled_m_Mode_temp_0 = 0;
+	unmarshaled_m_Mode_temp_0 = marshaled.___m_Mode_0;
+	unmarshaled.set_m_Mode_0(unmarshaled_m_Mode_temp_0);
+	float unmarshaled_m_CurveMultiplier_temp_1 = 0.0f;
+	unmarshaled_m_CurveMultiplier_temp_1 = marshaled.___m_CurveMultiplier_1;
+	unmarshaled.set_m_CurveMultiplier_1(unmarshaled_m_CurveMultiplier_temp_1);
+	unmarshaled.set_m_CurveMin_2((AnimationCurve_t3306541151 *)il2cpp_codegen_object_new(AnimationCurve_t3306541151_il2cpp_TypeInfo_var));
+	AnimationCurve__ctor_m3707994114(unmarshaled.get_m_CurveMin_2(), NULL);
+	AnimationCurve_t3306541151_marshal_pinvoke_back(marshaled.___m_CurveMin_2, *unmarshaled.get_m_CurveMin_2());
+	unmarshaled.set_m_CurveMax_3((AnimationCurve_t3306541151 *)il2cpp_codegen_object_new(AnimationCurve_t3306541151_il2cpp_TypeInfo_var));
+	AnimationCurve__ctor_m3707994114(unmarshaled.get_m_CurveMax_3(), NULL);
+	AnimationCurve_t3306541151_marshal_pinvoke_back(marshaled.___m_CurveMax_3, *unmarshaled.get_m_CurveMax_3());
+	float unmarshaled_m_ConstantMin_temp_4 = 0.0f;
+	unmarshaled_m_ConstantMin_temp_4 = marshaled.___m_ConstantMin_4;
+	unmarshaled.set_m_ConstantMin_4(unmarshaled_m_ConstantMin_temp_4);
+	float unmarshaled_m_ConstantMax_temp_5 = 0.0f;
+	unmarshaled_m_ConstantMax_temp_5 = marshaled.___m_ConstantMax_5;
+	unmarshaled.set_m_ConstantMax_5(unmarshaled_m_ConstantMax_temp_5);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/MinMaxCurve
+extern "C" void MinMaxCurve_t122563058_marshal_pinvoke_cleanup(MinMaxCurve_t122563058_marshaled_pinvoke& marshaled)
+{
+	AnimationCurve_t3306541151_marshal_pinvoke_cleanup(marshaled.___m_CurveMin_2);
+	AnimationCurve_t3306541151_marshal_pinvoke_cleanup(marshaled.___m_CurveMax_3);
+}
+
+
+
+
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/MinMaxCurve
+extern "C" void MinMaxCurve_t122563058_marshal_com(const MinMaxCurve_t122563058& unmarshaled, MinMaxCurve_t122563058_marshaled_com& marshaled)
+{
+	marshaled.___m_Mode_0 = unmarshaled.get_m_Mode_0();
+	marshaled.___m_CurveMultiplier_1 = unmarshaled.get_m_CurveMultiplier_1();
+	if (unmarshaled.get_m_CurveMin_2() != NULL) AnimationCurve_t3306541151_marshal_com(*unmarshaled.get_m_CurveMin_2(), *marshaled.___m_CurveMin_2);
+	if (unmarshaled.get_m_CurveMax_3() != NULL) AnimationCurve_t3306541151_marshal_com(*unmarshaled.get_m_CurveMax_3(), *marshaled.___m_CurveMax_3);
+	marshaled.___m_ConstantMin_4 = unmarshaled.get_m_ConstantMin_4();
+	marshaled.___m_ConstantMax_5 = unmarshaled.get_m_ConstantMax_5();
+}
+extern "C" void MinMaxCurve_t122563058_marshal_com_back(const MinMaxCurve_t122563058_marshaled_com& marshaled, MinMaxCurve_t122563058& unmarshaled)
+{
+	int32_t unmarshaled_m_Mode_temp_0 = 0;
+	unmarshaled_m_Mode_temp_0 = marshaled.___m_Mode_0;
+	unmarshaled.set_m_Mode_0(unmarshaled_m_Mode_temp_0);
+	float unmarshaled_m_CurveMultiplier_temp_1 = 0.0f;
+	unmarshaled_m_CurveMultiplier_temp_1 = marshaled.___m_CurveMultiplier_1;
+	unmarshaled.set_m_CurveMultiplier_1(unmarshaled_m_CurveMultiplier_temp_1);
+	if (unmarshaled.get_m_CurveMin_2() != NULL)
+	{
+		AnimationCurve__ctor_m3707994114(unmarshaled.get_m_CurveMin_2(), NULL);
+		AnimationCurve_t3306541151_marshal_com_back(*marshaled.___m_CurveMin_2, *unmarshaled.get_m_CurveMin_2());
+	}
+	if (unmarshaled.get_m_CurveMax_3() != NULL)
+	{
+		AnimationCurve__ctor_m3707994114(unmarshaled.get_m_CurveMax_3(), NULL);
+		AnimationCurve_t3306541151_marshal_com_back(*marshaled.___m_CurveMax_3, *unmarshaled.get_m_CurveMax_3());
+	}
+	float unmarshaled_m_ConstantMin_temp_4 = 0.0f;
+	unmarshaled_m_ConstantMin_temp_4 = marshaled.___m_ConstantMin_4;
+	unmarshaled.set_m_ConstantMin_4(unmarshaled_m_ConstantMin_temp_4);
+	float unmarshaled_m_ConstantMax_temp_5 = 0.0f;
+	unmarshaled_m_ConstantMax_temp_5 = marshaled.___m_ConstantMax_5;
+	unmarshaled.set_m_ConstantMax_5(unmarshaled_m_ConstantMax_temp_5);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/MinMaxCurve
+extern "C" void MinMaxCurve_t122563058_marshal_com_cleanup(MinMaxCurve_t122563058_marshaled_com& marshaled)
+{
+	if (&(*marshaled.___m_CurveMin_2) != NULL) AnimationCurve_t3306541151_marshal_com_cleanup(*marshaled.___m_CurveMin_2);
+	if (&(*marshaled.___m_CurveMax_3) != NULL) AnimationCurve_t3306541151_marshal_com_cleanup(*marshaled.___m_CurveMax_3);
+}
+// System.Single UnityEngine.ParticleSystem/MinMaxCurve::get_constant()
+extern "C"  float MinMaxCurve_get_constant_m3247355635 (MinMaxCurve_t122563058 * __this, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->get_m_ConstantMax_5();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  float MinMaxCurve_get_constant_m3247355635_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	MinMaxCurve_t122563058 * _thisAdjusted = reinterpret_cast<MinMaxCurve_t122563058 *>(__this + 1);
+	return MinMaxCurve_get_constant_m3247355635(_thisAdjusted, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_position(UnityEngine.Vector3)
 extern "C"  void Particle_set_position_m3680513126 (Particle_t250075699 * __this, Vector3_t2243707580  ___value0, const MethodInfo* method)
@@ -20185,6 +23437,35 @@ extern "C"  void Particle_set_startColor_m3936512348_AdjustorThunk (Il2CppObject
 {
 	Particle_t250075699 * _thisAdjusted = reinterpret_cast<Particle_t250075699 *>(__this + 1);
 	Particle_set_startColor_m3936512348(_thisAdjusted, ___value0, method);
+}
+// UnityEngine.Vector3 UnityEngine.Physics::get_gravity()
+extern "C"  Vector3_t2243707580  Physics_get_gravity_m195764919 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector3_t2243707580  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		Physics_INTERNAL_get_gravity_m3802008392(NULL /*static, unused*/, (&V_0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_0 = V_0;
+		V_1 = L_0;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		Vector3_t2243707580  L_1 = V_1;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Physics::INTERNAL_get_gravity(UnityEngine.Vector3&)
+extern "C"  void Physics_INTERNAL_get_gravity_m3802008392 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Physics_INTERNAL_get_gravity_m3802008392_ftn) (Vector3_t2243707580 *);
+	static Physics_INTERNAL_get_gravity_m3802008392_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Physics_INTERNAL_get_gravity_m3802008392_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::INTERNAL_get_gravity(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(___value0);
 }
 // System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32)
 extern "C"  bool Physics_Raycast_m2874007225 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, float ___maxDistance2, int32_t ___layerMask3, const MethodInfo* method)
@@ -20762,6 +24043,31 @@ extern "C"  RaycastHitU5BU5D_t1214023521* Physics_INTERNAL_CALL_RaycastAll_m2126
 	_il2cpp_icall_func = (Physics_INTERNAL_CALL_RaycastAll_m2126789092_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::INTERNAL_CALL_RaycastAll(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
 	return _il2cpp_icall_func(___origin0, ___direction1, ___maxDistance2, ___layermask3, ___queryTriggerInteraction4);
 }
+// System.Boolean UnityEngine.Physics::SphereCast(UnityEngine.Ray,System.Single,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C"  bool Physics_SphereCast_m402220965 (Il2CppObject * __this /* static, unused */, Ray_t2469606224  ___ray0, float ___radius1, float ___maxDistance2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const MethodInfo* method)
+{
+	RaycastHit_t87180320  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	bool V_1 = false;
+	{
+		Vector3_t2243707580  L_0 = Ray_get_origin_m3339262500((&___ray0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_1 = Ray_get_origin_m3339262500((&___ray0), /*hidden argument*/NULL);
+		float L_2 = ___radius1;
+		Vector3_t2243707580  L_3 = Ray_get_direction_m4059191533((&___ray0), /*hidden argument*/NULL);
+		float L_4 = ___maxDistance2;
+		int32_t L_5 = ___layerMask3;
+		int32_t L_6 = ___queryTriggerInteraction4;
+		bool L_7 = Physics_Internal_CapsuleCast_m1833501922(NULL /*static, unused*/, L_0, L_1, L_2, L_3, (&V_0), L_4, L_5, L_6, /*hidden argument*/NULL);
+		V_1 = L_7;
+		goto IL_0028;
+	}
+
+IL_0028:
+	{
+		bool L_8 = V_1;
+		return L_8;
+	}
+}
 // System.Boolean UnityEngine.Physics::Internal_Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C"  bool Physics_Internal_Raycast_m1160243045 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, RaycastHit_t87180320 * ___hitInfo2, float ___maxDistance3, int32_t ___layermask4, int32_t ___queryTriggerInteraction5, const MethodInfo* method)
 {
@@ -20790,6 +24096,36 @@ extern "C"  bool Physics_INTERNAL_CALL_Internal_Raycast_m93849932 (Il2CppObject 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Physics_INTERNAL_CALL_Internal_Raycast_m93849932_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
 	return _il2cpp_icall_func(___origin0, ___direction1, ___hitInfo2, ___maxDistance3, ___layermask4, ___queryTriggerInteraction5);
+}
+// System.Boolean UnityEngine.Physics::Internal_CapsuleCast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C"  bool Physics_Internal_CapsuleCast_m1833501922 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___point10, Vector3_t2243707580  ___point21, float ___radius2, Vector3_t2243707580  ___direction3, RaycastHit_t87180320 * ___hitInfo4, float ___maxDistance5, int32_t ___layermask6, int32_t ___queryTriggerInteraction7, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		float L_0 = ___radius2;
+		RaycastHit_t87180320 * L_1 = ___hitInfo4;
+		float L_2 = ___maxDistance5;
+		int32_t L_3 = ___layermask6;
+		int32_t L_4 = ___queryTriggerInteraction7;
+		bool L_5 = Physics_INTERNAL_CALL_Internal_CapsuleCast_m4097719249(NULL /*static, unused*/, (&___point10), (&___point21), L_0, (&___direction3), L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
+		V_0 = L_5;
+		goto IL_001b;
+	}
+
+IL_001b:
+	{
+		bool L_6 = V_0;
+		return L_6;
+	}
+}
+// System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_CapsuleCast(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C"  bool Physics_INTERNAL_CALL_Internal_CapsuleCast_m4097719249 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___point10, Vector3_t2243707580 * ___point21, float ___radius2, Vector3_t2243707580 * ___direction3, RaycastHit_t87180320 * ___hitInfo4, float ___maxDistance5, int32_t ___layermask6, int32_t ___queryTriggerInteraction7, const MethodInfo* method)
+{
+	typedef bool (*Physics_INTERNAL_CALL_Internal_CapsuleCast_m4097719249_ftn) (Vector3_t2243707580 *, Vector3_t2243707580 *, float, Vector3_t2243707580 *, RaycastHit_t87180320 *, float, int32_t, int32_t);
+	static Physics_INTERNAL_CALL_Internal_CapsuleCast_m4097719249_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Physics_INTERNAL_CALL_Internal_CapsuleCast_m4097719249_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::INTERNAL_CALL_Internal_CapsuleCast(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
+	return _il2cpp_icall_func(___point10, ___point21, ___radius2, ___direction3, ___hitInfo4, ___maxDistance5, ___layermask6, ___queryTriggerInteraction7);
 }
 // System.Boolean UnityEngine.Physics::Internal_RaycastTest(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C"  bool Physics_Internal_RaycastTest_m3442924926 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, float ___maxDistance2, int32_t ___layermask3, int32_t ___queryTriggerInteraction4, const MethodInfo* method)
@@ -20972,3749 +24308,14 @@ extern "C"  void PropertyAttribute__ctor_m3663555848 (PropertyAttribute_t2606999
 		return;
 	}
 }
-// System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)
-extern "C"  void Quaternion__ctor_m3196903881 (Quaternion_t4030073918 * __this, float ___x0, float ___y1, float ___z2, float ___w3, const MethodInfo* method)
+// System.Void UnityEngine.QualitySettings::set_shadowDistance(System.Single)
+extern "C"  void QualitySettings_set_shadowDistance_m2077100724 (Il2CppObject * __this /* static, unused */, float ___value0, const MethodInfo* method)
 {
-	{
-		float L_0 = ___x0;
-		__this->set_x_0(L_0);
-		float L_1 = ___y1;
-		__this->set_y_1(L_1);
-		float L_2 = ___z2;
-		__this->set_z_2(L_2);
-		float L_3 = ___w3;
-		__this->set_w_3(L_3);
-		return;
-	}
-}
-extern "C"  void Quaternion__ctor_m3196903881_AdjustorThunk (Il2CppObject * __this, float ___x0, float ___y1, float ___z2, float ___w3, const MethodInfo* method)
-{
-	Quaternion_t4030073918 * _thisAdjusted = reinterpret_cast<Quaternion_t4030073918 *>(__this + 1);
-	Quaternion__ctor_m3196903881(_thisAdjusted, ___x0, ___y1, ___z2, ___w3, method);
-}
-// UnityEngine.Quaternion UnityEngine.Quaternion::Inverse(UnityEngine.Quaternion)
-extern "C"  Quaternion_t4030073918  Quaternion_Inverse_m3931399088 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___rotation0, const MethodInfo* method)
-{
-	Quaternion_t4030073918  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Quaternion_t4030073918  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		Quaternion_INTERNAL_CALL_Inverse_m1043108654(NULL /*static, unused*/, (&___rotation0), (&V_0), /*hidden argument*/NULL);
-		Quaternion_t4030073918  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		Quaternion_t4030073918  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.Quaternion::INTERNAL_CALL_Inverse(UnityEngine.Quaternion&,UnityEngine.Quaternion&)
-extern "C"  void Quaternion_INTERNAL_CALL_Inverse_m1043108654 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918 * ___rotation0, Quaternion_t4030073918 * ___value1, const MethodInfo* method)
-{
-	typedef void (*Quaternion_INTERNAL_CALL_Inverse_m1043108654_ftn) (Quaternion_t4030073918 *, Quaternion_t4030073918 *);
-	static Quaternion_INTERNAL_CALL_Inverse_m1043108654_ftn _il2cpp_icall_func;
+	typedef void (*QualitySettings_set_shadowDistance_m2077100724_ftn) (float);
+	static QualitySettings_set_shadowDistance_m2077100724_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Quaternion_INTERNAL_CALL_Inverse_m1043108654_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Quaternion::INTERNAL_CALL_Inverse(UnityEngine.Quaternion&,UnityEngine.Quaternion&)");
-	_il2cpp_icall_func(___rotation0, ___value1);
-}
-// UnityEngine.Quaternion UnityEngine.Quaternion::Euler(System.Single,System.Single,System.Single)
-extern "C"  Quaternion_t4030073918  Quaternion_Euler_m2887458175 (Il2CppObject * __this /* static, unused */, float ___x0, float ___y1, float ___z2, const MethodInfo* method)
-{
-	Quaternion_t4030073918  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = ___x0;
-		float L_1 = ___y1;
-		float L_2 = ___z2;
-		Vector3_t2243707580  L_3;
-		memset(&L_3, 0, sizeof(L_3));
-		Vector3__ctor_m2638739322(&L_3, L_0, L_1, L_2, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_4 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_3, (0.0174532924f), /*hidden argument*/NULL);
-		Quaternion_t4030073918  L_5 = Quaternion_Internal_FromEulerRad_m1121344272(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
-		V_0 = L_5;
-		goto IL_001e;
-	}
-
-IL_001e:
-	{
-		Quaternion_t4030073918  L_6 = V_0;
-		return L_6;
-	}
-}
-// UnityEngine.Quaternion UnityEngine.Quaternion::Internal_FromEulerRad(UnityEngine.Vector3)
-extern "C"  Quaternion_t4030073918  Quaternion_Internal_FromEulerRad_m1121344272 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___euler0, const MethodInfo* method)
-{
-	Quaternion_t4030073918  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Quaternion_t4030073918  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132(NULL /*static, unused*/, (&___euler0), (&V_0), /*hidden argument*/NULL);
-		Quaternion_t4030073918  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		Quaternion_t4030073918  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.Quaternion::INTERNAL_CALL_Internal_FromEulerRad(UnityEngine.Vector3&,UnityEngine.Quaternion&)
-extern "C"  void Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580 * ___euler0, Quaternion_t4030073918 * ___value1, const MethodInfo* method)
-{
-	typedef void (*Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132_ftn) (Vector3_t2243707580 *, Quaternion_t4030073918 *);
-	static Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Quaternion::INTERNAL_CALL_Internal_FromEulerRad(UnityEngine.Vector3&,UnityEngine.Quaternion&)");
-	_il2cpp_icall_func(___euler0, ___value1);
-}
-// UnityEngine.Quaternion UnityEngine.Quaternion::get_identity()
-extern "C"  Quaternion_t4030073918  Quaternion_get_identity_m1561886418 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
-{
-	Quaternion_t4030073918  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Quaternion_t4030073918  L_0;
-		memset(&L_0, 0, sizeof(L_0));
-		Quaternion__ctor_m3196903881(&L_0, (0.0f), (0.0f), (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_0020;
-	}
-
-IL_0020:
-	{
-		Quaternion_t4030073918  L_1 = V_0;
-		return L_1;
-	}
-}
-// UnityEngine.Quaternion UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Quaternion)
-extern "C"  Quaternion_t4030073918  Quaternion_op_Multiply_m2426727589 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___lhs0, Quaternion_t4030073918  ___rhs1, const MethodInfo* method)
-{
-	Quaternion_t4030073918  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = (&___lhs0)->get_w_3();
-		float L_1 = (&___rhs1)->get_x_0();
-		float L_2 = (&___lhs0)->get_x_0();
-		float L_3 = (&___rhs1)->get_w_3();
-		float L_4 = (&___lhs0)->get_y_1();
-		float L_5 = (&___rhs1)->get_z_2();
-		float L_6 = (&___lhs0)->get_z_2();
-		float L_7 = (&___rhs1)->get_y_1();
-		float L_8 = (&___lhs0)->get_w_3();
-		float L_9 = (&___rhs1)->get_y_1();
-		float L_10 = (&___lhs0)->get_y_1();
-		float L_11 = (&___rhs1)->get_w_3();
-		float L_12 = (&___lhs0)->get_z_2();
-		float L_13 = (&___rhs1)->get_x_0();
-		float L_14 = (&___lhs0)->get_x_0();
-		float L_15 = (&___rhs1)->get_z_2();
-		float L_16 = (&___lhs0)->get_w_3();
-		float L_17 = (&___rhs1)->get_z_2();
-		float L_18 = (&___lhs0)->get_z_2();
-		float L_19 = (&___rhs1)->get_w_3();
-		float L_20 = (&___lhs0)->get_x_0();
-		float L_21 = (&___rhs1)->get_y_1();
-		float L_22 = (&___lhs0)->get_y_1();
-		float L_23 = (&___rhs1)->get_x_0();
-		float L_24 = (&___lhs0)->get_w_3();
-		float L_25 = (&___rhs1)->get_w_3();
-		float L_26 = (&___lhs0)->get_x_0();
-		float L_27 = (&___rhs1)->get_x_0();
-		float L_28 = (&___lhs0)->get_y_1();
-		float L_29 = (&___rhs1)->get_y_1();
-		float L_30 = (&___lhs0)->get_z_2();
-		float L_31 = (&___rhs1)->get_z_2();
-		Quaternion_t4030073918  L_32;
-		memset(&L_32, 0, sizeof(L_32));
-		Quaternion__ctor_m3196903881(&L_32, ((float)((float)((float)((float)((float)((float)((float)((float)L_0*(float)L_1))+(float)((float)((float)L_2*(float)L_3))))+(float)((float)((float)L_4*(float)L_5))))-(float)((float)((float)L_6*(float)L_7)))), ((float)((float)((float)((float)((float)((float)((float)((float)L_8*(float)L_9))+(float)((float)((float)L_10*(float)L_11))))+(float)((float)((float)L_12*(float)L_13))))-(float)((float)((float)L_14*(float)L_15)))), ((float)((float)((float)((float)((float)((float)((float)((float)L_16*(float)L_17))+(float)((float)((float)L_18*(float)L_19))))+(float)((float)((float)L_20*(float)L_21))))-(float)((float)((float)L_22*(float)L_23)))), ((float)((float)((float)((float)((float)((float)((float)((float)L_24*(float)L_25))-(float)((float)((float)L_26*(float)L_27))))-(float)((float)((float)L_28*(float)L_29))))-(float)((float)((float)L_30*(float)L_31)))), /*hidden argument*/NULL);
-		V_0 = L_32;
-		goto IL_0108;
-	}
-
-IL_0108:
-	{
-		Quaternion_t4030073918  L_33 = V_0;
-		return L_33;
-	}
-}
-// UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)
-extern "C"  Vector3_t2243707580  Quaternion_op_Multiply_m1483423721 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___rotation0, Vector3_t2243707580  ___point1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	float V_4 = 0.0f;
-	float V_5 = 0.0f;
-	float V_6 = 0.0f;
-	float V_7 = 0.0f;
-	float V_8 = 0.0f;
-	float V_9 = 0.0f;
-	float V_10 = 0.0f;
-	float V_11 = 0.0f;
-	Vector3_t2243707580  V_12;
-	memset(&V_12, 0, sizeof(V_12));
-	Vector3_t2243707580  V_13;
-	memset(&V_13, 0, sizeof(V_13));
-	{
-		float L_0 = (&___rotation0)->get_x_0();
-		V_0 = ((float)((float)L_0*(float)(2.0f)));
-		float L_1 = (&___rotation0)->get_y_1();
-		V_1 = ((float)((float)L_1*(float)(2.0f)));
-		float L_2 = (&___rotation0)->get_z_2();
-		V_2 = ((float)((float)L_2*(float)(2.0f)));
-		float L_3 = (&___rotation0)->get_x_0();
-		float L_4 = V_0;
-		V_3 = ((float)((float)L_3*(float)L_4));
-		float L_5 = (&___rotation0)->get_y_1();
-		float L_6 = V_1;
-		V_4 = ((float)((float)L_5*(float)L_6));
-		float L_7 = (&___rotation0)->get_z_2();
-		float L_8 = V_2;
-		V_5 = ((float)((float)L_7*(float)L_8));
-		float L_9 = (&___rotation0)->get_x_0();
-		float L_10 = V_1;
-		V_6 = ((float)((float)L_9*(float)L_10));
-		float L_11 = (&___rotation0)->get_x_0();
-		float L_12 = V_2;
-		V_7 = ((float)((float)L_11*(float)L_12));
-		float L_13 = (&___rotation0)->get_y_1();
-		float L_14 = V_2;
-		V_8 = ((float)((float)L_13*(float)L_14));
-		float L_15 = (&___rotation0)->get_w_3();
-		float L_16 = V_0;
-		V_9 = ((float)((float)L_15*(float)L_16));
-		float L_17 = (&___rotation0)->get_w_3();
-		float L_18 = V_1;
-		V_10 = ((float)((float)L_17*(float)L_18));
-		float L_19 = (&___rotation0)->get_w_3();
-		float L_20 = V_2;
-		V_11 = ((float)((float)L_19*(float)L_20));
-		float L_21 = V_4;
-		float L_22 = V_5;
-		float L_23 = (&___point1)->get_x_1();
-		float L_24 = V_6;
-		float L_25 = V_11;
-		float L_26 = (&___point1)->get_y_2();
-		float L_27 = V_7;
-		float L_28 = V_10;
-		float L_29 = (&___point1)->get_z_3();
-		(&V_12)->set_x_1(((float)((float)((float)((float)((float)((float)((float)((float)(1.0f)-(float)((float)((float)L_21+(float)L_22))))*(float)L_23))+(float)((float)((float)((float)((float)L_24-(float)L_25))*(float)L_26))))+(float)((float)((float)((float)((float)L_27+(float)L_28))*(float)L_29)))));
-		float L_30 = V_6;
-		float L_31 = V_11;
-		float L_32 = (&___point1)->get_x_1();
-		float L_33 = V_3;
-		float L_34 = V_5;
-		float L_35 = (&___point1)->get_y_2();
-		float L_36 = V_8;
-		float L_37 = V_9;
-		float L_38 = (&___point1)->get_z_3();
-		(&V_12)->set_y_2(((float)((float)((float)((float)((float)((float)((float)((float)L_30+(float)L_31))*(float)L_32))+(float)((float)((float)((float)((float)(1.0f)-(float)((float)((float)L_33+(float)L_34))))*(float)L_35))))+(float)((float)((float)((float)((float)L_36-(float)L_37))*(float)L_38)))));
-		float L_39 = V_7;
-		float L_40 = V_10;
-		float L_41 = (&___point1)->get_x_1();
-		float L_42 = V_8;
-		float L_43 = V_9;
-		float L_44 = (&___point1)->get_y_2();
-		float L_45 = V_3;
-		float L_46 = V_4;
-		float L_47 = (&___point1)->get_z_3();
-		(&V_12)->set_z_3(((float)((float)((float)((float)((float)((float)((float)((float)L_39-(float)L_40))*(float)L_41))+(float)((float)((float)((float)((float)L_42+(float)L_43))*(float)L_44))))+(float)((float)((float)((float)((float)(1.0f)-(float)((float)((float)L_45+(float)L_46))))*(float)L_47)))));
-		Vector3_t2243707580  L_48 = V_12;
-		V_13 = L_48;
-		goto IL_0136;
-	}
-
-IL_0136:
-	{
-		Vector3_t2243707580  L_49 = V_13;
-		return L_49;
-	}
-}
-// System.Boolean UnityEngine.Quaternion::op_Equality(UnityEngine.Quaternion,UnityEngine.Quaternion)
-extern "C"  bool Quaternion_op_Equality_m2308156925 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___lhs0, Quaternion_t4030073918  ___rhs1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		Quaternion_t4030073918  L_0 = ___lhs0;
-		Quaternion_t4030073918  L_1 = ___rhs1;
-		float L_2 = Quaternion_Dot_m952616600(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = (bool)((((float)L_2) > ((float)(0.999999f)))? 1 : 0);
-		goto IL_0015;
-	}
-
-IL_0015:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Quaternion::op_Inequality(UnityEngine.Quaternion,UnityEngine.Quaternion)
-extern "C"  bool Quaternion_op_Inequality_m3629786166 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___lhs0, Quaternion_t4030073918  ___rhs1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		Quaternion_t4030073918  L_0 = ___lhs0;
-		Quaternion_t4030073918  L_1 = ___rhs1;
-		bool L_2 = Quaternion_op_Equality_m2308156925(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Single UnityEngine.Quaternion::Dot(UnityEngine.Quaternion,UnityEngine.Quaternion)
-extern "C"  float Quaternion_Dot_m952616600 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___a0, Quaternion_t4030073918  ___b1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = (&___a0)->get_x_0();
-		float L_1 = (&___b1)->get_x_0();
-		float L_2 = (&___a0)->get_y_1();
-		float L_3 = (&___b1)->get_y_1();
-		float L_4 = (&___a0)->get_z_2();
-		float L_5 = (&___b1)->get_z_2();
-		float L_6 = (&___a0)->get_w_3();
-		float L_7 = (&___b1)->get_w_3();
-		V_0 = ((float)((float)((float)((float)((float)((float)((float)((float)L_0*(float)L_1))+(float)((float)((float)L_2*(float)L_3))))+(float)((float)((float)L_4*(float)L_5))))+(float)((float)((float)L_6*(float)L_7))));
-		goto IL_0046;
-	}
-
-IL_0046:
-	{
-		float L_8 = V_0;
-		return L_8;
-	}
-}
-// System.Int32 UnityEngine.Quaternion::GetHashCode()
-extern "C"  int32_t Quaternion_GetHashCode_m2270520528 (Quaternion_t4030073918 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		float* L_0 = __this->get_address_of_x_0();
-		int32_t L_1 = Single_GetHashCode_m3102305584(L_0, /*hidden argument*/NULL);
-		float* L_2 = __this->get_address_of_y_1();
-		int32_t L_3 = Single_GetHashCode_m3102305584(L_2, /*hidden argument*/NULL);
-		float* L_4 = __this->get_address_of_z_2();
-		int32_t L_5 = Single_GetHashCode_m3102305584(L_4, /*hidden argument*/NULL);
-		float* L_6 = __this->get_address_of_w_3();
-		int32_t L_7 = Single_GetHashCode_m3102305584(L_6, /*hidden argument*/NULL);
-		V_0 = ((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_1^(int32_t)((int32_t)((int32_t)L_3<<(int32_t)2))))^(int32_t)((int32_t)((int32_t)L_5>>(int32_t)2))))^(int32_t)((int32_t)((int32_t)L_7>>(int32_t)1))));
-		goto IL_0054;
-	}
-
-IL_0054:
-	{
-		int32_t L_8 = V_0;
-		return L_8;
-	}
-}
-extern "C"  int32_t Quaternion_GetHashCode_m2270520528_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Quaternion_t4030073918 * _thisAdjusted = reinterpret_cast<Quaternion_t4030073918 *>(__this + 1);
-	return Quaternion_GetHashCode_m2270520528(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Quaternion::Equals(System.Object)
-extern "C"  bool Quaternion_Equals_m3730391696 (Quaternion_t4030073918 * __this, Il2CppObject * ___other0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Quaternion_Equals_m3730391696_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	Quaternion_t4030073918  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	int32_t G_B7_0 = 0;
-	{
-		Il2CppObject * L_0 = ___other0;
-		if (((Il2CppObject *)IsInstSealed(L_0, Quaternion_t4030073918_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		V_0 = (bool)0;
-		goto IL_007a;
-	}
-
-IL_0013:
-	{
-		Il2CppObject * L_1 = ___other0;
-		V_1 = ((*(Quaternion_t4030073918 *)((Quaternion_t4030073918 *)UnBox(L_1, Quaternion_t4030073918_il2cpp_TypeInfo_var))));
-		float* L_2 = __this->get_address_of_x_0();
-		float L_3 = (&V_1)->get_x_0();
-		bool L_4 = Single_Equals_m3359827399(L_2, L_3, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_0073;
-		}
-	}
-	{
-		float* L_5 = __this->get_address_of_y_1();
-		float L_6 = (&V_1)->get_y_1();
-		bool L_7 = Single_Equals_m3359827399(L_5, L_6, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_0073;
-		}
-	}
-	{
-		float* L_8 = __this->get_address_of_z_2();
-		float L_9 = (&V_1)->get_z_2();
-		bool L_10 = Single_Equals_m3359827399(L_8, L_9, /*hidden argument*/NULL);
-		if (!L_10)
-		{
-			goto IL_0073;
-		}
-	}
-	{
-		float* L_11 = __this->get_address_of_w_3();
-		float L_12 = (&V_1)->get_w_3();
-		bool L_13 = Single_Equals_m3359827399(L_11, L_12, /*hidden argument*/NULL);
-		G_B7_0 = ((int32_t)(L_13));
-		goto IL_0074;
-	}
-
-IL_0073:
-	{
-		G_B7_0 = 0;
-	}
-
-IL_0074:
-	{
-		V_0 = (bool)G_B7_0;
-		goto IL_007a;
-	}
-
-IL_007a:
-	{
-		bool L_14 = V_0;
-		return L_14;
-	}
-}
-extern "C"  bool Quaternion_Equals_m3730391696_AdjustorThunk (Il2CppObject * __this, Il2CppObject * ___other0, const MethodInfo* method)
-{
-	Quaternion_t4030073918 * _thisAdjusted = reinterpret_cast<Quaternion_t4030073918 *>(__this + 1);
-	return Quaternion_Equals_m3730391696(_thisAdjusted, ___other0, method);
-}
-// System.String UnityEngine.Quaternion::ToString()
-extern "C"  String_t* Quaternion_ToString_m2638853272 (Quaternion_t4030073918 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Quaternion_ToString_m2638853272_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	String_t* V_0 = NULL;
-	{
-		ObjectU5BU5D_t3614634134* L_0 = ((ObjectU5BU5D_t3614634134*)SZArrayNew(ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var, (uint32_t)4));
-		float L_1 = __this->get_x_0();
-		float L_2 = L_1;
-		Il2CppObject * L_3 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_2);
-		NullCheck(L_0);
-		ArrayElementTypeCheck (L_0, L_3);
-		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_3);
-		ObjectU5BU5D_t3614634134* L_4 = L_0;
-		float L_5 = __this->get_y_1();
-		float L_6 = L_5;
-		Il2CppObject * L_7 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_6);
-		NullCheck(L_4);
-		ArrayElementTypeCheck (L_4, L_7);
-		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_7);
-		ObjectU5BU5D_t3614634134* L_8 = L_4;
-		float L_9 = __this->get_z_2();
-		float L_10 = L_9;
-		Il2CppObject * L_11 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_10);
-		NullCheck(L_8);
-		ArrayElementTypeCheck (L_8, L_11);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)L_11);
-		ObjectU5BU5D_t3614634134* L_12 = L_8;
-		float L_13 = __this->get_w_3();
-		float L_14 = L_13;
-		Il2CppObject * L_15 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_14);
-		NullCheck(L_12);
-		ArrayElementTypeCheck (L_12, L_15);
-		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(3), (Il2CppObject *)L_15);
-		String_t* L_16 = UnityString_Format_m2949645127(NULL /*static, unused*/, _stringLiteral3587482509, L_12, /*hidden argument*/NULL);
-		V_0 = L_16;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		String_t* L_17 = V_0;
-		return L_17;
-	}
-}
-extern "C"  String_t* Quaternion_ToString_m2638853272_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Quaternion_t4030073918 * _thisAdjusted = reinterpret_cast<Quaternion_t4030073918 *>(__this + 1);
-	return Quaternion_ToString_m2638853272(_thisAdjusted, method);
-}
-// System.Single UnityEngine.Random::Range(System.Single,System.Single)
-extern "C"  float Random_Range_m2884721203 (Il2CppObject * __this /* static, unused */, float ___min0, float ___max1, const MethodInfo* method)
-{
-	typedef float (*Random_Range_m2884721203_ftn) (float, float);
-	static Random_Range_m2884721203_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Random_Range_m2884721203_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Random::Range(System.Single,System.Single)");
-	return _il2cpp_icall_func(___min0, ___max1);
-}
-// System.Void UnityEngine.RangeAttribute::.ctor(System.Single,System.Single)
-extern "C"  void RangeAttribute__ctor_m1657271662 (RangeAttribute_t3336560921 * __this, float ___min0, float ___max1, const MethodInfo* method)
-{
-	{
-		PropertyAttribute__ctor_m3663555848(__this, /*hidden argument*/NULL);
-		float L_0 = ___min0;
-		__this->set_min_0(L_0);
-		float L_1 = ___max1;
-		__this->set_max_1(L_1);
-		return;
-	}
-}
-// System.Int32 UnityEngine.RangeInt::get_end()
-extern "C"  int32_t RangeInt_get_end_m913869897 (RangeInt_t2323401134 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->get_start_0();
-		int32_t L_1 = __this->get_length_1();
-		V_0 = ((int32_t)((int32_t)L_0+(int32_t)L_1));
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		int32_t L_2 = V_0;
-		return L_2;
-	}
-}
-extern "C"  int32_t RangeInt_get_end_m913869897_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RangeInt_t2323401134 * _thisAdjusted = reinterpret_cast<RangeInt_t2323401134 *>(__this + 1);
-	return RangeInt_get_end_m913869897(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Ray::.ctor(UnityEngine.Vector3,UnityEngine.Vector3)
-extern "C"  void Ray__ctor_m3379034047 (Ray_t2469606224 * __this, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, const MethodInfo* method)
-{
-	{
-		Vector3_t2243707580  L_0 = ___origin0;
-		__this->set_m_Origin_0(L_0);
-		Vector3_t2243707580  L_1 = Vector3_get_normalized_m936072361((&___direction1), /*hidden argument*/NULL);
-		__this->set_m_Direction_1(L_1);
-		return;
-	}
-}
-extern "C"  void Ray__ctor_m3379034047_AdjustorThunk (Il2CppObject * __this, Vector3_t2243707580  ___origin0, Vector3_t2243707580  ___direction1, const MethodInfo* method)
-{
-	Ray_t2469606224 * _thisAdjusted = reinterpret_cast<Ray_t2469606224 *>(__this + 1);
-	Ray__ctor_m3379034047(_thisAdjusted, ___origin0, ___direction1, method);
-}
-// UnityEngine.Vector3 UnityEngine.Ray::get_origin()
-extern "C"  Vector3_t2243707580  Ray_get_origin_m3339262500 (Ray_t2469606224 * __this, const MethodInfo* method)
-{
-	Vector3_t2243707580  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector3_t2243707580  L_0 = __this->get_m_Origin_0();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector3_t2243707580  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector3_t2243707580  Ray_get_origin_m3339262500_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Ray_t2469606224 * _thisAdjusted = reinterpret_cast<Ray_t2469606224 *>(__this + 1);
-	return Ray_get_origin_m3339262500(_thisAdjusted, method);
-}
-// UnityEngine.Vector3 UnityEngine.Ray::get_direction()
-extern "C"  Vector3_t2243707580  Ray_get_direction_m4059191533 (Ray_t2469606224 * __this, const MethodInfo* method)
-{
-	Vector3_t2243707580  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector3_t2243707580  L_0 = __this->get_m_Direction_1();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector3_t2243707580  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector3_t2243707580  Ray_get_direction_m4059191533_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Ray_t2469606224 * _thisAdjusted = reinterpret_cast<Ray_t2469606224 *>(__this + 1);
-	return Ray_get_direction_m4059191533(_thisAdjusted, method);
-}
-// UnityEngine.Vector3 UnityEngine.Ray::GetPoint(System.Single)
-extern "C"  Vector3_t2243707580  Ray_GetPoint_m1353702366 (Ray_t2469606224 * __this, float ___distance0, const MethodInfo* method)
-{
-	Vector3_t2243707580  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector3_t2243707580  L_0 = __this->get_m_Origin_0();
-		Vector3_t2243707580  L_1 = __this->get_m_Direction_1();
-		float L_2 = ___distance0;
-		Vector3_t2243707580  L_3 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_1, L_2, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_4 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_0, L_3, /*hidden argument*/NULL);
-		V_0 = L_4;
-		goto IL_001e;
-	}
-
-IL_001e:
-	{
-		Vector3_t2243707580  L_5 = V_0;
-		return L_5;
-	}
-}
-extern "C"  Vector3_t2243707580  Ray_GetPoint_m1353702366_AdjustorThunk (Il2CppObject * __this, float ___distance0, const MethodInfo* method)
-{
-	Ray_t2469606224 * _thisAdjusted = reinterpret_cast<Ray_t2469606224 *>(__this + 1);
-	return Ray_GetPoint_m1353702366(_thisAdjusted, ___distance0, method);
-}
-// System.String UnityEngine.Ray::ToString()
-extern "C"  String_t* Ray_ToString_m2019179238 (Ray_t2469606224 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Ray_ToString_m2019179238_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	String_t* V_0 = NULL;
-	{
-		ObjectU5BU5D_t3614634134* L_0 = ((ObjectU5BU5D_t3614634134*)SZArrayNew(ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var, (uint32_t)2));
-		Vector3_t2243707580  L_1 = __this->get_m_Origin_0();
-		Vector3_t2243707580  L_2 = L_1;
-		Il2CppObject * L_3 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_2);
-		NullCheck(L_0);
-		ArrayElementTypeCheck (L_0, L_3);
-		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_3);
-		ObjectU5BU5D_t3614634134* L_4 = L_0;
-		Vector3_t2243707580  L_5 = __this->get_m_Direction_1();
-		Vector3_t2243707580  L_6 = L_5;
-		Il2CppObject * L_7 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_6);
-		NullCheck(L_4);
-		ArrayElementTypeCheck (L_4, L_7);
-		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_7);
-		String_t* L_8 = UnityString_Format_m2949645127(NULL /*static, unused*/, _stringLiteral1807026812, L_4, /*hidden argument*/NULL);
-		V_0 = L_8;
-		goto IL_0033;
-	}
-
-IL_0033:
-	{
-		String_t* L_9 = V_0;
-		return L_9;
-	}
-}
-extern "C"  String_t* Ray_ToString_m2019179238_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Ray_t2469606224 * _thisAdjusted = reinterpret_cast<Ray_t2469606224 *>(__this + 1);
-	return Ray_ToString_m2019179238(_thisAdjusted, method);
-}
-// Conversion methods for marshalling of: UnityEngine.RaycastHit
-extern "C" void RaycastHit_t87180320_marshal_pinvoke(const RaycastHit_t87180320& unmarshaled, RaycastHit_t87180320_marshaled_pinvoke& marshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-extern "C" void RaycastHit_t87180320_marshal_pinvoke_back(const RaycastHit_t87180320_marshaled_pinvoke& marshaled, RaycastHit_t87180320& unmarshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.RaycastHit
-extern "C" void RaycastHit_t87180320_marshal_pinvoke_cleanup(RaycastHit_t87180320_marshaled_pinvoke& marshaled)
-{
-}
-// Conversion methods for marshalling of: UnityEngine.RaycastHit
-extern "C" void RaycastHit_t87180320_marshal_com(const RaycastHit_t87180320& unmarshaled, RaycastHit_t87180320_marshaled_com& marshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-extern "C" void RaycastHit_t87180320_marshal_com_back(const RaycastHit_t87180320_marshaled_com& marshaled, RaycastHit_t87180320& unmarshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.RaycastHit
-extern "C" void RaycastHit_t87180320_marshal_com_cleanup(RaycastHit_t87180320_marshaled_com& marshaled)
-{
-}
-// UnityEngine.Vector3 UnityEngine.RaycastHit::get_point()
-extern "C"  Vector3_t2243707580  RaycastHit_get_point_m326143462 (RaycastHit_t87180320 * __this, const MethodInfo* method)
-{
-	Vector3_t2243707580  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector3_t2243707580  L_0 = __this->get_m_Point_0();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector3_t2243707580  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector3_t2243707580  RaycastHit_get_point_m326143462_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit_t87180320 * _thisAdjusted = reinterpret_cast<RaycastHit_t87180320 *>(__this + 1);
-	return RaycastHit_get_point_m326143462(_thisAdjusted, method);
-}
-// UnityEngine.Vector3 UnityEngine.RaycastHit::get_normal()
-extern "C"  Vector3_t2243707580  RaycastHit_get_normal_m817665579 (RaycastHit_t87180320 * __this, const MethodInfo* method)
-{
-	Vector3_t2243707580  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector3_t2243707580  L_0 = __this->get_m_Normal_1();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector3_t2243707580  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector3_t2243707580  RaycastHit_get_normal_m817665579_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit_t87180320 * _thisAdjusted = reinterpret_cast<RaycastHit_t87180320 *>(__this + 1);
-	return RaycastHit_get_normal_m817665579(_thisAdjusted, method);
-}
-// System.Single UnityEngine.RaycastHit::get_distance()
-extern "C"  float RaycastHit_get_distance_m1178709367 (RaycastHit_t87180320 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_Distance_3();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float RaycastHit_get_distance_m1178709367_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit_t87180320 * _thisAdjusted = reinterpret_cast<RaycastHit_t87180320 *>(__this + 1);
-	return RaycastHit_get_distance_m1178709367(_thisAdjusted, method);
-}
-// UnityEngine.Collider UnityEngine.RaycastHit::get_collider()
-extern "C"  Collider_t3497673348 * RaycastHit_get_collider_m301198172 (RaycastHit_t87180320 * __this, const MethodInfo* method)
-{
-	Collider_t3497673348 * V_0 = NULL;
-	{
-		Collider_t3497673348 * L_0 = __this->get_m_Collider_5();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Collider_t3497673348 * L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Collider_t3497673348 * RaycastHit_get_collider_m301198172_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit_t87180320 * _thisAdjusted = reinterpret_cast<RaycastHit_t87180320 *>(__this + 1);
-	return RaycastHit_get_collider_m301198172(_thisAdjusted, method);
-}
-// Conversion methods for marshalling of: UnityEngine.RaycastHit2D
-extern "C" void RaycastHit2D_t4063908774_marshal_pinvoke(const RaycastHit2D_t4063908774& unmarshaled, RaycastHit2D_t4063908774_marshaled_pinvoke& marshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit2D': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-extern "C" void RaycastHit2D_t4063908774_marshal_pinvoke_back(const RaycastHit2D_t4063908774_marshaled_pinvoke& marshaled, RaycastHit2D_t4063908774& unmarshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit2D': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.RaycastHit2D
-extern "C" void RaycastHit2D_t4063908774_marshal_pinvoke_cleanup(RaycastHit2D_t4063908774_marshaled_pinvoke& marshaled)
-{
-}
-// Conversion methods for marshalling of: UnityEngine.RaycastHit2D
-extern "C" void RaycastHit2D_t4063908774_marshal_com(const RaycastHit2D_t4063908774& unmarshaled, RaycastHit2D_t4063908774_marshaled_com& marshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit2D': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-extern "C" void RaycastHit2D_t4063908774_marshal_com_back(const RaycastHit2D_t4063908774_marshaled_com& marshaled, RaycastHit2D_t4063908774& unmarshaled)
-{
-	Il2CppCodeGenException* ___m_Collider_5Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_Collider' of type 'RaycastHit2D': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_Collider_5Exception);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.RaycastHit2D
-extern "C" void RaycastHit2D_t4063908774_marshal_com_cleanup(RaycastHit2D_t4063908774_marshaled_com& marshaled)
-{
-}
-// UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_point()
-extern "C"  Vector2_t2243707579  RaycastHit2D_get_point_m442317739 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector2_t2243707579  L_0 = __this->get_m_Point_1();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector2_t2243707579  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector2_t2243707579  RaycastHit2D_get_point_m442317739_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit2D_t4063908774 * _thisAdjusted = reinterpret_cast<RaycastHit2D_t4063908774 *>(__this + 1);
-	return RaycastHit2D_get_point_m442317739(_thisAdjusted, method);
-}
-// UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_normal()
-extern "C"  Vector2_t2243707579  RaycastHit2D_get_normal_m3768105386 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector2_t2243707579  L_0 = __this->get_m_Normal_2();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector2_t2243707579  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector2_t2243707579  RaycastHit2D_get_normal_m3768105386_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit2D_t4063908774 * _thisAdjusted = reinterpret_cast<RaycastHit2D_t4063908774 *>(__this + 1);
-	return RaycastHit2D_get_normal_m3768105386(_thisAdjusted, method);
-}
-// System.Single UnityEngine.RaycastHit2D::get_fraction()
-extern "C"  float RaycastHit2D_get_fraction_m1296150410 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_Fraction_4();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float RaycastHit2D_get_fraction_m1296150410_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit2D_t4063908774 * _thisAdjusted = reinterpret_cast<RaycastHit2D_t4063908774 *>(__this + 1);
-	return RaycastHit2D_get_fraction_m1296150410(_thisAdjusted, method);
-}
-// UnityEngine.Collider2D UnityEngine.RaycastHit2D::get_collider()
-extern "C"  Collider2D_t646061738 * RaycastHit2D_get_collider_m2568504212 (RaycastHit2D_t4063908774 * __this, const MethodInfo* method)
-{
-	Collider2D_t646061738 * V_0 = NULL;
-	{
-		Collider2D_t646061738 * L_0 = __this->get_m_Collider_5();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Collider2D_t646061738 * L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Collider2D_t646061738 * RaycastHit2D_get_collider_m2568504212_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	RaycastHit2D_t4063908774 * _thisAdjusted = reinterpret_cast<RaycastHit2D_t4063908774 *>(__this + 1);
-	return RaycastHit2D_get_collider_m2568504212(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
-extern "C"  void Rect__ctor_m1220545469 (Rect_t3681755626 * __this, float ___x0, float ___y1, float ___width2, float ___height3, const MethodInfo* method)
-{
-	{
-		float L_0 = ___x0;
-		__this->set_m_XMin_0(L_0);
-		float L_1 = ___y1;
-		__this->set_m_YMin_1(L_1);
-		float L_2 = ___width2;
-		__this->set_m_Width_2(L_2);
-		float L_3 = ___height3;
-		__this->set_m_Height_3(L_3);
-		return;
-	}
-}
-extern "C"  void Rect__ctor_m1220545469_AdjustorThunk (Il2CppObject * __this, float ___x0, float ___y1, float ___width2, float ___height3, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect__ctor_m1220545469(_thisAdjusted, ___x0, ___y1, ___width2, ___height3, method);
-}
-// System.Single UnityEngine.Rect::get_x()
-extern "C"  float Rect_get_x_m1393582490 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_XMin_0();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float Rect_get_x_m1393582490_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_x_m1393582490(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_x(System.Single)
-extern "C"  void Rect_set_x_m3783700513 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	{
-		float L_0 = ___value0;
-		__this->set_m_XMin_0(L_0);
-		return;
-	}
-}
-extern "C"  void Rect_set_x_m3783700513_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_x_m3783700513(_thisAdjusted, ___value0, method);
-}
-// System.Single UnityEngine.Rect::get_y()
-extern "C"  float Rect_get_y_m1393582395 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_YMin_1();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float Rect_get_y_m1393582395_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_y_m1393582395(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_y(System.Single)
-extern "C"  void Rect_set_y_m4294916608 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	{
-		float L_0 = ___value0;
-		__this->set_m_YMin_1(L_0);
-		return;
-	}
-}
-extern "C"  void Rect_set_y_m4294916608_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_y_m4294916608(_thisAdjusted, ___value0, method);
-}
-// UnityEngine.Vector2 UnityEngine.Rect::get_position()
-extern "C"  Vector2_t2243707579  Rect_get_position_m24550734 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = __this->get_m_XMin_0();
-		float L_1 = __this->get_m_YMin_1();
-		Vector2_t2243707579  L_2;
-		memset(&L_2, 0, sizeof(L_2));
-		Vector2__ctor_m3067419446(&L_2, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		Vector2_t2243707579  L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  Vector2_t2243707579  Rect_get_position_m24550734_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_position_m24550734(_thisAdjusted, method);
-}
-// UnityEngine.Vector2 UnityEngine.Rect::get_center()
-extern "C"  Vector2_t2243707579  Rect_get_center_m3049923624 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = Rect_get_x_m1393582490(__this, /*hidden argument*/NULL);
-		float L_1 = __this->get_m_Width_2();
-		float L_2 = Rect_get_y_m1393582395(__this, /*hidden argument*/NULL);
-		float L_3 = __this->get_m_Height_3();
-		Vector2_t2243707579  L_4;
-		memset(&L_4, 0, sizeof(L_4));
-		Vector2__ctor_m3067419446(&L_4, ((float)((float)L_0+(float)((float)((float)L_1/(float)(2.0f))))), ((float)((float)L_2+(float)((float)((float)L_3/(float)(2.0f))))), /*hidden argument*/NULL);
-		V_0 = L_4;
-		goto IL_0032;
-	}
-
-IL_0032:
-	{
-		Vector2_t2243707579  L_5 = V_0;
-		return L_5;
-	}
-}
-extern "C"  Vector2_t2243707579  Rect_get_center_m3049923624_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_center_m3049923624(_thisAdjusted, method);
-}
-// UnityEngine.Vector2 UnityEngine.Rect::get_min()
-extern "C"  Vector2_t2243707579  Rect_get_min_m2549872833 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = Rect_get_xMin_m1161102488(__this, /*hidden argument*/NULL);
-		float L_1 = Rect_get_yMin_m1161103577(__this, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_2;
-		memset(&L_2, 0, sizeof(L_2));
-		Vector2__ctor_m3067419446(&L_2, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		Vector2_t2243707579  L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  Vector2_t2243707579  Rect_get_min_m2549872833_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_min_m2549872833(_thisAdjusted, method);
-}
-// UnityEngine.Vector2 UnityEngine.Rect::get_max()
-extern "C"  Vector2_t2243707579  Rect_get_max_m96665935 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = Rect_get_xMax_m2915145014(__this, /*hidden argument*/NULL);
-		float L_1 = Rect_get_yMax_m2915146103(__this, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_2;
-		memset(&L_2, 0, sizeof(L_2));
-		Vector2__ctor_m3067419446(&L_2, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		Vector2_t2243707579  L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  Vector2_t2243707579  Rect_get_max_m96665935_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_max_m96665935(_thisAdjusted, method);
-}
-// System.Single UnityEngine.Rect::get_width()
-extern "C"  float Rect_get_width_m1138015702 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_Width_2();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float Rect_get_width_m1138015702_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_width_m1138015702(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_width(System.Single)
-extern "C"  void Rect_set_width_m1921257731 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	{
-		float L_0 = ___value0;
-		__this->set_m_Width_2(L_0);
-		return;
-	}
-}
-extern "C"  void Rect_set_width_m1921257731_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_width_m1921257731(_thisAdjusted, ___value0, method);
-}
-// System.Single UnityEngine.Rect::get_height()
-extern "C"  float Rect_get_height_m3128694305 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_Height_3();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float Rect_get_height_m3128694305_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_height_m3128694305(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_height(System.Single)
-extern "C"  void Rect_set_height_m2019122814 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	{
-		float L_0 = ___value0;
-		__this->set_m_Height_3(L_0);
-		return;
-	}
-}
-extern "C"  void Rect_set_height_m2019122814_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_height_m2019122814(_thisAdjusted, ___value0, method);
-}
-// UnityEngine.Vector2 UnityEngine.Rect::get_size()
-extern "C"  Vector2_t2243707579  Rect_get_size_m3833121112 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = __this->get_m_Width_2();
-		float L_1 = __this->get_m_Height_3();
-		Vector2_t2243707579  L_2;
-		memset(&L_2, 0, sizeof(L_2));
-		Vector2__ctor_m3067419446(&L_2, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		Vector2_t2243707579  L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  Vector2_t2243707579  Rect_get_size_m3833121112_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_size_m3833121112(_thisAdjusted, method);
-}
-// System.Single UnityEngine.Rect::get_xMin()
-extern "C"  float Rect_get_xMin_m1161102488 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_XMin_0();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float Rect_get_xMin_m1161102488_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_xMin_m1161102488(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_xMin(System.Single)
-extern "C"  void Rect_set_xMin_m4214255623 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = Rect_get_xMax_m2915145014(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		float L_1 = ___value0;
-		__this->set_m_XMin_0(L_1);
-		float L_2 = V_0;
-		float L_3 = __this->get_m_XMin_0();
-		__this->set_m_Width_2(((float)((float)L_2-(float)L_3)));
-		return;
-	}
-}
-extern "C"  void Rect_set_xMin_m4214255623_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_xMin_m4214255623(_thisAdjusted, ___value0, method);
-}
-// System.Single UnityEngine.Rect::get_yMin()
-extern "C"  float Rect_get_yMin_m1161103577 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_YMin_1();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		float L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  float Rect_get_yMin_m1161103577_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_yMin_m1161103577(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_yMin(System.Single)
-extern "C"  void Rect_set_yMin_m734445288 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = Rect_get_yMax_m2915146103(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		float L_1 = ___value0;
-		__this->set_m_YMin_1(L_1);
-		float L_2 = V_0;
-		float L_3 = __this->get_m_YMin_1();
-		__this->set_m_Height_3(((float)((float)L_2-(float)L_3)));
-		return;
-	}
-}
-extern "C"  void Rect_set_yMin_m734445288_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_yMin_m734445288(_thisAdjusted, ___value0, method);
-}
-// System.Single UnityEngine.Rect::get_xMax()
-extern "C"  float Rect_get_xMax_m2915145014 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_Width_2();
-		float L_1 = __this->get_m_XMin_0();
-		V_0 = ((float)((float)L_0+(float)L_1));
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		float L_2 = V_0;
-		return L_2;
-	}
-}
-extern "C"  float Rect_get_xMax_m2915145014_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_xMax_m2915145014(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_xMax(System.Single)
-extern "C"  void Rect_set_xMax_m3501625033 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	{
-		float L_0 = ___value0;
-		float L_1 = __this->get_m_XMin_0();
-		__this->set_m_Width_2(((float)((float)L_0-(float)L_1)));
-		return;
-	}
-}
-extern "C"  void Rect_set_xMax_m3501625033_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_xMax_m3501625033(_thisAdjusted, ___value0, method);
-}
-// System.Single UnityEngine.Rect::get_yMax()
-extern "C"  float Rect_get_yMax_m2915146103 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->get_m_Height_3();
-		float L_1 = __this->get_m_YMin_1();
-		V_0 = ((float)((float)L_0+(float)L_1));
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		float L_2 = V_0;
-		return L_2;
-	}
-}
-extern "C"  float Rect_get_yMax_m2915146103_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_get_yMax_m2915146103(_thisAdjusted, method);
-}
-// System.Void UnityEngine.Rect::set_yMax(System.Single)
-extern "C"  void Rect_set_yMax_m21814698 (Rect_t3681755626 * __this, float ___value0, const MethodInfo* method)
-{
-	{
-		float L_0 = ___value0;
-		float L_1 = __this->get_m_YMin_1();
-		__this->set_m_Height_3(((float)((float)L_0-(float)L_1)));
-		return;
-	}
-}
-extern "C"  void Rect_set_yMax_m21814698_AdjustorThunk (Il2CppObject * __this, float ___value0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	Rect_set_yMax_m21814698(_thisAdjusted, ___value0, method);
-}
-// System.Boolean UnityEngine.Rect::Contains(UnityEngine.Vector2)
-extern "C"  bool Rect_Contains_m1334685290 (Rect_t3681755626 * __this, Vector2_t2243707579  ___point0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	int32_t G_B5_0 = 0;
-	{
-		float L_0 = (&___point0)->get_x_0();
-		float L_1 = Rect_get_xMin_m1161102488(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_0) >= ((float)L_1))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_2 = (&___point0)->get_x_0();
-		float L_3 = Rect_get_xMax_m2915145014(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_2) < ((float)L_3))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_4 = (&___point0)->get_y_1();
-		float L_5 = Rect_get_yMin_m1161103577(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_4) >= ((float)L_5))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_6 = (&___point0)->get_y_1();
-		float L_7 = Rect_get_yMax_m2915146103(__this, /*hidden argument*/NULL);
-		G_B5_0 = ((((float)L_6) < ((float)L_7))? 1 : 0);
-		goto IL_0049;
-	}
-
-IL_0048:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_0049:
-	{
-		V_0 = (bool)G_B5_0;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		bool L_8 = V_0;
-		return L_8;
-	}
-}
-extern "C"  bool Rect_Contains_m1334685290_AdjustorThunk (Il2CppObject * __this, Vector2_t2243707579  ___point0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_Contains_m1334685290(_thisAdjusted, ___point0, method);
-}
-// System.Boolean UnityEngine.Rect::Contains(UnityEngine.Vector3)
-extern "C"  bool Rect_Contains_m1334685291 (Rect_t3681755626 * __this, Vector3_t2243707580  ___point0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	int32_t G_B5_0 = 0;
-	{
-		float L_0 = (&___point0)->get_x_1();
-		float L_1 = Rect_get_xMin_m1161102488(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_0) >= ((float)L_1))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_2 = (&___point0)->get_x_1();
-		float L_3 = Rect_get_xMax_m2915145014(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_2) < ((float)L_3))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_4 = (&___point0)->get_y_2();
-		float L_5 = Rect_get_yMin_m1161103577(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_4) >= ((float)L_5))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_6 = (&___point0)->get_y_2();
-		float L_7 = Rect_get_yMax_m2915146103(__this, /*hidden argument*/NULL);
-		G_B5_0 = ((((float)L_6) < ((float)L_7))? 1 : 0);
-		goto IL_0049;
-	}
-
-IL_0048:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_0049:
-	{
-		V_0 = (bool)G_B5_0;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		bool L_8 = V_0;
-		return L_8;
-	}
-}
-extern "C"  bool Rect_Contains_m1334685291_AdjustorThunk (Il2CppObject * __this, Vector3_t2243707580  ___point0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_Contains_m1334685291(_thisAdjusted, ___point0, method);
-}
-// UnityEngine.Rect UnityEngine.Rect::OrderMinMax(UnityEngine.Rect)
-extern "C"  Rect_t3681755626  Rect_OrderMinMax_m1783437776 (Il2CppObject * __this /* static, unused */, Rect_t3681755626  ___rect0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	Rect_t3681755626  V_2;
-	memset(&V_2, 0, sizeof(V_2));
-	{
-		float L_0 = Rect_get_xMin_m1161102488((&___rect0), /*hidden argument*/NULL);
-		float L_1 = Rect_get_xMax_m2915145014((&___rect0), /*hidden argument*/NULL);
-		if ((!(((float)L_0) > ((float)L_1))))
-		{
-			goto IL_0034;
-		}
-	}
-	{
-		float L_2 = Rect_get_xMin_m1161102488((&___rect0), /*hidden argument*/NULL);
-		V_0 = L_2;
-		float L_3 = Rect_get_xMax_m2915145014((&___rect0), /*hidden argument*/NULL);
-		Rect_set_xMin_m4214255623((&___rect0), L_3, /*hidden argument*/NULL);
-		float L_4 = V_0;
-		Rect_set_xMax_m3501625033((&___rect0), L_4, /*hidden argument*/NULL);
-	}
-
-IL_0034:
-	{
-		float L_5 = Rect_get_yMin_m1161103577((&___rect0), /*hidden argument*/NULL);
-		float L_6 = Rect_get_yMax_m2915146103((&___rect0), /*hidden argument*/NULL);
-		if ((!(((float)L_5) > ((float)L_6))))
-		{
-			goto IL_0067;
-		}
-	}
-	{
-		float L_7 = Rect_get_yMin_m1161103577((&___rect0), /*hidden argument*/NULL);
-		V_1 = L_7;
-		float L_8 = Rect_get_yMax_m2915146103((&___rect0), /*hidden argument*/NULL);
-		Rect_set_yMin_m734445288((&___rect0), L_8, /*hidden argument*/NULL);
-		float L_9 = V_1;
-		Rect_set_yMax_m21814698((&___rect0), L_9, /*hidden argument*/NULL);
-	}
-
-IL_0067:
-	{
-		Rect_t3681755626  L_10 = ___rect0;
-		V_2 = L_10;
-		goto IL_006e;
-	}
-
-IL_006e:
-	{
-		Rect_t3681755626  L_11 = V_2;
-		return L_11;
-	}
-}
-// System.Boolean UnityEngine.Rect::Overlaps(UnityEngine.Rect)
-extern "C"  bool Rect_Overlaps_m210444568 (Rect_t3681755626 * __this, Rect_t3681755626  ___other0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	int32_t G_B5_0 = 0;
-	{
-		float L_0 = Rect_get_xMax_m2915145014((&___other0), /*hidden argument*/NULL);
-		float L_1 = Rect_get_xMin_m1161102488(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_0) > ((float)L_1))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_2 = Rect_get_xMin_m1161102488((&___other0), /*hidden argument*/NULL);
-		float L_3 = Rect_get_xMax_m2915145014(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_2) < ((float)L_3))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_4 = Rect_get_yMax_m2915146103((&___other0), /*hidden argument*/NULL);
-		float L_5 = Rect_get_yMin_m1161103577(__this, /*hidden argument*/NULL);
-		if ((!(((float)L_4) > ((float)L_5))))
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		float L_6 = Rect_get_yMin_m1161103577((&___other0), /*hidden argument*/NULL);
-		float L_7 = Rect_get_yMax_m2915146103(__this, /*hidden argument*/NULL);
-		G_B5_0 = ((((float)L_6) < ((float)L_7))? 1 : 0);
-		goto IL_0049;
-	}
-
-IL_0048:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_0049:
-	{
-		V_0 = (bool)G_B5_0;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		bool L_8 = V_0;
-		return L_8;
-	}
-}
-extern "C"  bool Rect_Overlaps_m210444568_AdjustorThunk (Il2CppObject * __this, Rect_t3681755626  ___other0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_Overlaps_m210444568(_thisAdjusted, ___other0, method);
-}
-// System.Boolean UnityEngine.Rect::Overlaps(UnityEngine.Rect,System.Boolean)
-extern "C"  bool Rect_Overlaps_m4145874649 (Rect_t3681755626 * __this, Rect_t3681755626  ___other0, bool ___allowInverse1, const MethodInfo* method)
-{
-	Rect_t3681755626  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	bool V_1 = false;
-	{
-		V_0 = (*(Rect_t3681755626 *)__this);
-		bool L_0 = ___allowInverse1;
-		if (!L_0)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		Rect_t3681755626  L_1 = V_0;
-		Rect_t3681755626  L_2 = Rect_OrderMinMax_m1783437776(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		Rect_t3681755626  L_3 = ___other0;
-		Rect_t3681755626  L_4 = Rect_OrderMinMax_m1783437776(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
-		___other0 = L_4;
-	}
-
-IL_001f:
-	{
-		Rect_t3681755626  L_5 = ___other0;
-		bool L_6 = Rect_Overlaps_m210444568((&V_0), L_5, /*hidden argument*/NULL);
-		V_1 = L_6;
-		goto IL_002d;
-	}
-
-IL_002d:
-	{
-		bool L_7 = V_1;
-		return L_7;
-	}
-}
-extern "C"  bool Rect_Overlaps_m4145874649_AdjustorThunk (Il2CppObject * __this, Rect_t3681755626  ___other0, bool ___allowInverse1, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_Overlaps_m4145874649(_thisAdjusted, ___other0, ___allowInverse1, method);
-}
-// System.Boolean UnityEngine.Rect::op_Inequality(UnityEngine.Rect,UnityEngine.Rect)
-extern "C"  bool Rect_op_Inequality_m3595915756 (Il2CppObject * __this /* static, unused */, Rect_t3681755626  ___lhs0, Rect_t3681755626  ___rhs1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		Rect_t3681755626  L_0 = ___lhs0;
-		Rect_t3681755626  L_1 = ___rhs1;
-		bool L_2 = Rect_op_Equality_m2793663577(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Rect::op_Equality(UnityEngine.Rect,UnityEngine.Rect)
-extern "C"  bool Rect_op_Equality_m2793663577 (Il2CppObject * __this /* static, unused */, Rect_t3681755626  ___lhs0, Rect_t3681755626  ___rhs1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	int32_t G_B5_0 = 0;
-	{
-		float L_0 = Rect_get_x_m1393582490((&___lhs0), /*hidden argument*/NULL);
-		float L_1 = Rect_get_x_m1393582490((&___rhs1), /*hidden argument*/NULL);
-		if ((!(((float)L_0) == ((float)L_1))))
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		float L_2 = Rect_get_y_m1393582395((&___lhs0), /*hidden argument*/NULL);
-		float L_3 = Rect_get_y_m1393582395((&___rhs1), /*hidden argument*/NULL);
-		if ((!(((float)L_2) == ((float)L_3))))
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		float L_4 = Rect_get_width_m1138015702((&___lhs0), /*hidden argument*/NULL);
-		float L_5 = Rect_get_width_m1138015702((&___rhs1), /*hidden argument*/NULL);
-		if ((!(((float)L_4) == ((float)L_5))))
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		float L_6 = Rect_get_height_m3128694305((&___lhs0), /*hidden argument*/NULL);
-		float L_7 = Rect_get_height_m3128694305((&___rhs1), /*hidden argument*/NULL);
-		G_B5_0 = ((((float)L_6) == ((float)L_7))? 1 : 0);
-		goto IL_004d;
-	}
-
-IL_004c:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_004d:
-	{
-		V_0 = (bool)G_B5_0;
-		goto IL_0053;
-	}
-
-IL_0053:
-	{
-		bool L_8 = V_0;
-		return L_8;
-	}
-}
-// System.Int32 UnityEngine.Rect::GetHashCode()
-extern "C"  int32_t Rect_GetHashCode_m559954498 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	int32_t V_4 = 0;
-	{
-		float L_0 = Rect_get_x_m1393582490(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		int32_t L_1 = Single_GetHashCode_m3102305584((&V_0), /*hidden argument*/NULL);
-		float L_2 = Rect_get_width_m1138015702(__this, /*hidden argument*/NULL);
-		V_1 = L_2;
-		int32_t L_3 = Single_GetHashCode_m3102305584((&V_1), /*hidden argument*/NULL);
-		float L_4 = Rect_get_y_m1393582395(__this, /*hidden argument*/NULL);
-		V_2 = L_4;
-		int32_t L_5 = Single_GetHashCode_m3102305584((&V_2), /*hidden argument*/NULL);
-		float L_6 = Rect_get_height_m3128694305(__this, /*hidden argument*/NULL);
-		V_3 = L_6;
-		int32_t L_7 = Single_GetHashCode_m3102305584((&V_3), /*hidden argument*/NULL);
-		V_4 = ((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_1^(int32_t)((int32_t)((int32_t)L_3<<(int32_t)2))))^(int32_t)((int32_t)((int32_t)L_5>>(int32_t)2))))^(int32_t)((int32_t)((int32_t)L_7>>(int32_t)1))));
-		goto IL_0061;
-	}
-
-IL_0061:
-	{
-		int32_t L_8 = V_4;
-		return L_8;
-	}
-}
-extern "C"  int32_t Rect_GetHashCode_m559954498_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_GetHashCode_m559954498(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Rect::Equals(System.Object)
-extern "C"  bool Rect_Equals_m3806390726 (Rect_t3681755626 * __this, Il2CppObject * ___other0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Rect_Equals_m3806390726_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	Rect_t3681755626  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	float V_4 = 0.0f;
-	float V_5 = 0.0f;
-	int32_t G_B7_0 = 0;
-	{
-		Il2CppObject * L_0 = ___other0;
-		if (((Il2CppObject *)IsInstSealed(L_0, Rect_t3681755626_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		V_0 = (bool)0;
-		goto IL_0088;
-	}
-
-IL_0013:
-	{
-		Il2CppObject * L_1 = ___other0;
-		V_1 = ((*(Rect_t3681755626 *)((Rect_t3681755626 *)UnBox(L_1, Rect_t3681755626_il2cpp_TypeInfo_var))));
-		float L_2 = Rect_get_x_m1393582490(__this, /*hidden argument*/NULL);
-		V_2 = L_2;
-		float L_3 = Rect_get_x_m1393582490((&V_1), /*hidden argument*/NULL);
-		bool L_4 = Single_Equals_m3359827399((&V_2), L_3, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_0081;
-		}
-	}
-	{
-		float L_5 = Rect_get_y_m1393582395(__this, /*hidden argument*/NULL);
-		V_3 = L_5;
-		float L_6 = Rect_get_y_m1393582395((&V_1), /*hidden argument*/NULL);
-		bool L_7 = Single_Equals_m3359827399((&V_3), L_6, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_0081;
-		}
-	}
-	{
-		float L_8 = Rect_get_width_m1138015702(__this, /*hidden argument*/NULL);
-		V_4 = L_8;
-		float L_9 = Rect_get_width_m1138015702((&V_1), /*hidden argument*/NULL);
-		bool L_10 = Single_Equals_m3359827399((&V_4), L_9, /*hidden argument*/NULL);
-		if (!L_10)
-		{
-			goto IL_0081;
-		}
-	}
-	{
-		float L_11 = Rect_get_height_m3128694305(__this, /*hidden argument*/NULL);
-		V_5 = L_11;
-		float L_12 = Rect_get_height_m3128694305((&V_1), /*hidden argument*/NULL);
-		bool L_13 = Single_Equals_m3359827399((&V_5), L_12, /*hidden argument*/NULL);
-		G_B7_0 = ((int32_t)(L_13));
-		goto IL_0082;
-	}
-
-IL_0081:
-	{
-		G_B7_0 = 0;
-	}
-
-IL_0082:
-	{
-		V_0 = (bool)G_B7_0;
-		goto IL_0088;
-	}
-
-IL_0088:
-	{
-		bool L_14 = V_0;
-		return L_14;
-	}
-}
-extern "C"  bool Rect_Equals_m3806390726_AdjustorThunk (Il2CppObject * __this, Il2CppObject * ___other0, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_Equals_m3806390726(_thisAdjusted, ___other0, method);
-}
-// System.String UnityEngine.Rect::ToString()
-extern "C"  String_t* Rect_ToString_m2728794442 (Rect_t3681755626 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Rect_ToString_m2728794442_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	String_t* V_0 = NULL;
-	{
-		ObjectU5BU5D_t3614634134* L_0 = ((ObjectU5BU5D_t3614634134*)SZArrayNew(ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var, (uint32_t)4));
-		float L_1 = Rect_get_x_m1393582490(__this, /*hidden argument*/NULL);
-		float L_2 = L_1;
-		Il2CppObject * L_3 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_2);
-		NullCheck(L_0);
-		ArrayElementTypeCheck (L_0, L_3);
-		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_3);
-		ObjectU5BU5D_t3614634134* L_4 = L_0;
-		float L_5 = Rect_get_y_m1393582395(__this, /*hidden argument*/NULL);
-		float L_6 = L_5;
-		Il2CppObject * L_7 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_6);
-		NullCheck(L_4);
-		ArrayElementTypeCheck (L_4, L_7);
-		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_7);
-		ObjectU5BU5D_t3614634134* L_8 = L_4;
-		float L_9 = Rect_get_width_m1138015702(__this, /*hidden argument*/NULL);
-		float L_10 = L_9;
-		Il2CppObject * L_11 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_10);
-		NullCheck(L_8);
-		ArrayElementTypeCheck (L_8, L_11);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)L_11);
-		ObjectU5BU5D_t3614634134* L_12 = L_8;
-		float L_13 = Rect_get_height_m3128694305(__this, /*hidden argument*/NULL);
-		float L_14 = L_13;
-		Il2CppObject * L_15 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_14);
-		NullCheck(L_12);
-		ArrayElementTypeCheck (L_12, L_15);
-		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(3), (Il2CppObject *)L_15);
-		String_t* L_16 = UnityString_Format_m2949645127(NULL /*static, unused*/, _stringLiteral1853817013, L_12, /*hidden argument*/NULL);
-		V_0 = L_16;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		String_t* L_17 = V_0;
-		return L_17;
-	}
-}
-extern "C"  String_t* Rect_ToString_m2728794442_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Rect_t3681755626 * _thisAdjusted = reinterpret_cast<Rect_t3681755626 *>(__this + 1);
-	return Rect_ToString_m2728794442(_thisAdjusted, method);
-}
-// Conversion methods for marshalling of: UnityEngine.RectOffset
-extern "C" void RectOffset_t3387826427_marshal_pinvoke(const RectOffset_t3387826427& unmarshaled, RectOffset_t3387826427_marshaled_pinvoke& marshaled)
-{
-	marshaled.___m_Ptr_0 = reinterpret_cast<intptr_t>((unmarshaled.get_m_Ptr_0()).get_m_value_0());
-	if (unmarshaled.get_m_SourceStyle_1() != NULL)
-	{
-		if ((unmarshaled.get_m_SourceStyle_1())->klass->is_import_or_windows_runtime)
-		{
-			il2cpp_hresult_t hr = ((Il2CppComObject *)unmarshaled.get_m_SourceStyle_1())->identity->QueryInterface(Il2CppIUnknown::IID, reinterpret_cast<void**>(&marshaled.___m_SourceStyle_1));
-			il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-		}
-		else
-		{
-			marshaled.___m_SourceStyle_1 = il2cpp_codegen_com_get_or_create_ccw<Il2CppIUnknown>(unmarshaled.get_m_SourceStyle_1());
-		}
-	}
-	else
-	{
-		marshaled.___m_SourceStyle_1 = NULL;
-	}
-}
-extern "C" void RectOffset_t3387826427_marshal_pinvoke_back(const RectOffset_t3387826427_marshaled_pinvoke& marshaled, RectOffset_t3387826427& unmarshaled)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectOffset_t3387826427_pinvoke_FromNativeMethodDefinition_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	IntPtr_t unmarshaled_m_Ptr_temp_0;
-	memset(&unmarshaled_m_Ptr_temp_0, 0, sizeof(unmarshaled_m_Ptr_temp_0));
-	IntPtr_t unmarshaled_m_Ptr_temp_0_temp;
-	unmarshaled_m_Ptr_temp_0_temp.set_m_value_0(reinterpret_cast<void*>((intptr_t)(marshaled.___m_Ptr_0)));
-	unmarshaled_m_Ptr_temp_0 = unmarshaled_m_Ptr_temp_0_temp;
-	unmarshaled.set_m_Ptr_0(unmarshaled_m_Ptr_temp_0);
-	if (marshaled.___m_SourceStyle_1 != NULL)
-	{
-		unmarshaled.set_m_SourceStyle_1(il2cpp_codegen_com_get_or_create_rcw_from_iunknown<Il2CppObject>(marshaled.___m_SourceStyle_1, Il2CppComObject_il2cpp_TypeInfo_var));
-	}
-	else
-	{
-		unmarshaled.set_m_SourceStyle_1(NULL);
-	}
-}
-// Conversion method for clean up from marshalling of: UnityEngine.RectOffset
-extern "C" void RectOffset_t3387826427_marshal_pinvoke_cleanup(RectOffset_t3387826427_marshaled_pinvoke& marshaled)
-{
-	if (marshaled.___m_SourceStyle_1 != NULL)
-	{
-		(marshaled.___m_SourceStyle_1)->Release();
-		marshaled.___m_SourceStyle_1 = NULL;
-	}
-}
-// Conversion methods for marshalling of: UnityEngine.RectOffset
-extern "C" void RectOffset_t3387826427_marshal_com(const RectOffset_t3387826427& unmarshaled, RectOffset_t3387826427_marshaled_com& marshaled)
-{
-	marshaled.___m_Ptr_0 = reinterpret_cast<intptr_t>((unmarshaled.get_m_Ptr_0()).get_m_value_0());
-	if (unmarshaled.get_m_SourceStyle_1() != NULL)
-	{
-		if ((unmarshaled.get_m_SourceStyle_1())->klass->is_import_or_windows_runtime)
-		{
-			il2cpp_hresult_t hr = ((Il2CppComObject *)unmarshaled.get_m_SourceStyle_1())->identity->QueryInterface(Il2CppIUnknown::IID, reinterpret_cast<void**>(&marshaled.___m_SourceStyle_1));
-			il2cpp_codegen_com_raise_exception_if_failed(hr, true);
-		}
-		else
-		{
-			marshaled.___m_SourceStyle_1 = il2cpp_codegen_com_get_or_create_ccw<Il2CppIUnknown>(unmarshaled.get_m_SourceStyle_1());
-		}
-	}
-	else
-	{
-		marshaled.___m_SourceStyle_1 = NULL;
-	}
-}
-extern "C" void RectOffset_t3387826427_marshal_com_back(const RectOffset_t3387826427_marshaled_com& marshaled, RectOffset_t3387826427& unmarshaled)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectOffset_t3387826427_com_FromNativeMethodDefinition_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	IntPtr_t unmarshaled_m_Ptr_temp_0;
-	memset(&unmarshaled_m_Ptr_temp_0, 0, sizeof(unmarshaled_m_Ptr_temp_0));
-	IntPtr_t unmarshaled_m_Ptr_temp_0_temp;
-	unmarshaled_m_Ptr_temp_0_temp.set_m_value_0(reinterpret_cast<void*>((intptr_t)(marshaled.___m_Ptr_0)));
-	unmarshaled_m_Ptr_temp_0 = unmarshaled_m_Ptr_temp_0_temp;
-	unmarshaled.set_m_Ptr_0(unmarshaled_m_Ptr_temp_0);
-	if (marshaled.___m_SourceStyle_1 != NULL)
-	{
-		unmarshaled.set_m_SourceStyle_1(il2cpp_codegen_com_get_or_create_rcw_from_iunknown<Il2CppObject>(marshaled.___m_SourceStyle_1, Il2CppComObject_il2cpp_TypeInfo_var));
-	}
-	else
-	{
-		unmarshaled.set_m_SourceStyle_1(NULL);
-	}
-}
-// Conversion method for clean up from marshalling of: UnityEngine.RectOffset
-extern "C" void RectOffset_t3387826427_marshal_com_cleanup(RectOffset_t3387826427_marshaled_com& marshaled)
-{
-	if (marshaled.___m_SourceStyle_1 != NULL)
-	{
-		(marshaled.___m_SourceStyle_1)->Release();
-		marshaled.___m_SourceStyle_1 = NULL;
-	}
-}
-// System.Void UnityEngine.RectOffset::.ctor()
-extern "C"  void RectOffset__ctor_m2227510254 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
-		RectOffset_Init_m4361650(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectOffset::.ctor(System.Object,System.IntPtr)
-extern "C"  void RectOffset__ctor_m1265077918 (RectOffset_t3387826427 * __this, Il2CppObject * ___sourceStyle0, IntPtr_t ___source1, const MethodInfo* method)
-{
-	{
-		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
-		Il2CppObject * L_0 = ___sourceStyle0;
-		__this->set_m_SourceStyle_1(L_0);
-		IntPtr_t L_1 = ___source1;
-		__this->set_m_Ptr_0(L_1);
-		return;
-	}
-}
-// System.Void UnityEngine.RectOffset::Init()
-extern "C"  void RectOffset_Init_m4361650 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef void (*RectOffset_Init_m4361650_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_Init_m4361650_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_Init_m4361650_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::Init()");
-	_il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.RectOffset::Cleanup()
-extern "C"  void RectOffset_Cleanup_m3198970074 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef void (*RectOffset_Cleanup_m3198970074_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_Cleanup_m3198970074_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_Cleanup_m3198970074_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::Cleanup()");
-	_il2cpp_icall_func(__this);
-}
-// System.Int32 UnityEngine.RectOffset::get_left()
-extern "C"  int32_t RectOffset_get_left_m439065308 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*RectOffset_get_left_m439065308_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_get_left_m439065308_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_get_left_m439065308_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::get_left()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.RectOffset::set_left(System.Int32)
-extern "C"  void RectOffset_set_left_m620681523 (RectOffset_t3387826427 * __this, int32_t ___value0, const MethodInfo* method)
-{
-	typedef void (*RectOffset_set_left_m620681523_ftn) (RectOffset_t3387826427 *, int32_t);
-	static RectOffset_set_left_m620681523_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_set_left_m620681523_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::set_left(System.Int32)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Int32 UnityEngine.RectOffset::get_right()
-extern "C"  int32_t RectOffset_get_right_m281378687 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*RectOffset_get_right_m281378687_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_get_right_m281378687_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_get_right_m281378687_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::get_right()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.RectOffset::set_right(System.Int32)
-extern "C"  void RectOffset_set_right_m1671272302 (RectOffset_t3387826427 * __this, int32_t ___value0, const MethodInfo* method)
-{
-	typedef void (*RectOffset_set_right_m1671272302_ftn) (RectOffset_t3387826427 *, int32_t);
-	static RectOffset_set_right_m1671272302_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_set_right_m1671272302_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::set_right(System.Int32)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Int32 UnityEngine.RectOffset::get_top()
-extern "C"  int32_t RectOffset_get_top_m3629049358 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*RectOffset_get_top_m3629049358_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_get_top_m3629049358_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_get_top_m3629049358_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::get_top()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.RectOffset::set_top(System.Int32)
-extern "C"  void RectOffset_set_top_m3579196427 (RectOffset_t3387826427 * __this, int32_t ___value0, const MethodInfo* method)
-{
-	typedef void (*RectOffset_set_top_m3579196427_ftn) (RectOffset_t3387826427 *, int32_t);
-	static RectOffset_set_top_m3579196427_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_set_top_m3579196427_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::set_top(System.Int32)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Int32 UnityEngine.RectOffset::get_bottom()
-extern "C"  int32_t RectOffset_get_bottom_m4112328858 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*RectOffset_get_bottom_m4112328858_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_get_bottom_m4112328858_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_get_bottom_m4112328858_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::get_bottom()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.RectOffset::set_bottom(System.Int32)
-extern "C"  void RectOffset_set_bottom_m4065521443 (RectOffset_t3387826427 * __this, int32_t ___value0, const MethodInfo* method)
-{
-	typedef void (*RectOffset_set_bottom_m4065521443_ftn) (RectOffset_t3387826427 *, int32_t);
-	static RectOffset_set_bottom_m4065521443_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_set_bottom_m4065521443_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::set_bottom(System.Int32)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Int32 UnityEngine.RectOffset::get_horizontal()
-extern "C"  int32_t RectOffset_get_horizontal_m3818523637 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*RectOffset_get_horizontal_m3818523637_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_get_horizontal_m3818523637_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_get_horizontal_m3818523637_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::get_horizontal()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Int32 UnityEngine.RectOffset::get_vertical()
-extern "C"  int32_t RectOffset_get_vertical_m3856345169 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*RectOffset_get_vertical_m3856345169_ftn) (RectOffset_t3387826427 *);
-	static RectOffset_get_vertical_m3856345169_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectOffset_get_vertical_m3856345169_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectOffset::get_vertical()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.RectOffset::Finalize()
-extern "C"  void RectOffset_Finalize_m901770914 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	Exception_t1927440687 * __last_unhandled_exception = 0;
-	NO_UNUSED_WARNING (__last_unhandled_exception);
-	Exception_t1927440687 * __exception_local = 0;
-	NO_UNUSED_WARNING (__exception_local);
-	int32_t __leave_target = 0;
-	NO_UNUSED_WARNING (__leave_target);
-	{
-	}
-
-IL_0001:
-	try
-	{ // begin try (depth: 1)
-		{
-			Il2CppObject * L_0 = __this->get_m_SourceStyle_1();
-			if (L_0)
-			{
-				goto IL_0012;
-			}
-		}
-
-IL_000c:
-		{
-			RectOffset_Cleanup_m3198970074(__this, /*hidden argument*/NULL);
-		}
-
-IL_0012:
-		{
-			IL2CPP_LEAVE(0x1E, FINALLY_0017);
-		}
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
-		goto FINALLY_0017;
-	}
-
-FINALLY_0017:
-	{ // begin finally (depth: 1)
-		Object_Finalize_m4087144328(__this, /*hidden argument*/NULL);
-		IL2CPP_END_FINALLY(23)
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(23)
-	{
-		IL2CPP_JUMP_TBL(0x1E, IL_001e)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
-	}
-
-IL_001e:
-	{
-		return;
-	}
-}
-// System.String UnityEngine.RectOffset::ToString()
-extern "C"  String_t* RectOffset_ToString_m1281517011 (RectOffset_t3387826427 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectOffset_ToString_m1281517011_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	String_t* V_0 = NULL;
-	{
-		ObjectU5BU5D_t3614634134* L_0 = ((ObjectU5BU5D_t3614634134*)SZArrayNew(ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var, (uint32_t)4));
-		int32_t L_1 = RectOffset_get_left_m439065308(__this, /*hidden argument*/NULL);
-		int32_t L_2 = L_1;
-		Il2CppObject * L_3 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_2);
-		NullCheck(L_0);
-		ArrayElementTypeCheck (L_0, L_3);
-		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_3);
-		ObjectU5BU5D_t3614634134* L_4 = L_0;
-		int32_t L_5 = RectOffset_get_right_m281378687(__this, /*hidden argument*/NULL);
-		int32_t L_6 = L_5;
-		Il2CppObject * L_7 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_6);
-		NullCheck(L_4);
-		ArrayElementTypeCheck (L_4, L_7);
-		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_7);
-		ObjectU5BU5D_t3614634134* L_8 = L_4;
-		int32_t L_9 = RectOffset_get_top_m3629049358(__this, /*hidden argument*/NULL);
-		int32_t L_10 = L_9;
-		Il2CppObject * L_11 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_10);
-		NullCheck(L_8);
-		ArrayElementTypeCheck (L_8, L_11);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)L_11);
-		ObjectU5BU5D_t3614634134* L_12 = L_8;
-		int32_t L_13 = RectOffset_get_bottom_m4112328858(__this, /*hidden argument*/NULL);
-		int32_t L_14 = L_13;
-		Il2CppObject * L_15 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_14);
-		NullCheck(L_12);
-		ArrayElementTypeCheck (L_12, L_15);
-		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(3), (Il2CppObject *)L_15);
-		String_t* L_16 = UnityString_Format_m2949645127(NULL /*static, unused*/, _stringLiteral3899275604, L_12, /*hidden argument*/NULL);
-		V_0 = L_16;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		String_t* L_17 = V_0;
-		return L_17;
-	}
-}
-// UnityEngine.Rect UnityEngine.RectTransform::get_rect()
-extern "C"  Rect_t3681755626  RectTransform_get_rect_m73954734 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	Rect_t3681755626  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Rect_t3681755626  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_INTERNAL_get_rect_m1177342209(__this, (&V_0), /*hidden argument*/NULL);
-		Rect_t3681755626  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Rect_t3681755626  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_get_rect(UnityEngine.Rect&)
-extern "C"  void RectTransform_INTERNAL_get_rect_m1177342209 (RectTransform_t3349966182 * __this, Rect_t3681755626 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_get_rect_m1177342209_ftn) (RectTransform_t3349966182 *, Rect_t3681755626 *);
-	static RectTransform_INTERNAL_get_rect_m1177342209_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_get_rect_m1177342209_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_get_rect(UnityEngine.Rect&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMin()
-extern "C"  Vector2_t2243707579  RectTransform_get_anchorMin_m1497323108 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_INTERNAL_get_anchorMin_m3180545469(__this, (&V_0), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Vector2_t2243707579  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.RectTransform::set_anchorMin(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_anchorMin_m4247668187 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method)
-{
-	{
-		RectTransform_INTERNAL_set_anchorMin_m885423409(__this, (&___value0), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_get_anchorMin(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_anchorMin_m3180545469 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_get_anchorMin_m3180545469_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_get_anchorMin_m3180545469_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_get_anchorMin_m3180545469_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_get_anchorMin(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_set_anchorMin(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_anchorMin_m885423409 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_set_anchorMin_m885423409_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_set_anchorMin_m885423409_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_set_anchorMin_m885423409_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_set_anchorMin(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMax()
-extern "C"  Vector2_t2243707579  RectTransform_get_anchorMax_m3816015142 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_INTERNAL_get_anchorMax_m834202955(__this, (&V_0), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Vector2_t2243707579  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.RectTransform::set_anchorMax(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_anchorMax_m2955899993 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method)
-{
-	{
-		RectTransform_INTERNAL_set_anchorMax_m1551648727(__this, (&___value0), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_get_anchorMax(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_anchorMax_m834202955 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_get_anchorMax_m834202955_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_get_anchorMax_m834202955_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_get_anchorMax_m834202955_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_get_anchorMax(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_set_anchorMax(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_anchorMax_m1551648727 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_set_anchorMax_m1551648727_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_set_anchorMax_m1551648727_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_set_anchorMax_m1551648727_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_set_anchorMax(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchoredPosition()
-extern "C"  Vector2_t2243707579  RectTransform_get_anchoredPosition_m3570822376 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_INTERNAL_get_anchoredPosition_m3564306187(__this, (&V_0), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Vector2_t2243707579  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.RectTransform::set_anchoredPosition(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_anchoredPosition_m2077229449 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method)
-{
-	{
-		RectTransform_INTERNAL_set_anchoredPosition_m693024247(__this, (&___value0), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_get_anchoredPosition(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_anchoredPosition_m3564306187 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_get_anchoredPosition_m3564306187_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_get_anchoredPosition_m3564306187_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_get_anchoredPosition_m3564306187_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_get_anchoredPosition(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_set_anchoredPosition(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_anchoredPosition_m693024247 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_set_anchoredPosition_m693024247_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_set_anchoredPosition_m693024247_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_set_anchoredPosition_m693024247_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_set_anchoredPosition(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_sizeDelta()
-extern "C"  Vector2_t2243707579  RectTransform_get_sizeDelta_m2157326342 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_INTERNAL_get_sizeDelta_m3975625099(__this, (&V_0), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Vector2_t2243707579  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.RectTransform::set_sizeDelta(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_sizeDelta_m2319668137 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method)
-{
-	{
-		RectTransform_INTERNAL_set_sizeDelta_m1402803191(__this, (&___value0), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_get_sizeDelta(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_sizeDelta_m3975625099 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_get_sizeDelta_m3975625099_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_get_sizeDelta_m3975625099_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_get_sizeDelta_m3975625099_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_get_sizeDelta(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_set_sizeDelta(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_sizeDelta_m1402803191 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_set_sizeDelta_m1402803191_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_set_sizeDelta_m1402803191_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_set_sizeDelta_m1402803191_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_set_sizeDelta(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.Vector2 UnityEngine.RectTransform::get_pivot()
-extern "C"  Vector2_t2243707579  RectTransform_get_pivot_m759087479 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_INTERNAL_get_pivot_m3003734630(__this, (&V_0), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Vector2_t2243707579  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.RectTransform::set_pivot(UnityEngine.Vector2)
-extern "C"  void RectTransform_set_pivot_m1360548980 (RectTransform_t3349966182 * __this, Vector2_t2243707579  ___value0, const MethodInfo* method)
-{
-	{
-		RectTransform_INTERNAL_set_pivot_m2764958706(__this, (&___value0), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_get_pivot(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_get_pivot_m3003734630 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_get_pivot_m3003734630_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_get_pivot_m3003734630_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_get_pivot_m3003734630_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_get_pivot(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Void UnityEngine.RectTransform::INTERNAL_set_pivot(UnityEngine.Vector2&)
-extern "C"  void RectTransform_INTERNAL_set_pivot_m2764958706 (RectTransform_t3349966182 * __this, Vector2_t2243707579 * ___value0, const MethodInfo* method)
-{
-	typedef void (*RectTransform_INTERNAL_set_pivot_m2764958706_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *);
-	static RectTransform_INTERNAL_set_pivot_m2764958706_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransform_INTERNAL_set_pivot_m2764958706_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransform::INTERNAL_set_pivot(UnityEngine.Vector2&)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Void UnityEngine.RectTransform::add_reapplyDrivenProperties(UnityEngine.RectTransform/ReapplyDrivenProperties)
-extern "C"  void RectTransform_add_reapplyDrivenProperties_m1603911943 (Il2CppObject * __this /* static, unused */, ReapplyDrivenProperties_t2020713228 * ___value0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransform_add_reapplyDrivenProperties_m1603911943_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	ReapplyDrivenProperties_t2020713228 * V_0 = NULL;
-	ReapplyDrivenProperties_t2020713228 * V_1 = NULL;
-	{
-		ReapplyDrivenProperties_t2020713228 * L_0 = ((RectTransform_t3349966182_StaticFields*)RectTransform_t3349966182_il2cpp_TypeInfo_var->static_fields)->get_reapplyDrivenProperties_2();
-		V_0 = L_0;
-	}
-
-IL_0006:
-	{
-		ReapplyDrivenProperties_t2020713228 * L_1 = V_0;
-		V_1 = L_1;
-		ReapplyDrivenProperties_t2020713228 * L_2 = V_1;
-		ReapplyDrivenProperties_t2020713228 * L_3 = ___value0;
-		Delegate_t3022476291 * L_4 = Delegate_Combine_m3791207084(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
-		ReapplyDrivenProperties_t2020713228 * L_5 = V_0;
-		ReapplyDrivenProperties_t2020713228 * L_6 = InterlockedCompareExchangeImpl<ReapplyDrivenProperties_t2020713228 *>((((RectTransform_t3349966182_StaticFields*)RectTransform_t3349966182_il2cpp_TypeInfo_var->static_fields)->get_address_of_reapplyDrivenProperties_2()), ((ReapplyDrivenProperties_t2020713228 *)CastclassSealed(L_4, ReapplyDrivenProperties_t2020713228_il2cpp_TypeInfo_var)), L_5);
-		V_0 = L_6;
-		ReapplyDrivenProperties_t2020713228 * L_7 = V_0;
-		ReapplyDrivenProperties_t2020713228 * L_8 = V_1;
-		if ((!(((Il2CppObject*)(ReapplyDrivenProperties_t2020713228 *)L_7) == ((Il2CppObject*)(ReapplyDrivenProperties_t2020713228 *)L_8))))
-		{
-			goto IL_0006;
-		}
-	}
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::remove_reapplyDrivenProperties(UnityEngine.RectTransform/ReapplyDrivenProperties)
-extern "C"  void RectTransform_remove_reapplyDrivenProperties_m4209881182 (Il2CppObject * __this /* static, unused */, ReapplyDrivenProperties_t2020713228 * ___value0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransform_remove_reapplyDrivenProperties_m4209881182_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	ReapplyDrivenProperties_t2020713228 * V_0 = NULL;
-	ReapplyDrivenProperties_t2020713228 * V_1 = NULL;
-	{
-		ReapplyDrivenProperties_t2020713228 * L_0 = ((RectTransform_t3349966182_StaticFields*)RectTransform_t3349966182_il2cpp_TypeInfo_var->static_fields)->get_reapplyDrivenProperties_2();
-		V_0 = L_0;
-	}
-
-IL_0006:
-	{
-		ReapplyDrivenProperties_t2020713228 * L_1 = V_0;
-		V_1 = L_1;
-		ReapplyDrivenProperties_t2020713228 * L_2 = V_1;
-		ReapplyDrivenProperties_t2020713228 * L_3 = ___value0;
-		Delegate_t3022476291 * L_4 = Delegate_Remove_m2626518725(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
-		ReapplyDrivenProperties_t2020713228 * L_5 = V_0;
-		ReapplyDrivenProperties_t2020713228 * L_6 = InterlockedCompareExchangeImpl<ReapplyDrivenProperties_t2020713228 *>((((RectTransform_t3349966182_StaticFields*)RectTransform_t3349966182_il2cpp_TypeInfo_var->static_fields)->get_address_of_reapplyDrivenProperties_2()), ((ReapplyDrivenProperties_t2020713228 *)CastclassSealed(L_4, ReapplyDrivenProperties_t2020713228_il2cpp_TypeInfo_var)), L_5);
-		V_0 = L_6;
-		ReapplyDrivenProperties_t2020713228 * L_7 = V_0;
-		ReapplyDrivenProperties_t2020713228 * L_8 = V_1;
-		if ((!(((Il2CppObject*)(ReapplyDrivenProperties_t2020713228 *)L_7) == ((Il2CppObject*)(ReapplyDrivenProperties_t2020713228 *)L_8))))
-		{
-			goto IL_0006;
-		}
-	}
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::SendReapplyDrivenProperties(UnityEngine.RectTransform)
-extern "C"  void RectTransform_SendReapplyDrivenProperties_m90487700 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___driven0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransform_SendReapplyDrivenProperties_m90487700_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		ReapplyDrivenProperties_t2020713228 * L_0 = ((RectTransform_t3349966182_StaticFields*)RectTransform_t3349966182_il2cpp_TypeInfo_var->static_fields)->get_reapplyDrivenProperties_2();
-		if (!L_0)
-		{
-			goto IL_0016;
-		}
-	}
-	{
-		ReapplyDrivenProperties_t2020713228 * L_1 = ((RectTransform_t3349966182_StaticFields*)RectTransform_t3349966182_il2cpp_TypeInfo_var->static_fields)->get_reapplyDrivenProperties_2();
-		RectTransform_t3349966182 * L_2 = ___driven0;
-		NullCheck(L_1);
-		ReapplyDrivenProperties_Invoke_m1090213637(L_1, L_2, /*hidden argument*/NULL);
-	}
-
-IL_0016:
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::GetLocalCorners(UnityEngine.Vector3[])
-extern "C"  void RectTransform_GetLocalCorners_m1836626405 (RectTransform_t3349966182 * __this, Vector3U5BU5D_t1172311765* ___fourCornersArray0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransform_GetLocalCorners_m1836626405_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Rect_t3681755626  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	float V_1 = 0.0f;
-	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	float V_4 = 0.0f;
-	{
-		Vector3U5BU5D_t1172311765* L_0 = ___fourCornersArray0;
-		if (!L_0)
-		{
-			goto IL_0010;
-		}
-	}
-	{
-		Vector3U5BU5D_t1172311765* L_1 = ___fourCornersArray0;
-		NullCheck(L_1);
-		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_1)->max_length))))) >= ((int32_t)4)))
-		{
-			goto IL_0020;
-		}
-	}
-
-IL_0010:
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
-		Debug_LogError_m3715728798(NULL /*static, unused*/, _stringLiteral895140023, /*hidden argument*/NULL);
-		goto IL_00aa;
-	}
-
-IL_0020:
-	{
-		Rect_t3681755626  L_2 = RectTransform_get_rect_m73954734(__this, /*hidden argument*/NULL);
-		V_0 = L_2;
-		float L_3 = Rect_get_x_m1393582490((&V_0), /*hidden argument*/NULL);
-		V_1 = L_3;
-		float L_4 = Rect_get_y_m1393582395((&V_0), /*hidden argument*/NULL);
-		V_2 = L_4;
-		float L_5 = Rect_get_xMax_m2915145014((&V_0), /*hidden argument*/NULL);
-		V_3 = L_5;
-		float L_6 = Rect_get_yMax_m2915146103((&V_0), /*hidden argument*/NULL);
-		V_4 = L_6;
-		Vector3U5BU5D_t1172311765* L_7 = ___fourCornersArray0;
-		NullCheck(L_7);
-		float L_8 = V_1;
-		float L_9 = V_2;
-		Vector3_t2243707580  L_10;
-		memset(&L_10, 0, sizeof(L_10));
-		Vector3__ctor_m2638739322(&L_10, L_8, L_9, (0.0f), /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)((L_7)->GetAddressAt(static_cast<il2cpp_array_size_t>(0)))) = L_10;
-		Vector3U5BU5D_t1172311765* L_11 = ___fourCornersArray0;
-		NullCheck(L_11);
-		float L_12 = V_1;
-		float L_13 = V_4;
-		Vector3_t2243707580  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector3__ctor_m2638739322(&L_14, L_12, L_13, (0.0f), /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)((L_11)->GetAddressAt(static_cast<il2cpp_array_size_t>(1)))) = L_14;
-		Vector3U5BU5D_t1172311765* L_15 = ___fourCornersArray0;
-		NullCheck(L_15);
-		float L_16 = V_3;
-		float L_17 = V_4;
-		Vector3_t2243707580  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector3__ctor_m2638739322(&L_18, L_16, L_17, (0.0f), /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)((L_15)->GetAddressAt(static_cast<il2cpp_array_size_t>(2)))) = L_18;
-		Vector3U5BU5D_t1172311765* L_19 = ___fourCornersArray0;
-		NullCheck(L_19);
-		float L_20 = V_3;
-		float L_21 = V_2;
-		Vector3_t2243707580  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		Vector3__ctor_m2638739322(&L_22, L_20, L_21, (0.0f), /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)((L_19)->GetAddressAt(static_cast<il2cpp_array_size_t>(3)))) = L_22;
-	}
-
-IL_00aa:
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::GetWorldCorners(UnityEngine.Vector3[])
-extern "C"  void RectTransform_GetWorldCorners_m3873546362 (RectTransform_t3349966182 * __this, Vector3U5BU5D_t1172311765* ___fourCornersArray0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransform_GetWorldCorners_m3873546362_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Transform_t3275118058 * V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		Vector3U5BU5D_t1172311765* L_0 = ___fourCornersArray0;
-		if (!L_0)
-		{
-			goto IL_0010;
-		}
-	}
-	{
-		Vector3U5BU5D_t1172311765* L_1 = ___fourCornersArray0;
-		NullCheck(L_1);
-		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_1)->max_length))))) >= ((int32_t)4)))
-		{
-			goto IL_0020;
-		}
-	}
-
-IL_0010:
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
-		Debug_LogError_m3715728798(NULL /*static, unused*/, _stringLiteral3518247078, /*hidden argument*/NULL);
-		goto IL_005e;
-	}
-
-IL_0020:
-	{
-		Vector3U5BU5D_t1172311765* L_2 = ___fourCornersArray0;
-		RectTransform_GetLocalCorners_m1836626405(__this, L_2, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_3 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		V_0 = L_3;
-		V_1 = 0;
-		goto IL_0057;
-	}
-
-IL_0035:
-	{
-		Vector3U5BU5D_t1172311765* L_4 = ___fourCornersArray0;
-		int32_t L_5 = V_1;
-		NullCheck(L_4);
-		Transform_t3275118058 * L_6 = V_0;
-		Vector3U5BU5D_t1172311765* L_7 = ___fourCornersArray0;
-		int32_t L_8 = V_1;
-		NullCheck(L_7);
-		NullCheck(L_6);
-		Vector3_t2243707580  L_9 = Transform_TransformPoint_m3272254198(L_6, (*(Vector3_t2243707580 *)((L_7)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_8)))), /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)((L_4)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_5)))) = L_9;
-		int32_t L_10 = V_1;
-		V_1 = ((int32_t)((int32_t)L_10+(int32_t)1));
-	}
-
-IL_0057:
-	{
-		int32_t L_11 = V_1;
-		if ((((int32_t)L_11) < ((int32_t)4)))
-		{
-			goto IL_0035;
-		}
-	}
-
-IL_005e:
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::SetInsetAndSizeFromParentEdge(UnityEngine.RectTransform/Edge,System.Single,System.Single)
-extern "C"  void RectTransform_SetInsetAndSizeFromParentEdge_m2835026182 (RectTransform_t3349966182 * __this, int32_t ___edge0, float ___inset1, float ___size2, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	bool V_1 = false;
-	float V_2 = 0.0f;
-	Vector2_t2243707579  V_3;
-	memset(&V_3, 0, sizeof(V_3));
-	Vector2_t2243707579  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	Vector2_t2243707579  V_5;
-	memset(&V_5, 0, sizeof(V_5));
-	Vector2_t2243707579  V_6;
-	memset(&V_6, 0, sizeof(V_6));
-	Vector2_t2243707579  V_7;
-	memset(&V_7, 0, sizeof(V_7));
-	int32_t G_B4_0 = 0;
-	int32_t G_B7_0 = 0;
-	int32_t G_B10_0 = 0;
-	int32_t G_B12_0 = 0;
-	Vector2_t2243707579 * G_B12_1 = NULL;
-	int32_t G_B11_0 = 0;
-	Vector2_t2243707579 * G_B11_1 = NULL;
-	float G_B13_0 = 0.0f;
-	int32_t G_B13_1 = 0;
-	Vector2_t2243707579 * G_B13_2 = NULL;
-	{
-		int32_t L_0 = ___edge0;
-		if ((((int32_t)L_0) == ((int32_t)2)))
-		{
-			goto IL_000f;
-		}
-	}
-	{
-		int32_t L_1 = ___edge0;
-		if ((!(((uint32_t)L_1) == ((uint32_t)3))))
-		{
-			goto IL_0015;
-		}
-	}
-
-IL_000f:
-	{
-		G_B4_0 = 1;
-		goto IL_0016;
-	}
-
-IL_0015:
-	{
-		G_B4_0 = 0;
-	}
-
-IL_0016:
-	{
-		V_0 = G_B4_0;
-		int32_t L_2 = ___edge0;
-		if ((((int32_t)L_2) == ((int32_t)2)))
-		{
-			goto IL_0024;
-		}
-	}
-	{
-		int32_t L_3 = ___edge0;
-		G_B7_0 = ((((int32_t)L_3) == ((int32_t)1))? 1 : 0);
-		goto IL_0025;
-	}
-
-IL_0024:
-	{
-		G_B7_0 = 1;
-	}
-
-IL_0025:
-	{
-		V_1 = (bool)G_B7_0;
-		bool L_4 = V_1;
-		if (!L_4)
-		{
-			goto IL_0032;
-		}
-	}
-	{
-		G_B10_0 = 1;
-		goto IL_0033;
-	}
-
-IL_0032:
-	{
-		G_B10_0 = 0;
-	}
-
-IL_0033:
-	{
-		V_2 = (((float)((float)G_B10_0)));
-		Vector2_t2243707579  L_5 = RectTransform_get_anchorMin_m1497323108(__this, /*hidden argument*/NULL);
-		V_3 = L_5;
-		int32_t L_6 = V_0;
-		float L_7 = V_2;
-		Vector2_set_Item_m3881967114((&V_3), L_6, L_7, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_8 = V_3;
-		RectTransform_set_anchorMin_m4247668187(__this, L_8, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_9 = RectTransform_get_anchorMax_m3816015142(__this, /*hidden argument*/NULL);
-		V_3 = L_9;
-		int32_t L_10 = V_0;
-		float L_11 = V_2;
-		Vector2_set_Item_m3881967114((&V_3), L_10, L_11, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_12 = V_3;
-		RectTransform_set_anchorMax_m2955899993(__this, L_12, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_13 = RectTransform_get_sizeDelta_m2157326342(__this, /*hidden argument*/NULL);
-		V_4 = L_13;
-		int32_t L_14 = V_0;
-		float L_15 = ___size2;
-		Vector2_set_Item_m3881967114((&V_4), L_14, L_15, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_16 = V_4;
-		RectTransform_set_sizeDelta_m2319668137(__this, L_16, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_17 = RectTransform_get_anchoredPosition_m3570822376(__this, /*hidden argument*/NULL);
-		V_5 = L_17;
-		int32_t L_18 = V_0;
-		bool L_19 = V_1;
-		G_B11_0 = L_18;
-		G_B11_1 = (&V_5);
-		if (!L_19)
-		{
-			G_B12_0 = L_18;
-			G_B12_1 = (&V_5);
-			goto IL_00ad;
-		}
-	}
-	{
-		float L_20 = ___inset1;
-		float L_21 = ___size2;
-		Vector2_t2243707579  L_22 = RectTransform_get_pivot_m759087479(__this, /*hidden argument*/NULL);
-		V_6 = L_22;
-		int32_t L_23 = V_0;
-		float L_24 = Vector2_get_Item_m2792130561((&V_6), L_23, /*hidden argument*/NULL);
-		G_B13_0 = ((float)((float)((-L_20))-(float)((float)((float)L_21*(float)((float)((float)(1.0f)-(float)L_24))))));
-		G_B13_1 = G_B11_0;
-		G_B13_2 = G_B11_1;
-		goto IL_00c1;
-	}
-
-IL_00ad:
-	{
-		float L_25 = ___inset1;
-		float L_26 = ___size2;
-		Vector2_t2243707579  L_27 = RectTransform_get_pivot_m759087479(__this, /*hidden argument*/NULL);
-		V_7 = L_27;
-		int32_t L_28 = V_0;
-		float L_29 = Vector2_get_Item_m2792130561((&V_7), L_28, /*hidden argument*/NULL);
-		G_B13_0 = ((float)((float)L_25+(float)((float)((float)L_26*(float)L_29))));
-		G_B13_1 = G_B12_0;
-		G_B13_2 = G_B12_1;
-	}
-
-IL_00c1:
-	{
-		Vector2_set_Item_m3881967114(G_B13_2, G_B13_1, G_B13_0, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_30 = V_5;
-		RectTransform_set_anchoredPosition_m2077229449(__this, L_30, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransform::SetSizeWithCurrentAnchors(UnityEngine.RectTransform/Axis,System.Single)
-extern "C"  void RectTransform_SetSizeWithCurrentAnchors_m2368352721 (RectTransform_t3349966182 * __this, int32_t ___axis0, float ___size1, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	Vector2_t2243707579  V_2;
-	memset(&V_2, 0, sizeof(V_2));
-	Vector2_t2243707579  V_3;
-	memset(&V_3, 0, sizeof(V_3));
-	Vector2_t2243707579  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	{
-		int32_t L_0 = ___axis0;
-		V_0 = L_0;
-		Vector2_t2243707579  L_1 = RectTransform_get_sizeDelta_m2157326342(__this, /*hidden argument*/NULL);
-		V_1 = L_1;
-		int32_t L_2 = V_0;
-		float L_3 = ___size1;
-		Vector2_t2243707579  L_4 = RectTransform_GetParentSize_m1571597933(__this, /*hidden argument*/NULL);
-		V_2 = L_4;
-		int32_t L_5 = V_0;
-		float L_6 = Vector2_get_Item_m2792130561((&V_2), L_5, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_7 = RectTransform_get_anchorMax_m3816015142(__this, /*hidden argument*/NULL);
-		V_3 = L_7;
-		int32_t L_8 = V_0;
-		float L_9 = Vector2_get_Item_m2792130561((&V_3), L_8, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_10 = RectTransform_get_anchorMin_m1497323108(__this, /*hidden argument*/NULL);
-		V_4 = L_10;
-		int32_t L_11 = V_0;
-		float L_12 = Vector2_get_Item_m2792130561((&V_4), L_11, /*hidden argument*/NULL);
-		Vector2_set_Item_m3881967114((&V_1), L_2, ((float)((float)L_3-(float)((float)((float)L_6*(float)((float)((float)L_9-(float)L_12)))))), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_13 = V_1;
-		RectTransform_set_sizeDelta_m2319668137(__this, L_13, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.Vector2 UnityEngine.RectTransform::GetParentSize()
-extern "C"  Vector2_t2243707579  RectTransform_GetParentSize_m1571597933 (RectTransform_t3349966182 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransform_GetParentSize_m1571597933_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	RectTransform_t3349966182 * V_0 = NULL;
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	Rect_t3681755626  V_2;
-	memset(&V_2, 0, sizeof(V_2));
-	{
-		Transform_t3275118058 * L_0 = Transform_get_parent_m147407266(__this, /*hidden argument*/NULL);
-		V_0 = ((RectTransform_t3349966182 *)IsInstSealed(L_0, RectTransform_t3349966182_il2cpp_TypeInfo_var));
-		RectTransform_t3349966182 * L_1 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_2 = Object_op_Implicit_m2856731593(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		if (L_2)
-		{
-			goto IL_0023;
-		}
-	}
-	{
-		Vector2_t2243707579  L_3 = Vector2_get_zero_m3966848876(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_1 = L_3;
-		goto IL_0037;
-	}
-
-IL_0023:
-	{
-		RectTransform_t3349966182 * L_4 = V_0;
-		NullCheck(L_4);
-		Rect_t3681755626  L_5 = RectTransform_get_rect_m73954734(L_4, /*hidden argument*/NULL);
-		V_2 = L_5;
-		Vector2_t2243707579  L_6 = Rect_get_size_m3833121112((&V_2), /*hidden argument*/NULL);
-		V_1 = L_6;
-		goto IL_0037;
-	}
-
-IL_0037:
-	{
-		Vector2_t2243707579  L_7 = V_1;
-		return L_7;
-	}
-}
-// System.Void UnityEngine.RectTransform/ReapplyDrivenProperties::.ctor(System.Object,System.IntPtr)
-extern "C"  void ReapplyDrivenProperties__ctor_m210072638 (ReapplyDrivenProperties_t2020713228 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
-{
-	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
-	__this->set_method_3(___method1);
-	__this->set_m_target_2(___object0);
-}
-// System.Void UnityEngine.RectTransform/ReapplyDrivenProperties::Invoke(UnityEngine.RectTransform)
-extern "C"  void ReapplyDrivenProperties_Invoke_m1090213637 (ReapplyDrivenProperties_t2020713228 * __this, RectTransform_t3349966182 * ___driven0, const MethodInfo* method)
-{
-	if(__this->get_prev_9() != NULL)
-	{
-		ReapplyDrivenProperties_Invoke_m1090213637((ReapplyDrivenProperties_t2020713228 *)__this->get_prev_9(),___driven0, method);
-	}
-	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	if (__this->get_m_target_2() != NULL && ___methodIsStatic)
-	{
-		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, RectTransform_t3349966182 * ___driven0, const MethodInfo* method);
-		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),___driven0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	}
-	else if (__this->get_m_target_2() != NULL || ___methodIsStatic)
-	{
-		typedef void (*FunctionPointerType) (void* __this, RectTransform_t3349966182 * ___driven0, const MethodInfo* method);
-		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),___driven0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	}
-	else
-	{
-		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
-		((FunctionPointerType)__this->get_method_ptr_0())(___driven0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	}
-}
-// System.IAsyncResult UnityEngine.RectTransform/ReapplyDrivenProperties::BeginInvoke(UnityEngine.RectTransform,System.AsyncCallback,System.Object)
-extern "C"  Il2CppObject * ReapplyDrivenProperties_BeginInvoke_m2337529776 (ReapplyDrivenProperties_t2020713228 * __this, RectTransform_t3349966182 * ___driven0, AsyncCallback_t163412349 * ___callback1, Il2CppObject * ___object2, const MethodInfo* method)
-{
-	void *__d_args[2] = {0};
-	__d_args[0] = ___driven0;
-	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback1, (Il2CppObject*)___object2);
-}
-// System.Void UnityEngine.RectTransform/ReapplyDrivenProperties::EndInvoke(System.IAsyncResult)
-extern "C"  void ReapplyDrivenProperties_EndInvoke_m2375002944 (ReapplyDrivenProperties_t2020713228 * __this, Il2CppObject * ___result0, const MethodInfo* method)
-{
-	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
-}
-// System.Boolean UnityEngine.RectTransformUtility::ScreenPointToWorldPointInRectangle(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Camera,UnityEngine.Vector3&)
-extern "C"  bool RectTransformUtility_ScreenPointToWorldPointInRectangle_m2304638810 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, Vector2_t2243707579  ___screenPoint1, Camera_t189460977 * ___cam2, Vector3_t2243707580 * ___worldPoint3, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_ScreenPointToWorldPointInRectangle_m2304638810_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Ray_t2469606224  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Plane_t3727654732  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	float V_2 = 0.0f;
-	bool V_3 = false;
-	{
-		Vector3_t2243707580 * L_0 = ___worldPoint3;
-		Vector2_t2243707579  L_1 = Vector2_get_zero_m3966848876(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_2 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)L_0) = L_2;
-		Camera_t189460977 * L_3 = ___cam2;
-		Vector2_t2243707579  L_4 = ___screenPoint1;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		Ray_t2469606224  L_5 = RectTransformUtility_ScreenPointToRay_m1842507230(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
-		V_0 = L_5;
-		RectTransform_t3349966182 * L_6 = ___rect0;
-		NullCheck(L_6);
-		Quaternion_t4030073918  L_7 = Transform_get_rotation_m1033555130(L_6, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_8 = Vector3_get_back_m4246539215(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_9 = Quaternion_op_Multiply_m1483423721(NULL /*static, unused*/, L_7, L_8, /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_10 = ___rect0;
-		NullCheck(L_10);
-		Vector3_t2243707580  L_11 = Transform_get_position_m1104419803(L_10, /*hidden argument*/NULL);
-		Plane__ctor_m3187718367((&V_1), L_9, L_11, /*hidden argument*/NULL);
-		Ray_t2469606224  L_12 = V_0;
-		bool L_13 = Plane_Raycast_m2870142810((&V_1), L_12, (&V_2), /*hidden argument*/NULL);
-		if (L_13)
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		V_3 = (bool)0;
-		goto IL_0061;
-	}
-
-IL_004c:
-	{
-		Vector3_t2243707580 * L_14 = ___worldPoint3;
-		float L_15 = V_2;
-		Vector3_t2243707580  L_16 = Ray_GetPoint_m1353702366((&V_0), L_15, /*hidden argument*/NULL);
-		(*(Vector3_t2243707580 *)L_14) = L_16;
-		V_3 = (bool)1;
-		goto IL_0061;
-	}
-
-IL_0061:
-	{
-		bool L_17 = V_3;
-		return L_17;
-	}
-}
-// System.Boolean UnityEngine.RectTransformUtility::ScreenPointToLocalPointInRectangle(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Camera,UnityEngine.Vector2&)
-extern "C"  bool RectTransformUtility_ScreenPointToLocalPointInRectangle_m2398565080 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, Vector2_t2243707579  ___screenPoint1, Camera_t189460977 * ___cam2, Vector2_t2243707579 * ___localPoint3, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_ScreenPointToLocalPointInRectangle_m2398565080_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Vector3_t2243707580  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	bool V_1 = false;
-	{
-		Vector2_t2243707579 * L_0 = ___localPoint3;
-		Vector2_t2243707579  L_1 = Vector2_get_zero_m3966848876(NULL /*static, unused*/, /*hidden argument*/NULL);
-		(*(Vector2_t2243707579 *)L_0) = L_1;
-		RectTransform_t3349966182 * L_2 = ___rect0;
-		Vector2_t2243707579  L_3 = ___screenPoint1;
-		Camera_t189460977 * L_4 = ___cam2;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		bool L_5 = RectTransformUtility_ScreenPointToWorldPointInRectangle_m2304638810(NULL /*static, unused*/, L_2, L_3, L_4, (&V_0), /*hidden argument*/NULL);
-		if (!L_5)
-		{
-			goto IL_0035;
-		}
-	}
-	{
-		Vector2_t2243707579 * L_6 = ___localPoint3;
-		RectTransform_t3349966182 * L_7 = ___rect0;
-		Vector3_t2243707580  L_8 = V_0;
-		NullCheck(L_7);
-		Vector3_t2243707580  L_9 = Transform_InverseTransformPoint_m2648491174(L_7, L_8, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_10 = Vector2_op_Implicit_m1064335535(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
-		(*(Vector2_t2243707579 *)L_6) = L_10;
-		V_1 = (bool)1;
-		goto IL_003c;
-	}
-
-IL_0035:
-	{
-		V_1 = (bool)0;
-		goto IL_003c;
-	}
-
-IL_003c:
-	{
-		bool L_11 = V_1;
-		return L_11;
-	}
-}
-// UnityEngine.Ray UnityEngine.RectTransformUtility::ScreenPointToRay(UnityEngine.Camera,UnityEngine.Vector2)
-extern "C"  Ray_t2469606224  RectTransformUtility_ScreenPointToRay_m1842507230 (Il2CppObject * __this /* static, unused */, Camera_t189460977 * ___cam0, Vector2_t2243707579  ___screenPos1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_ScreenPointToRay_m1842507230_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Ray_t2469606224  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector3_t2243707580  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		Camera_t189460977 * L_0 = ___cam0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_0, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		Camera_t189460977 * L_2 = ___cam0;
-		Vector2_t2243707579  L_3 = ___screenPos1;
-		Vector3_t2243707580  L_4 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		Ray_t2469606224  L_5 = Camera_ScreenPointToRay_m614889538(L_2, L_4, /*hidden argument*/NULL);
-		V_0 = L_5;
-		goto IL_004a;
-	}
-
-IL_001f:
-	{
-		Vector2_t2243707579  L_6 = ___screenPos1;
-		Vector3_t2243707580  L_7 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
-		V_1 = L_7;
-		Vector3_t2243707580 * L_8 = (&V_1);
-		float L_9 = L_8->get_z_3();
-		L_8->set_z_3(((float)((float)L_9-(float)(100.0f))));
-		Vector3_t2243707580  L_10 = V_1;
-		Vector3_t2243707580  L_11 = Vector3_get_forward_m1201659139(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Ray_t2469606224  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Ray__ctor_m3379034047(&L_12, L_10, L_11, /*hidden argument*/NULL);
-		V_0 = L_12;
-		goto IL_004a;
-	}
-
-IL_004a:
-	{
-		Ray_t2469606224  L_13 = V_0;
-		return L_13;
-	}
-}
-// System.Void UnityEngine.RectTransformUtility::FlipLayoutOnAxis(UnityEngine.RectTransform,System.Int32,System.Boolean,System.Boolean)
-extern "C"  void RectTransformUtility_FlipLayoutOnAxis_m3920364518 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, int32_t ___axis1, bool ___keepPositioning2, bool ___recursive3, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_FlipLayoutOnAxis_m3920364518_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	RectTransform_t3349966182 * V_1 = NULL;
-	Vector2_t2243707579  V_2;
-	memset(&V_2, 0, sizeof(V_2));
-	Vector2_t2243707579  V_3;
-	memset(&V_3, 0, sizeof(V_3));
-	Vector2_t2243707579  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	Vector2_t2243707579  V_5;
-	memset(&V_5, 0, sizeof(V_5));
-	float V_6 = 0.0f;
-	{
-		RectTransform_t3349966182 * L_0 = ___rect0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_0, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		goto IL_00f3;
-	}
-
-IL_0012:
-	{
-		bool L_2 = ___recursive3;
-		if (!L_2)
-		{
-			goto IL_0055;
-		}
-	}
-	{
-		V_0 = 0;
-		goto IL_0048;
-	}
-
-IL_0020:
-	{
-		RectTransform_t3349966182 * L_3 = ___rect0;
-		int32_t L_4 = V_0;
-		NullCheck(L_3);
-		Transform_t3275118058 * L_5 = Transform_GetChild_m3838588184(L_3, L_4, /*hidden argument*/NULL);
-		V_1 = ((RectTransform_t3349966182 *)IsInstSealed(L_5, RectTransform_t3349966182_il2cpp_TypeInfo_var));
-		RectTransform_t3349966182 * L_6 = V_1;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_7 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_6, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_0043;
-		}
-	}
-	{
-		RectTransform_t3349966182 * L_8 = V_1;
-		int32_t L_9 = ___axis1;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		RectTransformUtility_FlipLayoutOnAxis_m3920364518(NULL /*static, unused*/, L_8, L_9, (bool)0, (bool)1, /*hidden argument*/NULL);
-	}
-
-IL_0043:
-	{
-		int32_t L_10 = V_0;
-		V_0 = ((int32_t)((int32_t)L_10+(int32_t)1));
-	}
-
-IL_0048:
-	{
-		int32_t L_11 = V_0;
-		RectTransform_t3349966182 * L_12 = ___rect0;
-		NullCheck(L_12);
-		int32_t L_13 = Transform_get_childCount_m881385315(L_12, /*hidden argument*/NULL);
-		if ((((int32_t)L_11) < ((int32_t)L_13)))
-		{
-			goto IL_0020;
-		}
-	}
-	{
-	}
-
-IL_0055:
-	{
-		RectTransform_t3349966182 * L_14 = ___rect0;
-		NullCheck(L_14);
-		Vector2_t2243707579  L_15 = RectTransform_get_pivot_m759087479(L_14, /*hidden argument*/NULL);
-		V_2 = L_15;
-		int32_t L_16 = ___axis1;
-		int32_t L_17 = ___axis1;
-		float L_18 = Vector2_get_Item_m2792130561((&V_2), L_17, /*hidden argument*/NULL);
-		Vector2_set_Item_m3881967114((&V_2), L_16, ((float)((float)(1.0f)-(float)L_18)), /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_19 = ___rect0;
-		Vector2_t2243707579  L_20 = V_2;
-		NullCheck(L_19);
-		RectTransform_set_pivot_m1360548980(L_19, L_20, /*hidden argument*/NULL);
-		bool L_21 = ___keepPositioning2;
-		if (!L_21)
-		{
-			goto IL_0084;
-		}
-	}
-	{
-		goto IL_00f3;
-	}
-
-IL_0084:
-	{
-		RectTransform_t3349966182 * L_22 = ___rect0;
-		NullCheck(L_22);
-		Vector2_t2243707579  L_23 = RectTransform_get_anchoredPosition_m3570822376(L_22, /*hidden argument*/NULL);
-		V_3 = L_23;
-		int32_t L_24 = ___axis1;
-		int32_t L_25 = ___axis1;
-		float L_26 = Vector2_get_Item_m2792130561((&V_3), L_25, /*hidden argument*/NULL);
-		Vector2_set_Item_m3881967114((&V_3), L_24, ((-L_26)), /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_27 = ___rect0;
-		Vector2_t2243707579  L_28 = V_3;
-		NullCheck(L_27);
-		RectTransform_set_anchoredPosition_m2077229449(L_27, L_28, /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_29 = ___rect0;
-		NullCheck(L_29);
-		Vector2_t2243707579  L_30 = RectTransform_get_anchorMin_m1497323108(L_29, /*hidden argument*/NULL);
-		V_4 = L_30;
-		RectTransform_t3349966182 * L_31 = ___rect0;
-		NullCheck(L_31);
-		Vector2_t2243707579  L_32 = RectTransform_get_anchorMax_m3816015142(L_31, /*hidden argument*/NULL);
-		V_5 = L_32;
-		int32_t L_33 = ___axis1;
-		float L_34 = Vector2_get_Item_m2792130561((&V_4), L_33, /*hidden argument*/NULL);
-		V_6 = L_34;
-		int32_t L_35 = ___axis1;
-		int32_t L_36 = ___axis1;
-		float L_37 = Vector2_get_Item_m2792130561((&V_5), L_36, /*hidden argument*/NULL);
-		Vector2_set_Item_m3881967114((&V_4), L_35, ((float)((float)(1.0f)-(float)L_37)), /*hidden argument*/NULL);
-		int32_t L_38 = ___axis1;
-		float L_39 = V_6;
-		Vector2_set_Item_m3881967114((&V_5), L_38, ((float)((float)(1.0f)-(float)L_39)), /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_40 = ___rect0;
-		Vector2_t2243707579  L_41 = V_4;
-		NullCheck(L_40);
-		RectTransform_set_anchorMin_m4247668187(L_40, L_41, /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_42 = ___rect0;
-		Vector2_t2243707579  L_43 = V_5;
-		NullCheck(L_42);
-		RectTransform_set_anchorMax_m2955899993(L_42, L_43, /*hidden argument*/NULL);
-	}
-
-IL_00f3:
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.RectTransformUtility::FlipLayoutAxes(UnityEngine.RectTransform,System.Boolean,System.Boolean)
-extern "C"  void RectTransformUtility_FlipLayoutAxes_m532748168 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, bool ___keepPositioning1, bool ___recursive2, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_FlipLayoutAxes_m532748168_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	RectTransform_t3349966182 * V_1 = NULL;
-	{
-		RectTransform_t3349966182 * L_0 = ___rect0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_0, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		goto IL_00b4;
-	}
-
-IL_0012:
-	{
-		bool L_2 = ___recursive2;
-		if (!L_2)
-		{
-			goto IL_0054;
-		}
-	}
-	{
-		V_0 = 0;
-		goto IL_0047;
-	}
-
-IL_0020:
-	{
-		RectTransform_t3349966182 * L_3 = ___rect0;
-		int32_t L_4 = V_0;
-		NullCheck(L_3);
-		Transform_t3275118058 * L_5 = Transform_GetChild_m3838588184(L_3, L_4, /*hidden argument*/NULL);
-		V_1 = ((RectTransform_t3349966182 *)IsInstSealed(L_5, RectTransform_t3349966182_il2cpp_TypeInfo_var));
-		RectTransform_t3349966182 * L_6 = V_1;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_7 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_6, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_0042;
-		}
-	}
-	{
-		RectTransform_t3349966182 * L_8 = V_1;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		RectTransformUtility_FlipLayoutAxes_m532748168(NULL /*static, unused*/, L_8, (bool)0, (bool)1, /*hidden argument*/NULL);
-	}
-
-IL_0042:
-	{
-		int32_t L_9 = V_0;
-		V_0 = ((int32_t)((int32_t)L_9+(int32_t)1));
-	}
-
-IL_0047:
-	{
-		int32_t L_10 = V_0;
-		RectTransform_t3349966182 * L_11 = ___rect0;
-		NullCheck(L_11);
-		int32_t L_12 = Transform_get_childCount_m881385315(L_11, /*hidden argument*/NULL);
-		if ((((int32_t)L_10) < ((int32_t)L_12)))
-		{
-			goto IL_0020;
-		}
-	}
-	{
-	}
-
-IL_0054:
-	{
-		RectTransform_t3349966182 * L_13 = ___rect0;
-		RectTransform_t3349966182 * L_14 = ___rect0;
-		NullCheck(L_14);
-		Vector2_t2243707579  L_15 = RectTransform_get_pivot_m759087479(L_14, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		Vector2_t2243707579  L_16 = RectTransformUtility_GetTransposed_m1770338235(NULL /*static, unused*/, L_15, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		RectTransform_set_pivot_m1360548980(L_13, L_16, /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_17 = ___rect0;
-		RectTransform_t3349966182 * L_18 = ___rect0;
-		NullCheck(L_18);
-		Vector2_t2243707579  L_19 = RectTransform_get_sizeDelta_m2157326342(L_18, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_20 = RectTransformUtility_GetTransposed_m1770338235(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
-		NullCheck(L_17);
-		RectTransform_set_sizeDelta_m2319668137(L_17, L_20, /*hidden argument*/NULL);
-		bool L_21 = ___keepPositioning1;
-		if (!L_21)
-		{
-			goto IL_0081;
-		}
-	}
-	{
-		goto IL_00b4;
-	}
-
-IL_0081:
-	{
-		RectTransform_t3349966182 * L_22 = ___rect0;
-		RectTransform_t3349966182 * L_23 = ___rect0;
-		NullCheck(L_23);
-		Vector2_t2243707579  L_24 = RectTransform_get_anchoredPosition_m3570822376(L_23, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		Vector2_t2243707579  L_25 = RectTransformUtility_GetTransposed_m1770338235(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
-		NullCheck(L_22);
-		RectTransform_set_anchoredPosition_m2077229449(L_22, L_25, /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_26 = ___rect0;
-		RectTransform_t3349966182 * L_27 = ___rect0;
-		NullCheck(L_27);
-		Vector2_t2243707579  L_28 = RectTransform_get_anchorMin_m1497323108(L_27, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_29 = RectTransformUtility_GetTransposed_m1770338235(NULL /*static, unused*/, L_28, /*hidden argument*/NULL);
-		NullCheck(L_26);
-		RectTransform_set_anchorMin_m4247668187(L_26, L_29, /*hidden argument*/NULL);
-		RectTransform_t3349966182 * L_30 = ___rect0;
-		RectTransform_t3349966182 * L_31 = ___rect0;
-		NullCheck(L_31);
-		Vector2_t2243707579  L_32 = RectTransform_get_anchorMax_m3816015142(L_31, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_33 = RectTransformUtility_GetTransposed_m1770338235(NULL /*static, unused*/, L_32, /*hidden argument*/NULL);
-		NullCheck(L_30);
-		RectTransform_set_anchorMax_m2955899993(L_30, L_33, /*hidden argument*/NULL);
-	}
-
-IL_00b4:
-	{
-		return;
-	}
-}
-// UnityEngine.Vector2 UnityEngine.RectTransformUtility::GetTransposed(UnityEngine.Vector2)
-extern "C"  Vector2_t2243707579  RectTransformUtility_GetTransposed_m1770338235 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579  ___input0, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		float L_0 = (&___input0)->get_y_1();
-		float L_1 = (&___input0)->get_x_0();
-		Vector2_t2243707579  L_2;
-		memset(&L_2, 0, sizeof(L_2));
-		Vector2__ctor_m3067419446(&L_2, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_001a;
-	}
-
-IL_001a:
-	{
-		Vector2_t2243707579  L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.RectTransformUtility::RectangleContainsScreenPoint(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Camera)
-extern "C"  bool RectTransformUtility_RectangleContainsScreenPoint_m1244853728 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, Vector2_t2243707579  ___screenPoint1, Camera_t189460977 * ___cam2, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_RectangleContainsScreenPoint_m1244853728_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	{
-		RectTransform_t3349966182 * L_0 = ___rect0;
-		Camera_t189460977 * L_1 = ___cam2;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		bool L_2 = RectTransformUtility_INTERNAL_CALL_RectangleContainsScreenPoint_m3362263993(NULL /*static, unused*/, L_0, (&___screenPoint1), L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.RectTransformUtility::INTERNAL_CALL_RectangleContainsScreenPoint(UnityEngine.RectTransform,UnityEngine.Vector2&,UnityEngine.Camera)
-extern "C"  bool RectTransformUtility_INTERNAL_CALL_RectangleContainsScreenPoint_m3362263993 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rect0, Vector2_t2243707579 * ___screenPoint1, Camera_t189460977 * ___cam2, const MethodInfo* method)
-{
-	typedef bool (*RectTransformUtility_INTERNAL_CALL_RectangleContainsScreenPoint_m3362263993_ftn) (RectTransform_t3349966182 *, Vector2_t2243707579 *, Camera_t189460977 *);
-	static RectTransformUtility_INTERNAL_CALL_RectangleContainsScreenPoint_m3362263993_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransformUtility_INTERNAL_CALL_RectangleContainsScreenPoint_m3362263993_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransformUtility::INTERNAL_CALL_RectangleContainsScreenPoint(UnityEngine.RectTransform,UnityEngine.Vector2&,UnityEngine.Camera)");
-	return _il2cpp_icall_func(___rect0, ___screenPoint1, ___cam2);
-}
-// UnityEngine.Vector2 UnityEngine.RectTransformUtility::PixelAdjustPoint(UnityEngine.Vector2,UnityEngine.Transform,UnityEngine.Canvas)
-extern "C"  Vector2_t2243707579  RectTransformUtility_PixelAdjustPoint_m560908615 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579  ___point0, Transform_t3275118058 * ___elementTransform1, Canvas_t209405766 * ___canvas2, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_PixelAdjustPoint_m560908615_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Vector2_t2243707579  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		Transform_t3275118058 * L_0 = ___elementTransform1;
-		Canvas_t209405766 * L_1 = ___canvas2;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		RectTransformUtility_INTERNAL_CALL_PixelAdjustPoint_m2153046669(NULL /*static, unused*/, (&___point0), L_0, L_1, (&V_0), /*hidden argument*/NULL);
-		Vector2_t2243707579  L_2 = V_0;
-		V_1 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		Vector2_t2243707579  L_3 = V_1;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustPoint(UnityEngine.Vector2&,UnityEngine.Transform,UnityEngine.Canvas,UnityEngine.Vector2&)
-extern "C"  void RectTransformUtility_INTERNAL_CALL_PixelAdjustPoint_m2153046669 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579 * ___point0, Transform_t3275118058 * ___elementTransform1, Canvas_t209405766 * ___canvas2, Vector2_t2243707579 * ___value3, const MethodInfo* method)
-{
-	typedef void (*RectTransformUtility_INTERNAL_CALL_PixelAdjustPoint_m2153046669_ftn) (Vector2_t2243707579 *, Transform_t3275118058 *, Canvas_t209405766 *, Vector2_t2243707579 *);
-	static RectTransformUtility_INTERNAL_CALL_PixelAdjustPoint_m2153046669_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransformUtility_INTERNAL_CALL_PixelAdjustPoint_m2153046669_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustPoint(UnityEngine.Vector2&,UnityEngine.Transform,UnityEngine.Canvas,UnityEngine.Vector2&)");
-	_il2cpp_icall_func(___point0, ___elementTransform1, ___canvas2, ___value3);
-}
-// UnityEngine.Rect UnityEngine.RectTransformUtility::PixelAdjustRect(UnityEngine.RectTransform,UnityEngine.Canvas)
-extern "C"  Rect_t3681755626  RectTransformUtility_PixelAdjustRect_m93024038 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rectTransform0, Canvas_t209405766 * ___canvas1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility_PixelAdjustRect_m93024038_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Rect_t3681755626  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Rect_t3681755626  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		RectTransform_t3349966182 * L_0 = ___rectTransform0;
-		Canvas_t209405766 * L_1 = ___canvas1;
-		IL2CPP_RUNTIME_CLASS_INIT(RectTransformUtility_t2941082270_il2cpp_TypeInfo_var);
-		RectTransformUtility_INTERNAL_CALL_PixelAdjustRect_m1237215542(NULL /*static, unused*/, L_0, L_1, (&V_0), /*hidden argument*/NULL);
-		Rect_t3681755626  L_2 = V_0;
-		V_1 = L_2;
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		Rect_t3681755626  L_3 = V_1;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustRect(UnityEngine.RectTransform,UnityEngine.Canvas,UnityEngine.Rect&)
-extern "C"  void RectTransformUtility_INTERNAL_CALL_PixelAdjustRect_m1237215542 (Il2CppObject * __this /* static, unused */, RectTransform_t3349966182 * ___rectTransform0, Canvas_t209405766 * ___canvas1, Rect_t3681755626 * ___value2, const MethodInfo* method)
-{
-	typedef void (*RectTransformUtility_INTERNAL_CALL_PixelAdjustRect_m1237215542_ftn) (RectTransform_t3349966182 *, Canvas_t209405766 *, Rect_t3681755626 *);
-	static RectTransformUtility_INTERNAL_CALL_PixelAdjustRect_m1237215542_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RectTransformUtility_INTERNAL_CALL_PixelAdjustRect_m1237215542_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustRect(UnityEngine.RectTransform,UnityEngine.Canvas,UnityEngine.Rect&)");
-	_il2cpp_icall_func(___rectTransform0, ___canvas1, ___value2);
-}
-// System.Void UnityEngine.RectTransformUtility::.cctor()
-extern "C"  void RectTransformUtility__cctor_m1866023382 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RectTransformUtility__cctor_m1866023382_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		((RectTransformUtility_t2941082270_StaticFields*)RectTransformUtility_t2941082270_il2cpp_TypeInfo_var->static_fields)->set_s_Corners_0(((Vector3U5BU5D_t1172311765*)SZArrayNew(Vector3U5BU5D_t1172311765_il2cpp_TypeInfo_var, (uint32_t)4)));
-		return;
-	}
-}
-// System.Void UnityEngine.RemoteSettings::CallOnUpdate()
-extern "C"  void RemoteSettings_CallOnUpdate_m1624968574 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (RemoteSettings_CallOnUpdate_m1624968574_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	UpdatedEventHandler_t3033456180 * V_0 = NULL;
-	{
-		UpdatedEventHandler_t3033456180 * L_0 = ((RemoteSettings_t392466225_StaticFields*)RemoteSettings_t392466225_il2cpp_TypeInfo_var->static_fields)->get_Updated_0();
-		V_0 = L_0;
-		UpdatedEventHandler_t3033456180 * L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		UpdatedEventHandler_t3033456180 * L_2 = V_0;
-		NullCheck(L_2);
-		UpdatedEventHandler_Invoke_m159598802(L_2, /*hidden argument*/NULL);
-	}
-
-IL_0013:
-	{
-		return;
-	}
-}
-extern "C"  void DelegatePInvokeWrapper_UpdatedEventHandler_t3033456180 (UpdatedEventHandler_t3033456180 * __this, const MethodInfo* method)
-{
-	typedef void (STDCALL *PInvokeFunc)();
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((Il2CppDelegate*)__this)->method->methodPointer);
-
-	// Native function invocation
-	il2cppPInvokeFunc();
-
-}
-// System.Void UnityEngine.RemoteSettings/UpdatedEventHandler::.ctor(System.Object,System.IntPtr)
-extern "C"  void UpdatedEventHandler__ctor_m1393569768 (UpdatedEventHandler_t3033456180 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
-{
-	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
-	__this->set_method_3(___method1);
-	__this->set_m_target_2(___object0);
-}
-// System.Void UnityEngine.RemoteSettings/UpdatedEventHandler::Invoke()
-extern "C"  void UpdatedEventHandler_Invoke_m159598802 (UpdatedEventHandler_t3033456180 * __this, const MethodInfo* method)
-{
-	if(__this->get_prev_9() != NULL)
-	{
-		UpdatedEventHandler_Invoke_m159598802((UpdatedEventHandler_t3033456180 *)__this->get_prev_9(), method);
-	}
-	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	if ((__this->get_m_target_2() != NULL || MethodHasParameters((MethodInfo*)(__this->get_method_3().get_m_value_0()))) && ___methodIsStatic)
-	{
-		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, const MethodInfo* method);
-		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),(MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	}
-	else
-	{
-		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
-		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),(MethodInfo*)(__this->get_method_3().get_m_value_0()));
-	}
-}
-// System.IAsyncResult UnityEngine.RemoteSettings/UpdatedEventHandler::BeginInvoke(System.AsyncCallback,System.Object)
-extern "C"  Il2CppObject * UpdatedEventHandler_BeginInvoke_m4238510153 (UpdatedEventHandler_t3033456180 * __this, AsyncCallback_t163412349 * ___callback0, Il2CppObject * ___object1, const MethodInfo* method)
-{
-	void *__d_args[1] = {0};
-	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback0, (Il2CppObject*)___object1);
-}
-// System.Void UnityEngine.RemoteSettings/UpdatedEventHandler::EndInvoke(System.IAsyncResult)
-extern "C"  void UpdatedEventHandler_EndInvoke_m224684362 (UpdatedEventHandler_t3033456180 * __this, Il2CppObject * ___result0, const MethodInfo* method)
-{
-	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
-}
-// UnityEngine.Material UnityEngine.Renderer::get_material()
-extern "C"  Material_t193706927 * Renderer_get_material_m2553789785 (Renderer_t257310565 * __this, const MethodInfo* method)
-{
-	typedef Material_t193706927 * (*Renderer_get_material_m2553789785_ftn) (Renderer_t257310565 *);
-	static Renderer_get_material_m2553789785_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_get_material_m2553789785_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_material()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.Renderer::SetPropertyBlock(UnityEngine.MaterialPropertyBlock)
-extern "C"  void Renderer_SetPropertyBlock_m1151988246 (Renderer_t257310565 * __this, MaterialPropertyBlock_t3303648957 * ___properties0, const MethodInfo* method)
-{
-	typedef void (*Renderer_SetPropertyBlock_m1151988246_ftn) (Renderer_t257310565 *, MaterialPropertyBlock_t3303648957 *);
-	static Renderer_SetPropertyBlock_m1151988246_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_SetPropertyBlock_m1151988246_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetPropertyBlock(UnityEngine.MaterialPropertyBlock)");
-	_il2cpp_icall_func(__this, ___properties0);
-}
-// System.Int32 UnityEngine.Renderer::get_sortingLayerID()
-extern "C"  int32_t Renderer_get_sortingLayerID_m2403577271 (Renderer_t257310565 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*Renderer_get_sortingLayerID_m2403577271_ftn) (Renderer_t257310565 *);
-	static Renderer_get_sortingLayerID_m2403577271_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_get_sortingLayerID_m2403577271_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_sortingLayerID()");
-	return _il2cpp_icall_func(__this);
-}
-// System.Int32 UnityEngine.Renderer::get_sortingOrder()
-extern "C"  int32_t Renderer_get_sortingOrder_m1544525007 (Renderer_t257310565 * __this, const MethodInfo* method)
-{
-	typedef int32_t (*Renderer_get_sortingOrder_m1544525007_ftn) (Renderer_t257310565 *);
-	static Renderer_get_sortingOrder_m1544525007_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_get_sortingOrder_m1544525007_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_sortingOrder()");
-	return _il2cpp_icall_func(__this);
+	_il2cpp_icall_func = (QualitySettings_set_shadowDistance_m2077100724_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::set_shadowDistance(System.Single)");
+	_il2cpp_icall_func(___value0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

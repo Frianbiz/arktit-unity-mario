@@ -1,2 +1,10 @@
 <linker>
+	<assembly fullname="Assembly-CSharp-firstpass">
+		<type fullname="UnityStandardAssets.CrossPlatformInput.ButtonHandler">
+			<method name="SetDownState"/>
+			<method name="SetUpState"/>
+			<method name="SetDownState"/>
+			<method name="SetUpState"/>
+		</type>
+	</assembly>
 </linker>

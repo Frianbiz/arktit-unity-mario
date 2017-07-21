@@ -24,13 +24,20 @@
 #include "UnityEngine_UnityEngine_AddComponentMenu1099699699.h"
 #include "mscorlib_System_String2029220233.h"
 #include "mscorlib_System_Int322071877448.h"
+#include "UnityEngine_UnityEngine_AI_NavMesh1481227028.h"
+#include "UnityEngine_UnityEngine_AI_NavMesh_OnNavMeshPreUpd2039022291.h"
+#include "mscorlib_System_Object2689449295.h"
+#include "mscorlib_System_IntPtr2504060609.h"
+#include "mscorlib_System_AsyncCallback163412349.h"
+#include "UnityEngine_UnityEngine_AI_NavMeshAgent2761625415.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
+#include "mscorlib_System_Boolean3825574718.h"
+#include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UnityEngine_Analytics_Analytics2007048212.h"
 #include "UnityEngine_UnityEngine_Analytics_UnityAnalyticsHa3238795095.h"
 #include "UnityEngine_UnityEngine_Analytics_AnalyticsResult3037633135.h"
 #include "UnityEngine_UnityEngine_Analytics_CustomEventData1269126727.h"
-#include "mscorlib_System_Boolean3825574718.h"
 #include "mscorlib_System_ArgumentException3259014390.h"
-#include "mscorlib_System_Object2689449295.h"
 #include "mscorlib_System_Char3454481338.h"
 #include "mscorlib_System_Byte3683104436.h"
 #include "mscorlib_System_SByte454417549.h"
@@ -39,19 +46,21 @@
 #include "mscorlib_System_UInt322149682021.h"
 #include "mscorlib_System_Int64909078037.h"
 #include "mscorlib_System_UInt642909196914.h"
-#include "mscorlib_System_Single2076509932.h"
 #include "mscorlib_System_Decimal724701077.h"
 #include "mscorlib_System_Double4078015681.h"
 #include "mscorlib_System_Collections_Generic_KeyValuePair_22361573779.h"
 #include "mscorlib_System_Collections_Generic_KeyValuePair_2_g38854645.h"
 #include "mscorlib_System_RuntimeTypeHandle2330101084.h"
+#include "UnityEngine_UnityEngine_Animation2068071072.h"
+#include "UnityEngine_UnityEngine_PlayMode1184682879.h"
+#include "UnityEngine_UnityEngine_Animation_Enumerator59479314.h"
+#include "UnityEngine_UnityEngine_AnimationState1303741697.h"
 #include "UnityEngine_UnityEngine_AnimationClip3510324950.h"
 #include "UnityEngine_UnityEngine_AnimationCurve3306541151.h"
 #include "UnityEngine_UnityEngine_Keyframe1449471340.h"
 #include "UnityEngine_UnityEngine_AnimationEvent2428323300.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
 #include "UnityEngine_UnityEngine_AnimationEventSource3560017945.h"
-#include "UnityEngine_UnityEngine_AnimationState1303741697.h"
 #include "UnityEngine_UnityEngine_AnimatorStateInfo2577870592.h"
 #include "UnityEngine_UnityEngine_AnimatorClipInfo3905751349.h"
 #include "UnityEngine_UnityEngine_SendMessageOptions1414041951.h"
@@ -64,8 +73,6 @@
 #include "UnityEngine_UnityEngine_RuntimePlatform1869584967.h"
 #include "UnityEngine_UnityEngine_LogType1559732862.h"
 #include "UnityEngine_UnityEngine_Application_LogCallback1867914413.h"
-#include "mscorlib_System_IntPtr2504060609.h"
-#include "mscorlib_System_AsyncCallback163412349.h"
 #include "UnityEngine_UnityEngine_AssemblyIsEditorAssembly1557026495.h"
 #include "UnityEngine_UnityEngine_AssetBundle2054978754.h"
 #include "UnityEngine_UnityEngine_AssetBundleCreateRequest1038783543.h"
@@ -88,7 +95,6 @@
 #include "UnityEngine_UnityEngine_Behaviour955675639.h"
 #include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "UnityEngine_UnityEngine_Bounds3033363703.h"
-#include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "UnityEngine_UnityEngine_Rect3681755626.h"
 #include "UnityEngine_UnityEngine_RenderTexture2666733923.h"
@@ -116,6 +122,7 @@
 #include "mscorlib_System_Collections_Generic_List_1_gen1612828711.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen1612828713.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen1440998580.h"
+#include "UnityEngine_UnityEngine_CapsuleCollider720607407.h"
 #include "UnityEngine_UnityEngine_CharacterController4094781467.h"
 #include "UnityEngine_UnityEngine_Collections_DeallocateOnJob987733588.h"
 #include "UnityEngine_UnityEngine_Collections_NativeContainer269240268.h"
@@ -192,13 +199,6 @@
 #include "UnityEngine_UnityEngine_Experimental_Director_Anim3036622417.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Anima859920217.h"
 #include "UnityEngine_UnityEngine_Quaternion4030073918.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Anim4078305555.h"
-#include "UnityEngine_UnityEngine_RuntimeAnimatorController670468573.h"
-#include "mscorlib_System_Collections_Generic_List_1_gen3274872481.h"
-#include "mscorlib_System_IndexOutOfRangeException3527622107.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Fram1120735295.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Frame658788566.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Play3250302433.h"
 
 // AOT.MonoPInvokeCallbackAttribute
 struct MonoPInvokeCallbackAttribute_t2934651840;
@@ -210,6 +210,16 @@ struct Attribute_t542643598;
 struct AddComponentMenu_t1099699699;
 // System.String
 struct String_t;
+// UnityEngine.AI.NavMesh/OnNavMeshPreUpdate
+struct OnNavMeshPreUpdate_t2039022291;
+// System.Object
+struct Il2CppObject;
+// System.IAsyncResult
+struct IAsyncResult_t1999651008;
+// System.AsyncCallback
+struct AsyncCallback_t163412349;
+// UnityEngine.AI.NavMeshAgent
+struct NavMeshAgent_t2761625415;
 // UnityEngine.Analytics.UnityAnalyticsHandler
 struct UnityAnalyticsHandler_t3238795095;
 // System.Collections.Generic.IDictionary`2<System.String,System.Object>
@@ -218,8 +228,14 @@ struct IDictionary_2_t2603311978;
 struct ArgumentException_t3259014390;
 // UnityEngine.Analytics.CustomEventData
 struct CustomEventData_t1269126727;
-// System.Object
-struct Il2CppObject;
+// UnityEngine.Animation
+struct Animation_t2068071072;
+// System.Collections.IEnumerator
+struct IEnumerator_t1466026749;
+// UnityEngine.Animation/Enumerator
+struct Enumerator_t59479314;
+// UnityEngine.AnimationState
+struct AnimationState_t1303741697;
 // UnityEngine.AnimationCurve
 struct AnimationCurve_t3306541151;
 // UnityEngine.Keyframe[]
@@ -228,8 +244,6 @@ struct KeyframeU5BU5D_t449065829;
 struct Object_t1021602117;
 // UnityEngine.AnimationEvent
 struct AnimationEvent_t2428323300;
-// UnityEngine.AnimationState
-struct AnimationState_t1303741697;
 // UnityEngine.Animator
 struct Animator_t69676727;
 // UnityEngine.AnimatorControllerParameter
@@ -238,10 +252,6 @@ struct AnimatorControllerParameter_t1381019216;
 struct LowMemoryCallback_t642977590;
 // UnityEngine.Application/LogCallback
 struct LogCallback_t1867914413;
-// System.IAsyncResult
-struct IAsyncResult_t1999651008;
-// System.AsyncCallback
-struct AsyncCallback_t163412349;
 // UnityEngine.AssemblyIsEditorAssembly
 struct AssemblyIsEditorAssembly_t1557026495;
 // UnityEngine.AssetBundleCreateRequest
@@ -330,6 +340,8 @@ struct List_1_t1612828711;
 struct List_1_t1612828713;
 // System.Collections.Generic.List`1<System.Int32>
 struct List_1_t1440998580;
+// UnityEngine.CapsuleCollider
+struct CapsuleCollider_t720607407;
 // UnityEngine.Collections.DeallocateOnJobCompletionAttribute
 struct DeallocateOnJobCompletionAttribute_t987733588;
 // UnityEngine.Collections.NativeContainerAttribute
@@ -354,8 +366,6 @@ struct Collision_t2876846408;
 struct Transform_t3275118058;
 // UnityEngine.ContactPoint[]
 struct ContactPointU5BU5D_t1084937515;
-// System.Collections.IEnumerator
-struct IEnumerator_t1466026749;
 // System.Array
 struct Il2CppArray;
 // UnityEngine.Component[]
@@ -462,18 +472,8 @@ struct AnimationMixerPlayable_t3036622417;
 struct AnimationOffsetPlayable_t859920217;
 // UnityEngine.Experimental.Director.Playable
 struct Playable_t3667545548;
-// UnityEngine.Experimental.Director.AnimatorControllerPlayable
-struct AnimatorControllerPlayable_t4078305555;
-// UnityEngine.RuntimeAnimatorController
-struct RuntimeAnimatorController_t670468573;
-// UnityEngine.AnimatorClipInfo[]
-struct AnimatorClipInfoU5BU5D_t2969332312;
-// System.Collections.Generic.List`1<UnityEngine.AnimatorClipInfo>
-struct List_1_t3274872481;
-// UnityEngine.AnimatorControllerParameter[]
-struct AnimatorControllerParameterU5BU5D_t1936965233;
-// System.IndexOutOfRangeException
-struct IndexOutOfRangeException_t3527622107;
+extern Il2CppClass* NavMesh_t1481227028_il2cpp_TypeInfo_var;
+extern const uint32_t NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974_MetadataUsageId;
 extern Il2CppClass* Analytics_t2007048212_il2cpp_TypeInfo_var;
 extern Il2CppClass* UnityAnalyticsHandler_t3238795095_il2cpp_TypeInfo_var;
 extern const uint32_t Analytics_GetUnityAnalyticsHandler_m832551809_MetadataUsageId;
@@ -522,6 +522,8 @@ extern const MethodInfo* KeyValuePair_2_get_Value_m3217213384_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1743624307;
 extern Il2CppCodeGenString* _stringLiteral2174244105;
 extern const uint32_t CustomEventData_Add_m952171437_MetadataUsageId;
+extern Il2CppClass* Enumerator_t59479314_il2cpp_TypeInfo_var;
+extern const uint32_t Animation_GetEnumerator_m3067441975_MetadataUsageId;
 struct Object_t1021602117_marshaled_pinvoke;
 struct Object_t1021602117;;
 struct Object_t1021602117_marshaled_pinvoke;;
@@ -720,14 +722,6 @@ extern Il2CppCodeGenString* _stringLiteral372029310;
 extern const uint32_t UnityEventBase_ToString_m433343709_MetadataUsageId;
 extern const Il2CppType* Il2CppObject_0_0_0_var;
 extern const uint32_t UnityEventBase_GetValidMethodInfo_m1834951552_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral1467286041;
-extern const uint32_t AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m3523103275_MetadataUsageId;
-extern const uint32_t AnimatorControllerPlayable_GetNextAnimatorClipInfo_m2439552509_MetadataUsageId;
-extern Il2CppClass* IndexOutOfRangeException_t3527622107_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral1460639766;
-extern const uint32_t AnimatorControllerPlayable_GetParameter_m1109094904_MetadataUsageId;
-extern Il2CppClass* PlayableHandle_t1502856514_il2cpp_TypeInfo_var;
-extern const uint32_t PlayableHandle_Equals_m1435096530_MetadataUsageId;
 
 // UnityEngine.Keyframe[]
 struct KeyframeU5BU5D_t449065829  : public Il2CppArray
@@ -1274,78 +1268,6 @@ public:
 		m_Items[index] = value;
 	}
 };
-// UnityEngine.AnimatorClipInfo[]
-struct AnimatorClipInfoU5BU5D_t2969332312  : public Il2CppArray
-{
-public:
-	ALIGN_FIELD (8) AnimatorClipInfo_t3905751349  m_Items[1];
-
-public:
-	inline AnimatorClipInfo_t3905751349  GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline AnimatorClipInfo_t3905751349 * GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, AnimatorClipInfo_t3905751349  value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline AnimatorClipInfo_t3905751349  GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline AnimatorClipInfo_t3905751349 * GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, AnimatorClipInfo_t3905751349  value)
-	{
-		m_Items[index] = value;
-	}
-};
-// UnityEngine.AnimatorControllerParameter[]
-struct AnimatorControllerParameterU5BU5D_t1936965233  : public Il2CppArray
-{
-public:
-	ALIGN_FIELD (8) AnimatorControllerParameter_t1381019216 * m_Items[1];
-
-public:
-	inline AnimatorControllerParameter_t1381019216 * GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline AnimatorControllerParameter_t1381019216 ** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, AnimatorControllerParameter_t1381019216 * value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-	inline AnimatorControllerParameter_t1381019216 * GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline AnimatorControllerParameter_t1381019216 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, AnimatorControllerParameter_t1381019216 * value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-};
 
 extern "C" void Object_t1021602117_marshal_pinvoke(const Object_t1021602117& unmarshaled, Object_t1021602117_marshaled_pinvoke& marshaled);
 extern "C" void Object_t1021602117_marshal_pinvoke_back(const Object_t1021602117_marshaled_pinvoke& marshaled, Object_t1021602117& unmarshaled);
@@ -1405,6 +1327,12 @@ extern "C"  void Enumerator_Dispose_m3736175406_gshared (Enumerator_t1593300101 
 
 // System.Void System.Attribute::.ctor()
 extern "C"  void Attribute__ctor_m1730479323 (Attribute_t542643598 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::Invoke()
+extern "C"  void OnNavMeshPreUpdate_Invoke_m1433154603 (OnNavMeshPreUpdate_t2039022291 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)
+extern "C"  bool NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988 (Il2CppObject * __this /* static, unused */, NavMeshAgent_t2761625415 * ___self0, Vector3_t2243707580 * ___target1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AI.NavMeshAgent::INTERNAL_get_desiredVelocity(UnityEngine.Vector3&)
+extern "C"  void NavMeshAgent_INTERNAL_get_desiredVelocity_m1272342813 (NavMeshAgent_t2761625415 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Analytics.UnityAnalyticsHandler::.ctor()
 extern "C"  void UnityAnalyticsHandler__ctor_m113083880 (UnityAnalyticsHandler_t3238795095 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::IsNullOrEmpty(System.String)
@@ -1509,10 +1437,24 @@ extern "C"  void UnityAnalyticsHandler_InternalDestroy_m485611477 (UnityAnalytic
 extern "C"  int32_t UnityAnalyticsHandler_SendCustomEventName_m558081333 (UnityAnalyticsHandler_t3238795095 * __this, String_t* ___customEventName0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Analytics.AnalyticsResult UnityEngine.Analytics.UnityAnalyticsHandler::SendCustomEvent(UnityEngine.Analytics.CustomEventData)
 extern "C"  int32_t UnityAnalyticsHandler_SendCustomEvent_m375646568 (UnityAnalyticsHandler_t3238795095 * __this, CustomEventData_t1269126727 * ___eventData0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Animation::Play(UnityEngine.PlayMode)
+extern "C"  bool Animation_Play_m112733823 (Animation_t2068071072 * __this, int32_t ___mode0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Animation::PlayDefaultAnimation(UnityEngine.PlayMode)
+extern "C"  bool Animation_PlayDefaultAnimation_m3276120146 (Animation_t2068071072 * __this, int32_t ___mode0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Animation/Enumerator::.ctor(UnityEngine.Animation)
+extern "C"  void Enumerator__ctor_m1257319481 (Enumerator_t59479314 * __this, Animation_t2068071072 * ___outer0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AnimationState UnityEngine.Animation::GetStateAtIndex(System.Int32)
+extern "C"  AnimationState_t1303741697 * Animation_GetStateAtIndex_m2774853377 (Animation_t2068071072 * __this, int32_t ___index0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Animation::GetStateCount()
+extern "C"  int32_t Animation_GetStateCount_m1145090795 (Animation_t2068071072 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AnimationCurve::Init(UnityEngine.Keyframe[])
 extern "C"  void AnimationCurve_Init_m1486386337 (AnimationCurve_t3306541151 * __this, KeyframeU5BU5D_t449065829* ___keys0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AnimationCurve::Cleanup()
 extern "C"  void AnimationCurve_Cleanup_m2190142678 (AnimationCurve_t3306541151 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Keyframe UnityEngine.AnimationCurve::GetKey_Internal(System.Int32)
+extern "C"  Keyframe_t1449471340  AnimationCurve_GetKey_Internal_m4198730374 (AnimationCurve_t3306541151 * __this, int32_t ___index0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AnimationCurve::INTERNAL_CALL_GetKey_Internal(UnityEngine.AnimationCurve,System.Int32,UnityEngine.Keyframe&)
+extern "C"  void AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550 (Il2CppObject * __this /* static, unused */, AnimationCurve_t3306541151 * ___self0, int32_t ___index1, Keyframe_t1449471340 * ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.AnimationEvent::get_isFiredByLegacy()
 extern "C"  bool AnimationEvent_get_isFiredByLegacy_m2585487710 (AnimationEvent_t2428323300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Debug::LogError(System.Object)
@@ -1525,10 +1467,18 @@ extern "C"  String_t* AnimationEvent_get_functionName_m4178006856 (AnimationEven
 extern "C"  float AnimationEvent_get_time_m2837507241 (AnimationEvent_t2428323300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Single::GetHashCode()
 extern "C"  int32_t Single_GetHashCode_m3102305584 (float* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Animator::SetFloatString(System.String,System.Single)
+extern "C"  void Animator_SetFloatString_m3960043456 (Animator_t69676727 * __this, String_t* ___name0, float ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Animator::SetFloatStringDamp(System.String,System.Single,System.Single,System.Single)
+extern "C"  void Animator_SetFloatStringDamp_m3711926322 (Animator_t69676727 * __this, String_t* ___name0, float ___value1, float ___dampTime2, float ___deltaTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Animator::SetBoolString(System.String,System.Boolean)
+extern "C"  void Animator_SetBoolString_m1893192746 (Animator_t69676727 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::SetTriggerString(System.String)
 extern "C"  void Animator_SetTriggerString_m2002790359 (Animator_t69676727 * __this, String_t* ___name0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::ResetTriggerString(System.String)
 extern "C"  void Animator_ResetTriggerString_m1445965342 (Animator_t69676727 * __this, String_t* ___name0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Animator::INTERNAL_get_deltaPosition(UnityEngine.Vector3&)
+extern "C"  void Animator_INTERNAL_get_deltaPosition_m3555533205 (Animator_t69676727 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::op_Equality(System.String,System.String)
 extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.AnimatorControllerParameter::get_name()
@@ -1705,6 +1655,10 @@ extern "C"  void CanvasRenderer_SplitUIVertexStreamsInternal_m729405782 (Il2CppO
 extern "C"  void CanvasRenderer_SplitIndiciesStreamsInternal_m3005676420 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___verts0, Il2CppObject * ___indicies1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.CanvasRenderer::CreateUIVertexStreamInternal(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)
 extern "C"  void CanvasRenderer_CreateUIVertexStreamInternal_m2886336395 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___verts0, Il2CppObject * ___positions1, Il2CppObject * ___colors2, Il2CppObject * ___uv0S3, Il2CppObject * ___uv1S4, Il2CppObject * ___normals5, Il2CppObject * ___tangents6, Il2CppObject * ___indicies7, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.CapsuleCollider::INTERNAL_get_center(UnityEngine.Vector3&)
+extern "C"  void CapsuleCollider_INTERNAL_get_center_m2069429931 (CapsuleCollider_t720607407 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.CapsuleCollider::INTERNAL_set_center(UnityEngine.Vector3&)
+extern "C"  void CapsuleCollider_INTERNAL_set_center_m3532272183 (CapsuleCollider_t720607407 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Rigidbody UnityEngine.Collision::get_rigidbody()
 extern "C"  Rigidbody_t4233889191 * Collision_get_rigidbody_m3671561778 (Collision_t2876846408 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
@@ -2053,202 +2007,6 @@ extern "C"  void AnimationOffsetPlayable_INTERNAL_CALL_GetRotation_m2705874827 (
 extern "C"  void AnimationOffsetPlayable_INTERNAL_CALL_SetRotation_m2224758383 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, Quaternion_t4030073918 * ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Experimental.Director.Playable::.ctor()
 extern "C"  void Playable__ctor_m334077411 (Playable_t3667545548 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.RuntimeAnimatorController UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  RuntimeAnimatorController_t670468573 * AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  float AnimatorControllerPlayable_GetFloatString_m2999633302 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_GetFloatID_m3274868729 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetFloatString_m3937146789 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetFloatID_m2632606700 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_GetBoolString_m2552769404 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_GetBoolID_m2566184981 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_SetBoolString_m1314460333 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_SetBoolID_m1141253014 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_GetIntegerString_m3063601436 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_GetIntegerID_m756947419 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetIntegerString_m1750228335 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetIntegerID_m1774408598 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_SetTriggerString_m2313149510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetTriggerID_m290818743 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_ResetTriggerString_m1669955779 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_ResetTriggerID_m326518904 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveString_m4036987523 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveID_m4183631446 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_GetLayerCountInternal_m467020652 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_GetLayerNameInternal_m3717310182 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_GetLayerIndexInternal_m696260605 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_GetLayerWeightInternal_m2558846198 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetLayerWeightInternal_m1987718751 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetCurrentAnimatorStateInfoInternal_m1841547606 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetNextAnimatorStateInfoInternal_m928343784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_GetAnimatorTransitionInfoInternal_m2884059009 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetCurrentAnimatorClipInfoInternal_m2037167218 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
-extern "C"  void AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131 (AnimatorControllerPlayable_t4078305555 * __this, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___isCurrent2, Il2CppObject * ___clips3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.AnimatorControllerPlayable,UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212 (Il2CppObject * __this /* static, unused */, AnimatorControllerPlayable_t4078305555 * ___self0, PlayableHandle_t1502856514 * ___handle1, int32_t ___layerIndex2, bool ___isCurrent3, Il2CppObject * ___clips4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  int32_t AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetNextAnimatorClipInfoInternal_m2063705906 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_ResolveHashInternal_m4066573656 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_IsInTransitionInternal_m3004933857 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_GetParameterCountInternal_m3993919750 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_GetParametersArrayInternal_m851504719 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.IndexOutOfRangeException::.ctor(System.String)
-extern "C"  void IndexOutOfRangeException__ctor_m1847153122 (IndexOutOfRangeException_t3527622107 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::StringToHash(System.String)
-extern "C"  int32_t AnimatorControllerPlayable_StringToHash_m223263502 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m2119841183 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m220517942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m3146661810 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2562520484 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2629510873 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_Play_m1100499576 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInternal_m3385259863 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_Play_m2286317581 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_HasStateInternal_m1905524675 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValid()
-extern "C"  bool PlayableHandle_IsValid_m40842953 (PlayableHandle_t1502856514 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_IsValidInternal_m1910030079 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::CompareVersion(UnityEngine.Experimental.Director.PlayableHandle,UnityEngine.Experimental.Director.PlayableHandle)
-extern "C"  bool PlayableHandle_CompareVersion_m2333515486 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514  ___lhs0, PlayableHandle_t1502856514  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::Equals(System.Object)
-extern "C"  bool PlayableHandle_Equals_m1435096530 (PlayableHandle_t1502856514 * __this, Il2CppObject * ___p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 System.IntPtr::GetHashCode()
-extern "C"  int32_t IntPtr_GetHashCode_m1174575389 (IntPtr_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 System.Int32::GetHashCode()
-extern "C"  int32_t Int32_GetHashCode_m1381647448 (int32_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.PlayableHandle::GetHashCode()
-extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282 (PlayableHandle_t1502856514 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
-extern "C"  bool IntPtr_op_Equality_m1573482188 (Il2CppObject * __this /* static, unused */, IntPtr_t p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -2284,6 +2042,170 @@ extern "C"  void AddComponentMenu__ctor_m648737891 (AddComponentMenu_t1099699699
 		__this->set_m_Ordering_1(L_1);
 		return;
 	}
+}
+// System.Void UnityEngine.AI.NavMesh::Internal_CallOnNavMeshPreUpdate()
+extern "C"  void NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		OnNavMeshPreUpdate_t2039022291 * L_0 = ((NavMesh_t1481227028_StaticFields*)NavMesh_t1481227028_il2cpp_TypeInfo_var->static_fields)->get_onPreUpdate_0();
+		if (!L_0)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		OnNavMeshPreUpdate_t2039022291 * L_1 = ((NavMesh_t1481227028_StaticFields*)NavMesh_t1481227028_il2cpp_TypeInfo_var->static_fields)->get_onPreUpdate_0();
+		NullCheck(L_1);
+		OnNavMeshPreUpdate_Invoke_m1433154603(L_1, /*hidden argument*/NULL);
+	}
+
+IL_0015:
+	{
+		return;
+	}
+}
+extern "C"  void DelegatePInvokeWrapper_OnNavMeshPreUpdate_t2039022291 (OnNavMeshPreUpdate_t2039022291 * __this, const MethodInfo* method)
+{
+	typedef void (STDCALL *PInvokeFunc)();
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((Il2CppDelegate*)__this)->method->methodPointer);
+
+	// Native function invocation
+	il2cppPInvokeFunc();
+
+}
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::.ctor(System.Object,System.IntPtr)
+extern "C"  void OnNavMeshPreUpdate__ctor_m1184347935 (OnNavMeshPreUpdate_t2039022291 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
+{
+	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::Invoke()
+extern "C"  void OnNavMeshPreUpdate_Invoke_m1433154603 (OnNavMeshPreUpdate_t2039022291 * __this, const MethodInfo* method)
+{
+	if(__this->get_prev_9() != NULL)
+	{
+		OnNavMeshPreUpdate_Invoke_m1433154603((OnNavMeshPreUpdate_t2039022291 *)__this->get_prev_9(), method);
+	}
+	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	if ((__this->get_m_target_2() != NULL || MethodHasParameters((MethodInfo*)(__this->get_method_3().get_m_value_0()))) && ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else
+	{
+		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+}
+// System.IAsyncResult UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::BeginInvoke(System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * OnNavMeshPreUpdate_BeginInvoke_m3346880328 (OnNavMeshPreUpdate_t2039022291 * __this, AsyncCallback_t163412349 * ___callback0, Il2CppObject * ___object1, const MethodInfo* method)
+{
+	void *__d_args[1] = {0};
+	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback0, (Il2CppObject*)___object1);
+}
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::EndInvoke(System.IAsyncResult)
+extern "C"  void OnNavMeshPreUpdate_EndInvoke_m3901151097 (OnNavMeshPreUpdate_t2039022291 * __this, Il2CppObject * ___result0, const MethodInfo* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+// System.Boolean UnityEngine.AI.NavMeshAgent::SetDestination(UnityEngine.Vector3)
+extern "C"  bool NavMeshAgent_SetDestination_m1354616139 (NavMeshAgent_t2761625415 * __this, Vector3_t2243707580  ___target0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		bool L_0 = NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988(NULL /*static, unused*/, __this, (&___target0), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		bool L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)
+extern "C"  bool NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988 (Il2CppObject * __this /* static, unused */, NavMeshAgent_t2761625415 * ___self0, Vector3_t2243707580 * ___target1, const MethodInfo* method)
+{
+	typedef bool (*NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988_ftn) (NavMeshAgent_t2761625415 *, Vector3_t2243707580 *);
+	static NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)");
+	return _il2cpp_icall_func(___self0, ___target1);
+}
+// System.Single UnityEngine.AI.NavMeshAgent::get_stoppingDistance()
+extern "C"  float NavMeshAgent_get_stoppingDistance_m456040076 (NavMeshAgent_t2761625415 * __this, const MethodInfo* method)
+{
+	typedef float (*NavMeshAgent_get_stoppingDistance_m456040076_ftn) (NavMeshAgent_t2761625415 *);
+	static NavMeshAgent_get_stoppingDistance_m456040076_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_get_stoppingDistance_m456040076_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::get_stoppingDistance()");
+	return _il2cpp_icall_func(__this);
+}
+// UnityEngine.Vector3 UnityEngine.AI.NavMeshAgent::get_desiredVelocity()
+extern "C"  Vector3_t2243707580  NavMeshAgent_get_desiredVelocity_m331356702 (NavMeshAgent_t2761625415 * __this, const MethodInfo* method)
+{
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector3_t2243707580  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		NavMeshAgent_INTERNAL_get_desiredVelocity_m1272342813(__this, (&V_0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_0 = V_0;
+		V_1 = L_0;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		Vector3_t2243707580  L_1 = V_1;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.AI.NavMeshAgent::INTERNAL_get_desiredVelocity(UnityEngine.Vector3&)
+extern "C"  void NavMeshAgent_INTERNAL_get_desiredVelocity_m1272342813 (NavMeshAgent_t2761625415 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*NavMeshAgent_INTERNAL_get_desiredVelocity_m1272342813_ftn) (NavMeshAgent_t2761625415 *, Vector3_t2243707580 *);
+	static NavMeshAgent_INTERNAL_get_desiredVelocity_m1272342813_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_INTERNAL_get_desiredVelocity_m1272342813_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::INTERNAL_get_desiredVelocity(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
+extern "C"  float NavMeshAgent_get_remainingDistance_m2699477664 (NavMeshAgent_t2761625415 * __this, const MethodInfo* method)
+{
+	typedef float (*NavMeshAgent_get_remainingDistance_m2699477664_ftn) (NavMeshAgent_t2761625415 *);
+	static NavMeshAgent_get_remainingDistance_m2699477664_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_get_remainingDistance_m2699477664_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::get_remainingDistance()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.AI.NavMeshAgent::set_updatePosition(System.Boolean)
+extern "C"  void NavMeshAgent_set_updatePosition_m3466016722 (NavMeshAgent_t2761625415 * __this, bool ___value0, const MethodInfo* method)
+{
+	typedef void (*NavMeshAgent_set_updatePosition_m3466016722_ftn) (NavMeshAgent_t2761625415 *, bool);
+	static NavMeshAgent_set_updatePosition_m3466016722_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_set_updatePosition_m3466016722_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::set_updatePosition(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.AI.NavMeshAgent::set_updateRotation(System.Boolean)
+extern "C"  void NavMeshAgent_set_updateRotation_m2981003907 (NavMeshAgent_t2761625415 * __this, bool ___value0, const MethodInfo* method)
+{
+	typedef void (*NavMeshAgent_set_updateRotation_m2981003907_ftn) (NavMeshAgent_t2761625415 *, bool);
+	static NavMeshAgent_set_updateRotation_m2981003907_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_set_updateRotation_m2981003907_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::set_updateRotation(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // UnityEngine.Analytics.UnityAnalyticsHandler UnityEngine.Analytics.Analytics::GetUnityAnalyticsHandler()
 extern "C"  UnityAnalyticsHandler_t3238795095 * Analytics_GetUnityAnalyticsHandler_m832551809 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
@@ -3488,6 +3410,154 @@ extern "C"  int32_t UnityAnalyticsHandler_SendCustomEvent_m375646568 (UnityAnaly
 	_il2cpp_icall_func = (UnityAnalyticsHandler_SendCustomEvent_m375646568_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Analytics.UnityAnalyticsHandler::SendCustomEvent(UnityEngine.Analytics.CustomEventData)");
 	return _il2cpp_icall_func(__this, ___eventData0);
 }
+// System.Boolean UnityEngine.Animation::Play()
+extern "C"  bool Animation_Play_m185747875 (Animation_t2068071072 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		V_0 = 0;
+		int32_t L_0 = V_0;
+		bool L_1 = Animation_Play_m112733823(__this, L_0, /*hidden argument*/NULL);
+		V_1 = L_1;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		bool L_2 = V_1;
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.Animation::Play(UnityEngine.PlayMode)
+extern "C"  bool Animation_Play_m112733823 (Animation_t2068071072 * __this, int32_t ___mode0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		int32_t L_0 = ___mode0;
+		bool L_1 = Animation_PlayDefaultAnimation_m3276120146(__this, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.Animation::PlayDefaultAnimation(UnityEngine.PlayMode)
+extern "C"  bool Animation_PlayDefaultAnimation_m3276120146 (Animation_t2068071072 * __this, int32_t ___mode0, const MethodInfo* method)
+{
+	typedef bool (*Animation_PlayDefaultAnimation_m3276120146_ftn) (Animation_t2068071072 *, int32_t);
+	static Animation_PlayDefaultAnimation_m3276120146_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animation_PlayDefaultAnimation_m3276120146_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animation::PlayDefaultAnimation(UnityEngine.PlayMode)");
+	return _il2cpp_icall_func(__this, ___mode0);
+}
+// System.Collections.IEnumerator UnityEngine.Animation::GetEnumerator()
+extern "C"  Il2CppObject * Animation_GetEnumerator_m3067441975 (Animation_t2068071072 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Animation_GetEnumerator_m3067441975_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Il2CppObject * V_0 = NULL;
+	{
+		Enumerator_t59479314 * L_0 = (Enumerator_t59479314 *)il2cpp_codegen_object_new(Enumerator_t59479314_il2cpp_TypeInfo_var);
+		Enumerator__ctor_m1257319481(L_0, __this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		Il2CppObject * L_1 = V_0;
+		return L_1;
+	}
+}
+// UnityEngine.AnimationState UnityEngine.Animation::GetStateAtIndex(System.Int32)
+extern "C"  AnimationState_t1303741697 * Animation_GetStateAtIndex_m2774853377 (Animation_t2068071072 * __this, int32_t ___index0, const MethodInfo* method)
+{
+	typedef AnimationState_t1303741697 * (*Animation_GetStateAtIndex_m2774853377_ftn) (Animation_t2068071072 *, int32_t);
+	static Animation_GetStateAtIndex_m2774853377_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animation_GetStateAtIndex_m2774853377_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animation::GetStateAtIndex(System.Int32)");
+	return _il2cpp_icall_func(__this, ___index0);
+}
+// System.Int32 UnityEngine.Animation::GetStateCount()
+extern "C"  int32_t Animation_GetStateCount_m1145090795 (Animation_t2068071072 * __this, const MethodInfo* method)
+{
+	typedef int32_t (*Animation_GetStateCount_m1145090795_ftn) (Animation_t2068071072 *);
+	static Animation_GetStateCount_m1145090795_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animation_GetStateCount_m1145090795_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animation::GetStateCount()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Animation/Enumerator::.ctor(UnityEngine.Animation)
+extern "C"  void Enumerator__ctor_m1257319481 (Enumerator_t59479314 * __this, Animation_t2068071072 * ___outer0, const MethodInfo* method)
+{
+	{
+		__this->set_m_CurrentIndex_1((-1));
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		Animation_t2068071072 * L_0 = ___outer0;
+		__this->set_m_Outer_0(L_0);
+		return;
+	}
+}
+// System.Object UnityEngine.Animation/Enumerator::get_Current()
+extern "C"  Il2CppObject * Enumerator_get_Current_m1209866037 (Enumerator_t59479314 * __this, const MethodInfo* method)
+{
+	Il2CppObject * V_0 = NULL;
+	{
+		Animation_t2068071072 * L_0 = __this->get_m_Outer_0();
+		int32_t L_1 = __this->get_m_CurrentIndex_1();
+		NullCheck(L_0);
+		AnimationState_t1303741697 * L_2 = Animation_GetStateAtIndex_m2774853377(L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0018;
+	}
+
+IL_0018:
+	{
+		Il2CppObject * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Animation/Enumerator::MoveNext()
+extern "C"  bool Enumerator_MoveNext_m1994650764 (Enumerator_t59479314 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		Animation_t2068071072 * L_0 = __this->get_m_Outer_0();
+		NullCheck(L_0);
+		int32_t L_1 = Animation_GetStateCount_m1145090795(L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		int32_t L_2 = __this->get_m_CurrentIndex_1();
+		__this->set_m_CurrentIndex_1(((int32_t)((int32_t)L_2+(int32_t)1)));
+		int32_t L_3 = __this->get_m_CurrentIndex_1();
+		int32_t L_4 = V_0;
+		V_1 = (bool)((((int32_t)L_3) < ((int32_t)L_4))? 1 : 0);
+		goto IL_002a;
+	}
+
+IL_002a:
+	{
+		bool L_5 = V_1;
+		return L_5;
+	}
+}
+// System.Void UnityEngine.Animation/Enumerator::Reset()
+extern "C"  void Enumerator_Reset_m1246523333 (Enumerator_t59479314 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_m_CurrentIndex_1((-1));
+		return;
+	}
+}
 // Conversion methods for marshalling of: UnityEngine.AnimationCurve
 extern "C" void AnimationCurve_t3306541151_marshal_pinvoke(const AnimationCurve_t3306541151& unmarshaled, AnimationCurve_t3306541151_marshaled_pinvoke& marshaled)
 {
@@ -3591,6 +3661,72 @@ IL_0013:
 	{
 		return;
 	}
+}
+// System.Single UnityEngine.AnimationCurve::Evaluate(System.Single)
+extern "C"  float AnimationCurve_Evaluate_m3698879322 (AnimationCurve_t3306541151 * __this, float ___time0, const MethodInfo* method)
+{
+	typedef float (*AnimationCurve_Evaluate_m3698879322_ftn) (AnimationCurve_t3306541151 *, float);
+	static AnimationCurve_Evaluate_m3698879322_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimationCurve_Evaluate_m3698879322_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AnimationCurve::Evaluate(System.Single)");
+	return _il2cpp_icall_func(__this, ___time0);
+}
+// UnityEngine.Keyframe UnityEngine.AnimationCurve::get_Item(System.Int32)
+extern "C"  Keyframe_t1449471340  AnimationCurve_get_Item_m3780274863 (AnimationCurve_t3306541151 * __this, int32_t ___index0, const MethodInfo* method)
+{
+	Keyframe_t1449471340  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		int32_t L_0 = ___index0;
+		Keyframe_t1449471340  L_1 = AnimationCurve_GetKey_Internal_m4198730374(__this, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		Keyframe_t1449471340  L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 UnityEngine.AnimationCurve::get_length()
+extern "C"  int32_t AnimationCurve_get_length_m1757155287 (AnimationCurve_t3306541151 * __this, const MethodInfo* method)
+{
+	typedef int32_t (*AnimationCurve_get_length_m1757155287_ftn) (AnimationCurve_t3306541151 *);
+	static AnimationCurve_get_length_m1757155287_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimationCurve_get_length_m1757155287_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AnimationCurve::get_length()");
+	return _il2cpp_icall_func(__this);
+}
+// UnityEngine.Keyframe UnityEngine.AnimationCurve::GetKey_Internal(System.Int32)
+extern "C"  Keyframe_t1449471340  AnimationCurve_GetKey_Internal_m4198730374 (AnimationCurve_t3306541151 * __this, int32_t ___index0, const MethodInfo* method)
+{
+	Keyframe_t1449471340  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Keyframe_t1449471340  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		int32_t L_0 = ___index0;
+		AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550(NULL /*static, unused*/, __this, L_0, (&V_0), /*hidden argument*/NULL);
+		Keyframe_t1449471340  L_1 = V_0;
+		V_1 = L_1;
+		goto IL_0011;
+	}
+
+IL_0011:
+	{
+		Keyframe_t1449471340  L_2 = V_1;
+		return L_2;
+	}
+}
+// System.Void UnityEngine.AnimationCurve::INTERNAL_CALL_GetKey_Internal(UnityEngine.AnimationCurve,System.Int32,UnityEngine.Keyframe&)
+extern "C"  void AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550 (Il2CppObject * __this /* static, unused */, AnimationCurve_t3306541151 * ___self0, int32_t ___index1, Keyframe_t1449471340 * ___value2, const MethodInfo* method)
+{
+	typedef void (*AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550_ftn) (AnimationCurve_t3306541151 *, int32_t, Keyframe_t1449471340 *);
+	static AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AnimationCurve::INTERNAL_CALL_GetKey_Internal(UnityEngine.AnimationCurve,System.Int32,UnityEngine.Keyframe&)");
+	_il2cpp_icall_func(___self0, ___index1, ___value2);
 }
 // System.Void UnityEngine.AnimationCurve::Init(UnityEngine.Keyframe[])
 extern "C"  void AnimationCurve_Init_m1486386337 (AnimationCurve_t3306541151 * __this, KeyframeU5BU5D_t449065829* ___keys0, const MethodInfo* method)
@@ -4025,6 +4161,38 @@ IL_0031:
 		return L_6;
 	}
 }
+// System.Void UnityEngine.Animator::SetFloat(System.String,System.Single)
+extern "C"  void Animator_SetFloat_m956158019 (Animator_t69676727 * __this, String_t* ___name0, float ___value1, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		float L_1 = ___value1;
+		Animator_SetFloatString_m3960043456(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Animator::SetFloat(System.String,System.Single,System.Single,System.Single)
+extern "C"  void Animator_SetFloat_m2537879907 (Animator_t69676727 * __this, String_t* ___name0, float ___value1, float ___dampTime2, float ___deltaTime3, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		float L_1 = ___value1;
+		float L_2 = ___dampTime2;
+		float L_3 = ___deltaTime3;
+		Animator_SetFloatStringDamp_m3711926322(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Animator::SetBool(System.String,System.Boolean)
+extern "C"  void Animator_SetBool_m2305662531 (Animator_t69676727 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		bool L_1 = ___value1;
+		Animator_SetBoolString_m1893192746(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Animator::SetTrigger(System.String)
 extern "C"  void Animator_SetTrigger_m3418492570 (Animator_t69676727 * __this, String_t* ___name0, const MethodInfo* method)
 {
@@ -4042,6 +4210,62 @@ extern "C"  void Animator_ResetTrigger_m865269317 (Animator_t69676727 * __this, 
 		Animator_ResetTriggerString_m1445965342(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
+}
+// UnityEngine.Vector3 UnityEngine.Animator::get_deltaPosition()
+extern "C"  Vector3_t2243707580  Animator_get_deltaPosition_m1710146426 (Animator_t69676727 * __this, const MethodInfo* method)
+{
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector3_t2243707580  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		Animator_INTERNAL_get_deltaPosition_m3555533205(__this, (&V_0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_0 = V_0;
+		V_1 = L_0;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		Vector3_t2243707580  L_1 = V_1;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Animator::INTERNAL_get_deltaPosition(UnityEngine.Vector3&)
+extern "C"  void Animator_INTERNAL_get_deltaPosition_m3555533205 (Animator_t69676727 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Animator_INTERNAL_get_deltaPosition_m3555533205_ftn) (Animator_t69676727 *, Vector3_t2243707580 *);
+	static Animator_INTERNAL_get_deltaPosition_m3555533205_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_INTERNAL_get_deltaPosition_m3555533205_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::INTERNAL_get_deltaPosition(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.Animator::set_applyRootMotion(System.Boolean)
+extern "C"  void Animator_set_applyRootMotion_m635228566 (Animator_t69676727 * __this, bool ___value0, const MethodInfo* method)
+{
+	typedef void (*Animator_set_applyRootMotion_m635228566_ftn) (Animator_t69676727 *, bool);
+	static Animator_set_applyRootMotion_m635228566_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_set_applyRootMotion_m635228566_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::set_applyRootMotion(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// UnityEngine.AnimatorStateInfo UnityEngine.Animator::GetCurrentAnimatorStateInfo(System.Int32)
+extern "C"  AnimatorStateInfo_t2577870592  Animator_GetCurrentAnimatorStateInfo_m1931338898 (Animator_t69676727 * __this, int32_t ___layerIndex0, const MethodInfo* method)
+{
+	typedef AnimatorStateInfo_t2577870592  (*Animator_GetCurrentAnimatorStateInfo_m1931338898_ftn) (Animator_t69676727 *, int32_t);
+	static Animator_GetCurrentAnimatorStateInfo_m1931338898_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_GetCurrentAnimatorStateInfo_m1931338898_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::GetCurrentAnimatorStateInfo(System.Int32)");
+	return _il2cpp_icall_func(__this, ___layerIndex0);
+}
+// System.Void UnityEngine.Animator::set_speed(System.Single)
+extern "C"  void Animator_set_speed_m3511108817 (Animator_t69676727 * __this, float ___value0, const MethodInfo* method)
+{
+	typedef void (*Animator_set_speed_m3511108817_ftn) (Animator_t69676727 *, float);
+	static Animator_set_speed_m3511108817_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_set_speed_m3511108817_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::set_speed(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Boolean UnityEngine.Animator::get_hasBoundPlayables()
 extern "C"  bool Animator_get_hasBoundPlayables_m3670407842 (Animator_t69676727 * __this, const MethodInfo* method)
@@ -4061,6 +4285,24 @@ extern "C"  int32_t Animator_StringToHash_m3313850714 (Il2CppObject * __this /* 
 	_il2cpp_icall_func = (Animator_StringToHash_m3313850714_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::StringToHash(System.String)");
 	return _il2cpp_icall_func(___name0);
 }
+// System.Void UnityEngine.Animator::SetFloatString(System.String,System.Single)
+extern "C"  void Animator_SetFloatString_m3960043456 (Animator_t69676727 * __this, String_t* ___name0, float ___value1, const MethodInfo* method)
+{
+	typedef void (*Animator_SetFloatString_m3960043456_ftn) (Animator_t69676727 *, String_t*, float);
+	static Animator_SetFloatString_m3960043456_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_SetFloatString_m3960043456_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::SetFloatString(System.String,System.Single)");
+	_il2cpp_icall_func(__this, ___name0, ___value1);
+}
+// System.Void UnityEngine.Animator::SetBoolString(System.String,System.Boolean)
+extern "C"  void Animator_SetBoolString_m1893192746 (Animator_t69676727 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method)
+{
+	typedef void (*Animator_SetBoolString_m1893192746_ftn) (Animator_t69676727 *, String_t*, bool);
+	static Animator_SetBoolString_m1893192746_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_SetBoolString_m1893192746_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::SetBoolString(System.String,System.Boolean)");
+	_il2cpp_icall_func(__this, ___name0, ___value1);
+}
 // System.Void UnityEngine.Animator::SetTriggerString(System.String)
 extern "C"  void Animator_SetTriggerString_m2002790359 (Animator_t69676727 * __this, String_t* ___name0, const MethodInfo* method)
 {
@@ -4078,6 +4320,15 @@ extern "C"  void Animator_ResetTriggerString_m1445965342 (Animator_t69676727 * _
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Animator_ResetTriggerString_m1445965342_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::ResetTriggerString(System.String)");
 	_il2cpp_icall_func(__this, ___name0);
+}
+// System.Void UnityEngine.Animator::SetFloatStringDamp(System.String,System.Single,System.Single,System.Single)
+extern "C"  void Animator_SetFloatStringDamp_m3711926322 (Animator_t69676727 * __this, String_t* ___name0, float ___value1, float ___dampTime2, float ___deltaTime3, const MethodInfo* method)
+{
+	typedef void (*Animator_SetFloatStringDamp_m3711926322_ftn) (Animator_t69676727 *, String_t*, float, float, float);
+	static Animator_SetFloatStringDamp_m3711926322_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_SetFloatStringDamp_m3711926322_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::SetFloatStringDamp(System.String,System.Single,System.Single,System.Single)");
+	_il2cpp_icall_func(__this, ___name0, ___value1, ___dampTime2, ___deltaTime3);
 }
 // System.String UnityEngine.AnimatorControllerParameter::get_name()
 extern "C"  String_t* AnimatorControllerParameter_get_name_m1366583724 (AnimatorControllerParameter_t1381019216 * __this, const MethodInfo* method)
@@ -6424,6 +6675,24 @@ extern "C"  String_t* Bounds_ToString_m1966597703_AdjustorThunk (Il2CppObject * 
 	Bounds_t3033363703 * _thisAdjusted = reinterpret_cast<Bounds_t3033363703 *>(__this + 1);
 	return Bounds_ToString_m1966597703(_thisAdjusted, method);
 }
+// System.Single UnityEngine.Camera::get_fieldOfView()
+extern "C"  float Camera_get_fieldOfView_m3384007405 (Camera_t189460977 * __this, const MethodInfo* method)
+{
+	typedef float (*Camera_get_fieldOfView_m3384007405_ftn) (Camera_t189460977 *);
+	static Camera_get_fieldOfView_m3384007405_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Camera_get_fieldOfView_m3384007405_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::get_fieldOfView()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Camera::set_fieldOfView(System.Single)
+extern "C"  void Camera_set_fieldOfView_m3974156396 (Camera_t189460977 * __this, float ___value0, const MethodInfo* method)
+{
+	typedef void (*Camera_set_fieldOfView_m3974156396_ftn) (Camera_t189460977 *, float);
+	static Camera_set_fieldOfView_m3974156396_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Camera_set_fieldOfView_m3974156396_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::set_fieldOfView(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Single UnityEngine.Camera::get_nearClipPlane()
 extern "C"  float Camera_get_nearClipPlane_m3536967407 (Camera_t189460977 * __this, const MethodInfo* method)
 {
@@ -7452,6 +7721,21 @@ extern "C"  void CanvasRenderer_CreateUIVertexStreamInternal_m2886336395 (Il2Cpp
 	_il2cpp_icall_func = (CanvasRenderer_CreateUIVertexStreamInternal_m2886336395_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CanvasRenderer::CreateUIVertexStreamInternal(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)");
 	_il2cpp_icall_func(___verts0, ___positions1, ___colors2, ___uv0S3, ___uv1S4, ___normals5, ___tangents6, ___indicies7);
 }
+// System.Void UnityEngine.CanvasRenderer::AddUIVertexStream(System.Collections.Generic.List`1<UnityEngine.UIVertex>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<UnityEngine.Color32>,System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<UnityEngine.Vector4>)
+extern "C"  void CanvasRenderer_AddUIVertexStream_m1334037553 (Il2CppObject * __this /* static, unused */, List_1_t573379950 * ___verts0, List_1_t1612828712 * ___positions1, List_1_t243638650 * ___colors2, List_1_t1612828711 * ___uv0S3, List_1_t1612828711 * ___uv1S4, List_1_t1612828712 * ___normals5, List_1_t1612828713 * ___tangents6, const MethodInfo* method)
+{
+	{
+		List_1_t573379950 * L_0 = ___verts0;
+		List_1_t1612828712 * L_1 = ___positions1;
+		List_1_t243638650 * L_2 = ___colors2;
+		List_1_t1612828711 * L_3 = ___uv0S3;
+		List_1_t1612828711 * L_4 = ___uv1S4;
+		List_1_t1612828712 * L_5 = ___normals5;
+		List_1_t1612828713 * L_6 = ___tangents6;
+		CanvasRenderer_SplitUIVertexStreamsInternal_m729405782(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, L_5, L_6, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Boolean UnityEngine.CanvasRenderer::get_cull()
 extern "C"  bool CanvasRenderer_get_cull_m3577089379 (CanvasRenderer_t261436805 * __this, const MethodInfo* method)
 {
@@ -7487,6 +7771,79 @@ extern "C"  bool CanvasRenderer_get_hasMoved_m2428030996 (CanvasRenderer_t261436
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (CanvasRenderer_get_hasMoved_m2428030996_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CanvasRenderer::get_hasMoved()");
 	return _il2cpp_icall_func(__this);
+}
+// UnityEngine.Vector3 UnityEngine.CapsuleCollider::get_center()
+extern "C"  Vector3_t2243707580  CapsuleCollider_get_center_m189177564 (CapsuleCollider_t720607407 * __this, const MethodInfo* method)
+{
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector3_t2243707580  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		CapsuleCollider_INTERNAL_get_center_m2069429931(__this, (&V_0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_0 = V_0;
+		V_1 = L_0;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		Vector3_t2243707580  L_1 = V_1;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.CapsuleCollider::set_center(UnityEngine.Vector3)
+extern "C"  void CapsuleCollider_set_center_m2483620541 (CapsuleCollider_t720607407 * __this, Vector3_t2243707580  ___value0, const MethodInfo* method)
+{
+	{
+		CapsuleCollider_INTERNAL_set_center_m3532272183(__this, (&___value0), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.CapsuleCollider::INTERNAL_get_center(UnityEngine.Vector3&)
+extern "C"  void CapsuleCollider_INTERNAL_get_center_m2069429931 (CapsuleCollider_t720607407 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*CapsuleCollider_INTERNAL_get_center_m2069429931_ftn) (CapsuleCollider_t720607407 *, Vector3_t2243707580 *);
+	static CapsuleCollider_INTERNAL_get_center_m2069429931_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CapsuleCollider_INTERNAL_get_center_m2069429931_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CapsuleCollider::INTERNAL_get_center(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.CapsuleCollider::INTERNAL_set_center(UnityEngine.Vector3&)
+extern "C"  void CapsuleCollider_INTERNAL_set_center_m3532272183 (CapsuleCollider_t720607407 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method)
+{
+	typedef void (*CapsuleCollider_INTERNAL_set_center_m3532272183_ftn) (CapsuleCollider_t720607407 *, Vector3_t2243707580 *);
+	static CapsuleCollider_INTERNAL_set_center_m3532272183_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CapsuleCollider_INTERNAL_set_center_m3532272183_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CapsuleCollider::INTERNAL_set_center(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Single UnityEngine.CapsuleCollider::get_radius()
+extern "C"  float CapsuleCollider_get_radius_m842698081 (CapsuleCollider_t720607407 * __this, const MethodInfo* method)
+{
+	typedef float (*CapsuleCollider_get_radius_m842698081_ftn) (CapsuleCollider_t720607407 *);
+	static CapsuleCollider_get_radius_m842698081_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CapsuleCollider_get_radius_m842698081_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CapsuleCollider::get_radius()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Single UnityEngine.CapsuleCollider::get_height()
+extern "C"  float CapsuleCollider_get_height_m2987501502 (CapsuleCollider_t720607407 * __this, const MethodInfo* method)
+{
+	typedef float (*CapsuleCollider_get_height_m2987501502_ftn) (CapsuleCollider_t720607407 *);
+	static CapsuleCollider_get_height_m2987501502_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CapsuleCollider_get_height_m2987501502_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CapsuleCollider::get_height()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.CapsuleCollider::set_height(System.Single)
+extern "C"  void CapsuleCollider_set_height_m643982877 (CapsuleCollider_t720607407 * __this, float ___value0, const MethodInfo* method)
+{
+	typedef void (*CapsuleCollider_set_height_m643982877_ftn) (CapsuleCollider_t720607407 *, float);
+	static CapsuleCollider_set_height_m643982877_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CapsuleCollider_set_height_m643982877_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CapsuleCollider::set_height(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Void UnityEngine.Collections.DeallocateOnJobCompletionAttribute::.ctor()
 extern "C"  void DeallocateOnJobCompletionAttribute__ctor_m2925527080 (DeallocateOnJobCompletionAttribute_t987733588 * __this, const MethodInfo* method)
@@ -8180,6 +8537,25 @@ IL_0020:
 		return L_1;
 	}
 }
+// UnityEngine.Color UnityEngine.Color::get_green()
+extern "C"  Color_t2020392075  Color_get_green_m2671273823 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	Color_t2020392075  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Color_t2020392075  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Color__ctor_m1909920690(&L_0, (0.0f), (1.0f), (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_0020;
+	}
+
+IL_0020:
+	{
+		Color_t2020392075  L_1 = V_0;
+		return L_1;
+	}
+}
 // UnityEngine.Color UnityEngine.Color::get_white()
 extern "C"  Color_t2020392075  Color_get_white_m3987539815 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
@@ -8208,6 +8584,25 @@ extern "C"  Color_t2020392075  Color_get_black_m2650940523 (Il2CppObject * __thi
 		Color_t2020392075  L_0;
 		memset(&L_0, 0, sizeof(L_0));
 		Color__ctor_m1909920690(&L_0, (0.0f), (0.0f), (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_0020;
+	}
+
+IL_0020:
+	{
+		Color_t2020392075  L_1 = V_0;
+		return L_1;
+	}
+}
+// UnityEngine.Color UnityEngine.Color::get_yellow()
+extern "C"  Color_t2020392075  Color_get_yellow_m3741935494 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	Color_t2020392075  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Color_t2020392075  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Color__ctor_m1909920690(&L_0, (1.0f), (0.921568632f), (0.0156862754f), (1.0f), /*hidden argument*/NULL);
 		V_0 = L_0;
 		goto IL_0020;
 	}
@@ -13441,2316 +13836,6 @@ extern "C"  void AnimationPlayable__ctor_m1288299781 (AnimationPlayable_t1693994
 	{
 		Playable__ctor_m334077411(__this, /*hidden argument*/NULL);
 		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::.ctor()
-extern "C"  void AnimatorControllerPlayable__ctor_m98486062 (AnimatorControllerPlayable_t4078305555 * __this, const MethodInfo* method)
-{
-	{
-		AnimationPlayable__ctor_m1288299781(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.Experimental.Director.PlayableHandle UnityEngine.Experimental.Director.AnimatorControllerPlayable::op_Implicit(UnityEngine.Experimental.Director.AnimatorControllerPlayable)
-extern "C"  PlayableHandle_t1502856514  AnimatorControllerPlayable_op_Implicit_m2653766077 (Il2CppObject * __this /* static, unused */, AnimatorControllerPlayable_t4078305555 * ___b0, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		AnimatorControllerPlayable_t4078305555 * L_0 = ___b0;
-		NullCheck(L_0);
-		PlayableHandle_t1502856514  L_1 = ((Playable_t3667545548 *)L_0)->get_handle_0();
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		PlayableHandle_t1502856514  L_2 = V_0;
-		return L_2;
-	}
-}
-// UnityEngine.RuntimeAnimatorController UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  RuntimeAnimatorController_t670468573 * AnimatorControllerPlayable_GetAnimatorControllerInternal_m3295942522 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	RuntimeAnimatorController_t670468573 * V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		RuntimeAnimatorController_t670468573 * L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		RuntimeAnimatorController_t670468573 * L_2 = V_0;
-		return L_2;
-	}
-}
-// UnityEngine.RuntimeAnimatorController UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  RuntimeAnimatorController_t670468573 * AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	typedef RuntimeAnimatorController_t670468573 * (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681_ftn) (PlayableHandle_t1502856514 *);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorControllerInternal_m239716681_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorControllerInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
-	return _il2cpp_icall_func(___handle0);
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloat(System.String)
-extern "C"  float AnimatorControllerPlayable_GetFloat_m3973018798 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		float L_2 = AnimatorControllerPlayable_GetFloatString_m2999633302(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		float L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloat(System.Int32)
-extern "C"  float AnimatorControllerPlayable_GetFloat_m1390479365 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		float L_2 = AnimatorControllerPlayable_GetFloatID_m3274868729(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		float L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloat(System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetFloat_m1976526821 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, float ___value1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		float L_2 = ___value1;
-		AnimatorControllerPlayable_SetFloatString_m3937146789(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloat(System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetFloat_m3591286820 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, float ___value1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		float L_2 = ___value1;
-		AnimatorControllerPlayable_SetFloatID_m2632606700(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBool(System.String)
-extern "C"  bool AnimatorControllerPlayable_GetBool_m3591753284 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		bool L_2 = AnimatorControllerPlayable_GetBoolString_m2552769404(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBool(System.Int32)
-extern "C"  bool AnimatorControllerPlayable_GetBool_m1148461985 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		bool L_2 = AnimatorControllerPlayable_GetBoolID_m2566184981(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBool(System.String,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_SetBool_m557806493 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		bool L_2 = ___value1;
-		AnimatorControllerPlayable_SetBoolString_m1314460333(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBool(System.Int32,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_SetBool_m1779744142 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, bool ___value1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		bool L_2 = ___value1;
-		AnimatorControllerPlayable_SetBoolID_m1141253014(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetInteger(System.String)
-extern "C"  int32_t AnimatorControllerPlayable_GetInteger_m4173276460 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		int32_t L_2 = AnimatorControllerPlayable_GetIntegerString_m3063601436(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetInteger(System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_GetInteger_m3742708739 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		int32_t L_2 = AnimatorControllerPlayable_GetIntegerID_m756947419(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetInteger(System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetInteger_m1311149575 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, int32_t ___value1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		int32_t L_2 = ___value1;
-		AnimatorControllerPlayable_SetIntegerString_m1750228335(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetInteger(System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetInteger_m1170756226 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, int32_t ___value1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		int32_t L_2 = ___value1;
-		AnimatorControllerPlayable_SetIntegerID_m1774408598(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTrigger(System.String)
-extern "C"  void AnimatorControllerPlayable_SetTrigger_m3144166126 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		AnimatorControllerPlayable_SetTriggerString_m2313149510(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTrigger(System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetTrigger_m4082809679 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		AnimatorControllerPlayable_SetTriggerID_m290818743(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTrigger(System.String)
-extern "C"  void AnimatorControllerPlayable_ResetTrigger_m1410782179 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		AnimatorControllerPlayable_ResetTriggerString_m1669955779(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTrigger(System.Int32)
-extern "C"  void AnimatorControllerPlayable_ResetTrigger_m2216540396 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		AnimatorControllerPlayable_ResetTriggerID_m326518904(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurve(System.String)
-extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurve_m1187113395 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___name0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___name0;
-		bool L_2 = AnimatorControllerPlayable_IsParameterControlledByCurveString_m4036987523(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurve(System.Int32)
-extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurve_m3222505226 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___id0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___id0;
-		bool L_2 = AnimatorControllerPlayable_IsParameterControlledByCurveID_m4183631446(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::get_layerCount()
-extern "C"  int32_t AnimatorControllerPlayable_get_layerCount_m3541790599 (AnimatorControllerPlayable_t4078305555 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = AnimatorControllerPlayable_GetLayerCountInternal_m467020652(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_0012;
-	}
-
-IL_0012:
-	{
-		int32_t L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_GetLayerCountInternal_m467020652 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		int32_t L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255_ftn) (PlayableHandle_t1502856514 *);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerCountInternal_m2530620255_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
-	return _il2cpp_icall_func(___handle0);
-}
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_GetLayerNameInternal_m3717310182 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	String_t* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		String_t* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		String_t* L_3 = V_0;
-		return L_3;
-	}
-}
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef String_t* (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerNameInternal_m2049776925_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerNameInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerName(System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_GetLayerName_m2571001466 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	String_t* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		String_t* L_2 = AnimatorControllerPlayable_GetLayerNameInternal_m3717310182(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		String_t* L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_GetLayerIndexInternal_m696260605 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___layerName1;
-		int32_t L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___layerName1, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerIndexInternal_m1847150746_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerIndexInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	return _il2cpp_icall_func(___handle0, ___layerName1);
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerIndex(System.String)
-extern "C"  int32_t AnimatorControllerPlayable_GetLayerIndex_m3450603267 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___layerName0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___layerName0;
-		int32_t L_2 = AnimatorControllerPlayable_GetLayerIndexInternal_m696260605(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_GetLayerWeightInternal_m2558846198 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		float L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		float L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef float (*AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetLayerWeightInternal_m3829748773_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetLayerWeight(System.Int32)
-extern "C"  float AnimatorControllerPlayable_GetLayerWeight_m839112938 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		float L_2 = AnimatorControllerPlayable_GetLayerWeightInternal_m2558846198(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		float L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetLayerWeightInternal_m1987718751 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		float L_2 = ___weight2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, float ___weight2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944_ftn) (PlayableHandle_t1502856514 *, int32_t, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetLayerWeightInternal_m1418536944_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetLayerWeightInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)");
-	_il2cpp_icall_func(___handle0, ___layerIndex1, ___weight2);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetLayerWeight(System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetLayerWeight_m795493633 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, float ___weight1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		float L_2 = ___weight1;
-		AnimatorControllerPlayable_SetLayerWeightInternal_m1987718751(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetCurrentAnimatorStateInfoInternal_m1841547606 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	AnimatorStateInfo_t2577870592  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		AnimatorStateInfo_t2577870592  L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef AnimatorStateInfo_t2577870592  (*AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal_m3799001565_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorStateInfo(System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetCurrentAnimatorStateInfo_m689786022 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	AnimatorStateInfo_t2577870592  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_GetCurrentAnimatorStateInfoInternal_m1841547606(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		AnimatorStateInfo_t2577870592  L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetNextAnimatorStateInfoInternal_m928343784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	AnimatorStateInfo_t2577870592  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		AnimatorStateInfo_t2577870592  L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef AnimatorStateInfo_t2577870592  (*AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorStateInfoInternal_m1550960895_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorStateInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// UnityEngine.AnimatorStateInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorStateInfo(System.Int32)
-extern "C"  AnimatorStateInfo_t2577870592  AnimatorControllerPlayable_GetNextAnimatorStateInfo_m1349013420 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	AnimatorStateInfo_t2577870592  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		AnimatorStateInfo_t2577870592  L_2 = AnimatorControllerPlayable_GetNextAnimatorStateInfoInternal_m928343784(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		AnimatorStateInfo_t2577870592  L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_GetAnimatorTransitionInfoInternal_m2884059009 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	AnimatorTransitionInfo_t2410896200  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		AnimatorTransitionInfo_t2410896200  L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		AnimatorTransitionInfo_t2410896200  L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef AnimatorTransitionInfo_t2410896200  (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorTransitionInfoInternal_m2259454958_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorTransitionInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// UnityEngine.AnimatorTransitionInfo UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorTransitionInfo(System.Int32)
-extern "C"  AnimatorTransitionInfo_t2410896200  AnimatorControllerPlayable_GetAnimatorTransitionInfo_m1294266687 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	AnimatorTransitionInfo_t2410896200  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		AnimatorTransitionInfo_t2410896200  L_2 = AnimatorControllerPlayable_GetAnimatorTransitionInfoInternal_m2884059009(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		AnimatorTransitionInfo_t2410896200  L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetCurrentAnimatorClipInfoInternal_m2037167218 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef AnimatorClipInfoU5BU5D_t2969332312* (*AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal_m3542665271_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetCurrentAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfo(System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m663340294 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_GetCurrentAnimatorClipInfoInternal_m2037167218(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1<UnityEngine.AnimatorClipInfo>)
-extern "C"  void AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m3523103275 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, List_1_t3274872481 * ___clips1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (AnimatorControllerPlayable_GetCurrentAnimatorClipInfo_m3523103275_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		List_1_t3274872481 * L_0 = ___clips1;
-		if (L_0)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		ArgumentNullException_t628810857 * L_1 = (ArgumentNullException_t628810857 *)il2cpp_codegen_object_new(ArgumentNullException_t628810857_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_m3380712306(L_1, _stringLiteral1467286041, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
-	}
-
-IL_0012:
-	{
-		PlayableHandle_t1502856514 * L_2 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_3 = ___layerIndex0;
-		List_1_t3274872481 * L_4 = ___clips1;
-		AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131(__this, L_2, L_3, (bool)1, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1<UnityEngine.AnimatorClipInfo>)
-extern "C"  void AnimatorControllerPlayable_GetNextAnimatorClipInfo_m2439552509 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, List_1_t3274872481 * ___clips1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (AnimatorControllerPlayable_GetNextAnimatorClipInfo_m2439552509_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		List_1_t3274872481 * L_0 = ___clips1;
-		if (L_0)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		ArgumentNullException_t628810857 * L_1 = (ArgumentNullException_t628810857 *)il2cpp_codegen_object_new(ArgumentNullException_t628810857_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_m3380712306(L_1, _stringLiteral1467286041, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
-	}
-
-IL_0012:
-	{
-		PlayableHandle_t1502856514 * L_2 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_3 = ___layerIndex0;
-		List_1_t3274872481 * L_4 = ___clips1;
-		AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131(__this, L_2, L_3, (bool)0, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
-extern "C"  void AnimatorControllerPlayable_GetAnimatorClipInfoInternal_m2427817131 (AnimatorControllerPlayable_t4078305555 * __this, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___isCurrent2, Il2CppObject * ___clips3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		bool L_2 = ___isCurrent2;
-		Il2CppObject * L_3 = ___clips3;
-		AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212(NULL /*static, unused*/, __this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.AnimatorControllerPlayable,UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212 (Il2CppObject * __this /* static, unused */, AnimatorControllerPlayable_t4078305555 * ___self0, PlayableHandle_t1502856514 * ___handle1, int32_t ___layerIndex2, bool ___isCurrent3, Il2CppObject * ___clips4, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212_ftn) (AnimatorControllerPlayable_t4078305555 *, PlayableHandle_t1502856514 *, int32_t, bool, Il2CppObject *);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoInternal_m3180917212_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoInternal(UnityEngine.Experimental.Director.AnimatorControllerPlayable,UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean,System.Object)");
-	_il2cpp_icall_func(___self0, ___handle1, ___layerIndex2, ___isCurrent3, ___clips4);
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  int32_t AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		bool L_2 = ___current2;
-		int32_t L_3 = AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		goto IL_000f;
-	}
-
-IL_000f:
-	{
-		int32_t L_4 = V_0;
-		return L_4;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, bool ___current2, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097_ftn) (PlayableHandle_t1502856514 *, int32_t, bool);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetAnimatorClipInfoCountInternal_m76073097_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetAnimatorClipInfoCountInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1, ___current2);
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetCurrentAnimatorClipInfoCount(System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_GetCurrentAnimatorClipInfoCount_m335090574 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		int32_t L_2 = AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390(NULL /*static, unused*/, L_0, L_1, (bool)1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfoCount(System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_GetNextAnimatorClipInfoCount_m2044259572 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		int32_t L_2 = AnimatorControllerPlayable_GetAnimatorClipInfoCountInternal_m826336390(NULL /*static, unused*/, L_0, L_1, (bool)0, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetNextAnimatorClipInfoInternal_m2063705906 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef AnimatorClipInfoU5BU5D_t2969332312* (*AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetNextAnimatorClipInfoInternal_m4165249349_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetNextAnimatorClipInfoInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// UnityEngine.AnimatorClipInfo[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetNextAnimatorClipInfo(System.Int32)
-extern "C"  AnimatorClipInfoU5BU5D_t2969332312* AnimatorControllerPlayable_GetNextAnimatorClipInfo_m962214430 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	AnimatorClipInfoU5BU5D_t2969332312* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		AnimatorClipInfoU5BU5D_t2969332312* L_2 = AnimatorControllerPlayable_GetNextAnimatorClipInfoInternal_m2063705906(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		AnimatorClipInfoU5BU5D_t2969332312* L_3 = V_0;
-		return L_3;
-	}
-}
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResolveHash(System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_ResolveHash_m2472572196 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___hash0, const MethodInfo* method)
-{
-	String_t* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___hash0;
-		String_t* L_2 = AnimatorControllerPlayable_ResolveHashInternal_m4066573656(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		String_t* L_3 = V_0;
-		return L_3;
-	}
-}
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_ResolveHashInternal_m4066573656 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method)
-{
-	String_t* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___hash1;
-		String_t* L_2 = AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		String_t* L_3 = V_0;
-		return L_3;
-	}
-}
-// System.String UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  String_t* AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___hash1, const MethodInfo* method)
-{
-	typedef String_t* (*AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_ResolveHashInternal_m1707002337_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResolveHashInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___hash1);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_IsInTransitionInternal_m3004933857 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, const MethodInfo* method)
-{
-	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsInTransitionInternal_m2978200270_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsInTransitionInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsInTransition(System.Int32)
-extern "C"  bool AnimatorControllerPlayable_IsInTransition_m4064534331 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		bool L_2 = AnimatorControllerPlayable_IsInTransitionInternal_m3004933857(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_GetParameterCountInternal_m3993919750 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		int32_t L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209_ftn) (PlayableHandle_t1502856514 *);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetParameterCountInternal_m3593070209_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParameterCountInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
-	return _il2cpp_icall_func(___handle0);
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::get_parameterCount()
-extern "C"  int32_t AnimatorControllerPlayable_get_parameterCount_m993805465 (AnimatorControllerPlayable_t4078305555 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = AnimatorControllerPlayable_GetParameterCountInternal_m3993919750(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_0012;
-	}
-
-IL_0012:
-	{
-		int32_t L_2 = V_0;
-		return L_2;
-	}
-}
-// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_GetParametersArrayInternal_m851504719 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	AnimatorControllerParameterU5BU5D_t1936965233* V_0 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		AnimatorControllerParameterU5BU5D_t1936965233* L_1 = AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		AnimatorControllerParameterU5BU5D_t1936965233* L_2 = V_0;
-		return L_2;
-	}
-}
-// UnityEngine.AnimatorControllerParameter[] UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  AnimatorControllerParameterU5BU5D_t1936965233* AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, const MethodInfo* method)
-{
-	typedef AnimatorControllerParameterU5BU5D_t1936965233* (*AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534_ftn) (PlayableHandle_t1502856514 *);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetParametersArrayInternal_m3948383534_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetParametersArrayInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
-	return _il2cpp_icall_func(___handle0);
-}
-// UnityEngine.AnimatorControllerParameter UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetParameter(System.Int32)
-extern "C"  AnimatorControllerParameter_t1381019216 * AnimatorControllerPlayable_GetParameter_m1109094904 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___index0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (AnimatorControllerPlayable_GetParameter_m1109094904_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	AnimatorControllerParameterU5BU5D_t1936965233* V_0 = NULL;
-	AnimatorControllerParameter_t1381019216 * V_1 = NULL;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		AnimatorControllerParameterU5BU5D_t1936965233* L_1 = AnimatorControllerPlayable_GetParametersArrayInternal_m851504719(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		int32_t L_2 = ___index0;
-		if ((((int32_t)L_2) >= ((int32_t)0)))
-		{
-			goto IL_0028;
-		}
-	}
-	{
-		int32_t L_3 = ___index0;
-		AnimatorControllerParameterU5BU5D_t1936965233* L_4 = V_0;
-		NullCheck(L_4);
-		if ((((int32_t)L_3) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_4)->max_length)))))))
-		{
-			goto IL_0028;
-		}
-	}
-	{
-		IndexOutOfRangeException_t3527622107 * L_5 = (IndexOutOfRangeException_t3527622107 *)il2cpp_codegen_object_new(IndexOutOfRangeException_t3527622107_il2cpp_TypeInfo_var);
-		IndexOutOfRangeException__ctor_m1847153122(L_5, _stringLiteral1460639766, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
-	}
-
-IL_0028:
-	{
-		AnimatorControllerParameterU5BU5D_t1936965233* L_6 = V_0;
-		int32_t L_7 = ___index0;
-		NullCheck(L_6);
-		int32_t L_8 = L_7;
-		AnimatorControllerParameter_t1381019216 * L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
-		V_1 = L_9;
-		goto IL_0031;
-	}
-
-IL_0031:
-	{
-		AnimatorControllerParameter_t1381019216 * L_10 = V_1;
-		return L_10;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::StringToHash(System.String)
-extern "C"  int32_t AnimatorControllerPlayable_StringToHash_m223263502 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_StringToHash_m223263502_ftn) (String_t*);
-	static AnimatorControllerPlayable_StringToHash_m223263502_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_StringToHash_m223263502_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::StringToHash(System.String)");
-	return _il2cpp_icall_func(___name0);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single,System.Int32)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m2203048040 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (0.0f);
-		String_t* L_0 = ___stateName0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = ___layer2;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m3978247231 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (0.0f);
-		V_1 = (-1);
-		String_t* L_0 = ___stateName0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = V_1;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.String,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m3493632207 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___stateName0;
-		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		float L_3 = ___transitionDuration1;
-		int32_t L_4 = ___layer2;
-		float L_5 = ___fixedTime3;
-		AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818(NULL /*static, unused*/, L_0, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single,System.Int32)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m246216837 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (0.0f);
-		int32_t L_0 = ___stateNameHash0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = ___layer2;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m2153894334 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (0.0f);
-		V_1 = (-1);
-		int32_t L_0 = ___stateNameHash0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = V_1;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTime(System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTime_m1082259778 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___stateNameHash0;
-		float L_2 = ___transitionDuration1;
-		int32_t L_3 = ___layer2;
-		float L_4 = ___fixedTime3;
-		AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m793606818 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		float L_2 = ___transitionDuration2;
-		int32_t L_3 = ___layer3;
-		float L_4 = ___fixedTime4;
-		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m3955067023 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (0.0f);
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		float L_2 = ___transitionDuration2;
-		int32_t L_3 = ___layer3;
-		float L_4 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInFixedTimeInternal_m3729673154 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (0.0f);
-		V_1 = (-1);
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		float L_2 = ___transitionDuration2;
-		int32_t L_3 = V_1;
-		float L_4 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___fixedTime4, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771_ftn) (PlayableHandle_t1502856514 *, int32_t, float, int32_t, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInFixedTimeInternal_m3528719771_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)");
-	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___transitionDuration2, ___layer3, ___fixedTime4);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single,System.Int32)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m2332797404 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		String_t* L_0 = ___stateName0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = ___layer2;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFade_m2119841183(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m437921439 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		String_t* L_0 = ___stateName0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = V_1;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFade_m2119841183(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.String,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m2119841183 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___stateName0;
-		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		float L_3 = ___transitionDuration1;
-		int32_t L_4 = ___layer2;
-		float L_5 = ___normalizedTime3;
-		AnimatorControllerPlayable_CrossFadeInternal_m220517942(NULL /*static, unused*/, L_0, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single,System.Int32)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m1243737073 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		int32_t L_0 = ___stateNameHash0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = ___layer2;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFade_m3146661810(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m949607638 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		int32_t L_0 = ___stateNameHash0;
-		float L_1 = ___transitionDuration1;
-		int32_t L_2 = V_1;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_CrossFade_m3146661810(__this, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFade(System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFade_m3146661810 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, float ___transitionDuration1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___stateNameHash0;
-		float L_2 = ___transitionDuration1;
-		int32_t L_3 = ___layer2;
-		float L_4 = ___normalizedTime3;
-		AnimatorControllerPlayable_CrossFadeInternal_m220517942(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m220517942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		float L_2 = ___transitionDuration2;
-		int32_t L_3 = ___layer3;
-		float L_4 = ___normalizedTime4;
-		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m622348039 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		float L_2 = ___transitionDuration2;
-		int32_t L_3 = ___layer3;
-		float L_4 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_CrossFadeInternal_m3412201542 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		float L_2 = ___transitionDuration2;
-		int32_t L_3 = V_1;
-		float L_4 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, float ___transitionDuration2, int32_t ___layer3, float ___normalizedTime4, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831_ftn) (PlayableHandle_t1502856514 *, int32_t, float, int32_t, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_CrossFadeInternal_m698817831_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_CrossFadeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single,System.Int32,System.Single)");
-	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___transitionDuration2, ___layer3, ___normalizedTime4);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m172593751 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		String_t* L_0 = ___stateName0;
-		int32_t L_1 = ___layer1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_PlayInFixedTime_m2562520484(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m3734997604 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		String_t* L_0 = ___stateName0;
-		int32_t L_1 = V_1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_PlayInFixedTime_m2562520484(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.String,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2562520484 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___stateName0;
-		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		int32_t L_3 = ___layer1;
-		float L_4 = ___fixedTime2;
-		AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167(NULL /*static, unused*/, L_0, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2966168794 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		int32_t L_0 = ___stateNameHash0;
-		int32_t L_1 = ___layer1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_PlayInFixedTime_m2629510873(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2493327565 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		int32_t L_0 = ___stateNameHash0;
-		int32_t L_1 = V_1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_PlayInFixedTime_m2629510873(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTime(System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTime_m2629510873 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___fixedTime2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___stateNameHash0;
-		int32_t L_2 = ___layer1;
-		float L_3 = ___fixedTime2;
-		AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m2767099167 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		int32_t L_2 = ___layer2;
-		float L_3 = ___fixedTime3;
-		AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m2047085454 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		int32_t L_2 = ___layer2;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInFixedTimeInternal_m623452639 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		int32_t L_2 = V_1;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___fixedTime3, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_PlayInFixedTimeInternal_m847261734_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInFixedTimeInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)");
-	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___layer2, ___fixedTime3);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_Play_m3114724599 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		String_t* L_0 = ___stateName0;
-		int32_t L_1 = ___layer1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_Play_m1100499576(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String)
-extern "C"  void AnimatorControllerPlayable_Play_m1337154648 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		String_t* L_0 = ___stateName0;
-		int32_t L_1 = V_1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_Play_m1100499576(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.String,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_Play_m1100499576 (AnimatorControllerPlayable_t4078305555 * __this, String_t* ___stateName0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		String_t* L_1 = ___stateName0;
-		int32_t L_2 = AnimatorControllerPlayable_StringToHash_m223263502(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		int32_t L_3 = ___layer1;
-		float L_4 = ___normalizedTime2;
-		AnimatorControllerPlayable_PlayInternal_m3385259863(NULL /*static, unused*/, L_0, L_2, L_3, L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_Play_m1350238866 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		int32_t L_0 = ___stateNameHash0;
-		int32_t L_1 = ___layer1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_Play_m2286317581(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32)
-extern "C"  void AnimatorControllerPlayable_Play_m4092315465 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		int32_t L_0 = ___stateNameHash0;
-		int32_t L_1 = V_1;
-		float L_2 = V_0;
-		AnimatorControllerPlayable_Play_m2286317581(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::Play(System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_Play_m2286317581 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___stateNameHash0, int32_t ___layer1, float ___normalizedTime2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___stateNameHash0;
-		int32_t L_2 = ___layer1;
-		float L_3 = ___normalizedTime2;
-		AnimatorControllerPlayable_PlayInternal_m3385259863(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_PlayInternal_m3385259863 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		int32_t L_2 = ___layer2;
-		float L_3 = ___normalizedTime3;
-		AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInternal_m2770955394 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		int32_t L_2 = ___layer2;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_PlayInternal_m4018423479 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		V_0 = (-std::numeric_limits<float>::infinity());
-		V_1 = (-1);
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___stateNameHash1;
-		int32_t L_2 = V_1;
-		float L_3 = V_0;
-		AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968(NULL /*static, unused*/, L_0, L_1, L_2, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___stateNameHash1, int32_t ___layer2, float ___normalizedTime3, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_PlayInternal_m3496633968_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_PlayInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32,System.Single)");
-	_il2cpp_icall_func(___handle0, ___stateNameHash1, ___layer2, ___normalizedTime3);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::HasState(System.Int32,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_HasState_m4036688937 (AnimatorControllerPlayable_t4078305555 * __this, int32_t ___layerIndex0, int32_t ___stateID1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ((Playable_t3667545548 *)__this)->get_address_of_handle_0();
-		int32_t L_1 = ___layerIndex0;
-		int32_t L_2 = ___stateID1;
-		bool L_3 = AnimatorControllerPlayable_HasStateInternal_m1905524675(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		bool L_4 = V_0;
-		return L_4;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_HasStateInternal_m1905524675 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___layerIndex1;
-		int32_t L_2 = ___stateID2;
-		bool L_3 = AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		goto IL_000f;
-	}
-
-IL_000f:
-	{
-		bool L_4 = V_0;
-		return L_4;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___layerIndex1, int32_t ___stateID2, const MethodInfo* method)
-{
-	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_HasStateInternal_m2474394942_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_HasStateInternal(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___layerIndex1, ___stateID2);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetFloatString_m3937146789 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		float L_2 = ___value2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, float ___value2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790_ftn) (PlayableHandle_t1502856514 *, String_t*, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetFloatString_m743616790_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Single)");
-	_il2cpp_icall_func(___handle0, ___name1, ___value2);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_SetFloatID_m2632606700 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		float L_2 = ___value2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, float ___value2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187_ftn) (PlayableHandle_t1502856514 *, int32_t, float);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetFloatID_m1667841187_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Single)");
-	_il2cpp_icall_func(___handle0, ___id1, ___value2);
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  float AnimatorControllerPlayable_GetFloatString_m2999633302 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		float L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		float L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	typedef float (*AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetFloatString_m4205749063_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	return _il2cpp_icall_func(___handle0, ___name1);
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_GetFloatID_m3274868729 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	float V_0 = 0.0f;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		float L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		float L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Single UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  float AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	typedef float (*AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetFloatID_m1816887522_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetFloatID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_SetBoolString_m1314460333 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		bool L_2 = ___value2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, bool ___value2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510_ftn) (PlayableHandle_t1502856514 *, String_t*, bool);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetBoolString_m1232105510_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Boolean)");
-	_il2cpp_icall_func(___handle0, ___name1, ___value2);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_SetBoolID_m1141253014 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		bool L_2 = ___value2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, bool ___value2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503_ftn) (PlayableHandle_t1502856514 *, int32_t, bool);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetBoolID_m2987425503_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Boolean)");
-	_il2cpp_icall_func(___handle0, ___id1, ___value2);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_GetBoolString_m2552769404 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetBoolString_m538178071_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	return _il2cpp_icall_func(___handle0, ___name1);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_GetBoolID_m2566184981 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetBoolID_m3610941922_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetBoolID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetIntegerString_m1750228335 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		int32_t L_2 = ___value2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, int32_t ___value2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784_ftn) (PlayableHandle_t1502856514 *, String_t*, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerString_m4224797784_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String,System.Int32)");
-	_il2cpp_icall_func(___handle0, ___name1, ___value2);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetIntegerID_m1774408598 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		int32_t L_2 = ___value2;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, int32_t ___value2, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413_ftn) (PlayableHandle_t1502856514 *, int32_t, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetIntegerID_m3110109413_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32,System.Int32)");
-	_il2cpp_icall_func(___handle0, ___id1, ___value2);
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_GetIntegerString_m3063601436 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		int32_t L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerString_m1883966697_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	return _il2cpp_icall_func(___handle0, ___name1);
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_GetIntegerID_m756947419 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		int32_t L_2 = AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		int32_t L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Int32 UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  int32_t AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	typedef int32_t (*AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_GetIntegerID_m2295839520_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_GetIntegerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_SetTriggerString_m2313149510 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerString_m489309069_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	_il2cpp_icall_func(___handle0, ___name1);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_SetTriggerID_m290818743 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_SetTriggerID_m508896534_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_SetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	_il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_ResetTriggerString_m1669955779 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerString_m395754516_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	_il2cpp_icall_func(___handle0, ___name1);
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_ResetTriggerID_m326518904 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	typedef void (*AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m3592790433_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_ResetTriggerID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	_il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveString_m4036987523 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		String_t* L_1 = ___name1;
-		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method)
-{
-	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406_ftn) (PlayableHandle_t1502856514 *, String_t*);
-	static AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveString(UnityEngine.Experimental.Director.PlayableHandle&,System.String)");
-	return _il2cpp_icall_func(___handle0, ___name1);
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_IsParameterControlledByCurveID_m4183631446 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___handle0;
-		int32_t L_1 = ___id1;
-		bool L_2 = AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
-extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method)
-{
-	typedef bool (*AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn) (PlayableHandle_t1502856514 *, int32_t);
-	static AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
-	return _il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Void UnityEngine.Experimental.Director.Playable::.ctor()
-extern "C"  void Playable__ctor_m334077411 (Playable_t3667545548 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.Experimental.Director.PlayableHandle UnityEngine.Experimental.Director.Playable::op_Implicit(UnityEngine.Experimental.Director.Playable)
-extern "C"  PlayableHandle_t1502856514  Playable_op_Implicit_m1650048605 (Il2CppObject * __this /* static, unused */, Playable_t3667545548 * ___b0, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Playable_t3667545548 * L_0 = ___b0;
-		NullCheck(L_0);
-		PlayableHandle_t1502856514  L_1 = L_0->get_handle_0();
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		PlayableHandle_t1502856514  L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.Playable::IsValid()
-extern "C"  bool Playable_IsValid_m2102916683 (Playable_t3667545548 * __this, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = __this->get_address_of_handle_0();
-		bool L_1 = PlayableHandle_IsValid_m40842953(L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_0012;
-	}
-
-IL_0012:
-	{
-		bool L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValid()
-extern "C"  bool PlayableHandle_IsValid_m40842953 (PlayableHandle_t1502856514 * __this, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		bool L_0 = PlayableHandle_IsValidInternal_m1910030079(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		bool L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  bool PlayableHandle_IsValid_m40842953_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
-	return PlayableHandle_IsValid_m40842953(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_IsValidInternal_m1910030079 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___playable0;
-		bool L_1 = PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		bool L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method)
-{
-	typedef bool (*PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn) (PlayableHandle_t1502856514 *);
-	static PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
-	return _il2cpp_icall_func(___playable0);
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::Equals(System.Object)
-extern "C"  bool PlayableHandle_Equals_m1435096530 (PlayableHandle_t1502856514 * __this, Il2CppObject * ___p0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (PlayableHandle_Equals_m1435096530_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	{
-		Il2CppObject * L_0 = ___p0;
-		if (((Il2CppObject *)IsInstSealed(L_0, PlayableHandle_t1502856514_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		V_0 = (bool)0;
-		goto IL_002a;
-	}
-
-IL_0013:
-	{
-		Il2CppObject * L_1 = ___p0;
-		bool L_2 = PlayableHandle_CompareVersion_m2333515486(NULL /*static, unused*/, (*(PlayableHandle_t1502856514 *)__this), ((*(PlayableHandle_t1502856514 *)((PlayableHandle_t1502856514 *)UnBox(L_1, PlayableHandle_t1502856514_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_002a;
-	}
-
-IL_002a:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  bool PlayableHandle_Equals_m1435096530_AdjustorThunk (Il2CppObject * __this, Il2CppObject * ___p0, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
-	return PlayableHandle_Equals_m1435096530(_thisAdjusted, ___p0, method);
-}
-// System.Int32 UnityEngine.Experimental.Director.PlayableHandle::GetHashCode()
-extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282 (PlayableHandle_t1502856514 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		IntPtr_t* L_0 = __this->get_address_of_m_Handle_0();
-		int32_t L_1 = IntPtr_GetHashCode_m1174575389(L_0, /*hidden argument*/NULL);
-		int32_t* L_2 = __this->get_address_of_m_Version_1();
-		int32_t L_3 = Int32_GetHashCode_m1381647448(L_2, /*hidden argument*/NULL);
-		V_0 = ((int32_t)((int32_t)L_1^(int32_t)L_3));
-		goto IL_002a;
-	}
-
-IL_002a:
-	{
-		int32_t L_4 = V_0;
-		return L_4;
-	}
-}
-extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
-	return PlayableHandle_GetHashCode_m1257452282(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::CompareVersion(UnityEngine.Experimental.Director.PlayableHandle,UnityEngine.Experimental.Director.PlayableHandle)
-extern "C"  bool PlayableHandle_CompareVersion_m2333515486 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514  ___lhs0, PlayableHandle_t1502856514  ___rhs1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
-	{
-		IntPtr_t L_0 = (&___lhs0)->get_m_Handle_0();
-		IntPtr_t L_1 = (&___rhs1)->get_m_Handle_0();
-		bool L_2 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		if (!L_2)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		int32_t L_3 = (&___lhs0)->get_m_Version_1();
-		int32_t L_4 = (&___rhs1)->get_m_Version_1();
-		G_B3_0 = ((((int32_t)L_3) == ((int32_t)L_4))? 1 : 0);
-		goto IL_002c;
-	}
-
-IL_002b:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_002c:
-	{
-		V_0 = (bool)G_B3_0;
-		goto IL_0032;
-	}
-
-IL_0032:
-	{
-		bool L_5 = V_0;
-		return L_5;
 	}
 }
 #ifdef __clang__

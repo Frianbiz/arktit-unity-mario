@@ -15,70 +15,67 @@
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Alert3405955216.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_CipherAlg4212518094.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_CipherSuit491456551.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_CipherSui2431504453.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_CipherSui3273693255.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ClientCon3002158488.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ClientRec2694504884.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ClientSes3468069089.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ClientSes3595945587.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ContentTyp859870085.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Context4285182719.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ExchangeAl954949548.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake1820731088.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_HashAlgor1654661965.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_HttpsClie3823629320.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_RecordPro3166895267.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_RecordPro1946181211.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_RecordProt173216930.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_RSASslSign389653629.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_RSASslSig1282301050.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SecurityC3722381418.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SecurityP2290372928.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SecurityPr155967584.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_ServerCon3823737132.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Validatio1782558132.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SslClient3918817353.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SslCipher1404755603.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SslHandsh3044322977.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SslStreamB934199321.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_SslStream1610391122.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_TlsCipherS396038680.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_TlsClient2311449551.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_TlsExcepti583514812.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_TlsServerS403340211.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_TlsStream4089752859.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake4001384466.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake3938752374.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake2540099417.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake2537917473.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake4150496570.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake3939745042.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake2939633944.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake3808761250.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake_905088469.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake2187269356.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake1869592958.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake1289300668.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake_530021076.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Handshake2172608670.h"
-#include "Mono_Security_Mono_Math_Prime_PrimalityTest572679901.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Certificat989458295.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Certifica3318447433.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_Certifica3721235490.h"
-#include "Mono_Security_Mono_Security_Protocol_Tls_PrivateKe1663566523.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E1486305137.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U1892466092.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U2038352954.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U2540610921.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U3672778804.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U2896841275.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U2866209745.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U3672778802.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U1703410334.h"
-#include "Mono_Security_U3CPrivateImplementationDetailsU3E_U1957337331.h"
+#include "System_System_Text_RegularExpressions_Regex1803876613.h"
+#include "System_System_Text_RegularExpressions_RegexOptions2418259727.h"
+#include "System_System_Text_RegularExpressions_OpCode586571952.h"
+#include "System_System_Text_RegularExpressions_OpFlags378191910.h"
+#include "System_System_Text_RegularExpressions_Position3781184359.h"
+#include "System_System_Text_RegularExpressions_FactoryCache2051534610.h"
+#include "System_System_Text_RegularExpressions_FactoryCache_655155419.h"
+#include "System_System_Text_RegularExpressions_MRUList33178162.h"
+#include "System_System_Text_RegularExpressions_MRUList_Node1107172180.h"
+#include "System_System_Text_RegularExpressions_Category1984577050.h"
+#include "System_System_Text_RegularExpressions_CategoryUtil3840220623.h"
+#include "System_System_Text_RegularExpressions_LinkRef2090853131.h"
+#include "System_System_Text_RegularExpressions_InterpreterFa556462562.h"
+#include "System_System_Text_RegularExpressions_PatternCompil637049905.h"
+#include "System_System_Text_RegularExpressions_PatternCompi3979537293.h"
+#include "System_System_Text_RegularExpressions_PatternCompi3337276394.h"
+#include "System_System_Text_RegularExpressions_LinkStack954792760.h"
+#include "System_System_Text_RegularExpressions_Mark2724874473.h"
+#include "System_System_Text_RegularExpressions_Interpreter3731288230.h"
+#include "System_System_Text_RegularExpressions_Interpreter_I273560425.h"
+#include "System_System_Text_RegularExpressions_Interpreter_1827616978.h"
+#include "System_System_Text_RegularExpressions_Interpreter_2395763083.h"
+#include "System_System_Text_RegularExpressions_Interval2354235237.h"
+#include "System_System_Text_RegularExpressions_IntervalColl4130821325.h"
+#include "System_System_Text_RegularExpressions_IntervalColl1928086041.h"
+#include "System_System_Text_RegularExpressions_IntervalColl1824458113.h"
+#include "System_System_Text_RegularExpressions_Syntax_Parse2756028923.h"
+#include "System_System_Text_RegularExpressions_QuickSearch1036078825.h"
+#include "System_System_Text_RegularExpressions_Syntax_Expres238836340.h"
+#include "System_System_Text_RegularExpressions_Syntax_Expres368137076.h"
+#include "System_System_Text_RegularExpressions_Syntax_Compo1921307915.h"
+#include "System_System_Text_RegularExpressions_Syntax_Group2558408851.h"
+#include "System_System_Text_RegularExpressions_Syntax_Regul3083097024.h"
+#include "System_System_Text_RegularExpressions_Syntax_Captu3690174926.h"
+#include "System_System_Text_RegularExpressions_Syntax_Balan3168604284.h"
+#include "System_System_Text_RegularExpressions_Syntax_NonBac607185170.h"
+#include "System_System_Text_RegularExpressions_Syntax_Repet3426306051.h"
+#include "System_System_Text_RegularExpressions_Syntax_Asser1490870658.h"
+#include "System_System_Text_RegularExpressions_Syntax_Captur196851652.h"
+#include "System_System_Text_RegularExpressions_Syntax_Expre3255443744.h"
+#include "System_System_Text_RegularExpressions_Syntax_Alter3506694545.h"
+#include "System_System_Text_RegularExpressions_Syntax_Liter2896011011.h"
+#include "System_System_Text_RegularExpressions_Syntax_Posit2152361535.h"
+#include "System_System_Text_RegularExpressions_Syntax_Refer1540574699.h"
+#include "System_System_Text_RegularExpressions_Syntax_Backs1461652789.h"
+#include "System_System_Text_RegularExpressions_Syntax_Charac655244183.h"
+#include "System_System_Text_RegularExpressions_Syntax_Ancho1392970135.h"
+#include "System_System_DefaultUriParser1591960796.h"
+#include "System_System_GenericUriParser2599285286.h"
+#include "System_System_Uri19570940.h"
+#include "System_System_Uri_UriScheme1876590943.h"
+#include "System_System_UriFormatException3682083048.h"
+#include "System_System_UriHostNameType2148127109.h"
+#include "System_System_UriKind1128731744.h"
+#include "System_System_UriParser1012511323.h"
+#include "System_System_UriPartial112107391.h"
+#include "System_System_UriTypeConverter3912970448.h"
+#include "System_System_Net_Security_RemoteCertificateValida2756269959.h"
+#include "System_U3CPrivateImplementationDetailsU3E1486305137.h"
+#include "System_U3CPrivateImplementationDetailsU3E_U24ArrayT116038554.h"
+#include "System_U3CPrivateImplementationDetailsU3E_U24Array3672778802.h"
 #include "System_Core_U3CModuleU3E3783534214.h"
 #include "System_Core_System_Runtime_CompilerServices_Extens1840441203.h"
 #include "System_Core_Locale4255929014.h"
@@ -120,16 +117,25 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1100 = { sizeof (Alert_t3405955216), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1100[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1100 = { sizeof (Regex_t1803876613), -1, sizeof(Regex_t1803876613_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1100[9] = 
 {
-	Alert_t3405955216::get_offset_of_level_0(),
-	Alert_t3405955216::get_offset_of_description_1(),
+	Regex_t1803876613_StaticFields::get_offset_of_cache_0(),
+	Regex_t1803876613::get_offset_of_machineFactory_1(),
+	Regex_t1803876613::get_offset_of_mapping_2(),
+	Regex_t1803876613::get_offset_of_group_count_3(),
+	Regex_t1803876613::get_offset_of_gap_4(),
+	Regex_t1803876613::get_offset_of_group_names_5(),
+	Regex_t1803876613::get_offset_of_group_numbers_6(),
+	Regex_t1803876613::get_offset_of_pattern_7(),
+	Regex_t1803876613::get_offset_of_roptions_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1101 = { sizeof (CipherAlgorithmType_t4212518094)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1101[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1101 = { sizeof (RegexOptions_t2418259727)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1101[10] = 
 {
-	CipherAlgorithmType_t4212518094::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	RegexOptions_t2418259727::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
 	0,
 	0,
 	0,
@@ -138,430 +144,548 @@ extern const int32_t g_FieldOffsetTable1101[8] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1102 = { sizeof (CipherSuite_t491456551), -1, sizeof(CipherSuite_t491456551_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1102[21] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1102 = { sizeof (OpCode_t586571952)+ sizeof (Il2CppObject), sizeof(uint16_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1102[26] = 
 {
-	CipherSuite_t491456551_StaticFields::get_offset_of_EmptyArray_0(),
-	CipherSuite_t491456551::get_offset_of_code_1(),
-	CipherSuite_t491456551::get_offset_of_name_2(),
-	CipherSuite_t491456551::get_offset_of_cipherAlgorithmType_3(),
-	CipherSuite_t491456551::get_offset_of_hashAlgorithmType_4(),
-	CipherSuite_t491456551::get_offset_of_exchangeAlgorithmType_5(),
-	CipherSuite_t491456551::get_offset_of_isExportable_6(),
-	CipherSuite_t491456551::get_offset_of_cipherMode_7(),
-	CipherSuite_t491456551::get_offset_of_keyMaterialSize_8(),
-	CipherSuite_t491456551::get_offset_of_keyBlockSize_9(),
-	CipherSuite_t491456551::get_offset_of_expandedKeyMaterialSize_10(),
-	CipherSuite_t491456551::get_offset_of_effectiveKeyBits_11(),
-	CipherSuite_t491456551::get_offset_of_ivSize_12(),
-	CipherSuite_t491456551::get_offset_of_blockSize_13(),
-	CipherSuite_t491456551::get_offset_of_context_14(),
-	CipherSuite_t491456551::get_offset_of_encryptionAlgorithm_15(),
-	CipherSuite_t491456551::get_offset_of_encryptionCipher_16(),
-	CipherSuite_t491456551::get_offset_of_decryptionAlgorithm_17(),
-	CipherSuite_t491456551::get_offset_of_decryptionCipher_18(),
-	CipherSuite_t491456551::get_offset_of_clientHMAC_19(),
-	CipherSuite_t491456551::get_offset_of_serverHMAC_20(),
+	OpCode_t586571952::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1103 = { sizeof (CipherSuiteCollection_t2431504453), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1103[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1103 = { sizeof (OpFlags_t378191910)+ sizeof (Il2CppObject), sizeof(uint16_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1103[6] = 
 {
-	CipherSuiteCollection_t2431504453::get_offset_of_cipherSuites_0(),
-	CipherSuiteCollection_t2431504453::get_offset_of_protocol_1(),
+	OpFlags_t378191910::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1104 = { sizeof (CipherSuiteFactory_t3273693255), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1105 = { sizeof (ClientContext_t3002158488), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1105[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1104 = { sizeof (Position_t3781184359)+ sizeof (Il2CppObject), sizeof(uint16_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1104[11] = 
 {
-	ClientContext_t3002158488::get_offset_of_sslStream_30(),
-	ClientContext_t3002158488::get_offset_of_clientHelloProtocol_31(),
+	Position_t3781184359::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1106 = { sizeof (ClientRecordProtocol_t2694504884), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1107 = { sizeof (ClientSessionInfo_t3468069089), -1, sizeof(ClientSessionInfo_t3468069089_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1107[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1105 = { 0, -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1106 = { 0, -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1107 = { sizeof (FactoryCache_t2051534610), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1107[3] = 
 {
-	ClientSessionInfo_t3468069089_StaticFields::get_offset_of_ValidityInterval_0(),
-	ClientSessionInfo_t3468069089::get_offset_of_disposed_1(),
-	ClientSessionInfo_t3468069089::get_offset_of_validuntil_2(),
-	ClientSessionInfo_t3468069089::get_offset_of_host_3(),
-	ClientSessionInfo_t3468069089::get_offset_of_sid_4(),
-	ClientSessionInfo_t3468069089::get_offset_of_masterSecret_5(),
+	FactoryCache_t2051534610::get_offset_of_capacity_0(),
+	FactoryCache_t2051534610::get_offset_of_factories_1(),
+	FactoryCache_t2051534610::get_offset_of_mru_list_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1108 = { sizeof (ClientSessionCache_t3595945587), -1, sizeof(ClientSessionCache_t3595945587_StaticFields), 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1108 = { sizeof (Key_t655155419), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable1108[2] = 
 {
-	ClientSessionCache_t3595945587_StaticFields::get_offset_of_cache_0(),
-	ClientSessionCache_t3595945587_StaticFields::get_offset_of_locker_1(),
+	Key_t655155419::get_offset_of_pattern_0(),
+	Key_t655155419::get_offset_of_options_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1109 = { sizeof (ContentType_t859870085)+ sizeof (Il2CppObject), sizeof(uint8_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1109[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1109 = { sizeof (MRUList_t33178162), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1109[2] = 
 {
-	ContentType_t859870085::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
-	0,
-	0,
+	MRUList_t33178162::get_offset_of_head_0(),
+	MRUList_t33178162::get_offset_of_tail_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1110 = { sizeof (Context_t4285182719), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1110[30] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1110 = { sizeof (Node_t1107172180), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1110[3] = 
 {
-	Context_t4285182719::get_offset_of_securityProtocol_0(),
-	Context_t4285182719::get_offset_of_sessionId_1(),
-	Context_t4285182719::get_offset_of_compressionMethod_2(),
-	Context_t4285182719::get_offset_of_serverSettings_3(),
-	Context_t4285182719::get_offset_of_clientSettings_4(),
-	Context_t4285182719::get_offset_of_current_5(),
-	Context_t4285182719::get_offset_of_negotiating_6(),
-	Context_t4285182719::get_offset_of_read_7(),
-	Context_t4285182719::get_offset_of_write_8(),
-	Context_t4285182719::get_offset_of_supportedCiphers_9(),
-	Context_t4285182719::get_offset_of_lastHandshakeMsg_10(),
-	Context_t4285182719::get_offset_of_handshakeState_11(),
-	Context_t4285182719::get_offset_of_abbreviatedHandshake_12(),
-	Context_t4285182719::get_offset_of_receivedConnectionEnd_13(),
-	Context_t4285182719::get_offset_of_sentConnectionEnd_14(),
-	Context_t4285182719::get_offset_of_protocolNegotiated_15(),
-	Context_t4285182719::get_offset_of_writeSequenceNumber_16(),
-	Context_t4285182719::get_offset_of_readSequenceNumber_17(),
-	Context_t4285182719::get_offset_of_clientRandom_18(),
-	Context_t4285182719::get_offset_of_serverRandom_19(),
-	Context_t4285182719::get_offset_of_randomCS_20(),
-	Context_t4285182719::get_offset_of_randomSC_21(),
-	Context_t4285182719::get_offset_of_masterSecret_22(),
-	Context_t4285182719::get_offset_of_clientWriteKey_23(),
-	Context_t4285182719::get_offset_of_serverWriteKey_24(),
-	Context_t4285182719::get_offset_of_clientWriteIV_25(),
-	Context_t4285182719::get_offset_of_serverWriteIV_26(),
-	Context_t4285182719::get_offset_of_handshakeMessages_27(),
-	Context_t4285182719::get_offset_of_random_28(),
-	Context_t4285182719::get_offset_of_recordProtocol_29(),
+	Node_t1107172180::get_offset_of_value_0(),
+	Node_t1107172180::get_offset_of_previous_1(),
+	Node_t1107172180::get_offset_of_next_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1111 = { sizeof (ExchangeAlgorithmType_t954949548)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1111[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1111 = { sizeof (Category_t1984577050)+ sizeof (Il2CppObject), sizeof(uint16_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1111[146] = 
 {
-	ExchangeAlgorithmType_t954949548::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	Category_t1984577050::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
 	0,
 	0,
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1112 = { sizeof (HandshakeState_t1820731088)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1112[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1112 = { sizeof (CategoryUtils_t3840220623), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1113 = { sizeof (LinkRef_t2090853131), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1114 = { 0, -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1115 = { sizeof (InterpreterFactory_t556462562), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1115[4] = 
 {
-	HandshakeState_t1820731088::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
-	0,
+	InterpreterFactory_t556462562::get_offset_of_mapping_0(),
+	InterpreterFactory_t556462562::get_offset_of_pattern_1(),
+	InterpreterFactory_t556462562::get_offset_of_namesMapping_2(),
+	InterpreterFactory_t556462562::get_offset_of_gap_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1113 = { sizeof (HashAlgorithmType_t1654661965)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1113[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1116 = { sizeof (PatternCompiler_t637049905), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1116[1] = 
 {
-	HashAlgorithmType_t1654661965::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
-	0,
+	PatternCompiler_t637049905::get_offset_of_pgm_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1114 = { sizeof (HttpsClientStream_t3823629320), -1, sizeof(HttpsClientStream_t3823629320_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1114[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1117 = { sizeof (PatternLinkStack_t3979537293), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1117[1] = 
 {
-	HttpsClientStream_t3823629320::get_offset_of__request_20(),
-	HttpsClientStream_t3823629320::get_offset_of__status_21(),
-	HttpsClientStream_t3823629320_StaticFields::get_offset_of_U3CU3Ef__amU24cache2_22(),
-	HttpsClientStream_t3823629320_StaticFields::get_offset_of_U3CU3Ef__amU24cache3_23(),
+	PatternLinkStack_t3979537293::get_offset_of_link_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1115 = { sizeof (RecordProtocol_t3166895267), -1, sizeof(RecordProtocol_t3166895267_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1115[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1118 = { sizeof (Link_t3337276394)+ sizeof (Il2CppObject), sizeof(Link_t3337276394 ), 0, 0 };
+extern const int32_t g_FieldOffsetTable1118[2] = 
 {
-	RecordProtocol_t3166895267_StaticFields::get_offset_of_record_processing_0(),
-	RecordProtocol_t3166895267::get_offset_of_innerStream_1(),
-	RecordProtocol_t3166895267::get_offset_of_context_2(),
+	Link_t3337276394::get_offset_of_base_addr_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	Link_t3337276394::get_offset_of_offset_addr_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1116 = { sizeof (ReceiveRecordAsyncResult_t1946181211), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1116[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1119 = { sizeof (LinkStack_t954792760), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1119[1] = 
 {
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of_locker_0(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of__userCallback_1(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of__userState_2(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of__asyncException_3(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of_handle_4(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of__resultingBuffer_5(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of__record_6(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of_completed_7(),
-	ReceiveRecordAsyncResult_t1946181211::get_offset_of__initialBuffer_8(),
+	LinkStack_t954792760::get_offset_of_stack_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1117 = { sizeof (SendRecordAsyncResult_t173216930), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1117[7] = 
-{
-	SendRecordAsyncResult_t173216930::get_offset_of_locker_0(),
-	SendRecordAsyncResult_t173216930::get_offset_of__userCallback_1(),
-	SendRecordAsyncResult_t173216930::get_offset_of__userState_2(),
-	SendRecordAsyncResult_t173216930::get_offset_of__asyncException_3(),
-	SendRecordAsyncResult_t173216930::get_offset_of_handle_4(),
-	SendRecordAsyncResult_t173216930::get_offset_of__message_5(),
-	SendRecordAsyncResult_t173216930::get_offset_of_completed_6(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1118 = { sizeof (RSASslSignatureDeformatter_t389653629), -1, sizeof(RSASslSignatureDeformatter_t389653629_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1118[3] = 
-{
-	RSASslSignatureDeformatter_t389653629::get_offset_of_key_0(),
-	RSASslSignatureDeformatter_t389653629::get_offset_of_hash_1(),
-	RSASslSignatureDeformatter_t389653629_StaticFields::get_offset_of_U3CU3Ef__switchU24map15_2(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1119 = { sizeof (RSASslSignatureFormatter_t1282301050), -1, sizeof(RSASslSignatureFormatter_t1282301050_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1119[3] = 
-{
-	RSASslSignatureFormatter_t1282301050::get_offset_of_key_0(),
-	RSASslSignatureFormatter_t1282301050::get_offset_of_hash_1(),
-	RSASslSignatureFormatter_t1282301050_StaticFields::get_offset_of_U3CU3Ef__switchU24map16_2(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1120 = { sizeof (SecurityCompressionType_t3722381418)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1120 = { sizeof (Mark_t2724874473)+ sizeof (Il2CppObject), sizeof(Mark_t2724874473 ), 0, 0 };
 extern const int32_t g_FieldOffsetTable1120[3] = 
 {
-	SecurityCompressionType_t3722381418::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
+	Mark_t2724874473::get_offset_of_Start_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	Mark_t2724874473::get_offset_of_End_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	Mark_t2724874473::get_offset_of_Previous_2() + static_cast<int32_t>(sizeof(Il2CppObject)),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1121 = { sizeof (SecurityParameters_t2290372928), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1121[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1121 = { sizeof (Interpreter_t3731288230), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1121[16] = 
 {
-	SecurityParameters_t2290372928::get_offset_of_cipher_0(),
-	SecurityParameters_t2290372928::get_offset_of_clientWriteMAC_1(),
-	SecurityParameters_t2290372928::get_offset_of_serverWriteMAC_2(),
+	Interpreter_t3731288230::get_offset_of_program_1(),
+	Interpreter_t3731288230::get_offset_of_program_start_2(),
+	Interpreter_t3731288230::get_offset_of_text_3(),
+	Interpreter_t3731288230::get_offset_of_text_end_4(),
+	Interpreter_t3731288230::get_offset_of_group_count_5(),
+	Interpreter_t3731288230::get_offset_of_match_min_6(),
+	Interpreter_t3731288230::get_offset_of_qs_7(),
+	Interpreter_t3731288230::get_offset_of_scan_ptr_8(),
+	Interpreter_t3731288230::get_offset_of_repeat_9(),
+	Interpreter_t3731288230::get_offset_of_fast_10(),
+	Interpreter_t3731288230::get_offset_of_stack_11(),
+	Interpreter_t3731288230::get_offset_of_deep_12(),
+	Interpreter_t3731288230::get_offset_of_marks_13(),
+	Interpreter_t3731288230::get_offset_of_mark_start_14(),
+	Interpreter_t3731288230::get_offset_of_mark_end_15(),
+	Interpreter_t3731288230::get_offset_of_groups_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1122 = { sizeof (SecurityProtocolType_t155967584)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1122[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1122 = { sizeof (IntStack_t273560425)+ sizeof (Il2CppObject), sizeof(IntStack_t273560425_marshaled_pinvoke), 0, 0 };
+extern const int32_t g_FieldOffsetTable1122[2] = 
 {
-	SecurityProtocolType_t155967584::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
-	0,
-	0,
+	IntStack_t273560425::get_offset_of_values_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	IntStack_t273560425::get_offset_of_count_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1123 = { sizeof (ServerContext_t3823737132), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1124 = { sizeof (ValidationResult_t1782558132), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1124[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1123 = { sizeof (RepeatContext_t1827616978), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1123[7] = 
 {
-	ValidationResult_t1782558132::get_offset_of_trusted_0(),
-	ValidationResult_t1782558132::get_offset_of_error_code_1(),
+	RepeatContext_t1827616978::get_offset_of_start_0(),
+	RepeatContext_t1827616978::get_offset_of_min_1(),
+	RepeatContext_t1827616978::get_offset_of_max_2(),
+	RepeatContext_t1827616978::get_offset_of_lazy_3(),
+	RepeatContext_t1827616978::get_offset_of_expr_pc_4(),
+	RepeatContext_t1827616978::get_offset_of_previous_5(),
+	RepeatContext_t1827616978::get_offset_of_count_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1125 = { sizeof (SslClientStream_t3918817353), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1125[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1124 = { sizeof (Mode_t2395763083)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1124[4] = 
 {
-	SslClientStream_t3918817353::get_offset_of_ServerCertValidation_16(),
-	SslClientStream_t3918817353::get_offset_of_ClientCertSelection_17(),
-	SslClientStream_t3918817353::get_offset_of_PrivateKeySelection_18(),
-	SslClientStream_t3918817353::get_offset_of_ServerCertValidation2_19(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1126 = { sizeof (SslCipherSuite_t1404755603), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1126[3] = 
-{
-	SslCipherSuite_t1404755603::get_offset_of_pad1_21(),
-	SslCipherSuite_t1404755603::get_offset_of_pad2_22(),
-	SslCipherSuite_t1404755603::get_offset_of_header_23(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1127 = { sizeof (SslHandshakeHash_t3044322977), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1127[8] = 
-{
-	SslHandshakeHash_t3044322977::get_offset_of_md5_4(),
-	SslHandshakeHash_t3044322977::get_offset_of_sha_5(),
-	SslHandshakeHash_t3044322977::get_offset_of_hashing_6(),
-	SslHandshakeHash_t3044322977::get_offset_of_secret_7(),
-	SslHandshakeHash_t3044322977::get_offset_of_innerPadMD5_8(),
-	SslHandshakeHash_t3044322977::get_offset_of_outerPadMD5_9(),
-	SslHandshakeHash_t3044322977::get_offset_of_innerPadSHA_10(),
-	SslHandshakeHash_t3044322977::get_offset_of_outerPadSHA_11(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1128 = { sizeof (SslStreamBase_t934199321), -1, sizeof(SslStreamBase_t934199321_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1128[15] = 
-{
-	0,
-	SslStreamBase_t934199321_StaticFields::get_offset_of_record_processing_2(),
-	SslStreamBase_t934199321::get_offset_of_innerStream_3(),
-	SslStreamBase_t934199321::get_offset_of_inputBuffer_4(),
-	SslStreamBase_t934199321::get_offset_of_context_5(),
-	SslStreamBase_t934199321::get_offset_of_protocol_6(),
-	SslStreamBase_t934199321::get_offset_of_ownsStream_7(),
-	SslStreamBase_t934199321::get_offset_of_disposed_8(),
-	SslStreamBase_t934199321::get_offset_of_checkCertRevocationStatus_9(),
-	SslStreamBase_t934199321::get_offset_of_negotiate_10(),
-	SslStreamBase_t934199321::get_offset_of_read_11(),
-	SslStreamBase_t934199321::get_offset_of_write_12(),
-	SslStreamBase_t934199321::get_offset_of_negotiationComplete_13(),
-	SslStreamBase_t934199321::get_offset_of_recbuf_14(),
-	SslStreamBase_t934199321::get_offset_of_recordStream_15(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1129 = { sizeof (InternalAsyncResult_t1610391122), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1129[12] = 
-{
-	InternalAsyncResult_t1610391122::get_offset_of_locker_0(),
-	InternalAsyncResult_t1610391122::get_offset_of__userCallback_1(),
-	InternalAsyncResult_t1610391122::get_offset_of__userState_2(),
-	InternalAsyncResult_t1610391122::get_offset_of__asyncException_3(),
-	InternalAsyncResult_t1610391122::get_offset_of_handle_4(),
-	InternalAsyncResult_t1610391122::get_offset_of_completed_5(),
-	InternalAsyncResult_t1610391122::get_offset_of__bytesRead_6(),
-	InternalAsyncResult_t1610391122::get_offset_of__fromWrite_7(),
-	InternalAsyncResult_t1610391122::get_offset_of__proceedAfterHandshake_8(),
-	InternalAsyncResult_t1610391122::get_offset_of__buffer_9(),
-	InternalAsyncResult_t1610391122::get_offset_of__offset_10(),
-	InternalAsyncResult_t1610391122::get_offset_of__count_11(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1130 = { sizeof (TlsCipherSuite_t396038680), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1130[2] = 
-{
-	TlsCipherSuite_t396038680::get_offset_of_header_21(),
-	TlsCipherSuite_t396038680::get_offset_of_headerLock_22(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1131 = { sizeof (TlsClientSettings_t2311449551), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1131[4] = 
-{
-	TlsClientSettings_t2311449551::get_offset_of_targetHost_0(),
-	TlsClientSettings_t2311449551::get_offset_of_certificates_1(),
-	TlsClientSettings_t2311449551::get_offset_of_clientCertificate_2(),
-	TlsClientSettings_t2311449551::get_offset_of_certificateRSA_3(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1132 = { sizeof (TlsException_t583514812), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1132[1] = 
-{
-	TlsException_t583514812::get_offset_of_alert_11(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1133 = { sizeof (TlsServerSettings_t403340211), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1133[8] = 
-{
-	TlsServerSettings_t403340211::get_offset_of_certificates_0(),
-	TlsServerSettings_t403340211::get_offset_of_certificateRSA_1(),
-	TlsServerSettings_t403340211::get_offset_of_rsaParameters_2(),
-	TlsServerSettings_t403340211::get_offset_of_signedParams_3(),
-	TlsServerSettings_t403340211::get_offset_of_distinguisedNames_4(),
-	TlsServerSettings_t403340211::get_offset_of_serverKeyExchange_5(),
-	TlsServerSettings_t403340211::get_offset_of_certificateRequest_6(),
-	TlsServerSettings_t403340211::get_offset_of_certificateTypes_7(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1134 = { sizeof (TlsStream_t4089752859), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1134[4] = 
-{
-	TlsStream_t4089752859::get_offset_of_canRead_1(),
-	TlsStream_t4089752859::get_offset_of_canWrite_2(),
-	TlsStream_t4089752859::get_offset_of_buffer_3(),
-	TlsStream_t4089752859::get_offset_of_temp_4(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1135 = { sizeof (ClientCertificateType_t4001384466)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1135[6] = 
-{
-	ClientCertificateType_t4001384466::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
+	Mode_t2395763083::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1136 = { sizeof (HandshakeMessage_t3938752374), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1136[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1125 = { sizeof (Interval_t2354235237)+ sizeof (Il2CppObject), sizeof(Interval_t2354235237_marshaled_pinvoke), 0, 0 };
+extern const int32_t g_FieldOffsetTable1125[3] = 
 {
-	HandshakeMessage_t3938752374::get_offset_of_context_5(),
-	HandshakeMessage_t3938752374::get_offset_of_handshakeType_6(),
-	HandshakeMessage_t3938752374::get_offset_of_contentType_7(),
-	HandshakeMessage_t3938752374::get_offset_of_cache_8(),
+	Interval_t2354235237::get_offset_of_low_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	Interval_t2354235237::get_offset_of_high_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	Interval_t2354235237::get_offset_of_contiguous_2() + static_cast<int32_t>(sizeof(Il2CppObject)),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1137 = { sizeof (HandshakeType_t2540099417)+ sizeof (Il2CppObject), sizeof(uint8_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1137[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1126 = { sizeof (IntervalCollection_t4130821325), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1126[1] = 
 {
-	HandshakeType_t2540099417::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
+	IntervalCollection_t4130821325::get_offset_of_intervals_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1138 = { sizeof (TlsClientCertificate_t2537917473), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1138[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1127 = { sizeof (Enumerator_t1928086041), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1127[2] = 
 {
-	TlsClientCertificate_t2537917473::get_offset_of_clientCertSelected_9(),
-	TlsClientCertificate_t2537917473::get_offset_of_clientCert_10(),
+	Enumerator_t1928086041::get_offset_of_list_0(),
+	Enumerator_t1928086041::get_offset_of_ptr_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1139 = { sizeof (TlsClientCertificateVerify_t4150496570), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1140 = { sizeof (TlsClientFinished_t3939745042), -1, sizeof(TlsClientFinished_t3939745042_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1140[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1128 = { sizeof (CostDelegate_t1824458113), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1129 = { sizeof (Parser_t2756028923), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1129[6] = 
 {
-	TlsClientFinished_t3939745042_StaticFields::get_offset_of_Ssl3Marker_9(),
+	Parser_t2756028923::get_offset_of_pattern_0(),
+	Parser_t2756028923::get_offset_of_ptr_1(),
+	Parser_t2756028923::get_offset_of_caps_2(),
+	Parser_t2756028923::get_offset_of_refs_3(),
+	Parser_t2756028923::get_offset_of_num_groups_4(),
+	Parser_t2756028923::get_offset_of_gap_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1141 = { sizeof (TlsClientHello_t2939633944), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1141[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1130 = { sizeof (QuickSearch_t1036078825), -1, sizeof(QuickSearch_t1036078825_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1130[7] = 
 {
-	TlsClientHello_t2939633944::get_offset_of_random_9(),
+	QuickSearch_t1036078825::get_offset_of_str_0(),
+	QuickSearch_t1036078825::get_offset_of_len_1(),
+	QuickSearch_t1036078825::get_offset_of_ignore_2(),
+	QuickSearch_t1036078825::get_offset_of_reverse_3(),
+	QuickSearch_t1036078825::get_offset_of_shift_4(),
+	QuickSearch_t1036078825::get_offset_of_shiftExtended_5(),
+	QuickSearch_t1036078825_StaticFields::get_offset_of_THRESHOLD_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1142 = { sizeof (TlsClientKeyExchange_t3808761250), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1143 = { sizeof (TlsServerCertificate_t905088469), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1143[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1131 = { sizeof (ExpressionCollection_t238836340), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1132 = { sizeof (Expression_t368137076), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1133 = { sizeof (CompositeExpression_t1921307915), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1133[1] = 
 {
-	TlsServerCertificate_t905088469::get_offset_of_certificates_9(),
+	CompositeExpression_t1921307915::get_offset_of_expressions_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1144 = { sizeof (TlsServerCertificateRequest_t2187269356), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1134 = { sizeof (Group_t2558408851), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1135 = { sizeof (RegularExpression_t3083097024), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1135[1] = 
+{
+	RegularExpression_t3083097024::get_offset_of_group_count_1(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1136 = { sizeof (CapturingGroup_t3690174926), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1136[2] = 
+{
+	CapturingGroup_t3690174926::get_offset_of_gid_1(),
+	CapturingGroup_t3690174926::get_offset_of_name_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1137 = { sizeof (BalancingGroup_t3168604284), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1137[1] = 
+{
+	BalancingGroup_t3168604284::get_offset_of_balance_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1138 = { sizeof (NonBacktrackingGroup_t607185170), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1139 = { sizeof (Repetition_t3426306051), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1139[3] = 
+{
+	Repetition_t3426306051::get_offset_of_min_1(),
+	Repetition_t3426306051::get_offset_of_max_2(),
+	Repetition_t3426306051::get_offset_of_lazy_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1140 = { sizeof (Assertion_t1490870658), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1141 = { sizeof (CaptureAssertion_t196851652), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1141[3] = 
+{
+	CaptureAssertion_t196851652::get_offset_of_alternate_1(),
+	CaptureAssertion_t196851652::get_offset_of_group_2(),
+	CaptureAssertion_t196851652::get_offset_of_literal_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1142 = { sizeof (ExpressionAssertion_t3255443744), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1142[2] = 
+{
+	ExpressionAssertion_t3255443744::get_offset_of_reverse_1(),
+	ExpressionAssertion_t3255443744::get_offset_of_negate_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1143 = { sizeof (Alternation_t3506694545), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1144 = { sizeof (Literal_t2896011011), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable1144[2] = 
 {
-	TlsServerCertificateRequest_t2187269356::get_offset_of_certificateTypes_9(),
-	TlsServerCertificateRequest_t2187269356::get_offset_of_distinguisedNames_10(),
+	Literal_t2896011011::get_offset_of_str_0(),
+	Literal_t2896011011::get_offset_of_ignore_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1145 = { sizeof (TlsServerFinished_t1869592958), -1, sizeof(TlsServerFinished_t1869592958_StaticFields), 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1145 = { sizeof (PositionAssertion_t2152361535), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable1145[1] = 
 {
-	TlsServerFinished_t1869592958_StaticFields::get_offset_of_Ssl3Marker_9(),
+	PositionAssertion_t2152361535::get_offset_of_pos_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1146 = { sizeof (TlsServerHello_t1289300668), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1146[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1146 = { sizeof (Reference_t1540574699), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1146[2] = 
 {
-	TlsServerHello_t1289300668::get_offset_of_compressionMethod_9(),
-	TlsServerHello_t1289300668::get_offset_of_random_10(),
-	TlsServerHello_t1289300668::get_offset_of_sessionId_11(),
-	TlsServerHello_t1289300668::get_offset_of_cipherSuite_12(),
+	Reference_t1540574699::get_offset_of_group_0(),
+	Reference_t1540574699::get_offset_of_ignore_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1147 = { sizeof (TlsServerHelloDone_t530021076), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1148 = { sizeof (TlsServerKeyExchange_t2172608670), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1148[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1147 = { sizeof (BackslashNumber_t1461652789), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1147[2] = 
 {
-	TlsServerKeyExchange_t2172608670::get_offset_of_rsaParams_9(),
-	TlsServerKeyExchange_t2172608670::get_offset_of_signedParams_10(),
+	BackslashNumber_t1461652789::get_offset_of_literal_2(),
+	BackslashNumber_t1461652789::get_offset_of_ecma_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1149 = { sizeof (PrimalityTest_t572679902), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1150 = { sizeof (CertificateValidationCallback_t989458295), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1151 = { sizeof (CertificateValidationCallback2_t3318447433), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1152 = { sizeof (CertificateSelectionCallback_t3721235490), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1153 = { sizeof (PrivateKeySelectionCallback_t1663566523), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1154 = { sizeof (U3CPrivateImplementationDetailsU3E_t1486305139), -1, sizeof(U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1154[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1148 = { sizeof (CharacterClass_t655244183), -1, sizeof(CharacterClass_t655244183_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1148[6] = 
 {
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D0_0(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D5_1(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D6_2(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D7_3(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D8_4(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D9_5(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D11_6(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D12_7(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D13_8(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D14_9(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D15_10(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D16_11(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D17_12(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D21_13(),
-	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D22_14(),
+	CharacterClass_t655244183_StaticFields::get_offset_of_upper_case_characters_0(),
+	CharacterClass_t655244183::get_offset_of_negate_1(),
+	CharacterClass_t655244183::get_offset_of_ignore_2(),
+	CharacterClass_t655244183::get_offset_of_pos_cats_3(),
+	CharacterClass_t655244183::get_offset_of_neg_cats_4(),
+	CharacterClass_t655244183::get_offset_of_intervals_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1155 = { sizeof (U24ArrayTypeU243132_t1892466093)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU243132_t1892466093 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1156 = { sizeof (U24ArrayTypeU24256_t2038352955)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU24256_t2038352955 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1157 = { sizeof (U24ArrayTypeU2420_t540610922)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2420_t540610922 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1158 = { sizeof (U24ArrayTypeU2432_t3672778805)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2432_t3672778805 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1159 = { sizeof (U24ArrayTypeU2448_t896841276)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2448_t896841276 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1160 = { sizeof (U24ArrayTypeU2464_t2866209746)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2464_t2866209746 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1161 = { sizeof (U24ArrayTypeU2412_t3672778806)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2412_t3672778806 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1162 = { sizeof (U24ArrayTypeU2416_t1703410335)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2416_t1703410335 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1163 = { sizeof (U24ArrayTypeU244_t1957337331)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU244_t1957337331 ), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1149 = { sizeof (AnchorInfo_t1392970135), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1149[6] = 
+{
+	AnchorInfo_t1392970135::get_offset_of_expr_0(),
+	AnchorInfo_t1392970135::get_offset_of_pos_1(),
+	AnchorInfo_t1392970135::get_offset_of_offset_2(),
+	AnchorInfo_t1392970135::get_offset_of_str_3(),
+	AnchorInfo_t1392970135::get_offset_of_width_4(),
+	AnchorInfo_t1392970135::get_offset_of_ignore_5(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1150 = { sizeof (DefaultUriParser_t1591960796), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1151 = { sizeof (GenericUriParser_t2599285286), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1152 = { sizeof (Uri_t19570940), -1, sizeof(Uri_t19570940_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1152[33] = 
+{
+	Uri_t19570940::get_offset_of_isUnixFilePath_0(),
+	Uri_t19570940::get_offset_of_source_1(),
+	Uri_t19570940::get_offset_of_scheme_2(),
+	Uri_t19570940::get_offset_of_host_3(),
+	Uri_t19570940::get_offset_of_port_4(),
+	Uri_t19570940::get_offset_of_path_5(),
+	Uri_t19570940::get_offset_of_query_6(),
+	Uri_t19570940::get_offset_of_fragment_7(),
+	Uri_t19570940::get_offset_of_userinfo_8(),
+	Uri_t19570940::get_offset_of_isUnc_9(),
+	Uri_t19570940::get_offset_of_isOpaquePart_10(),
+	Uri_t19570940::get_offset_of_isAbsoluteUri_11(),
+	Uri_t19570940::get_offset_of_userEscaped_12(),
+	Uri_t19570940::get_offset_of_cachedAbsoluteUri_13(),
+	Uri_t19570940::get_offset_of_cachedToString_14(),
+	Uri_t19570940::get_offset_of_cachedHashCode_15(),
+	Uri_t19570940_StaticFields::get_offset_of_hexUpperChars_16(),
+	Uri_t19570940_StaticFields::get_offset_of_SchemeDelimiter_17(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeFile_18(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeFtp_19(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeGopher_20(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeHttp_21(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeHttps_22(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeMailto_23(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeNews_24(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeNntp_25(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeNetPipe_26(),
+	Uri_t19570940_StaticFields::get_offset_of_UriSchemeNetTcp_27(),
+	Uri_t19570940_StaticFields::get_offset_of_schemes_28(),
+	Uri_t19570940::get_offset_of_parser_29(),
+	Uri_t19570940_StaticFields::get_offset_of_U3CU3Ef__switchU24map14_30(),
+	Uri_t19570940_StaticFields::get_offset_of_U3CU3Ef__switchU24map15_31(),
+	Uri_t19570940_StaticFields::get_offset_of_U3CU3Ef__switchU24map16_32(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1153 = { sizeof (UriScheme_t1876590943)+ sizeof (Il2CppObject), sizeof(UriScheme_t1876590943_marshaled_pinvoke), 0, 0 };
+extern const int32_t g_FieldOffsetTable1153[3] = 
+{
+	UriScheme_t1876590943::get_offset_of_scheme_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	UriScheme_t1876590943::get_offset_of_delimiter_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	UriScheme_t1876590943::get_offset_of_defaultPort_2() + static_cast<int32_t>(sizeof(Il2CppObject)),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1154 = { sizeof (UriFormatException_t3682083048), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1155 = { sizeof (UriHostNameType_t2148127109)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1155[6] = 
+{
+	UriHostNameType_t2148127109::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1156 = { sizeof (UriKind_t1128731744)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1156[4] = 
+{
+	UriKind_t1128731744::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1157 = { sizeof (UriParser_t1012511323), -1, sizeof(UriParser_t1012511323_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1157[6] = 
+{
+	UriParser_t1012511323_StaticFields::get_offset_of_lock_object_0(),
+	UriParser_t1012511323_StaticFields::get_offset_of_table_1(),
+	UriParser_t1012511323::get_offset_of_scheme_name_2(),
+	UriParser_t1012511323::get_offset_of_default_port_3(),
+	UriParser_t1012511323_StaticFields::get_offset_of_uri_regex_4(),
+	UriParser_t1012511323_StaticFields::get_offset_of_auth_regex_5(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1158 = { sizeof (UriPartial_t112107391)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1158[5] = 
+{
+	UriPartial_t112107391::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1159 = { sizeof (UriTypeConverter_t3912970448), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1160 = { sizeof (RemoteCertificateValidationCallback_t2756269959), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1161 = { sizeof (U3CPrivateImplementationDetailsU3E_t1486305139), -1, sizeof(U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1161[3] = 
+{
+	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D2_0(),
+	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D3_1(),
+	U3CPrivateImplementationDetailsU3E_t1486305139_StaticFields::get_offset_of_U24U24fieldU2D4_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1162 = { sizeof (U24ArrayTypeU24128_t116038555)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU24128_t116038555 ), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1163 = { sizeof (U24ArrayTypeU2412_t3672778806)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU2412_t3672778806 ), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1164 = { sizeof (U3CModuleU3E_t3783534217), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1165 = { sizeof (ExtensionAttribute_t1840441203), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1166 = { sizeof (Locale_t4255929017), -1, 0, 0 };

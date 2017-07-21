@@ -10,6 +10,36 @@
 <type fullname="UnityEngine.XR.iOS.UnityARKitControl" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARVideo" preserve="all"/>
 <type fullname="UnityPointCloudExample" preserve="all"/>
+<type fullname="UnityStandardAssets.Characters.ThirdPerson.AICharacterControl" preserve="all"/>
+<type fullname="UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter" preserve="all"/>
+<type fullname="UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.AxisTouchButton" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.ButtonHandler" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.Joystick" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.MobileControlRig" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.TiltInput" preserve="all"/>
+<type fullname="UnityStandardAssets.CrossPlatformInput.TouchPad" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.ActivateTrigger" preserve="all"/>
+<type fullname="AlphaButtonClickMask" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.AutoMobileShaderSwitch" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.AutoMoveAndRotate" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.DragRigidbody" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.DynamicShadowSettings" preserve="all"/>
+<type fullname="EventSystemChecker" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.FPSCounter" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.FollowTarget" preserve="all"/>
+<type fullname="ForcedReset" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.ObjectResetter" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.ParticleSystemDestroyer" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.PlatformSpecificContent" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.SimpleActivatorMenu" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.SimpleMouseRotator" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.SmoothFollow" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.TimedObjectActivator" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.TimedObjectDestructor" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.WaypointCircuit" preserve="all"/>
+<type fullname="UnityStandardAssets.Utility.WaypointProgressTracker" preserve="all"/>
 </assembly>
 <assembly fullname="Assembly-CSharp">
 <type fullname="BallMaker" preserve="all"/>
@@ -29,9 +59,6 @@
 <type fullname="UnityEngine.UI.BoxSlider" preserve="all"/>
 <type fullname="ParticlePainter" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
-</assembly>
-<assembly fullname="UnityEngine.Analytics">
-<type fullname="UnityEngine.Analytics.AnalyticsTracker" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>
@@ -76,5 +103,8 @@
 <type fullname="UnityEngine.UI.Outline" preserve="all"/>
 <type fullname="UnityEngine.UI.PositionAsUV1" preserve="all"/>
 <type fullname="UnityEngine.UI.Shadow" preserve="all"/>
+</assembly>
+<assembly fullname="UnityEngine.Analytics">
+<type fullname="UnityEngine.Analytics.AnalyticsTracker" preserve="all"/>
 </assembly>
 </linker>

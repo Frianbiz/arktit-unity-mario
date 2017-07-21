@@ -34,13 +34,13 @@
 #include "UnityEngine_UnityEngine_UICharInfo3056636800.h"
 #include "UnityEngine_UnityEngine_Rect3681755626.h"
 #include "UnityEngine_UnityEngine_UIVertex1204258818.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "UnityEngine_UI_UnityEngine_UI_ColorBlock2652774230.h"
 #include "UnityEngine_UI_UnityEngine_UI_Navigation1571958496.h"
 #include "UnityEngine_UI_UnityEngine_UI_SpriteState1353336012.h"
 #include "UnityEngine_UnityEngine_AnimatorClipInfo3905751349.h"
 #include "UnityEngine_UnityEngine_Color32874517518.h"
 #include "UnityEngine_UI_UnityEngine_EventSystems_RaycastResul21186376.h"
-#include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "UnityEngine_UnityEngine_Vector42243707581.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_UnityEngine_XR_iOS_A3275513025.h"
 #include "mscorlib_System_DateTimeOffset1362988906.h"
@@ -670,103 +670,103 @@ static  Il2CppObject * UnresolvedVirtualCall_102 (Il2CppObject * __this, int32_t
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_103 (Il2CppObject * __this, Il2CppObject * ___Object1, StreamingContext_t1417235061  ___StreamingContext2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_103 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Il2CppObject * UnresolvedVirtualCall_104 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, int32_t ___Int323, int32_t ___Int324, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_104 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, Il2CppObject * ___Object3, int32_t ___Int324, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_105 (Il2CppObject * __this, Il2CppObject * ___Object1, int8_t ___SByte2, const MethodInfo* method)
+static  Il2CppObject * UnresolvedVirtualCall_105 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_106 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int8_t ___SByte3, Il2CppObject * ___Object4, const MethodInfo* method)
+static  Il2CppObject * UnresolvedVirtualCall_106 (Il2CppObject * __this, uint8_t ___Byte1, Il2CppObject * ___Object2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_107 (Il2CppObject * __this, int16_t ___Int161, Il2CppObject * ___Object2, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_107 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_108 (Il2CppObject * __this, int16_t ___Int161, int8_t ___SByte2, int8_t ___SByte3, int8_t ___SByte4, const MethodInfo* method)
+static  void UnresolvedVirtualCall_108 (Il2CppObject * __this, Il2CppObject * ___Object1, StreamingContext_t1417235061  ___StreamingContext2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_109 (Il2CppObject * __this, int16_t ___Int161, int16_t ___Int162, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
+static  Il2CppObject * UnresolvedVirtualCall_109 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, int32_t ___Int323, int32_t ___Int324, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_110 (Il2CppObject * __this, uint16_t ___UInt161, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
+static  void UnresolvedVirtualCall_110 (Il2CppObject * __this, Il2CppObject * ___Object1, int8_t ___SByte2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_111 (Il2CppObject * __this, uint16_t ___UInt161, const MethodInfo* method)
+static  void UnresolvedVirtualCall_111 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int8_t ___SByte3, Il2CppObject * ___Object4, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_112 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
+static  void UnresolvedVirtualCall_112 (Il2CppObject * __this, int16_t ___Int161, Il2CppObject * ___Object2, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_113 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int32_t ___Int323, const MethodInfo* method)
+static  void UnresolvedVirtualCall_113 (Il2CppObject * __this, int16_t ___Int161, int8_t ___SByte2, int8_t ___SByte3, int8_t ___SByte4, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_114 (Il2CppObject * __this, int8_t ___SByte1, int32_t ___Int322, Il2CppObject * ___Object3, const MethodInfo* method)
+static  void UnresolvedVirtualCall_114 (Il2CppObject * __this, int16_t ___Int161, int16_t ___Int162, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_115 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
+static  void UnresolvedVirtualCall_115 (Il2CppObject * __this, uint16_t ___UInt161, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_116 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, Il2CppObject * ___Object3, int32_t ___Int324, const MethodInfo* method)
+static  void UnresolvedVirtualCall_116 (Il2CppObject * __this, uint16_t ___UInt161, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Il2CppObject * UnresolvedVirtualCall_117 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
+static  void UnresolvedVirtualCall_117 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Il2CppObject * UnresolvedVirtualCall_118 (Il2CppObject * __this, uint8_t ___Byte1, Il2CppObject * ___Object2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_118 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int32_t ___Int323, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_119 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_119 (Il2CppObject * __this, int8_t ___SByte1, int32_t ___Int322, Il2CppObject * ___Object3, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
@@ -916,631 +916,643 @@ static  void UnresolvedVirtualCall_143 (Il2CppObject * __this, float ___Single1,
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_144 (Il2CppObject * __this, int8_t ___SByte1, int8_t ___SByte2, const MethodInfo* method)
+static  float UnresolvedVirtualCall_144 (Il2CppObject * __this, Il2CppObject * ___Object1, int8_t ___SByte2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_145 (Il2CppObject * __this, int16_t ___Int161, int16_t ___Int162, const MethodInfo* method)
+static  void UnresolvedVirtualCall_145 (Il2CppObject * __this, Il2CppObject * ___Object1, float ___Single2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_146 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, const MethodInfo* method)
+static  Vector3_t2243707580  UnresolvedVirtualCall_146 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_147 (Il2CppObject * __this, float ___Single1, float ___Single2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_147 (Il2CppObject * __this, int8_t ___SByte1, int8_t ___SByte2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_148 (Il2CppObject * __this, ColorBlock_t2652774230  ___ColorBlock1, ColorBlock_t2652774230  ___ColorBlock2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_148 (Il2CppObject * __this, int16_t ___Int161, int16_t ___Int162, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_149 (Il2CppObject * __this, Navigation_t1571958496  ___Navigation1, Navigation_t1571958496  ___Navigation2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_149 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_150 (Il2CppObject * __this, SpriteState_t1353336012  ___SpriteState1, SpriteState_t1353336012  ___SpriteState2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_150 (Il2CppObject * __this, float ___Single1, float ___Single2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_151 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_151 (Il2CppObject * __this, ColorBlock_t2652774230  ___ColorBlock1, ColorBlock_t2652774230  ___ColorBlock2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_152 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_152 (Il2CppObject * __this, Navigation_t1571958496  ___Navigation1, Navigation_t1571958496  ___Navigation2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_153 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_153 (Il2CppObject * __this, SpriteState_t1353336012  ___SpriteState1, SpriteState_t1353336012  ___SpriteState2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_154 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_154 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_155 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_155 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_156 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_156 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_157 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_157 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_158 (Il2CppObject * __this, Color32_t874517518  ___Color321, Color32_t874517518  ___Color322, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_158 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_159 (Il2CppObject * __this, Color32_t874517518  ___Color321, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_159 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_160 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, RaycastResult_t21186376  ___RaycastResult2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_160 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_161 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_161 (Il2CppObject * __this, Color32_t874517518  ___Color321, Color32_t874517518  ___Color322, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_162 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, UICharInfo_t3056636800  ___UICharInfo2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_162 (Il2CppObject * __this, Color32_t874517518  ___Color321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_163 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_163 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, RaycastResult_t21186376  ___RaycastResult2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_164 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, UILineInfo_t3621277874  ___UILineInfo2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_164 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_165 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_165 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, UICharInfo_t3056636800  ___UICharInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_166 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, UIVertex_t1204258818  ___UIVertex2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_166 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_167 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_167 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, UILineInfo_t3621277874  ___UILineInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_168 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, Vector2_t2243707579  ___Vector22, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_168 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_169 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_169 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, UIVertex_t1204258818  ___UIVertex2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_170 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, Vector3_t2243707580  ___Vector32, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_170 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_171 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_171 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, Vector2_t2243707579  ___Vector22, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_172 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, Vector4_t2243707581  ___Vector42, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_172 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_173 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_173 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, Vector3_t2243707580  ___Vector32, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_174 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, ARHitTestResult_t3275513025  ___ARHitTestResult2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_174 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_175 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_175 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, Vector4_t2243707581  ___Vector42, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_176 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_176 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_177 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_177 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, ARHitTestResult_t3275513025  ___ARHitTestResult2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_178 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_178 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_179 (Il2CppObject * __this, Color32_t874517518  ___Color321, Color32_t874517518  ___Color322, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_179 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_180 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, RaycastResult_t21186376  ___RaycastResult2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_180 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_181 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, UICharInfo_t3056636800  ___UICharInfo2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_181 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_182 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, UILineInfo_t3621277874  ___UILineInfo2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_182 (Il2CppObject * __this, Color32_t874517518  ___Color321, Color32_t874517518  ___Color322, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_183 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, UIVertex_t1204258818  ___UIVertex2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_183 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, RaycastResult_t21186376  ___RaycastResult2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_184 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, Vector2_t2243707579  ___Vector22, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_184 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, UICharInfo_t3056636800  ___UICharInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_185 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, Vector3_t2243707580  ___Vector32, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_185 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, UILineInfo_t3621277874  ___UILineInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_186 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, Vector4_t2243707581  ___Vector42, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_186 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, UIVertex_t1204258818  ___UIVertex2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_187 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, ARHitTestResult_t3275513025  ___ARHitTestResult2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_187 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, Vector2_t2243707579  ___Vector22, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_188 (Il2CppObject * __this, DateTimeOffset_t1362988906  ___DateTimeOffset1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_188 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, Vector3_t2243707580  ___Vector32, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_189 (Il2CppObject * __this, Guid_t  ___Guid1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_189 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, Vector4_t2243707581  ___Vector42, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_190 (Il2CppObject * __this, TimeSpan_t3430258949  ___TimeSpan1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_190 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, ARHitTestResult_t3275513025  ___ARHitTestResult2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_191 (Il2CppObject * __this, DateTime_t693205669  ___DateTime1, DateTime_t693205669  ___DateTime2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_191 (Il2CppObject * __this, DateTimeOffset_t1362988906  ___DateTimeOffset1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_192 (Il2CppObject * __this, DateTimeOffset_t1362988906  ___DateTimeOffset1, DateTimeOffset_t1362988906  ___DateTimeOffset2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_192 (Il2CppObject * __this, Guid_t  ___Guid1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_193 (Il2CppObject * __this, Guid_t  ___Guid1, Guid_t  ___Guid2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_193 (Il2CppObject * __this, TimeSpan_t3430258949  ___TimeSpan1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_194 (Il2CppObject * __this, TimeSpan_t3430258949  ___TimeSpan1, TimeSpan_t3430258949  ___TimeSpan2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_194 (Il2CppObject * __this, DateTime_t693205669  ___DateTime1, DateTime_t693205669  ___DateTime2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_195 (Il2CppObject * __this, int8_t ___SByte1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_195 (Il2CppObject * __this, DateTimeOffset_t1362988906  ___DateTimeOffset1, DateTimeOffset_t1362988906  ___DateTimeOffset2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_196 (Il2CppObject * __this, int16_t ___Int161, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_196 (Il2CppObject * __this, Guid_t  ___Guid1, Guid_t  ___Guid2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_197 (Il2CppObject * __this, DateTime_t693205669  ___DateTime1, DateTime_t693205669  ___DateTime2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_197 (Il2CppObject * __this, TimeSpan_t3430258949  ___TimeSpan1, TimeSpan_t3430258949  ___TimeSpan2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_198 (Il2CppObject * __this, DateTimeOffset_t1362988906  ___DateTimeOffset1, DateTimeOffset_t1362988906  ___DateTimeOffset2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_198 (Il2CppObject * __this, int8_t ___SByte1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_199 (Il2CppObject * __this, Guid_t  ___Guid1, Guid_t  ___Guid2, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_199 (Il2CppObject * __this, int16_t ___Int161, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_200 (Il2CppObject * __this, float ___Single1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_200 (Il2CppObject * __this, DateTime_t693205669  ___DateTime1, DateTime_t693205669  ___DateTime2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_201 (Il2CppObject * __this, TimeSpan_t3430258949  ___TimeSpan1, TimeSpan_t3430258949  ___TimeSpan2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_201 (Il2CppObject * __this, DateTimeOffset_t1362988906  ___DateTimeOffset1, DateTimeOffset_t1362988906  ___DateTimeOffset2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_202 (Il2CppObject * __this, ColorBlock_t2652774230  ___ColorBlock1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_202 (Il2CppObject * __this, Guid_t  ___Guid1, Guid_t  ___Guid2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_203 (Il2CppObject * __this, Navigation_t1571958496  ___Navigation1, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_203 (Il2CppObject * __this, float ___Single1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int32_t UnresolvedVirtualCall_204 (Il2CppObject * __this, SpriteState_t1353336012  ___SpriteState1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_204 (Il2CppObject * __this, TimeSpan_t3430258949  ___TimeSpan1, TimeSpan_t3430258949  ___TimeSpan2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  CustomAttributeNamedArgument_t94157543  UnresolvedVirtualCall_205 (Il2CppObject * __this, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_205 (Il2CppObject * __this, ColorBlock_t2652774230  ___ColorBlock1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  CustomAttributeTypedArgument_t1498197914  UnresolvedVirtualCall_206 (Il2CppObject * __this, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_206 (Il2CppObject * __this, Navigation_t1571958496  ___Navigation1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  AnimatorClipInfo_t3905751349  UnresolvedVirtualCall_207 (Il2CppObject * __this, const MethodInfo* method)
+static  int32_t UnresolvedVirtualCall_207 (Il2CppObject * __this, SpriteState_t1353336012  ___SpriteState1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Color32_t874517518  UnresolvedVirtualCall_208 (Il2CppObject * __this, const MethodInfo* method)
+static  CustomAttributeNamedArgument_t94157543  UnresolvedVirtualCall_208 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  RaycastResult_t21186376  UnresolvedVirtualCall_209 (Il2CppObject * __this, const MethodInfo* method)
+static  CustomAttributeTypedArgument_t1498197914  UnresolvedVirtualCall_209 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  UICharInfo_t3056636800  UnresolvedVirtualCall_210 (Il2CppObject * __this, const MethodInfo* method)
+static  AnimatorClipInfo_t3905751349  UnresolvedVirtualCall_210 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  UILineInfo_t3621277874  UnresolvedVirtualCall_211 (Il2CppObject * __this, const MethodInfo* method)
+static  Color32_t874517518  UnresolvedVirtualCall_211 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  UIVertex_t1204258818  UnresolvedVirtualCall_212 (Il2CppObject * __this, const MethodInfo* method)
+static  RaycastResult_t21186376  UnresolvedVirtualCall_212 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Vector3_t2243707580  UnresolvedVirtualCall_213 (Il2CppObject * __this, const MethodInfo* method)
+static  UICharInfo_t3056636800  UnresolvedVirtualCall_213 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Vector4_t2243707581  UnresolvedVirtualCall_214 (Il2CppObject * __this, const MethodInfo* method)
+static  UILineInfo_t3621277874  UnresolvedVirtualCall_214 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  ARHitTestResult_t3275513025  UnresolvedVirtualCall_215 (Il2CppObject * __this, const MethodInfo* method)
+static  UIVertex_t1204258818  UnresolvedVirtualCall_215 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_216 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, const MethodInfo* method)
+static  Vector4_t2243707581  UnresolvedVirtualCall_216 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_217 (Il2CppObject * __this, int32_t ___Int321, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument2, const MethodInfo* method)
+static  ARHitTestResult_t3275513025  UnresolvedVirtualCall_217 (Il2CppObject * __this, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_218 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, const MethodInfo* method)
+static  void UnresolvedVirtualCall_218 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_219 (Il2CppObject * __this, int32_t ___Int321, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_219 (Il2CppObject * __this, int32_t ___Int321, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_220 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_220 (Il2CppObject * __this, CustomAttributeNamedArgument_t94157543  ___CustomAttributeNamedArgument1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_221 (Il2CppObject * __this, int32_t ___Int321, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_221 (Il2CppObject * __this, int32_t ___Int321, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_222 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_222 (Il2CppObject * __this, CustomAttributeTypedArgument_t1498197914  ___CustomAttributeTypedArgument1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  AnimatorClipInfo_t3905751349  UnresolvedVirtualCall_223 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_223 (Il2CppObject * __this, int32_t ___Int321, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_224 (Il2CppObject * __this, int32_t ___Int321, Color32_t874517518  ___Color322, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_224 (Il2CppObject * __this, AnimatorClipInfo_t3905751349  ___AnimatorClipInfo1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_225 (Il2CppObject * __this, Color32_t874517518  ___Color321, const MethodInfo* method)
+static  AnimatorClipInfo_t3905751349  UnresolvedVirtualCall_225 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Color32_t874517518  UnresolvedVirtualCall_226 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_226 (Il2CppObject * __this, int32_t ___Int321, Color32_t874517518  ___Color322, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_227 (Il2CppObject * __this, int32_t ___Int321, RaycastResult_t21186376  ___RaycastResult2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_227 (Il2CppObject * __this, Color32_t874517518  ___Color321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_228 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, const MethodInfo* method)
+static  Color32_t874517518  UnresolvedVirtualCall_228 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  RaycastResult_t21186376  UnresolvedVirtualCall_229 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_229 (Il2CppObject * __this, int32_t ___Int321, RaycastResult_t21186376  ___RaycastResult2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_230 (Il2CppObject * __this, int32_t ___Int321, UICharInfo_t3056636800  ___UICharInfo2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_230 (Il2CppObject * __this, RaycastResult_t21186376  ___RaycastResult1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_231 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, const MethodInfo* method)
+static  RaycastResult_t21186376  UnresolvedVirtualCall_231 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_232 (Il2CppObject * __this, int32_t ___Int321, UILineInfo_t3621277874  ___UILineInfo2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_232 (Il2CppObject * __this, int32_t ___Int321, UICharInfo_t3056636800  ___UICharInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_233 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_233 (Il2CppObject * __this, UICharInfo_t3056636800  ___UICharInfo1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_234 (Il2CppObject * __this, int32_t ___Int321, UIVertex_t1204258818  ___UIVertex2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_234 (Il2CppObject * __this, int32_t ___Int321, UILineInfo_t3621277874  ___UILineInfo2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_235 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_235 (Il2CppObject * __this, UILineInfo_t3621277874  ___UILineInfo1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_236 (Il2CppObject * __this, int32_t ___Int321, Vector2_t2243707579  ___Vector22, const MethodInfo* method)
+static  void UnresolvedVirtualCall_236 (Il2CppObject * __this, int32_t ___Int321, UIVertex_t1204258818  ___UIVertex2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_237 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_237 (Il2CppObject * __this, UIVertex_t1204258818  ___UIVertex1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Vector2_t2243707579  UnresolvedVirtualCall_238 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_238 (Il2CppObject * __this, int32_t ___Int321, Vector2_t2243707579  ___Vector22, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_239 (Il2CppObject * __this, int32_t ___Int321, Vector3_t2243707580  ___Vector32, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_239 (Il2CppObject * __this, Vector2_t2243707579  ___Vector21, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_240 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, const MethodInfo* method)
+static  Vector2_t2243707579  UnresolvedVirtualCall_240 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Vector3_t2243707580  UnresolvedVirtualCall_241 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_241 (Il2CppObject * __this, int32_t ___Int321, Vector3_t2243707580  ___Vector32, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_242 (Il2CppObject * __this, int32_t ___Int321, Vector4_t2243707581  ___Vector42, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_242 (Il2CppObject * __this, Vector3_t2243707580  ___Vector31, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_243 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, const MethodInfo* method)
+static  Vector3_t2243707580  UnresolvedVirtualCall_243 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Vector4_t2243707581  UnresolvedVirtualCall_244 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_244 (Il2CppObject * __this, int32_t ___Int321, Vector4_t2243707581  ___Vector42, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_245 (Il2CppObject * __this, int32_t ___Int321, ARHitTestResult_t3275513025  ___ARHitTestResult2, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_245 (Il2CppObject * __this, Vector4_t2243707581  ___Vector41, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_246 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, const MethodInfo* method)
+static  Vector4_t2243707581  UnresolvedVirtualCall_246 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  ARHitTestResult_t3275513025  UnresolvedVirtualCall_247 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+static  void UnresolvedVirtualCall_247 (Il2CppObject * __this, int32_t ___Int321, ARHitTestResult_t3275513025  ___ARHitTestResult2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-extern const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[248] = 
+static  int8_t UnresolvedVirtualCall_248 (Il2CppObject * __this, ARHitTestResult_t3275513025  ___ARHitTestResult1, const MethodInfo* method)
+{
+	il2cpp_codegen_raise_execution_engine_exception(method);
+	il2cpp_codegen_no_return();
+}
+
+static  ARHitTestResult_t3275513025  UnresolvedVirtualCall_249 (Il2CppObject * __this, int32_t ___Int321, const MethodInfo* method)
+{
+	il2cpp_codegen_raise_execution_engine_exception(method);
+	il2cpp_codegen_no_return();
+}
+
+extern const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[250] = 
 {
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_0,
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_1,
@@ -1790,4 +1802,6 @@ extern const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[248] =
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_245,
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_246,
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_247,
+	(const Il2CppMethodPointer) UnresolvedVirtualCall_248,
+	(const Il2CppMethodPointer) UnresolvedVirtualCall_249,
 };

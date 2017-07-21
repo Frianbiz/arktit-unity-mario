@@ -266,7 +266,7 @@ struct Light_t494725636;
 extern Il2CppClass* MaterialPropertyBlock_t3303648957_il2cpp_TypeInfo_var;
 extern const uint32_t BallMaker_Start_m2175744074_MetadataUsageId;
 extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
-extern const MethodInfo* Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var;
+extern const MethodInfo* Object_Instantiate_TisGameObject_t1756533147_m3186302158_MethodInfo_var;
 extern const MethodInfo* GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3342124747;
 extern const uint32_t BallMaker_CreateBall_m373381602_MetadataUsageId;
@@ -295,7 +295,7 @@ extern const MethodInfo* UnityEvent_1_RemoveListener_m1138414664_MethodInfo_var;
 extern const uint32_t ColorImage_OnDestroy_m537617202_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral2880467378;
 extern const uint32_t ColorLabel__ctor_m3361268158_MetadataUsageId;
-extern const MethodInfo* Component_GetComponent_TisText_t356221433_m1342661039_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisText_t356221433_m2210710021_MethodInfo_var;
 extern const uint32_t ColorLabel_Awake_m1477595641_MetadataUsageId;
 extern Il2CppClass* UnityAction_3_t235051313_il2cpp_TypeInfo_var;
 extern const MethodInfo* ColorLabel_ColorChanged_m35916549_MethodInfo_var;
@@ -638,7 +638,7 @@ public:
 
 
 // !!0 UnityEngine.Object::Instantiate<System.Object>(!!0,UnityEngine.Vector3,UnityEngine.Quaternion)
-extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m3829784634_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, Vector3_t2243707580  p1, Quaternion_t4030073918  p2, const MethodInfo* method);
+extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m3692334404_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, Vector3_t2243707580  p1, Quaternion_t4030073918  p2, const MethodInfo* method);
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
 extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.XR.iOS.ARHitTestResult>::get_Count()
@@ -729,7 +729,7 @@ extern "C"  void MaterialPropertyBlock__ctor_m4079790842 (MaterialPropertyBlock_
 // UnityEngine.Quaternion UnityEngine.Quaternion::get_identity()
 extern "C"  Quaternion_t4030073918  Quaternion_get_identity_m1561886418 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0,UnityEngine.Vector3,UnityEngine.Quaternion)
-#define Object_Instantiate_TisGameObject_t1756533147_m3064851704(__this /* static, unused */, p0, p1, p2, method) ((  GameObject_t1756533147 * (*) (Il2CppObject * /* static, unused */, GameObject_t1756533147 *, Vector3_t2243707580 , Quaternion_t4030073918 , const MethodInfo*))Object_Instantiate_TisIl2CppObject_m3829784634_gshared)(__this /* static, unused */, p0, p1, p2, method)
+#define Object_Instantiate_TisGameObject_t1756533147_m3186302158(__this /* static, unused */, p0, p1, p2, method) ((  GameObject_t1756533147 * (*) (Il2CppObject * /* static, unused */, GameObject_t1756533147 *, Vector3_t2243707580 , Quaternion_t4030073918 , const MethodInfo*))Object_Instantiate_TisIl2CppObject_m3692334404_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // System.Single UnityEngine.Random::Range(System.Single,System.Single)
 extern "C"  float Random_Range_m2884721203 (Il2CppObject * __this /* static, unused */, float p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single)
@@ -803,7 +803,7 @@ extern "C"  GameObject_t1756533147 * Component_get_gameObject_m3105766835 (Compo
 // System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::RemoveListener(UnityEngine.Events.UnityAction`1<!0>)
 #define UnityEvent_1_RemoveListener_m1138414664(__this, p0, method) ((  void (*) (UnityEvent_1_t2058742090 *, UnityAction_1_t3386977826 *, const MethodInfo*))UnityEvent_1_RemoveListener_m1138414664_gshared)(__this, p0, method)
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Text>()
-#define Component_GetComponent_TisText_t356221433_m1342661039(__this, method) ((  Text_t356221433 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
+#define Component_GetComponent_TisText_t356221433_m2210710021(__this, method) ((  Text_t356221433 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
 // System.Boolean UnityEngine.Application::get_isPlaying()
 extern "C"  bool Application_get_isPlaying_m4091950718 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.UnityAction`3<System.Single,System.Single,System.Single>::.ctor(System.Object,System.IntPtr)
@@ -1270,7 +1270,7 @@ extern "C"  void BallMaker_CreateBall_m373381602 (BallMaker_t2085518213 * __this
 		Quaternion_t4030073918  L_2 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// GameObject ballGO = Instantiate (ballPrefab, atPosition, Quaternion.identity);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_3 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		GameObject_t1756533147 * L_3 = Object_Instantiate_TisGameObject_t1756533147_m3186302158(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3186302158_MethodInfo_var);
 		V_0 = L_3;
 		// float r = Random.Range(0.0f, 1.0f);
 		// float r = Random.Range(0.0f, 1.0f);
@@ -1530,7 +1530,7 @@ extern "C"  void BallMover_CreateMoveBall_m3920384562 (BallMover_t754704982 * __
 		Quaternion_t4030073918  L_2 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// collBallGO = Instantiate (collBallPrefab, explodePosition, Quaternion.identity);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_3 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		GameObject_t1756533147 * L_3 = Object_Instantiate_TisGameObject_t1756533147_m3186302158(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3186302158_MethodInfo_var);
 		__this->set_collBallGO_3(L_3);
 		// }
 		return;
@@ -2092,7 +2092,7 @@ extern "C"  void ColorLabel_Awake_m1477595641 (ColorLabel_t1884607337 * __this, 
 	{
 		// label = GetComponent<Text>();
 		// label = GetComponent<Text>();
-		Text_t356221433 * L_0 = Component_GetComponent_TisText_t356221433_m1342661039(__this, /*hidden argument*/Component_GetComponent_TisText_t356221433_m1342661039_MethodInfo_var);
+		Text_t356221433 * L_0 = Component_GetComponent_TisText_t356221433_m2210710021(__this, /*hidden argument*/Component_GetComponent_TisText_t356221433_m2210710021_MethodInfo_var);
 		__this->set_label_8(L_0);
 		// }
 		return;
