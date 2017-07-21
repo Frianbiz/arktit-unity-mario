@@ -27,10 +27,10 @@ class ViewController: UIViewController {
         joystickView?.trackingHandler = { data in
             if data.x < 0 {
                 print("left")
-                UnitySendMessage("MainGame", "left", nil)
+                UnitySendMessage("CustomController", "goLeft", nil)
             } else if data.x > 0 {
                 print("right")
-                UnitySendMessage("MainGame", "right", nil)
+                UnitySendMessage("CustomController", "goRight", nil)
             }
         }
         
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     @IBAction func jumpHandler(sender: AnyObject) {
         print("jump")
         self.playJumpSound()
-        UnitySendMessage("MainGame", "jump", "")
+        UnitySendMessage("CustomController", "Jump", "")
     }
     
     func playJumpSound(){

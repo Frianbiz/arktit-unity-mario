@@ -99,18 +99,16 @@
 #include "mscorlib_U3CPrivateImplementationDetailsU3E_U24Arr3672778798.h"
 #include "mscorlib_System___Il2CppComObject4064417062.h"
 #include "mscorlib_System___Il2CppComDelegate3311706788.h"
-#include "Mono_Security_U3CModuleU3E3783534214.h"
-#include "Mono_Security_Locale4255929014.h"
-#include "Mono_Security_Mono_Math_BigInteger925946152.h"
-#include "Mono_Security_Mono_Math_BigInteger_Sign874893935.h"
-#include "Mono_Security_Mono_Math_BigInteger_ModulusRing80355991.h"
-#include "Mono_Security_Mono_Math_BigInteger_Kernel1353186455.h"
-#include "Mono_Security_Mono_Math_Prime_ConfidenceFactor1997037801.h"
-#include "Mono_Security_Mono_Math_Prime_PrimalityTests3283102398.h"
-#include "Mono_Security_Mono_Math_Prime_Generator_PrimeGener1053438167.h"
-#include "Mono_Security_Mono_Math_Prime_Generator_SequentialS463670656.h"
-#include "Mono_Security_Mono_Security_ASN1924533535.h"
-#include "Mono_Security_Mono_Security_ASN1Convert3301846396.h"
+#include "System_U3CModuleU3E3783534214.h"
+#include "System_Locale4255929014.h"
+#include "System_System_MonoTODOAttribute3487514019.h"
+#include "System_System_Collections_Specialized_HybridDiction290043810.h"
+#include "System_System_Collections_Specialized_ListDictiona3458713452.h"
+#include "System_System_Collections_Specialized_ListDictiona2725637098.h"
+#include "System_System_Collections_Specialized_ListDictiona1923170152.h"
+#include "System_System_Collections_Specialized_NameObjectCo2034248631.h"
+#include "System_System_Collections_Specialized_NameObjectCo3244489099.h"
+#include "System_System_Collections_Specialized_NameObjectCo1718269396.h"
 
 
 
@@ -533,51 +531,81 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize886 = { sizeof (Il2Cp
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize887 = { sizeof (__Il2CppComDelegate_t3311706788), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize888 = { sizeof (U3CModuleU3E_t3783534215), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize889 = { sizeof (Locale_t4255929015), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize890 = { sizeof (BigInteger_t925946153), -1, sizeof(BigInteger_t925946153_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable890[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize890 = { sizeof (MonoTODOAttribute_t3487514020), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable890[1] = 
 {
-	BigInteger_t925946153::get_offset_of_length_0(),
-	BigInteger_t925946153::get_offset_of_data_1(),
-	BigInteger_t925946153_StaticFields::get_offset_of_smallPrimes_2(),
-	BigInteger_t925946153_StaticFields::get_offset_of_rng_3(),
+	MonoTODOAttribute_t3487514020::get_offset_of_comment_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize891 = { sizeof (Sign_t874893936)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable891[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize891 = { 0, 0, 0, 0 };
+extern const int32_t g_FieldOffsetTable891[3] = 
 {
-	Sign_t874893936::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize892 = { sizeof (ModulusRing_t80355992), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable892[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize892 = { 0, 0, 0, 0 };
+extern const int32_t g_FieldOffsetTable892[3] = 
 {
-	ModulusRing_t80355992::get_offset_of_mod_0(),
-	ModulusRing_t80355992::get_offset_of_constant_1(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize893 = { sizeof (Kernel_t1353186456), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize894 = { sizeof (ConfidenceFactor_t1997037802)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable894[7] = 
-{
-	ConfidenceFactor_t1997037802::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	0,
-	0,
-	0,
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize895 = { sizeof (PrimalityTests_t3283102399), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize896 = { sizeof (PrimeGeneratorBase_t1053438168), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize897 = { sizeof (SequentialSearchPrimeGeneratorBase_t463670657), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize898 = { sizeof (ASN1_t924533536), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable898[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize893 = { sizeof (HybridDictionary_t290043810), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable893[3] = 
 {
-	ASN1_t924533536::get_offset_of_m_nTag_0(),
-	ASN1_t924533536::get_offset_of_m_aValue_1(),
-	ASN1_t924533536::get_offset_of_elist_2(),
+	HybridDictionary_t290043810::get_offset_of_caseInsensitive_0(),
+	HybridDictionary_t290043810::get_offset_of_hashtable_1(),
+	HybridDictionary_t290043810::get_offset_of_list_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize899 = { sizeof (ASN1Convert_t3301846397), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize894 = { sizeof (ListDictionary_t3458713452), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable894[4] = 
+{
+	ListDictionary_t3458713452::get_offset_of_count_0(),
+	ListDictionary_t3458713452::get_offset_of_version_1(),
+	ListDictionary_t3458713452::get_offset_of_head_2(),
+	ListDictionary_t3458713452::get_offset_of_comparer_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize895 = { sizeof (DictionaryNode_t2725637098), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable895[3] = 
+{
+	DictionaryNode_t2725637098::get_offset_of_key_0(),
+	DictionaryNode_t2725637098::get_offset_of_value_1(),
+	DictionaryNode_t2725637098::get_offset_of_next_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize896 = { sizeof (DictionaryNodeEnumerator_t1923170152), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable896[4] = 
+{
+	DictionaryNodeEnumerator_t1923170152::get_offset_of_dict_0(),
+	DictionaryNodeEnumerator_t1923170152::get_offset_of_isAtStart_1(),
+	DictionaryNodeEnumerator_t1923170152::get_offset_of_current_2(),
+	DictionaryNodeEnumerator_t1923170152::get_offset_of_version_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize897 = { sizeof (NameObjectCollectionBase_t2034248631), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable897[10] = 
+{
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_ItemsContainer_0(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_NullKeyItem_1(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_ItemsArray_2(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_hashprovider_3(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_comparer_4(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_defCapacity_5(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_m_readonly_6(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_infoCopy_7(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_keyscoll_8(),
+	NameObjectCollectionBase_t2034248631::get_offset_of_equality_comparer_9(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize898 = { sizeof (_Item_t3244489099), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable898[2] = 
+{
+	_Item_t3244489099::get_offset_of_key_0(),
+	_Item_t3244489099::get_offset_of_value_1(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize899 = { sizeof (_KeysEnumerator_t1718269396), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable899[2] = 
+{
+	_KeysEnumerator_t1718269396::get_offset_of_m_collection_0(),
+	_KeysEnumerator_t1718269396::get_offset_of_m_position_1(),
+};
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

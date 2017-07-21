@@ -574,7 +574,7 @@ extern "C"  void Uri__ctor_m371762263 (Uri_t19570940 * __this, Uri_t19570940 * p
 // System.String System.Uri::get_AbsoluteUri()
 extern "C"  String_t* Uri_get_AbsoluteUri_m2120317928 (Uri_t19570940 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C"  void Regex__ctor_m2794328522 (Regex_t1803876613 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void Regex__ctor_m1229307206 (Regex_t1803876613 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -3019,25 +3019,6 @@ IL_0016:
 		return L_1;
 	}
 }
-// UnityEngine.Vector2 UnityEngine.Vector2::get_right()
-extern "C"  Vector2_t2243707579  Vector2_get_right_m28012078 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector2_t2243707579  L_0;
-		memset(&L_0, 0, sizeof(L_0));
-		Vector2__ctor_m3067419446(&L_0, (1.0f), (0.0f), /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_0016;
-	}
-
-IL_0016:
-	{
-		Vector2_t2243707579  L_1 = V_0;
-		return L_1;
-	}
-}
 // System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
 extern "C"  void Vector3__ctor_m2638739322 (Vector3_t2243707580 * __this, float ___x0, float ___y1, float ___z2, const MethodInfo* method)
 {
@@ -5291,7 +5272,7 @@ extern "C"  void WebRequestUtils__cctor_m893658947 (Il2CppObject * __this /* sta
 	}
 	{
 		Regex_t1803876613 * L_0 = (Regex_t1803876613 *)il2cpp_codegen_object_new(Regex_t1803876613_il2cpp_TypeInfo_var);
-		Regex__ctor_m2794328522(L_0, _stringLiteral2697683047, /*hidden argument*/NULL);
+		Regex__ctor_m1229307206(L_0, _stringLiteral2697683047, /*hidden argument*/NULL);
 		((WebRequestUtils_t4100941042_StaticFields*)WebRequestUtils_t4100941042_il2cpp_TypeInfo_var->static_fields)->set_domainRegex_0(L_0);
 		return;
 	}

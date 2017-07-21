@@ -7721,21 +7721,6 @@ extern "C"  void CanvasRenderer_CreateUIVertexStreamInternal_m2886336395 (Il2Cpp
 	_il2cpp_icall_func = (CanvasRenderer_CreateUIVertexStreamInternal_m2886336395_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CanvasRenderer::CreateUIVertexStreamInternal(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)");
 	_il2cpp_icall_func(___verts0, ___positions1, ___colors2, ___uv0S3, ___uv1S4, ___normals5, ___tangents6, ___indicies7);
 }
-// System.Void UnityEngine.CanvasRenderer::AddUIVertexStream(System.Collections.Generic.List`1<UnityEngine.UIVertex>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<UnityEngine.Color32>,System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<UnityEngine.Vector4>)
-extern "C"  void CanvasRenderer_AddUIVertexStream_m1334037553 (Il2CppObject * __this /* static, unused */, List_1_t573379950 * ___verts0, List_1_t1612828712 * ___positions1, List_1_t243638650 * ___colors2, List_1_t1612828711 * ___uv0S3, List_1_t1612828711 * ___uv1S4, List_1_t1612828712 * ___normals5, List_1_t1612828713 * ___tangents6, const MethodInfo* method)
-{
-	{
-		List_1_t573379950 * L_0 = ___verts0;
-		List_1_t1612828712 * L_1 = ___positions1;
-		List_1_t243638650 * L_2 = ___colors2;
-		List_1_t1612828711 * L_3 = ___uv0S3;
-		List_1_t1612828711 * L_4 = ___uv1S4;
-		List_1_t1612828712 * L_5 = ___normals5;
-		List_1_t1612828713 * L_6 = ___tangents6;
-		CanvasRenderer_SplitUIVertexStreamsInternal_m729405782(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, L_5, L_6, /*hidden argument*/NULL);
-		return;
-	}
-}
 // System.Boolean UnityEngine.CanvasRenderer::get_cull()
 extern "C"  bool CanvasRenderer_get_cull_m3577089379 (CanvasRenderer_t261436805 * __this, const MethodInfo* method)
 {

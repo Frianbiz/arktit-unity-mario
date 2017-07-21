@@ -7012,7 +7012,7 @@ IL_0012:
 	}
 }
 // System.Int32 System.Collections.Generic.List`1<System.Int32>::get_Count()
-extern "C"  int32_t List_1_get_Count_m852068579_gshared (List_1_t1440998580 * __this, const MethodInfo* method)
+extern "C"  int32_t List_1_get_Count_m630661787_gshared (List_1_t1440998580 * __this, const MethodInfo* method)
 {
 	{
 		int32_t L_0 = (int32_t)__this->get__size_2();

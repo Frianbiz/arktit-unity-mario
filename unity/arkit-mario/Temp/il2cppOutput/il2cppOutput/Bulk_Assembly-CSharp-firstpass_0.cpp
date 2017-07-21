@@ -783,6 +783,8 @@ extern const uint32_t VirtualAxis_Remove_m576372386_MetadataUsageId;
 extern const uint32_t VirtualButton_Remove_m97460871_MetadataUsageId;
 extern const uint32_t InputAxisScrollbar_HandleInput_m445149885_MetadataUsageId;
 extern const uint32_t Joystick__ctor_m3275054351_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2796468283;
+extern const uint32_t Joystick_Start_m4136878835_MetadataUsageId;
 extern const uint32_t Joystick_CreateVirtualAxes_m1218504933_MetadataUsageId;
 extern const uint32_t Joystick_OnDrag_m878547034_MetadataUsageId;
 extern const uint32_t MobileControlRig_Start_m398957278_MetadataUsageId;
@@ -10031,14 +10033,33 @@ IL_0091:
 
 IL_00b4:
 	{
-		// m_Character.Move(m_Move, crouch, m_Jump);
-		ThirdPersonCharacter_t1249311527 * L_25 = __this->get_m_Character_2();
+		// if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+		// if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		bool L_25 = Input_GetKey_m3849524999(NULL /*static, unused*/, ((int32_t)304), /*hidden argument*/NULL);
+		if (!L_25)
+		{
+			goto IL_00d9;
+		}
+	}
+	{
+		// if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
 		Vector3_t2243707580  L_26 = __this->get_m_Move_5();
-		bool L_27 = V_2;
-		bool L_28 = __this->get_m_Jump_6();
+		// if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+		Vector3_t2243707580  L_27 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_26, (0.5f), /*hidden argument*/NULL);
+		__this->set_m_Move_5(L_27);
+	}
+
+IL_00d9:
+	{
 		// m_Character.Move(m_Move, crouch, m_Jump);
-		NullCheck(L_25);
-		ThirdPersonCharacter_Move_m1991112899(L_25, L_26, L_27, L_28, /*hidden argument*/NULL);
+		ThirdPersonCharacter_t1249311527 * L_28 = __this->get_m_Character_2();
+		Vector3_t2243707580  L_29 = __this->get_m_Move_5();
+		bool L_30 = V_2;
+		bool L_31 = __this->get_m_Jump_6();
+		// m_Character.Move(m_Move, crouch, m_Jump);
+		NullCheck(L_28);
+		ThirdPersonCharacter_Move_m1991112899(L_28, L_29, L_30, L_31, /*hidden argument*/NULL);
 		// m_Jump = false;
 		__this->set_m_Jump_6((bool)0);
 		// }
@@ -10450,8 +10471,8 @@ extern "C"  void CrossPlatformInputManager__cctor_m2774626606 (Il2CppObject * __
 		StandaloneInput_t3273007553 * L_1 = (StandaloneInput_t3273007553 *)il2cpp_codegen_object_new(StandaloneInput_t3273007553_il2cpp_TypeInfo_var);
 		StandaloneInput__ctor_m1632608907(L_1, /*hidden argument*/NULL);
 		((CrossPlatformInputManager_t1746754562_StaticFields*)CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var->static_fields)->set_s_HardwareInput_2(L_1);
-		// activeInput = s_TouchInput;
-		VirtualInput_t3347016329 * L_2 = ((CrossPlatformInputManager_t1746754562_StaticFields*)CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var->static_fields)->get_s_TouchInput_1();
+		// activeInput = s_HardwareInput;
+		VirtualInput_t3347016329 * L_2 = ((CrossPlatformInputManager_t1746754562_StaticFields*)CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var->static_fields)->get_s_HardwareInput_2();
 		((CrossPlatformInputManager_t1746754562_StaticFields*)CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var->static_fields)->set_activeInput_0(L_2);
 		// }
 		return;
@@ -11522,6 +11543,12 @@ extern "C"  void Joystick_OnEnable_m1704544019 (Joystick_t2144252492 * __this, c
 // System.Void UnityStandardAssets.CrossPlatformInput.Joystick::Start()
 extern "C"  void Joystick_Start_m4136878835 (Joystick_t2144252492 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Joystick_Start_m4136878835_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// m_StartPos = transform.position;
 		// m_StartPos = transform.position;
@@ -11530,6 +11557,10 @@ extern "C"  void Joystick_Start_m4136878835 (Joystick_t2144252492 * __this, cons
 		NullCheck(L_0);
 		Vector3_t2243707580  L_1 = Transform_get_position_m1104419803(L_0, /*hidden argument*/NULL);
 		__this->set_m_StartPos_6(L_1);
+		// Debug.Log("in start Joystick :");
+		// Debug.Log("in start Joystick :");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2796468283, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -11974,9 +12005,9 @@ IL_002f:
 extern "C"  void MobileControlRig_CheckEnableControlRig_m1582734360 (MobileControlRig_t3634411257 * __this, const MethodInfo* method)
 {
 	{
-		// EnableControlRig(true);
-		// EnableControlRig(true);
-		MobileControlRig_EnableControlRig_m1718535711(__this, (bool)1, /*hidden argument*/NULL);
+		// EnableControlRig(false);
+		// EnableControlRig(false);
+		MobileControlRig_EnableControlRig_m1718535711(__this, (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}

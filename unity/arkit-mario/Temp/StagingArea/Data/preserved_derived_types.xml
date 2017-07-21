@@ -42,6 +42,7 @@
 <type fullname="UnityStandardAssets.Utility.WaypointProgressTracker" preserve="all"/>
 </assembly>
 <assembly fullname="Assembly-CSharp">
+<type fullname="CustomControllerScript" preserve="all"/>
 <type fullname="BallMaker" preserve="all"/>
 <type fullname="BallMover" preserve="all"/>
 <type fullname="Ballz" preserve="all"/>
@@ -59,6 +60,9 @@
 <type fullname="UnityEngine.UI.BoxSlider" preserve="all"/>
 <type fullname="ParticlePainter" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
+</assembly>
+<assembly fullname="UnityEngine.Analytics">
+<type fullname="UnityEngine.Analytics.AnalyticsTracker" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>
@@ -103,8 +107,5 @@
 <type fullname="UnityEngine.UI.Outline" preserve="all"/>
 <type fullname="UnityEngine.UI.PositionAsUV1" preserve="all"/>
 <type fullname="UnityEngine.UI.Shadow" preserve="all"/>
-</assembly>
-<assembly fullname="UnityEngine.Analytics">
-<type fullname="UnityEngine.Analytics.AnalyticsTracker" preserve="all"/>
 </assembly>
 </linker>

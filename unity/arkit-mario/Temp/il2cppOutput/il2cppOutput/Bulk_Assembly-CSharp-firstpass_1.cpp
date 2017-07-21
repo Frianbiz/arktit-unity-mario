@@ -513,14 +513,14 @@ extern "C"  Quaternion_t4030073918  Transform_get_localRotation_m4001487205 (Tra
 extern "C"  void Transform_set_localRotation_m2055111962 (Transform_t3275118058 * __this, Quaternion_t4030073918  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager::GetAxis(System.String)
 extern "C"  float CrossPlatformInputManager_GetAxis_m128371830 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
-extern "C"  float Mathf_Lerp_m1686556575 (Il2CppObject * __this /* static, unused */, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
 extern "C"  float Mathf_Clamp_m2354025655 (Il2CppObject * __this /* static, unused */, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Input::get_mousePosition()
 extern "C"  Vector3_t2243707580  Input_get_mousePosition_m146923508 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Screen::get_width()
 extern "C"  int32_t Screen_get_width_m41137238 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
+extern "C"  float Mathf_Lerp_m1686556575 (Il2CppObject * __this /* static, unused */, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Screen::get_height()
 extern "C"  int32_t Screen_get_height_m1051800773 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3&,System.Single)
@@ -1530,7 +1530,7 @@ extern "C"  void SimpleMouseRotator_Update_m4246691885 (SimpleMouseRotator_t3238
 		bool L_2 = __this->get_relative_7();
 		if (!L_2)
 		{
-			goto IL_02a6;
+			goto IL_01fe;
 		}
 	}
 	{
@@ -1635,167 +1635,111 @@ IL_0103:
 
 IL_0148:
 	{
-		// if (autoZeroHorizontalOnMobile) {
-		bool L_37 = __this->get_autoZeroHorizontalOnMobile_6();
-		if (!L_37)
-		{
-			goto IL_019a;
-		}
-	}
-	{
-		// m_TargetAngles.y = Mathf.Lerp (-rotationRange.y * 0.5f, rotationRange.y * 0.5f, inputH * .5f + .5f);
-		Vector3_t2243707580 * L_38 = __this->get_address_of_m_TargetAngles_8();
-		Vector2_t2243707579 * L_39 = __this->get_address_of_rotationRange_2();
-		float L_40 = L_39->get_y_1();
-		Vector2_t2243707579 * L_41 = __this->get_address_of_rotationRange_2();
-		float L_42 = L_41->get_y_1();
-		float L_43 = V_0;
-		// m_TargetAngles.y = Mathf.Lerp (-rotationRange.y * 0.5f, rotationRange.y * 0.5f, inputH * .5f + .5f);
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
-		float L_44 = Mathf_Lerp_m1686556575(NULL /*static, unused*/, ((float)((float)((-L_40))*(float)(0.5f))), ((float)((float)L_42*(float)(0.5f))), ((float)((float)((float)((float)L_43*(float)(0.5f)))+(float)(0.5f))), /*hidden argument*/NULL);
-		L_38->set_y_2(L_44);
-		goto IL_01b6;
-	}
-
-IL_019a:
-	{
-		// m_TargetAngles.y += inputH * rotationSpeed;
-		Vector3_t2243707580 * L_45 = __this->get_address_of_m_TargetAngles_8();
-		Vector3_t2243707580 * L_46 = L_45;
-		float L_47 = L_46->get_y_2();
-		float L_48 = V_0;
-		float L_49 = __this->get_rotationSpeed_3();
-		L_46->set_y_2(((float)((float)L_47+(float)((float)((float)L_48*(float)L_49)))));
-	}
-
-IL_01b6:
-	{
-		// if (autoZeroVerticalOnMobile) {
-		bool L_50 = __this->get_autoZeroVerticalOnMobile_5();
-		if (!L_50)
-		{
-			goto IL_0208;
-		}
-	}
-	{
-		// m_TargetAngles.x = Mathf.Lerp (-rotationRange.x * 0.5f, rotationRange.x * 0.5f, inputV * .5f + .5f);
-		Vector3_t2243707580 * L_51 = __this->get_address_of_m_TargetAngles_8();
+		// m_TargetAngles.y += inputH*rotationSpeed;
+		Vector3_t2243707580 * L_37 = __this->get_address_of_m_TargetAngles_8();
+		Vector3_t2243707580 * L_38 = L_37;
+		float L_39 = L_38->get_y_2();
+		float L_40 = V_0;
+		float L_41 = __this->get_rotationSpeed_3();
+		L_38->set_y_2(((float)((float)L_39+(float)((float)((float)L_40*(float)L_41)))));
+		// m_TargetAngles.x += inputV*rotationSpeed;
+		Vector3_t2243707580 * L_42 = __this->get_address_of_m_TargetAngles_8();
+		Vector3_t2243707580 * L_43 = L_42;
+		float L_44 = L_43->get_x_1();
+		float L_45 = V_1;
+		float L_46 = __this->get_rotationSpeed_3();
+		L_43->set_x_1(((float)((float)L_44+(float)((float)((float)L_45*(float)L_46)))));
+		// m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, -rotationRange.y*0.5f, rotationRange.y*0.5f);
+		Vector3_t2243707580 * L_47 = __this->get_address_of_m_TargetAngles_8();
+		Vector3_t2243707580 * L_48 = __this->get_address_of_m_TargetAngles_8();
+		float L_49 = L_48->get_y_2();
+		Vector2_t2243707579 * L_50 = __this->get_address_of_rotationRange_2();
+		float L_51 = L_50->get_y_1();
 		Vector2_t2243707579 * L_52 = __this->get_address_of_rotationRange_2();
-		float L_53 = L_52->get_x_0();
-		Vector2_t2243707579 * L_54 = __this->get_address_of_rotationRange_2();
-		float L_55 = L_54->get_x_0();
-		float L_56 = V_1;
-		// m_TargetAngles.x = Mathf.Lerp (-rotationRange.x * 0.5f, rotationRange.x * 0.5f, inputV * .5f + .5f);
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
-		float L_57 = Mathf_Lerp_m1686556575(NULL /*static, unused*/, ((float)((float)((-L_53))*(float)(0.5f))), ((float)((float)L_55*(float)(0.5f))), ((float)((float)((float)((float)L_56*(float)(0.5f)))+(float)(0.5f))), /*hidden argument*/NULL);
-		L_51->set_x_1(L_57);
-		goto IL_0224;
-	}
-
-IL_0208:
-	{
-		// m_TargetAngles.x += inputV * rotationSpeed;
-		Vector3_t2243707580 * L_58 = __this->get_address_of_m_TargetAngles_8();
-		Vector3_t2243707580 * L_59 = L_58;
-		float L_60 = L_59->get_x_1();
-		float L_61 = V_1;
-		float L_62 = __this->get_rotationSpeed_3();
-		L_59->set_x_1(((float)((float)L_60+(float)((float)((float)L_61*(float)L_62)))));
-	}
-
-IL_0224:
-	{
-		// m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, -rotationRange.y*0.5f, rotationRange.y*0.5f);
-		Vector3_t2243707580 * L_63 = __this->get_address_of_m_TargetAngles_8();
-		Vector3_t2243707580 * L_64 = __this->get_address_of_m_TargetAngles_8();
-		float L_65 = L_64->get_y_2();
-		Vector2_t2243707579 * L_66 = __this->get_address_of_rotationRange_2();
-		float L_67 = L_66->get_y_1();
-		Vector2_t2243707579 * L_68 = __this->get_address_of_rotationRange_2();
-		float L_69 = L_68->get_y_1();
+		float L_53 = L_52->get_y_1();
 		// m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, -rotationRange.y*0.5f, rotationRange.y*0.5f);
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
-		float L_70 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_65, ((float)((float)((-L_67))*(float)(0.5f))), ((float)((float)L_69*(float)(0.5f))), /*hidden argument*/NULL);
-		L_63->set_y_2(L_70);
+		float L_54 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_49, ((float)((float)((-L_51))*(float)(0.5f))), ((float)((float)L_53*(float)(0.5f))), /*hidden argument*/NULL);
+		L_47->set_y_2(L_54);
 		// m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, -rotationRange.x*0.5f, rotationRange.x*0.5f);
-		Vector3_t2243707580 * L_71 = __this->get_address_of_m_TargetAngles_8();
-		Vector3_t2243707580 * L_72 = __this->get_address_of_m_TargetAngles_8();
-		float L_73 = L_72->get_x_1();
-		Vector2_t2243707579 * L_74 = __this->get_address_of_rotationRange_2();
-		float L_75 = L_74->get_x_0();
-		Vector2_t2243707579 * L_76 = __this->get_address_of_rotationRange_2();
-		float L_77 = L_76->get_x_0();
+		Vector3_t2243707580 * L_55 = __this->get_address_of_m_TargetAngles_8();
+		Vector3_t2243707580 * L_56 = __this->get_address_of_m_TargetAngles_8();
+		float L_57 = L_56->get_x_1();
+		Vector2_t2243707579 * L_58 = __this->get_address_of_rotationRange_2();
+		float L_59 = L_58->get_x_0();
+		Vector2_t2243707579 * L_60 = __this->get_address_of_rotationRange_2();
+		float L_61 = L_60->get_x_0();
 		// m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, -rotationRange.x*0.5f, rotationRange.x*0.5f);
-		float L_78 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_73, ((float)((float)((-L_75))*(float)(0.5f))), ((float)((float)L_77*(float)(0.5f))), /*hidden argument*/NULL);
-		L_71->set_x_1(L_78);
-		goto IL_033a;
+		float L_62 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_57, ((float)((float)((-L_59))*(float)(0.5f))), ((float)((float)L_61*(float)(0.5f))), /*hidden argument*/NULL);
+		L_55->set_x_1(L_62);
+		goto IL_0292;
 	}
 
-IL_02a6:
+IL_01fe:
 	{
 		// inputH = Input.mousePosition.x;
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		Vector3_t2243707580  L_79 = Input_get_mousePosition_m146923508(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_2 = L_79;
-		float L_80 = (&V_2)->get_x_1();
-		V_0 = L_80;
+		Vector3_t2243707580  L_63 = Input_get_mousePosition_m146923508(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_2 = L_63;
+		float L_64 = (&V_2)->get_x_1();
+		V_0 = L_64;
 		// inputV = Input.mousePosition.y;
-		Vector3_t2243707580  L_81 = Input_get_mousePosition_m146923508(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_3 = L_81;
-		float L_82 = (&V_3)->get_y_2();
-		V_1 = L_82;
+		Vector3_t2243707580  L_65 = Input_get_mousePosition_m146923508(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_3 = L_65;
+		float L_66 = (&V_3)->get_y_2();
+		V_1 = L_66;
 		// m_TargetAngles.y = Mathf.Lerp(-rotationRange.y*0.5f, rotationRange.y*0.5f, inputH/Screen.width);
-		Vector3_t2243707580 * L_83 = __this->get_address_of_m_TargetAngles_8();
-		Vector2_t2243707579 * L_84 = __this->get_address_of_rotationRange_2();
-		float L_85 = L_84->get_y_1();
-		Vector2_t2243707579 * L_86 = __this->get_address_of_rotationRange_2();
-		float L_87 = L_86->get_y_1();
-		float L_88 = V_0;
+		Vector3_t2243707580 * L_67 = __this->get_address_of_m_TargetAngles_8();
+		Vector2_t2243707579 * L_68 = __this->get_address_of_rotationRange_2();
+		float L_69 = L_68->get_y_1();
+		Vector2_t2243707579 * L_70 = __this->get_address_of_rotationRange_2();
+		float L_71 = L_70->get_y_1();
+		float L_72 = V_0;
 		// m_TargetAngles.y = Mathf.Lerp(-rotationRange.y*0.5f, rotationRange.y*0.5f, inputH/Screen.width);
-		int32_t L_89 = Screen_get_width_m41137238(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t L_73 = Screen_get_width_m41137238(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// m_TargetAngles.y = Mathf.Lerp(-rotationRange.y*0.5f, rotationRange.y*0.5f, inputH/Screen.width);
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
-		float L_90 = Mathf_Lerp_m1686556575(NULL /*static, unused*/, ((float)((float)((-L_85))*(float)(0.5f))), ((float)((float)L_87*(float)(0.5f))), ((float)((float)L_88/(float)(((float)((float)L_89))))), /*hidden argument*/NULL);
-		L_83->set_y_2(L_90);
+		float L_74 = Mathf_Lerp_m1686556575(NULL /*static, unused*/, ((float)((float)((-L_69))*(float)(0.5f))), ((float)((float)L_71*(float)(0.5f))), ((float)((float)L_72/(float)(((float)((float)L_73))))), /*hidden argument*/NULL);
+		L_67->set_y_2(L_74);
 		// m_TargetAngles.x = Mathf.Lerp(-rotationRange.x*0.5f, rotationRange.x*0.5f, inputV/Screen.height);
-		Vector3_t2243707580 * L_91 = __this->get_address_of_m_TargetAngles_8();
-		Vector2_t2243707579 * L_92 = __this->get_address_of_rotationRange_2();
-		float L_93 = L_92->get_x_0();
-		Vector2_t2243707579 * L_94 = __this->get_address_of_rotationRange_2();
-		float L_95 = L_94->get_x_0();
-		float L_96 = V_1;
+		Vector3_t2243707580 * L_75 = __this->get_address_of_m_TargetAngles_8();
+		Vector2_t2243707579 * L_76 = __this->get_address_of_rotationRange_2();
+		float L_77 = L_76->get_x_0();
+		Vector2_t2243707579 * L_78 = __this->get_address_of_rotationRange_2();
+		float L_79 = L_78->get_x_0();
+		float L_80 = V_1;
 		// m_TargetAngles.x = Mathf.Lerp(-rotationRange.x*0.5f, rotationRange.x*0.5f, inputV/Screen.height);
-		int32_t L_97 = Screen_get_height_m1051800773(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t L_81 = Screen_get_height_m1051800773(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// m_TargetAngles.x = Mathf.Lerp(-rotationRange.x*0.5f, rotationRange.x*0.5f, inputV/Screen.height);
-		float L_98 = Mathf_Lerp_m1686556575(NULL /*static, unused*/, ((float)((float)((-L_93))*(float)(0.5f))), ((float)((float)L_95*(float)(0.5f))), ((float)((float)L_96/(float)(((float)((float)L_97))))), /*hidden argument*/NULL);
-		L_91->set_x_1(L_98);
+		float L_82 = Mathf_Lerp_m1686556575(NULL /*static, unused*/, ((float)((float)((-L_77))*(float)(0.5f))), ((float)((float)L_79*(float)(0.5f))), ((float)((float)L_80/(float)(((float)((float)L_81))))), /*hidden argument*/NULL);
+		L_75->set_x_1(L_82);
 	}
 
-IL_033a:
+IL_0292:
 	{
 		// m_FollowAngles = Vector3.SmoothDamp(m_FollowAngles, m_TargetAngles, ref m_FollowVelocity, dampingTime);
-		Vector3_t2243707580  L_99 = __this->get_m_FollowAngles_9();
-		Vector3_t2243707580  L_100 = __this->get_m_TargetAngles_8();
-		Vector3_t2243707580 * L_101 = __this->get_address_of_m_FollowVelocity_10();
-		float L_102 = __this->get_dampingTime_4();
+		Vector3_t2243707580  L_83 = __this->get_m_FollowAngles_9();
+		Vector3_t2243707580  L_84 = __this->get_m_TargetAngles_8();
+		Vector3_t2243707580 * L_85 = __this->get_address_of_m_FollowVelocity_10();
+		float L_86 = __this->get_dampingTime_4();
 		// m_FollowAngles = Vector3.SmoothDamp(m_FollowAngles, m_TargetAngles, ref m_FollowVelocity, dampingTime);
-		Vector3_t2243707580  L_103 = Vector3_SmoothDamp_m3087890513(NULL /*static, unused*/, L_99, L_100, L_101, L_102, /*hidden argument*/NULL);
-		__this->set_m_FollowAngles_9(L_103);
+		Vector3_t2243707580  L_87 = Vector3_SmoothDamp_m3087890513(NULL /*static, unused*/, L_83, L_84, L_85, L_86, /*hidden argument*/NULL);
+		__this->set_m_FollowAngles_9(L_87);
 		// transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
 		// transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
-		Transform_t3275118058 * L_104 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Quaternion_t4030073918  L_105 = __this->get_m_OriginalRotation_11();
-		Vector3_t2243707580 * L_106 = __this->get_address_of_m_FollowAngles_9();
-		float L_107 = L_106->get_x_1();
-		Vector3_t2243707580 * L_108 = __this->get_address_of_m_FollowAngles_9();
-		float L_109 = L_108->get_y_2();
+		Transform_t3275118058 * L_88 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Quaternion_t4030073918  L_89 = __this->get_m_OriginalRotation_11();
+		Vector3_t2243707580 * L_90 = __this->get_address_of_m_FollowAngles_9();
+		float L_91 = L_90->get_x_1();
+		Vector3_t2243707580 * L_92 = __this->get_address_of_m_FollowAngles_9();
+		float L_93 = L_92->get_y_2();
 		// transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
-		Quaternion_t4030073918  L_110 = Quaternion_Euler_m2887458175(NULL /*static, unused*/, ((-L_107)), L_109, (0.0f), /*hidden argument*/NULL);
+		Quaternion_t4030073918  L_94 = Quaternion_Euler_m2887458175(NULL /*static, unused*/, ((-L_91)), L_93, (0.0f), /*hidden argument*/NULL);
 		// transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
-		Quaternion_t4030073918  L_111 = Quaternion_op_Multiply_m2426727589(NULL /*static, unused*/, L_105, L_110, /*hidden argument*/NULL);
+		Quaternion_t4030073918  L_95 = Quaternion_op_Multiply_m2426727589(NULL /*static, unused*/, L_89, L_94, /*hidden argument*/NULL);
 		// transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
-		NullCheck(L_104);
-		Transform_set_localRotation_m2055111962(L_104, L_111, /*hidden argument*/NULL);
+		NullCheck(L_88);
+		Transform_set_localRotation_m2055111962(L_88, L_95, /*hidden argument*/NULL);
 		// }
 		return;
 	}

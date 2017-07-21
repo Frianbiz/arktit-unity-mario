@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CustomControllerScript.cs" />
      <Compile Include="Assets\Examples\BallMaker.cs" />
      <Compile Include="Assets\Examples\BallMover.cs" />
      <Compile Include="Assets\Examples\Ballz.cs" />

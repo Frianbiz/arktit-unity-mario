@@ -83,6 +83,7 @@
 #include "UnityEngine_UnityEngine_Texture2D3542995729.h"
 #include "mscorlib_System_Byte3683104436.h"
 #include "UnityEngine_UI_UnityEngine_UI_Slider_Direction1525323322.h"
+#include "AssemblyU2DCSharp_CustomControllerScript3130054264.h"
 #include "AssemblyU2DCSharp_HexColorField4192118964.h"
 #include "UnityEngine_UI_UnityEngine_UI_InputField1631627530.h"
 #include "UnityEngine_UI_UnityEngine_UI_InputField_SubmitEven907918422.h"
@@ -205,6 +206,8 @@ struct Texture_t2243626319;
 struct Texture2D_t3542995729;
 // UnityEngine.Color32[]
 struct Color32U5BU5D_t30278651;
+// CustomControllerScript
+struct CustomControllerScript_t3130054264;
 // HexColorField
 struct HexColorField_t4192118964;
 // UnityEngine.UI.InputField
@@ -348,6 +351,18 @@ extern const uint32_t ColorSliderImage_OnDestroy_m2738933995_MetadataUsageId;
 extern Il2CppClass* Texture2D_t3542995729_il2cpp_TypeInfo_var;
 extern Il2CppClass* Color32U5BU5D_t30278651_il2cpp_TypeInfo_var;
 extern const uint32_t ColorSliderImage_RegenerateTexture_m1461909699_MetadataUsageId;
+extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2995363771;
+extern const uint32_t CustomControllerScript_Start_m191831799_MetadataUsageId;
+extern Il2CppClass* CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1914104597;
+extern Il2CppCodeGenString* _stringLiteral842948034;
+extern const uint32_t CustomControllerScript_Jump_m2185880941_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3963794435;
+extern Il2CppCodeGenString* _stringLiteral855845486;
+extern const uint32_t CustomControllerScript_goRight_m678872079_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1778843488;
+extern const uint32_t CustomControllerScript_goLeft_m4174602868_MetadataUsageId;
 extern Il2CppClass* UnityAction_1_t3395805984_il2cpp_TypeInfo_var;
 extern const MethodInfo* Component_GetComponent_TisInputField_t1631627530_m1177654614_MethodInfo_var;
 extern const MethodInfo* HexColorField_UpdateColor_m4189307031_MethodInfo_var;
@@ -357,7 +372,6 @@ extern const MethodInfo* HexColorField_UpdateHex_m1796725051_MethodInfo_var;
 extern const uint32_t HexColorField_Awake_m306535424_MetadataUsageId;
 extern const MethodInfo* UnityEvent_1_RemoveListener_m2236604102_MethodInfo_var;
 extern const uint32_t HexColorField_OnDestroy_m4113204650_MetadataUsageId;
-extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3567086134;
 extern const uint32_t HexColorField_UpdateColor_m4189307031_MetadataUsageId;
 extern Il2CppClass* ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var;
@@ -946,6 +960,14 @@ extern "C"  void RawImage_set_texture_m2400157626 (RawImage_t2749640213 * __this
 extern "C"  void Rect__ctor_m1220545469 (Rect_t3681755626 * __this, float p0, float p1, float p2, float p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.UI.RawImage::set_uvRect(UnityEngine.Rect)
 extern "C"  void RawImage_set_uvRect_m3807597783 (RawImage_t2749640213 * __this, Rect_t3681755626  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Debug::Log(System.Object)
+extern "C"  void Debug_Log_m920475918 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager::SetButtonDown(System.String)
+extern "C"  void CrossPlatformInputManager_SetButtonDown_m3439992057 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager::SetAxisPositive(System.String)
+extern "C"  void CrossPlatformInputManager_SetAxisPositive_m1509431029 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager::SetAxisNegative(System.String)
+extern "C"  void CrossPlatformInputManager_SetAxisNegative_m3660614489 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.InputField>()
 #define Component_GetComponent_TisInputField_t1631627530_m1177654614(__this, method) ((  InputField_t1631627530 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
 // UnityEngine.UI.InputField/SubmitEvent UnityEngine.UI.InputField::get_onEndEdit()
@@ -966,8 +988,6 @@ extern "C"  void InputField_set_text_m114077119 (InputField_t1631627530 * __this
 extern "C"  bool HexColorField_HexToColor_m3970770477 (Il2CppObject * __this /* static, unused */, String_t* ___hex0, Color32_t874517518 * ___color1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color32::op_Implicit(UnityEngine.Color32)
 extern "C"  Color_t2020392075  Color32_op_Implicit_m889975790 (Il2CppObject * __this /* static, unused */, Color32_t874517518  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Debug::Log(System.Object)
-extern "C"  void Debug_Log_m920475918 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.String,System.Object[])
 extern "C"  String_t* String_Format_m1263743648 (Il2CppObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t3614634134* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.String,System.Object,System.Object,System.Object)
@@ -5007,6 +5027,106 @@ IL_04d9:
 
 IL_04de:
 	{
+		// }
+		return;
+	}
+}
+// System.Void CustomControllerScript::.ctor()
+extern "C"  void CustomControllerScript__ctor_m2748407643 (CustomControllerScript_t3130054264 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void CustomControllerScript::Start()
+extern "C"  void CustomControllerScript_Start_m191831799 (CustomControllerScript_t3130054264 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (CustomControllerScript_Start_m191831799_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Debug.Log("in start CustomControllerScript");
+		// Debug.Log("in start CustomControllerScript");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2995363771, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void CustomControllerScript::Update()
+extern "C"  void CustomControllerScript_Update_m3311107930 (CustomControllerScript_t3130054264 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void CustomControllerScript::Jump()
+extern "C"  void CustomControllerScript_Jump_m2185880941 (CustomControllerScript_t3130054264 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (CustomControllerScript_Jump_m2185880941_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Debug.Log("in jump CustomControllerScript");
+		// Debug.Log("in jump CustomControllerScript");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1914104597, /*hidden argument*/NULL);
+		// CrossPlatformInputManager.SetButtonDown("Jump");
+		// CrossPlatformInputManager.SetButtonDown("Jump");
+		IL2CPP_RUNTIME_CLASS_INIT(CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var);
+		CrossPlatformInputManager_SetButtonDown_m3439992057(NULL /*static, unused*/, _stringLiteral842948034, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void CustomControllerScript::goRight()
+extern "C"  void CustomControllerScript_goRight_m678872079 (CustomControllerScript_t3130054264 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (CustomControllerScript_goRight_m678872079_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Debug.Log("in goRight CustomControllerScript");
+		// Debug.Log("in goRight CustomControllerScript");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3963794435, /*hidden argument*/NULL);
+		// CrossPlatformInputManager.SetAxisPositive("Horizontal");
+		// CrossPlatformInputManager.SetAxisPositive("Horizontal");
+		IL2CPP_RUNTIME_CLASS_INIT(CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var);
+		CrossPlatformInputManager_SetAxisPositive_m1509431029(NULL /*static, unused*/, _stringLiteral855845486, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void CustomControllerScript::goLeft()
+extern "C"  void CustomControllerScript_goLeft_m4174602868 (CustomControllerScript_t3130054264 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (CustomControllerScript_goLeft_m4174602868_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Debug.Log("in goLeft CustomControllerScript");
+		// Debug.Log("in goLeft CustomControllerScript");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1778843488, /*hidden argument*/NULL);
+		// CrossPlatformInputManager.SetAxisNegative("Horizontal");
+		// CrossPlatformInputManager.SetAxisNegative("Horizontal");
+		IL2CPP_RUNTIME_CLASS_INIT(CrossPlatformInputManager_t1746754562_il2cpp_TypeInfo_var);
+		CrossPlatformInputManager_SetAxisNegative_m3660614489(NULL /*static, unused*/, _stringLiteral855845486, /*hidden argument*/NULL);
 		// }
 		return;
 	}

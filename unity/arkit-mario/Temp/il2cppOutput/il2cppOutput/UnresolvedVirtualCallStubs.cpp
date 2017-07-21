@@ -670,103 +670,103 @@ static  Il2CppObject * UnresolvedVirtualCall_102 (Il2CppObject * __this, int32_t
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_103 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
+static  void UnresolvedVirtualCall_103 (Il2CppObject * __this, Il2CppObject * ___Object1, StreamingContext_t1417235061  ___StreamingContext2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_104 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, Il2CppObject * ___Object3, int32_t ___Int324, const MethodInfo* method)
+static  Il2CppObject * UnresolvedVirtualCall_104 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, int32_t ___Int323, int32_t ___Int324, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Il2CppObject * UnresolvedVirtualCall_105 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
+static  void UnresolvedVirtualCall_105 (Il2CppObject * __this, Il2CppObject * ___Object1, int8_t ___SByte2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Il2CppObject * UnresolvedVirtualCall_106 (Il2CppObject * __this, uint8_t ___Byte1, Il2CppObject * ___Object2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_106 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int8_t ___SByte3, Il2CppObject * ___Object4, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  int8_t UnresolvedVirtualCall_107 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_107 (Il2CppObject * __this, int16_t ___Int161, Il2CppObject * ___Object2, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_108 (Il2CppObject * __this, Il2CppObject * ___Object1, StreamingContext_t1417235061  ___StreamingContext2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_108 (Il2CppObject * __this, int16_t ___Int161, int8_t ___SByte2, int8_t ___SByte3, int8_t ___SByte4, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Il2CppObject * UnresolvedVirtualCall_109 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, int32_t ___Int323, int32_t ___Int324, const MethodInfo* method)
+static  void UnresolvedVirtualCall_109 (Il2CppObject * __this, int16_t ___Int161, int16_t ___Int162, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_110 (Il2CppObject * __this, Il2CppObject * ___Object1, int8_t ___SByte2, const MethodInfo* method)
+static  void UnresolvedVirtualCall_110 (Il2CppObject * __this, uint16_t ___UInt161, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_111 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int8_t ___SByte3, Il2CppObject * ___Object4, const MethodInfo* method)
+static  void UnresolvedVirtualCall_111 (Il2CppObject * __this, uint16_t ___UInt161, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_112 (Il2CppObject * __this, int16_t ___Int161, Il2CppObject * ___Object2, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
+static  void UnresolvedVirtualCall_112 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_113 (Il2CppObject * __this, int16_t ___Int161, int8_t ___SByte2, int8_t ___SByte3, int8_t ___SByte4, const MethodInfo* method)
+static  void UnresolvedVirtualCall_113 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int32_t ___Int323, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_114 (Il2CppObject * __this, int16_t ___Int161, int16_t ___Int162, int8_t ___SByte3, int8_t ___SByte4, int8_t ___SByte5, const MethodInfo* method)
+static  void UnresolvedVirtualCall_114 (Il2CppObject * __this, int8_t ___SByte1, int32_t ___Int322, Il2CppObject * ___Object3, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_115 (Il2CppObject * __this, uint16_t ___UInt161, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
+static  void UnresolvedVirtualCall_115 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_116 (Il2CppObject * __this, uint16_t ___UInt161, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_116 (Il2CppObject * __this, Il2CppObject * ___Object1, Il2CppObject * ___Object2, Il2CppObject * ___Object3, int32_t ___Int324, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_117 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, int8_t ___SByte3, const MethodInfo* method)
+static  Il2CppObject * UnresolvedVirtualCall_117 (Il2CppObject * __this, uint8_t ___Byte1, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_118 (Il2CppObject * __this, int32_t ___Int321, int32_t ___Int322, int32_t ___Int323, const MethodInfo* method)
+static  Il2CppObject * UnresolvedVirtualCall_118 (Il2CppObject * __this, uint8_t ___Byte1, Il2CppObject * ___Object2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_119 (Il2CppObject * __this, int8_t ___SByte1, int32_t ___Int322, Il2CppObject * ___Object3, const MethodInfo* method)
+static  int8_t UnresolvedVirtualCall_119 (Il2CppObject * __this, int32_t ___Int321, int8_t ___SByte2, const MethodInfo* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
