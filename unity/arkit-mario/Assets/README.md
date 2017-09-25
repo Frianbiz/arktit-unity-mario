@@ -16,10 +16,10 @@ The plugin is open sourced and is released under the MIT license (see LICENSE fi
 * iOS device that supports ARKit (iPhone 6S or later, iPad (2017) or later)
 
 
-## How to use this code drop: ##
+## How to use this code drop:##
 
 The code drop is a Unity project that you can load up in any Unity version that is later than v5.6.1p1.  The Unity
-project contains the plugin sources and some example scenes and components that you may use in your own projects.
+project contains the plugin sources and some example scenes and components that you may use in your own projects.  
 
 Here is a summary of the important files in the plugin:
 
@@ -29,7 +29,7 @@ Here is a summary of the important files in the plugin:
 "/Assets/Plugins/iOS/UnityARKit/NativeInterface/UnityARSessionNativeInterface.cs" - this the scripting API to the ARKit, and provides the glue to the native code
 
 This contains the following APIs:
-
+	    
 
 ```
 #!C#
@@ -46,12 +46,12 @@ This contains the following APIs:
 
 	    public float GetARAmbientIntensity()
 
-	    public int GetARTrackingQuality()
+	    public int GetARTrackingQuality()  
 ```
 
 
-
-It also contains events that you can provide these delegates for:
+  
+It also contains events that you can provide these delegates for: 
 
 
 ```
@@ -68,13 +68,28 @@ It also contains events that you can provide these delegates for:
         public delegate void ARSessionFailed(string error)
 ```
 
+These are the list of events you can subscribe to:
+```
+#!C#
+		public static event ARFrameUpdate ARFrameUpdatedEvent;
+        public static event ARAnchorAdded ARAnchorAddedEvent;
+        public static event ARAnchorUpdated ARAnchorUpdatedEvent;
+        public static event ARAnchorRemoved ARAnchorRemovedEvent;
+        public static event ARAnchorAdded ARUserAnchorAddedEvent;
+        public static event ARAnchorUpdated ARUserAnchorUpdatedEvent;
+        public static event ARAnchorRemoved ARUserAnchorRemovedEvent;
+		public static event ARSessionCallback ARSessionInterruptedEvent;
+        public static event ARSessionCallback ARSessioninterruptionEndedEvent;
+		public static event ARSessionTrackingChanged ARSessionTrackingChangedEvent;
+
+```
 
 
 "/Assets/Plugins/iOS/UnityARKit/NativeInterface/AR*.cs" - these are the scripting API equivalents of data structures exposed by ARKit
 
 "/Assets/Plugins/iOS/UnityARKit/Utility/UnityARAnchorManager.cs" - this is a utility that keeps track of the anchor updates from ARKit and can create corresponding Unity gameobjects for them (see GeneratePlanes.cs component on how to use it)
 
-"/Assets/Plugins/iOS/UnityARKit/Editor/UnityARBuildPostprocessor.cs" - this is an editor script that runs at build time on iOS
+"/Assets/Plugins/iOS/UnityARKit/Editor/UnityARBuildPostprocessor.cs" - this is an editor script that runs at build time on iOS 
 
 ## ARKit useful components: ##
 
@@ -82,7 +97,9 @@ It also contains events that you can provide these delegates for:
 
 "/Assets/Plugins/iOS/UnityARKit/UnityARVideo.cs" - this component should be placed on the camera and grabs the textures needed for rendering the video, and sets it on the material needed for blitting to the backbuffer, and sets up the command buffer to do the actual blit
 
-You should be able to build the UnityARKitScene.unity to iOS to get a taste of what ARKit is capable of.  It demostrates all the basic functionality of the ARKit in this scene.
+"/Assest/Plugins/iOS/UnityARKit/UnityARUserAnchorComponent.cs" - this component adds and removes Anchors from ARKit based on the lifecycle of the GameObject it's added to.
+
+You should be able to build the UnityARKitScene.unity to iOS to get a taste of what ARKit is capable of.  It demostrates all the basic functionality of the ARKit in this scene.  
 
 See TUTORIAL.txt in this project for more detailed steps on setting up a project step by step.
 

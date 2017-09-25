@@ -4,7 +4,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>Unity ARKit Plugin</string>
+    <string>ARMArio</string>
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIconFiles</key>
@@ -18,7 +18,7 @@
       <string>AppIcon76x76~ipad.png</string>
     </array>
     <key>CFBundleIdentifier</key>
-    <string>fr.frianbiz.${PRODUCT_NAME}</string>
+    <string>com.frianbiz.${PRODUCT_NAME}</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -37,7 +37,7 @@
       <true />
     </dict>
     <key>NSCameraUsageDescription</key>
-    <string>AR BABY</string>
+    <string>ARKit needs camera.... :D</string>
     <key>UIApplicationExitsOnSuspend</key>
     <false />
     <key>UILaunchStoryboardName~ipad</key>
@@ -73,6 +73,6 @@
     <key>UnityCloudProjectID</key>
     <string>6dac9f5a-8c9d-4da7-886b-cebbc65614a1</string>
     <key>UnityCrashSubmissionURL</key>
-    <string>https://perf-events.cloud.unity3d.com/symbolicate</string>
+    <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>
 </plist>

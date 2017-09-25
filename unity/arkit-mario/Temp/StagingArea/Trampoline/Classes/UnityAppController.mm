@@ -82,7 +82,7 @@ bool    _supportsMSAA           = false;
 @synthesize renderDelegate          = _renderDelegate;
 @synthesize quitHandler             = _quitHandler;
 
-#if !UNITY_TVOS
+#if !PLATFORM_TVOS
 @synthesize interfaceOrientation    = _curOrientation;
 #endif
 
@@ -146,7 +146,7 @@ extern "C" void UnityRequestQuit()
         exit(0);
 }
 
-#if !UNITY_TVOS
+#if !PLATFORM_TVOS
 - (NSUInteger)application:(UIApplication*)application supportedInterfaceOrientationsForWindow:(UIWindow*)window
 {
     // UIInterfaceOrientationMaskAll
@@ -162,7 +162,7 @@ extern "C" void UnityRequestQuit()
 
 #endif
 
-#if !UNITY_TVOS
+#if !PLATFORM_TVOS
 - (void)application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification*)notification
 {
     AppController_SendNotificationWithArg(kUnityDidReceiveLocalNotification, notification);
@@ -184,7 +184,7 @@ extern "C" void UnityRequestQuit()
     UnitySendDeviceToken(deviceToken);
 }
 
-#if !UNITY_TVOS
+#if !PLATFORM_TVOS
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
 {
     AppController_SendNotificationWithArg(kUnityDidReceiveRemoteNotification, userInfo);
@@ -233,7 +233,7 @@ extern "C" void UnityRequestQuit()
     ::printf("-> applicationDidFinishLaunching()\n");
 
     // send notfications
-#if !UNITY_TVOS
+#if !PLATFORM_TVOS
     if (UILocalNotification* notification = [launchOptions objectForKey: UIApplicationLaunchOptionsLocalNotificationKey])
         UnitySendLocalNotification(notification);
 

@@ -21,6 +21,9 @@
 
 
 
+
+
+
 extern const Il2CppMethodPointer g_MethodPointers[];
 extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
 extern const Il2CppMethodPointer g_Il2CppGenericMethodPointers[];
@@ -28,21 +31,21 @@ extern const InvokerMethod g_Il2CppInvokerPointers[];
 extern const CustomAttributesCacheGenerator g_AttributeGenerators[];
 extern const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[];
 extern Il2CppInteropData g_Il2CppInteropData[];
-const Il2CppCodeRegistration g_CodeRegistration = 
+extern const Il2CppCodeRegistration g_CodeRegistration = 
 {
-	11651,
+	12679,
 	g_MethodPointers,
-	5,
+	11,
 	g_ReversePInvokeWrapperPointers,
-	4446,
+	4684,
 	g_Il2CppGenericMethodPointers,
-	1743,
+	1959,
 	g_Il2CppInvokerPointers,
-	2938,
+	3196,
 	g_AttributeGenerators,
-	250,
+	271,
 	g_UnresolvedVirtualMethodPointers,
-	109,
+	127,
 	g_Il2CppInteropData,
 };
 extern const Il2CppMetadataRegistration g_MetadataRegistration;
@@ -50,8 +53,10 @@ static const Il2CppCodeGenOptions s_Il2CppCodeGenOptions =
 {
 	false,
 };
-static void s_Il2CppCodegenRegistration()
+void s_Il2CppCodegenRegistration()
 {
 	il2cpp_codegen_register (&g_CodeRegistration, &g_MetadataRegistration, &s_Il2CppCodeGenOptions);
 }
+#if RUNTIME_IL2CPP
 static il2cpp::utils::RegisterRuntimeInitializeAndCleanup s_Il2CppCodegenRegistrationVariable (&s_Il2CppCodegenRegistration, NULL);
+#endif

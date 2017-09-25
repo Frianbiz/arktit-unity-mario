@@ -7,24 +7,28 @@ namespace UnityEngine.XR.iOS
     {
 
         private Light l;
-		private UnityARSessionNativeInterface m_Session;
 
         public void Start()
         {
-#if !UNITY_EDITOR
             l = GetComponent<Light>();
-			m_Session = UnityARSessionNativeInterface.GetARSessionNativeInterface ();
-#endif
+			UnityARSessionNativeInterface.ARFrameUpdatedEvent += UpdateLightEstimation;
         }
-#if !UNITY_EDITOR
-        public void Update()
-        {
-            // Convert ARKit intensity to Unity intensity
-            // ARKit ambient intensity ranges 0-2000
-            // Unity ambient intensity ranges 0-8 (for over-bright lights)
-            float newai = m_Session.GetARAmbientIntensity();
-            l.intensity = newai / 1000.0f;
-        }
-#endif
+
+		void UpdateLightEstimation(UnityARCamera camera)
+		{
+			// Convert ARKit intensity to Unity intensity
+			// ARKit ambient intensity ranges 0-2000
+			// Unity ambient intensity ranges 0-8 (for over-bright lights)
+			float newai = camera.lightEstimation.ambientIntensity;
+			l.intensity = newai / 1000.0f;
+
+			//Unity Light has functionality to filter the light color to correct temperature
+			//https://docs.unity3d.com/ScriptReference/Light-colorTemperature.html
+			l.colorTemperature = camera.lightEstimation.ambientColorTemperature;
+		}
+
+		void OnDestroy() {
+			UnityARSessionNativeInterface.ARFrameUpdatedEvent -= UpdateLightEstimation;
+		}
     }
 }

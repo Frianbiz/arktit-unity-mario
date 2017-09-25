@@ -26,4 +26,9 @@ Unity-ARKit-Plugin Step by Step
 
 13. You can obtain light estimation of the scene (https://developer.apple.com/documentation/arkit/arlightestimate) by calling m_session.GetARAmbientIntensity() on every Update. (see UnityARAmbient.cs)
 
+14. You can add and remove your own anchors to ARKit.  There is a component named UnityARUserAnchorComponent that implements one way this API can be used to associate a game object with an anchor.
+
+15. You can hook into ARKit Session Interrupted/InterruptionEnded callbacks by subscribing to them on the UnityARSessionNativeInterface.
+
+16. You can hook into the ARKit tracking changed callback by subscribing to the corresponding event in UnityARSessionNativeInterface.
 
